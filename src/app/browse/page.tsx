@@ -108,9 +108,6 @@ function BrowseContent() {
           <Link key={p.id} href={`/prompt/${p.slug}`} className="bcard">
             <div className="row1">
               <span className="cat-tag">{CAT_LABEL[p.category] ?? p.category}</span>
-              <span className={`diff ${DIFF_CLASS[p.difficulty] ?? "d-int"}`}>
-                {p.difficulty.charAt(0).toUpperCase() + p.difficulty.slice(1)}
-              </span>
             </div>
             <h4>{p.title}</h4>
             <p>{p.description}</p>
