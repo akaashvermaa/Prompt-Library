@@ -1,0 +1,110 @@
+[
+  {
+    "id": "linkedin-001",
+    "slug": "transformative-lesson-formatter",
+    "title": "The Transformative Lesson Formatter",
+    "description": "Converts professional experiences into high-engagement LinkedIn narratives with real takeaways",
+    "prompt": "Write a LinkedIn post sharing 3 lessons I've learned from [describe a recent client project or business experience].\n\nRules:\n- Each lesson must be specific and actionable, not generic\n- Include a concrete takeaway for [target audience, e.g. small business owners / developers / designers]\n- Open with a hook that stops the scroll — not 'I'm excited to share'\n- End with a question that invites comments\n- Keep it under 200 words\n- No bullet point lists — write in short punchy paragraphs",
+    "category": "linkedin",
+    "platforms": ["chatgpt"],
+    "tags": ["post", "thought-leadership", "lessons", "engagement"],
+    "difficulty": "beginner",
+    "featured": true
+  },
+  {
+    "id": "linkedin-002",
+    "slug": "common-problem-solver",
+    "title": "The Common Problem Solver",
+    "description": "Positions you as an authority by addressing a pain point your audience struggles with every day",
+    "prompt": "Write a LinkedIn post explaining why many [target audience, e.g. service providers / freelancers / startup founders] struggle with [specific problem] and how to overcome it.\n\nStructure:\n1. Open by naming the pain — make the reader feel seen\n2. Explain WHY this problem happens (the root cause most people miss)\n3. Give 2-3 specific, actionable solutions\n4. Close with a line that positions you as someone who has solved this\n\nKeep it under 250 words. Conversational tone. No corporate speak.",
+    "category": "linkedin",
+    "platforms": ["claude"],
+    "tags": ["authority", "pain-points", "problem-solving", "post"],
+    "difficulty": "beginner",
+    "featured": false
+  },
+  {
+    "id": "linkedin-003",
+    "slug": "client-success-story-arc",
+    "title": "The Client Success Story Arc",
+    "description": "Builds a compelling before/after client transformation post with measurable results and social proof",
+    "prompt": "Draft a LinkedIn client transformation post.\n\nDetails to include:\n- Client situation BEFORE working with me: [describe the problem]\n- What we did together: [describe the solution or service]\n- Measurable result AFTER: [describe the outcome with numbers if possible]\n\nRules:\n- Focus on the client's journey, not on how great I am\n- Use specific numbers wherever possible (% increase, time saved, revenue gained)\n- Do not make it sound like an ad — make it sound like a story\n- End with one insight other people can take away from this result\n- Under 200 words",
+    "category": "linkedin",
+    "platforms": ["chatgpt"],
+    "tags": ["case-study", "social-proof", "results", "storytelling"],
+    "difficulty": "intermediate",
+    "featured": true
+  },
+  {
+    "id": "linkedin-004",
+    "slug": "confusing-topic-breakdown",
+    "title": "The Confusing Topic Breakdown",
+    "description": "Simplifies a complex industry topic so even non-experts can understand and engage",
+    "prompt": "Write a LinkedIn post simplifying [confusing industry topic] so a complete non-expert can understand it.\n\nRules:\n- Open with why this topic matters to your audience (make them care first)\n- Use one analogy to explain the core idea\n- Break it down in plain language — no jargon unless immediately explained\n- End with one practical implication: 'What this means for you is...'\n- Target length: 150-200 words\n- Tone: intelligent but approachable, not condescending",
+    "category": "linkedin",
+    "platforms": ["any"],
+    "tags": ["education", "simplification", "reach", "engagement"],
+    "difficulty": "beginner",
+    "featured": false
+  },
+  {
+    "id": "linkedin-005",
+    "slug": "industry-myth-debunker",
+    "title": "The Industry Myth Debunker",
+    "description": "Creates conversation-starting posts by challenging a common misconception in your industry",
+    "prompt": "Create a LinkedIn post that challenges a common myth in my industry: [industry or niche]\n\nMy chosen myth: [state the myth you want to debunk]\n\nStructure:\n1. State the myth boldly — make people who believe it feel called out (politely)\n2. Explain why this myth exists and why people believe it\n3. Reveal the actual truth with evidence or personal experience\n4. End with a question to spark debate in the comments\n\nTone: confident, not preachy. You can be slightly controversial but not offensive. Under 200 words.",
+    "category": "linkedin",
+    "platforms": ["chatgpt", "gemini"],
+    "tags": ["controversy", "myth-busting", "engagement", "thought-leadership"],
+    "difficulty": "intermediate",
+    "featured": false
+  },
+  {
+    "id": "linkedin-006",
+    "slug": "headline-optimizer",
+    "title": "The Headline Optimizer",
+    "description": "Creates a keyword-rich LinkedIn headline that captures attention and ranks in recruiter searches",
+    "prompt": "Help me create a LinkedIn headline that effectively communicates my experience, qualifications, and unique value.\n\nConsider:\n- Incorporating keywords relevant to my industry (from my resume below)\n- Showcasing my passion or mission statement\n- Making it a snapshot that captures attention immediately — not a job title\n- It should answer: 'Why should someone click on my profile?'\n\nGenerate 3 headline options ranging from professional to bold.\n\nMy resume / background: [paste your resume or key details here]",
+    "category": "linkedin",
+    "platforms": ["any"],
+    "tags": ["headline", "SEO", "profile", "recruiter"],
+    "difficulty": "beginner",
+    "featured": true
+  },
+  {
+    "id": "linkedin-007",
+    "slug": "150-word-summary-crafter",
+    "title": "The 150-Word Summary Crafter",
+    "description": "Writes a conversational LinkedIn About section that feels human, not like a corporate resume",
+    "prompt": "Craft a concise and compelling summary for my LinkedIn About section.\n\nRequirements:\n- Highlight my professional journey, key skills, and what makes me unique\n- Tone: conversational and warm — NOT a resume rewrite\n- Must NOT exceed 150 words\n- Start with something other than 'I am a...'\n- End with a clear call to action (what I want people to do after reading)\n\nMy background: [paste your resume or write a brief description of your experience]",
+    "category": "linkedin",
+    "platforms": ["claude", "chatgpt"],
+    "tags": ["about", "summary", "profile", "personal-brand"],
+    "difficulty": "beginner",
+    "featured": false
+  },
+  {
+    "id": "linkedin-008",
+    "slug": "experience-section-impact-generator",
+    "title": "The Experience Section Impact Generator",
+    "description": "Rewrites job descriptions into metric-driven achievement statements that prove organizational impact",
+    "prompt": "Craft impactful entries for my LinkedIn Experience section that go beyond job descriptions.\n\nFor each role, share:\n- Not just what I did — but HOW my contributions made a measurable difference\n- Action verbs that show initiative and ownership\n- Quantified achievements wherever possible (%, $, time saved, users impacted)\n- Context that highlights the value I brought to the organization\n\nDo NOT just rephrase my job description. Transform duties into achievements.\n\nMy resume / job history: [paste your experience here]",
+    "category": "linkedin",
+    "platforms": ["any"],
+    "tags": ["experience", "achievements", "metrics", "resume"],
+    "difficulty": "beginner",
+    "featured": false
+  },
+  {
+    "id": "linkedin-009",
+    "slug": "vulnerable-business-story",
+    "title": "The Vulnerable Business Story",
+    "description": "Writes an authentic post about a professional failure or challenge — the content type that builds the deepest trust",
+    "prompt": "Write a LinkedIn post about a time I faced a significant challenge or failure in [work / business / career].\n\nDetails: [describe the situation briefly]\n\nStructure:\n1. Open with the moment things went wrong — put the reader in the scene\n2. Describe what I tried that didn't work\n3. What I finally learned from it (the real insight, not a cliché)\n4. How it changed how I work or think now\n\nRules:\n- Be genuinely vulnerable — not performatively vulnerable\n- Do NOT end with 'Everything happens for a reason'\n- Under 220 words\n- No bullet points — narrative paragraphs only",
+    "category": "linkedin",
+    "platforms": ["claude"],
+    "tags": ["vulnerability", "storytelling", "authenticity", "trust"],
+    "difficulty": "intermediate",
+    "featured": false
+  }
+]
