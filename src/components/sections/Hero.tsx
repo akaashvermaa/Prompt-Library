@@ -1,61 +1,114 @@
-import { Search, Sparkles } from "lucide-react";
-import Link from "next/link";
+"use client";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export function Hero() {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+
+  const search = () => {
+    if (query.trim()) router.push(`/browse?search=${encodeURIComponent(query.trim())}`);
+    else router.push("/browse");
+  };
+
   return (
-    <section className="relative overflow-hidden mb-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black opacity-100"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent opacity-50"></div>
+    <header className="hero">
+      <div className="wrap">
+        <div className="hero-meta">
+          <span className="bar" />
+          <span>A library, not a feed</span>
+          <span>—</span>
+          <span>Vol. 04 / 2026</span>
+        </div>
 
-      <div className="relative container mx-auto px-4 py-32 text-center">
-        <div className="max-w-5xl mx-auto">
-          {/* Icon */}
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl mb-8 transform hover:scale-105 transition-transform">
-            <Sparkles className="w-10 h-10 text-black" />
-          </div>
+        <h1>
+          <span>Prompts </span>
+          <span className="it">worth</span>
+          <br />
+          <span>keeping around.</span>
+        </h1>
 
-          {/* Headline */}
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-amber-400 via-orange-400 to-amber-400 bg-clip-text text-transparent animate-pulse">
-            PromptVault
-          </h1>
-
-          {/* Subtext */}
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
-            A curated prompt library for Claude, ChatGPT, Gemini, and Grok.
-            <br />
-            <span className="text-amber-400 font-semibold">One place. Every use case. Copy and go.</span>
+        <div className="hero-row">
+          <p className="hero-sub">
+            A curated, living archive of <strong>tested prompts</strong> for Claude, ChatGPT,
+            Gemini and Grok. No fluff, no infinite scroll &mdash; just the ones that actually work,
+            sorted by craft.
           </p>
+          <div className="hero-stats">
+            <div className="stat">
+              <div className="n">242</div>
+              <div className="l">Curated prompts</div>
+            </div>
+            <div className="stat">
+              <div className="n"><span className="it">8</span></div>
+              <div className="l">Categories</div>
+            </div>
+            <div className="stat">
+              <div className="n">4</div>
+              <div className="l">Models</div>
+            </div>
+          </div>
+        </div>
 
-          {/* CTA */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-            <Link
-              href="/browse"
-              className="px-8 py-4 bg-gradient-to-r from-amber-400 to-orange-500 hover:from-amber-500 hover:to-orange-600 text-black font-semibold rounded-lg transition-all duration-200 transform hover:scale-105 hover:shadow-lg hover:shadow-amber-500/25"
-            >
-              Browse All Prompts
-            </Link>
-            <Link
-              href="#categories"
-              className="px-8 py-4 bg-gray-800 hover:bg-gray-700 text-white font-semibold rounded-lg transition-colors duration-200"
-            >
-              Explore Categories
-            </Link>
+        <div className="hero-row" style={{ marginTop: 90, alignItems: "start" }}>
+          <div>
+            <div className="search-shell">
+              <div className="search">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+                </svg>
+                <input
+                  type="text"
+                  placeholder={`Search 242 prompts — try "explain like I'm five"`}
+                  value={query}
+                  onChange={e => setQuery(e.target.value)}
+                  onKeyDown={e => e.key === "Enter" && search()}
+                />
+                <button className="search-btn" onClick={search}>
+                  Search
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div className="quick">
+              <span className="label">Try:</span>
+              {["code review","essay outline","cold email","study buddy","teach me"].map(c => (
+                <span key={c} className="chip" onClick={() => { setQuery(c); router.push(`/browse?search=${encodeURIComponent(c)}`); }}>{c}</span>
+              ))}
+            </div>
           </div>
 
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-              <input
-                type="text"
-                placeholder="Search for prompts..."
-                className="w-full pl-12 pr-6 py-4 bg-gray-800/80 backdrop-blur-sm text-white rounded-xl border border-gray-700 focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all"
-              />
+          <div className="hero-card">
+            <div className="card-head">
+              <span>Prompt of the day</span>
+              <span className="live"><span className="ping" /> Updated 2h ago</span>
+            </div>
+            <div className="card-title">The <span className="it">socratic</span> tutor</div>
+            <div className="card-snippet">
+              <span className="hl">You are</span> a patient socratic tutor.{"\n"}
+              <span className="hl">Topic:</span> <span className="var">{"{{subject}}"}</span>{"\n"}
+              <span className="hl">Goal:</span> guide me to the answer with{"\n"}
+              {"       "}questions, never give it directly&hellip;
+            </div>
+            <div className="card-foot">
+              <div className="badges">
+                <span className="pbadge pb-claude">Claude</span>
+                <span className="pbadge pb-gpt">ChatGPT</span>
+                <span className="pbadge pb-gemini">Gemini</span>
+              </div>
+              <button className="copy-mini">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <rect x="9" y="9" width="13" height="13" rx="2"/>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                </svg>
+                Copy prompt
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

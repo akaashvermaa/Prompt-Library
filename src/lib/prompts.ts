@@ -1,57 +1,56 @@
 import { Prompt } from '@/types'
-import fs from 'fs'
-import path from 'path'
 
-const promptsDirectory = path.join(process.cwd(), 'data/prompts')
+// Static imports — no fs, works in server & client
+import studyPrompts from '@/data/prompts/study.json'
+import writingPrompts from '@/data/prompts/writing.json'
+import codingPrompts from '@/data/prompts/coding.json'
+import teachingPrompts from '@/data/prompts/teaching.json'
+import businessPrompts from '@/data/prompts/business.json'
+import reviewPrompts from '@/data/prompts/review.json'
+import testingPrompts from '@/data/prompts/testing.json'
+import linkedinPrompts from '@/data/prompts/linkedin.json'
+
+// Synchronous export — client components use this directly for instant filtering
+export const ALL_PROMPTS: Prompt[] = [
+  ...studyPrompts,
+  ...writingPrompts,
+  ...codingPrompts,
+  ...teachingPrompts,
+  ...businessPrompts,
+  ...reviewPrompts,
+  ...testingPrompts,
+  ...linkedinPrompts,
+] as Prompt[]
 
 export async function getAllPrompts(): Promise<Prompt[]> {
-  const promptFiles = fs.readdirSync(promptsDirectory)
-  const allPrompts: Prompt[] = []
-
-  for (const file of promptFiles) {
-    if (file.endsWith('.json')) {
-      const filePath = path.join(promptsDirectory, file)
-      const fileContent = fs.readFileSync(filePath, 'utf-8')
-      const prompts = JSON.parse(fileContent) as Prompt[]
-      allPrompts.push(...prompts)
-    }
-  }
-
-  return allPrompts
+  return ALL_PROMPTS
 }
 
 export async function getByCategory(category: string): Promise<Prompt[]> {
-  const allPrompts = await getAllPrompts()
-  return allPrompts.filter(prompt => prompt.category === category)
+  return ALL_PROMPTS.filter(p => p.category === category)
 }
 
 export async function getBySlug(slug: string): Promise<Prompt | null> {
-  const allPrompts = await getAllPrompts()
-  return allPrompts.find(prompt => prompt.slug === slug) || null
+  return ALL_PROMPTS.find(p => p.slug === slug) ?? null
 }
 
 export async function getPromptsByPlatform(platform: string): Promise<Prompt[]> {
-  const allPrompts = await getAllPrompts()
-  return allPrompts.filter(prompt =>
-    prompt.platforms.includes(platform as any) ||
-    prompt.platforms.includes('any')
+  return ALL_PROMPTS.filter(p =>
+    p.platforms.includes(platform as any) || p.platforms.includes('any')
   )
 }
 
 export async function getFeaturedPrompts(): Promise<Prompt[]> {
-  const allPrompts = await getAllPrompts()
-  return allPrompts.filter(prompt => prompt.featured)
+  return ALL_PROMPTS.filter(p => p.featured)
 }
 
 export async function searchPrompts(query: string): Promise<Prompt[]> {
-  const allPrompts = await getAllPrompts()
-  const lowercaseQuery = query.toLowerCase()
-
-  return allPrompts.filter(prompt =>
-    prompt.title.toLowerCase().includes(lowercaseQuery) ||
-    prompt.description.toLowerCase().includes(lowercaseQuery) ||
-    prompt.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)) ||
-    prompt.prompt.toLowerCase().includes(lowercaseQuery)
+  const q = query.toLowerCase()
+  return ALL_PROMPTS.filter(p =>
+    p.title.toLowerCase().includes(q) ||
+    p.description.toLowerCase().includes(q) ||
+    p.tags.some(tag => tag.toLowerCase().includes(q)) ||
+    p.prompt.toLowerCase().includes(q)
   )
 }
 
@@ -61,36 +60,28 @@ export async function filterPrompts(options: {
   difficulty?: string
   search?: string
 }): Promise<Prompt[]> {
-  let filteredPrompts = await getAllPrompts()
+  let result = ALL_PROMPTS
 
-  // Apply category filter
   if (options.category) {
-    filteredPrompts = filteredPrompts.filter(prompt => prompt.category === options.category)
+    result = result.filter(p => p.category === options.category)
   }
-
-  // Apply platform filter
   if (options.platform) {
-    filteredPrompts = filteredPrompts.filter(prompt =>
-      prompt.platforms.includes(options.platform as any) ||
-      prompt.platforms.includes('any')
+    result = result.filter(p =>
+      p.platforms.includes(options.platform as any) || p.platforms.includes('any')
     )
   }
-
-  // Apply difficulty filter
   if (options.difficulty) {
-    filteredPrompts = filteredPrompts.filter(prompt => prompt.difficulty === options.difficulty)
+    result = result.filter(p => p.difficulty === options.difficulty)
   }
-
-  // Apply search filter
   if (options.search) {
-    const lowercaseQuery = options.search.toLowerCase()
-    filteredPrompts = filteredPrompts.filter(prompt =>
-      prompt.title.toLowerCase().includes(lowercaseQuery) ||
-      prompt.description.toLowerCase().includes(lowercaseQuery) ||
-      prompt.tags.some(tag => tag.toLowerCase().includes(lowercaseQuery)) ||
-      prompt.prompt.toLowerCase().includes(lowercaseQuery)
+    const q = options.search.toLowerCase()
+    result = result.filter(p =>
+      p.title.toLowerCase().includes(q) ||
+      p.description.toLowerCase().includes(q) ||
+      p.tags.some(tag => tag.toLowerCase().includes(q)) ||
+      p.prompt.toLowerCase().includes(q)
     )
   }
 
-  return filteredPrompts
+  return result
 }

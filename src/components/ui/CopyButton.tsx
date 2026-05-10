@@ -1,41 +1,20 @@
 "use client";
-
 import { useState } from "react";
-import { Check, Copy } from "lucide-react";
 
-interface CopyButtonProps {
-  text: string;
-}
-
-export function CopyButton({ text }: CopyButtonProps) {
-  const [isCopied, setIsCopied] = useState(false);
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(text);
-      setIsCopied(true);
-      setTimeout(() => setIsCopied(false), 2000);
-    } catch (error) {
-      console.error("Failed to copy:", error);
-    }
+export function CopyButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false);
+  const copy = async () => {
+    await navigator.clipboard.writeText(text).catch(() => {});
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1600);
   };
-
   return (
-    <button
-      onClick={handleCopy}
-      className="flex items-center gap-2 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-black rounded-lg transition-colors font-medium"
-    >
-      {isCopied ? (
-        <>
-          <Check className="w-4 h-4" />
-          Copied!
-        </>
-      ) : (
-        <>
-          <Copy className="w-4 h-4" />
-          Copy
-        </>
-      )}
+    <button className="copy-mini" onClick={copy}>
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="9" y="9" width="13" height="13" rx="2"/>
+        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+      </svg>
+      {copied ? "Copied!" : "Copy prompt"}
     </button>
   );
 }
