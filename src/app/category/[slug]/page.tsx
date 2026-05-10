@@ -1,31 +1,69 @@
-import { notFound } from "next/navigation";
 import { getByCategory } from "@/lib/prompts";
-import { CategoryGrid } from "@/components/sections/CategoryGrid";
+import Link from "next/link";
+import { PlatformBadge } from "@/components/ui/PlatformBadge";
+import { notFound } from "next/navigation";
 
-interface CategoryPageProps {
-  params: {
-    slug: string;
-  };
+const DIFF_CLASS: Record<string,string> = { beginner:"d-beg", intermediate:"d-int", advanced:"d-adv" };
+const CAT_LABELS: Record<string,{ label: string; italic: string }> = {
+  study:    { label: "Study",    italic: "Learning" },
+  coding:   { label: "Code",     italic: "Development" },
+  writing:  { label: "Writing",  italic: "Essays" },
+  teaching: { label: "Teaching", italic: "Explaining" },
+  business: { label: "Business", italic: "Email" },
+  review:   { label: "Review",   italic: "Feedback" },
+  testing:  { label: "QA",       italic: "Testing" },
+  linkedin: { label: "LinkedIn", italic: "Career" },
+};
+
+export async function generateStaticParams() {
+  return Object.keys(CAT_LABELS).map(slug => ({ slug }));
 }
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
-  const prompts = await getByCategory(params.slug);
-
-  if (prompts.length === 0) {
-    notFound();
-  }
+export default async function CategoryPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const meta = CAT_LABELS[slug];
+  if (!meta) notFound();
+  const prompts = await getByCategory(slug);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-          {params.slug.charAt(0).toUpperCase() + params.slug.slice(1)} Prompts
-        </h1>
-        <p className="text-xl text-gray-300 mb-12 text-center max-w-2xl mx-auto">
-          Explore curated prompts for {params.slug} tasks and workflows
-        </p>
-        <CategoryGrid prompts={prompts} />
-      </div>
-    </main>
+    <div style={{ paddingTop: 80 }}>
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <div>
+              <div className="eyebrow">Category / {slug}</div>
+              <h2>{meta.label} &amp; <span className="it">{meta.italic}</span></h2>
+            </div>
+            <p className="lede">{prompts.length} prompts in this category.</p>
+          </div>
+          <div className="browse-head">
+            <Link href="/browse" style={{ fontFamily: "monospace", fontSize: 12, color: "var(--amber)" }}>← Back to Browse</Link>
+            <div className="meta">Showing <span className="it">{prompts.length}</span> prompts</div>
+          </div>
+          <div className="browse-grid">
+            {prompts.map(p => (
+              <Link key={p.id} href={`/prompt/${p.slug}`} className="bcard">
+                <div className="row1">
+                  <span className="cat-tag">{meta.label}</span>
+                  <span className={`diff ${DIFF_CLASS[p.difficulty] ?? "d-int"}`}>
+                    {p.difficulty.charAt(0).toUpperCase() + p.difficulty.slice(1)}
+                  </span>
+                </div>
+                <h4>{p.title}</h4>
+                <p>{p.description}</p>
+                <div className="foot">
+                  <div className="badges">
+                    {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
+                  </div>
+                  <span className="mono" style={{ fontSize: 11, color: "var(--muted-2)" }}>
+                    {p.tags.slice(0, 2).map(t => `#${t}`).join(" ")}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }

@@ -1,75 +1,88 @@
+import { getBySlug, getAllPrompts } from "@/lib/prompts";
 import { notFound } from "next/navigation";
-import { getBySlug } from "@/lib/prompts";
-import { CopyButton } from "@/components/ui/CopyButton";
+import Link from "next/link";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
-import RelatedPrompts from "@/components/sections/RelatedPromptsServer";
+import { CopyButton } from "@/components/ui/CopyButton";
 
-interface PromptPageProps {
-  params: {
-    slug: string;
-  };
+
+
+export async function generateStaticParams() {
+  const all = await getAllPrompts();
+  return all.map(p => ({ slug: p.slug }));
 }
 
-export default async function PromptPage({ params }: PromptPageProps) {
-  const prompt = await getBySlug(params.slug);
+export default async function PromptPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const prompt = await getBySlug(slug);
+  if (!prompt) notFound();
 
-  if (!prompt) {
-    notFound();
-  }
+  const lines = prompt.prompt.split("\n");
 
   return (
-    <>
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
-        <div className="container mx-auto px-4 py-16 max-w-4xl">
-          {/* Header */}
-          <div className="mb-12">
-            <div className="flex items-center gap-3 mb-4">
-              {prompt.platforms.map((platform) => (
-                <PlatformBadge key={platform} platform={platform} />
-              ))}
+    <div style={{ paddingTop: 80 }}>
+      <section className="detail-section">
+        <div className="wrap">
+          <div className="detail-grid">
+            {/* Left */}
+            <div className="detail-left">
+              <div className="crumb">
+                <Link href="/browse">browse</Link>
+                &nbsp;/&nbsp;
+                <Link href={`/category/${prompt.category}`}>{prompt.category}</Link>
+                &nbsp;/&nbsp;
+                <span style={{ color: "var(--text)" }}>{prompt.slug}</span>
+              </div>
+              <h2>{prompt.title}</h2>
+              <p className="desc">{prompt.description}</p>
+              <div className="detail-meta">
+                <div>
+                  <div className="lbl">Difficulty</div>
+                  <div className="val" style={{ textTransform: "capitalize", color: "var(--muted)" }}>
+                    {prompt.difficulty}
+                  </div>
+                </div>
+                <div>
+                  <div className="lbl">Category</div>
+                  <div className="val">{prompt.category}</div>
+                </div>
+                <div>
+                  <div className="lbl">Works with</div>
+                  <div className="val">
+                    <div className="badges">
+                      {prompt.platforms.map(pl => <PlatformBadge key={pl} platform={pl} />)}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="lbl">Tags</div>
+                  <div className="val mono" style={{ fontSize: 13, color: "var(--muted)" }}>
+                    {prompt.tags.map(t => `#${t}`).join("  ")}
+                  </div>
+                </div>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              {prompt.title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-2">
-              {prompt.description}
-            </p>
-            <div className="flex items-center gap-4 text-sm text-gray-400">
-              <span>Difficulty: {prompt.difficulty}</span>
-              {prompt.featured && (
-                <span className="text-amber-400">Featured</span>
-              )}
-            </div>
-          </div>
 
-          {/* Prompt Content */}
-          <div className="bg-gray-800 rounded-lg p-6 mb-8">
-            <div className="flex justify-between items-start mb-4">
-              <h2 className="text-xl font-semibold">Prompt</h2>
-              <CopyButton text={prompt.prompt} />
-            </div>
-            <pre className="whitespace-pre-wrap text-gray-200 font-mono text-sm leading-relaxed">
-              {prompt.prompt}
-            </pre>
-          </div>
-
-          {/* Tags */}
-          <div className="mb-8">
-            <h3 className="text-lg font-semibold mb-3">Tags</h3>
-            <div className="flex flex-wrap gap-2">
-              {prompt.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm"
-                >
-                  {tag}
-                </span>
-              ))}
+            {/* Right — Editor panel */}
+            <div className="detail-right">
+              <div className="editor-head">
+                <div className="dots">
+                  <span className="dot" /><span className="dot" /><span className="dot" />
+                </div>
+                <div className="file">prompt-{prompt.slug}.md</div>
+                <CopyButton text={prompt.prompt} />
+              </div>
+              <div className="editor-body">
+                {lines.map((line, i) => (
+                  <div key={i} className="ln">
+                    <span className="ln-num">{i + 1}</span>
+                    <span>{line || "\u00a0"}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
-      </main>
-      <RelatedPrompts currentPrompt={prompt} />
-    </>
+      </section>
+    </div>
   );
 }

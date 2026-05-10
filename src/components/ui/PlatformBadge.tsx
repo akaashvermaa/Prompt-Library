@@ -1,32 +1,16 @@
-interface PlatformBadgeProps {
-  platform: string;
-}
+type Platform = "chatgpt" | "claude" | "gemini" | "grok" | "any";
 
-export function PlatformBadge({ platform }: PlatformBadgeProps) {
-  const getPlatformStyle = (platform: string) => {
-    switch (platform) {
-      case "chatgpt":
-        return "bg-green-600 text-white";
-      case "claude":
-        return "bg-orange-600 text-white";
-      case "gemini":
-        return "bg-blue-600 text-white";
-      case "grok":
-        return "bg-purple-600 text-white";
-      default:
-        return "bg-gray-600 text-white";
-    }
-  };
+const MAP: Record<string, string> = {
+  claude: "pb-claude",
+  chatgpt: "pb-gpt",
+  gemini: "pb-gemini",
+  grok: "pb-grok",
+};
+const LABEL: Record<string, string> = {
+  claude: "Claude", chatgpt: "ChatGPT", gemini: "Gemini", grok: "Grok", any: "Any",
+};
 
-  const getPlatformLabel = (platform: string) => {
-    return platform.charAt(0).toUpperCase() + platform.slice(1);
-  };
-
-  return (
-    <span
-      className={`px-2 py-1 rounded text-xs font-medium ${getPlatformStyle(platform)}`}
-    >
-      {getPlatformLabel(platform)}
-    </span>
-  );
+export function PlatformBadge({ platform }: { platform: string }) {
+  if (platform === "any") return null;
+  return <span className={`pbadge ${MAP[platform] ?? ""}`}>{LABEL[platform] ?? platform}</span>;
 }
