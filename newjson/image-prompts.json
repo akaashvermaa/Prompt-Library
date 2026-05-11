@@ -5,7 +5,7 @@
     "title": "LinkedIn Professional Headshot",
     "description": "Studio-quality corporate headshot prompt for a polished LinkedIn profile photo",
     "prompt": "A professional corporate headshot of a [age] year old [gender] with [hair color] hair, wearing a navy blue blazer over a white shirt. Soft studio lighting with a neutral grey gradient background. Sharp focus on the face, shallow depth of field. Photorealistic, Canon 5D Mark IV quality.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "dalle3"
     ],
@@ -30,7 +30,7 @@
     "title": "Founder / Creative Headshot",
     "description": "Editorial-style portrait with natural window light \u2014 perfect for founders, creators, and personal brands",
     "prompt": "editorial portrait, young founder, confident relaxed expression, natural window light from left, minimal dark background, sharp eyes, slight smile, linen shirt, analog film grain, cinematic --ar 4:5 --style raw --v 6.1",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "midjourney"
     ],
@@ -55,7 +55,7 @@
     "title": "Product on White Background",
     "description": "Clean e-commerce product shot on white \u2014 ready for Amazon, Shopify, or any online store",
     "prompt": "A photo of a [product name] placed on a clean white studio surface. Soft diffused overhead lighting with subtle shadows beneath the product. Macro lens, hyper-realistic texture detail, commercial product photography style, white background, no props.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "imagen4",
       "dalle3"
@@ -82,7 +82,7 @@
     "title": "Lifestyle Product Shot",
     "description": "Product in a warm, lived-in lifestyle context \u2014 for Instagram, ads, and editorial use",
     "prompt": "A [product] sitting on a rustic wooden table next to a ceramic coffee mug and an open book, warm afternoon sunlight streaming through a nearby window creating soft golden highlights. Editorial lifestyle photography, shallow depth of field, photorealistic.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "dalle3"
     ],
@@ -107,7 +107,7 @@
     "title": "Instagram Flat Lay",
     "description": "Aesthetic overhead flat lay for Instagram posts \u2014 clean, minimal, and editorial",
     "prompt": "An overhead flat lay photograph of [items e.g. a journal, coffee cup, flowers, and phone] arranged aesthetically on a white marble surface. Soft natural daylight, pastel color palette, editorial fashion magazine style. Do not include any text or letters in the image.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "dalle3"
     ],
@@ -132,7 +132,7 @@
     "title": "YouTube Thumbnail Background",
     "description": "Dramatic cinematic background for YouTube thumbnails \u2014 high contrast, no text, no people",
     "prompt": "A dramatic cinematic background for a YouTube thumbnail. Deep dark blue and orange gradient sky, volumetric god rays of light breaking through storm clouds, hyper-detailed, ultra-wide 16:9 format, no people, no text, photorealistic.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "grok"
     ],
@@ -157,7 +157,7 @@
     "title": "Instagram Reel Cover",
     "description": "Vertical lifestyle cover image for Instagram Reels \u2014 golden hour, cinematic, scroll-stopping",
     "prompt": "vibrant lifestyle photo, golden hour beach, warm amber tones, bokeh background, person silhouette facing ocean, cinematic color grading, editorial quality --ar 9:16 --style raw --v 6.1",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "midjourney"
     ],
@@ -182,7 +182,7 @@
     "title": "Vintage Poster Design",
     "description": "Retro 1960s travel or event poster with bold flat illustration and art deco typography",
     "prompt": "retro 1960s travel poster, bold flat illustration, [city name] skyline, warm terracotta and mustard yellow palette, art deco typography, screen print texture, clean geometric composition --ar 2:3 --style raw --v 6.1",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "midjourney"
     ],
@@ -207,7 +207,7 @@
     "title": "Logo Concept Exploration",
     "description": "Minimal geometric logo mark exploration \u2014 clean vector style, no text, white background",
     "prompt": "masterpiece, best quality, minimal logo design, geometric abstract mark, single color, clean vector style, white background, professional branding, negative space concept, no text, no gradients, sharp edges",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "stablediffusion"
     ],
@@ -232,7 +232,7 @@
     "title": "App UI Mockup",
     "description": "Photorealistic iPhone mockup showing a dark mode dashboard \u2014 perfect for portfolios and pitch decks",
     "prompt": "A photorealistic mockup of a modern mobile app interface displayed on an iPhone 15 Pro on a clean dark desk. The screen shows a minimalist dashboard with dark mode UI, clean sans-serif typography, and subtle card components. Studio lighting, slight angle, professional tech photography style.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "dalle3"
     ],
@@ -257,7 +257,7 @@
     "title": "Cinematic Moody Portrait",
     "description": "Dramatic chiaroscuro portrait with deep shadows and film noir lighting \u2014 for creative projects",
     "prompt": "cinematic close-up portrait, dramatic chiaroscuro lighting, deep shadows, single key light from left, [subject description], film noir aesthetic, 85mm lens compression, shallow depth of field, analog grain --ar 4:5 --style raw --v 6.1",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "midjourney"
     ],
@@ -282,7 +282,7 @@
     "title": "Cartoon Avatar",
     "description": "Stylized flat vector cartoon avatar from a description \u2014 for profile pictures and personal branding",
     "prompt": "A stylized cartoon avatar of a [age] year old [gender] with [hair color] hair and [eye color] eyes, wearing [outfit]. Flat vector illustration style, clean bold outlines, vibrant colors, minimal background, Pixar-adjacent character design. No realistic rendering.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "grok"
     ],
@@ -307,7 +307,7 @@
     "title": "Fantasy Character Portrait",
     "description": "Painterly fantasy character with intricate armor and dramatic rim lighting \u2014 for games and creative projects",
     "prompt": "masterpiece, best quality, fantasy portrait, [character description], intricate armor detail, dramatic rim lighting, painterly style, dark atmospheric background, cinematic composition, 8k, sharp focus, artstation trending",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "stablediffusion"
     ],
@@ -332,7 +332,7 @@
     "title": "Interior Design Visualization",
     "description": "Photorealistic Scandinavian interior render \u2014 for architects, designers, and home decor brands",
     "prompt": "A photo of a minimalist Scandinavian living room interior. White walls, natural oak wood flooring, a low-profile linen sofa in warm beige, a single fiddle-leaf fig plant in the corner. Soft diffused natural light from floor-to-ceiling windows. Architectural photography, wide angle, photorealistic.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "imagen4"
     ],
@@ -357,7 +357,7 @@
     "title": "Exterior Architecture Render",
     "description": "Photorealistic modern house exterior at golden hour \u2014 for architects and real estate",
     "prompt": "A photorealistic architectural render of a modern minimalist house exterior. Concrete and glass facade, flat roof, surrounded by sparse desert landscaping with agave plants. Golden hour lighting casting long shadows. Wide angle, professional architectural photography, no people.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "dalle3"
     ],
@@ -382,7 +382,7 @@
     "title": "Food Photography",
     "description": "Editorial restaurant-quality food photo with professional lighting and plating",
     "prompt": "A photo of a [dish name] served in a ceramic bowl on a dark slate surface. Garnished with fresh herbs and a drizzle of olive oil. Soft side lighting from the left, shallow depth of field with bokeh background. Editorial food photography, restaurant-quality plating, photorealistic.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "imagen4"
     ],
@@ -407,7 +407,7 @@
     "title": "Coffee Shop Aesthetic",
     "description": "Warm cozy latte art close-up for lifestyle brands, bloggers, and cafe marketing",
     "prompt": "A photorealistic close-up of a ceramic cup of latte art on a worn wooden cafe table. Morning light filtering through a window creating warm golden tones. A blurred open book in the background. Lifestyle photography, soft bokeh, film grain, cozy autumn aesthetic.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "dalle3"
     ],
@@ -432,7 +432,7 @@
     "title": "Abstract Luxury Wallpaper",
     "description": "Deep navy and molten gold fluid art \u2014 high-end desktop wallpaper or background asset",
     "prompt": "abstract fluid art, deep navy blue and molten gold ink in water, macro photography, swirling organic forms, high contrast, luxury aesthetic, 4K desktop wallpaper --ar 16:9 --style raw --v 6.1",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "midjourney"
     ],
@@ -457,7 +457,7 @@
     "title": "Dark Cinematic Landscape",
     "description": "Epic wide-format landscape with lone figure \u2014 for book covers, posters, and cinematic projects",
     "prompt": "vast dark cinematic landscape, lone figure standing on a cliff edge overlooking a stormy ocean at dusk, dramatic volumetric clouds, purple and deep teal color grade, epic scale, Terrence Malick cinematography --ar 21:9 --style raw --v 6.1",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "midjourney"
     ],
@@ -482,7 +482,7 @@
     "title": "Meta Image Prompt Generator",
     "description": "Use Claude to write optimized image prompts for Midjourney, DALL-E 3, and Stable Diffusion simultaneously",
     "prompt": "You are an expert image prompt engineer. I want to generate an image of [describe your concept vaguely].\n\nWrite me 3 versions of this prompt:\n1. For Midjourney v6.1 \u2014 keyword-first, comma-separated, with --ar and --style parameters\n2. For DALL-E 3 \u2014 descriptive prose, complete sentences, with explicit negative constraints at the end\n3. For Stable Diffusion \u2014 quality tags first, comma-separated, with a negative prompt section\n\nEach prompt should be ready to copy and paste with no modifications needed.",
-    "category": "image",
+    "category": "image-prompts",
     "platforms": [
       "claude"
     ],

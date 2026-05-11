@@ -14,19 +14,19 @@ interface Submission {
   submittedAt: string;
 }
 
-const CATEGORIES = ["study", "coding", "writing", "teaching", "business", "review", "testing", "linkedin", "image"];
+const CATEGORIES = ["study-learn", "write-create", "code-dev", "teaching", "business-marketing", "review-test", "testing", "career-brand", "image"];
 const PLATFORMS = ["claude", "chatgpt", "gemini", "grok", "any"];
 const IMAGE_PLATFORMS = ["midjourney", "dalle3", "imagen4", "stablediffusion"];
 
 const CATEGORY_LABELS: Record<string, string> = {
-  study: "Study",
-  coding: "Code",
-  writing: "Writing",
+  "study-learn": "Study & Learn",
+  "write-create": "Write & Create",
+  "code-dev": "Code & Dev",
   teaching: "Teaching",
-  business: "Business",
-  review: "Review",
+  "business-marketing": "Business & Marketing",
+  "review-test": "Review & Test",
   testing: "QA",
-  linkedin: "LinkedIn",
+  "career-brand": "Career & Brand",
   image: "Image"
 };
 
@@ -35,9 +35,9 @@ export default function SubmitPage() {
     title: "",
     description: "",
     prompt: "",
-    category: "study",
+    category: "study-learn",
     platforms: ["any"] as string[],
-    tags: "" as string[],
+    tags: [] as string[],
     imagePlatforms: [] as string[],
       });
 
@@ -51,13 +51,13 @@ export default function SubmitPage() {
         platforms: ["any"]
       }));
     } else {
-      setFormData(prev => ({
-        ...prev,
-        platforms: prev.platforms.filter(p => p !== "any"),
-        platforms: prev.platforms.includes(platform)
-          ? prev.platforms.filter(p => p !== platform)
-          : [...prev.platforms, platform]
-      }));
+      setFormData(prev => {
+        const updatedPlatforms = prev.platforms.filter(p => p !== "any");
+        const finalPlatforms = updatedPlatforms.includes(platform)
+          ? updatedPlatforms.filter(p => p !== platform)
+          : [...updatedPlatforms, platform];
+        return { ...prev, platforms: finalPlatforms };
+      });
     }
   };
 
@@ -80,6 +80,10 @@ export default function SubmitPage() {
 
     setIsSubmitting(true);
 
+    const tagsArray = typeof formData.tags === 'string'
+      ? formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag)
+      : formData.tags;
+
     const newSubmission: Submission = {
       id: Date.now().toString(),
       title: formData.title.trim(),
@@ -87,7 +91,7 @@ export default function SubmitPage() {
       prompt: formData.prompt.trim(),
       category: formData.category,
       platforms: formData.platforms,
-      tags: formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag),
+      tags: tagsArray,
       imagePlatforms: formData.imagePlatforms.length > 0 ? formData.imagePlatforms : undefined,
       submittedAt: new Date().toISOString()
     };
@@ -108,9 +112,9 @@ export default function SubmitPage() {
           title: "",
           description: "",
           prompt: "",
-          category: "study",
+          category: "study-learn",
           platforms: ["any"],
-          tags: [],
+          tags: "",
           imagePlatforms: [],
                   });
       } else {

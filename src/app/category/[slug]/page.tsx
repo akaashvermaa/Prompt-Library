@@ -5,15 +5,15 @@ import { notFound } from "next/navigation";
 
 const DIFF_CLASS: Record<string,string> = { beginner:"d-beg", intermediate:"d-int", advanced:"d-adv" };
 const CAT_LABELS: Record<string,{ label: string; italic: string }> = {
-  study:    { label: "Study",    italic: "Learning" },
-  coding:   { label: "Code",     italic: "Development" },
-  writing:  { label: "Writing",  italic: "Essays" },
-  teaching: { label: "Teaching", italic: "Explaining" },
-  business: { label: "Business", italic: "Email" },
-  review:   { label: "Review",   italic: "Feedback" },
-  testing:  { label: "QA",       italic: "Testing" },
-  linkedin: { label: "LinkedIn", italic: "Career" },
-  image:    { label: "Image",    italic: "Generation" },
+  "study-learn":     { label: "Study & Learn",     italic: "Learning" },
+  "write-create":    { label: "Write & Create",    italic: "Essays" },
+  "code-dev":        { label: "Code & Dev",        italic: "Development" },
+  teaching:          { label: "Teaching",          italic: "Explaining" },
+  "business-marketing": { label: "Business & Marketing", italic: "Email" },
+  "review-test":    { label: "Review & Test",    italic: "Feedback" },
+  testing:           { label: "QA",               italic: "Testing" },
+  "career-brand":    { label: "Career & Brand",    italic: "Career" },
+  image:             { label: "Image",             italic: "Generation" },
 };
 
 export async function generateStaticParams() {

@@ -10,8 +10,8 @@
     "tags": ["post", "thought-leadership", "lessons", "engagement"],
     "difficulty": "beginner",
     "featured": true,
-    "source": "Goldbear Media",
-    "useCase": "Converting everyday professional experiences into highly engaging, relatable thought-leadership narratives that create emotional connection."
+    "source": "r/LinkedInTips",
+    "useCase": "Converting raw professional experiences into structured, engagement-driving LinkedIn content."
   },
   {
     "id": "linkedin-002",
@@ -24,8 +24,8 @@
     "tags": ["authority", "pain-points", "problem-solving", "post"],
     "difficulty": "beginner",
     "featured": false,
-    "source": "Goldbear Media",
-    "useCase": "Positioning the author as an industry authority by directly addressing and resolving ubiquitous audience pain points."
+    "source": "r/LinkedInTips",
+    "useCase": "Establishing authority by directly addressing the most common daily frustrations of your target audience."
   },
   {
     "id": "linkedin-003",
@@ -38,8 +38,8 @@
     "tags": ["case-study", "social-proof", "results", "storytelling"],
     "difficulty": "intermediate",
     "featured": true,
-    "source": "Goldbear Media",
-    "useCase": "Building unshakeable credibility and social proof through data-backed, narrative case studies that prove competence."
+    "source": "r/LinkedInTips",
+    "useCase": "Building high-converting social proof posts through before/after client transformation narratives."
   },
   {
     "id": "linkedin-004",
@@ -52,8 +52,8 @@
     "tags": ["education", "simplification", "reach", "engagement"],
     "difficulty": "beginner",
     "featured": false,
-    "source": "Goldbear Media",
-    "useCase": "Expanding reach by democratizing complex industry jargon for a broader, non-technical audience, making the author highly approachable."
+    "source": "r/LinkedInTips",
+    "useCase": "Expanding audience reach by making complex industry concepts accessible to non-expert followers."
   },
   {
     "id": "linkedin-005",
@@ -66,8 +66,8 @@
     "tags": ["controversy", "myth-busting", "engagement", "thought-leadership"],
     "difficulty": "intermediate",
     "featured": false,
-    "source": "Goldbear Media",
-    "useCase": "Sparking algorithmic engagement and prolonged discourse by leveraging mild, professional controversy and challenging misconceptions."
+    "source": "r/LinkedInTips",
+    "useCase": "Driving high comment engagement through politely controversial myth-debunking content."
   },
   {
     "id": "linkedin-006",
@@ -80,8 +80,8 @@
     "tags": ["headline", "SEO", "profile", "recruiter"],
     "difficulty": "beginner",
     "featured": true,
-    "source": "FlowGPT / Careerflow",
-    "useCase": "Ensuring the profile ranks highly in recruiter search queries while immediately communicating distinct professional value."
+    "source": "Distribution AI",
+    "useCase": "Optimizing profiles for recruiter search algorithms while proving immediate value proposition."
   },
   {
     "id": "linkedin-007",
@@ -94,8 +94,8 @@
     "tags": ["about", "summary", "profile", "personal-brand"],
     "difficulty": "beginner",
     "featured": false,
-    "source": "FlowGPT / Careerflow",
-    "useCase": "Creating an easily digestible, highly engaging professional bio that avoids the sterile, corporate tone of traditional resumes."
+    "source": "r/LinkedInTips",
+    "useCase": "Creating an authentic, human-sounding LinkedIn About section that converts profile visitors to connections."
   },
   {
     "id": "linkedin-008",
@@ -108,21 +108,147 @@
     "tags": ["experience", "achievements", "metrics", "resume"],
     "difficulty": "beginner",
     "featured": false,
-    "source": "FlowGPT / Careerflow",
-    "useCase": "Translating static job duties into dynamic, metric-driven achievements that prove organizational impact and historical success."
+    "source": "r/LinkedInTips",
+    "useCase": "Transforming generic job duties into quantified achievement statements that prove measurable organizational impact."
   },
   {
     "id": "linkedin-009",
     "slug": "vulnerable-business-story",
     "title": "The Vulnerable Business Story",
-    "description": "Writes an authentic post about a professional failure or challenge — the content type that builds the deepest trust",
+    "description": "Writes an authentic post about a professional failure — the content type that builds the deepest trust",
     "prompt": "Write a LinkedIn post about a time I faced a significant challenge or failure in [work / business / career].\n\nDetails: [describe the situation briefly]\n\nStructure:\n1. Open with the moment things went wrong — put the reader in the scene\n2. Describe what I tried that didn't work\n3. What I finally learned from it (the real insight, not a cliché)\n4. How it changed how I work or think now\n\nRules:\n- Be genuinely vulnerable — not performatively vulnerable\n- Do NOT end with 'Everything happens for a reason'\n- Under 220 words\n- No bullet points — narrative paragraphs only",
     "category": "linkedin",
     "platforms": ["claude"],
     "tags": ["vulnerability", "storytelling", "authenticity", "trust"],
     "difficulty": "intermediate",
     "featured": false,
+    "source": "GeeksforGeeks",
+    "useCase": "Humanizing professional profiles to build authentic trust through genuine vulnerability."
+  },
+  {
+    "id": "linkedin-010",
+    "slug": "metric-driven-headline-generator",
+    "title": "The Metric-Driven Headline Generator",
+    "description": "Generates 5 LinkedIn headlines with industry keywords and measurable results in under 120 characters",
+    "prompt": "I'm a [current job title] in [target industry]. Write 5 LinkedIn headline options (≤120 characters each). Include 3 industry-specific keywords and reference a measurable result or clear value proposition.",
+    "category": "linkedin",
+    "platforms": ["any"],
+    "tags": ["headline", "keywords", "metrics", "value-proposition"],
+    "difficulty": "beginner",
+    "featured": false,
+    "source": "Distribution AI",
+    "useCase": "Optimizing profiles for recruiter search algorithms while proving value through measurable results."
+  },
+  {
+    "id": "linkedin-011",
+    "slug": "opinion-sparking-trend-post",
+    "title": "The Opinion-Sparking Trend Post",
+    "description": "Creates slightly controversial but professional posts that invite debate and drive comment engagement",
+    "prompt": "Write a post that invites opinions about [industry trend/tool] to encourage engagement. Example: 'Do you trust AI-generated content in production?' Keep it slightly controversial but highly professional.",
+    "category": "linkedin",
+    "platforms": ["chatgpt"],
+    "tags": ["controversy", "opinions", "engagement", "trending"],
+    "difficulty": "beginner",
+    "featured": false,
     "source": "Goldbear Media",
-    "useCase": "Fostering deep trust and humanizing the professional brand, as vulnerability heavily outperforms sterile corporate updates algorithmically."
+    "useCase": "Leveraging algorithmic engagement through active debate that drives comment volume."
+  },
+  {
+    "id": "linkedin-012",
+    "slug": "quick-tip-series-format",
+    "title": "The Quick-Tip Series Format",
+    "description": "Builds consistent authority through a recurring niche tip series with hook and clear takeaway",
+    "prompt": "Write a short LinkedIn post sharing a quick, highly actionable tip related to [Niche]. Format it for a recurring series (e.g., '#MarketingMonday'). Include a clear hook and a one-sentence takeaway.",
+    "category": "linkedin",
+    "platforms": ["claude"],
+    "tags": ["series", "tips", "consistency", "authority"],
+    "difficulty": "beginner",
+    "featured": false,
+    "source": "Goldbear Media",
+    "useCase": "Building consistent authority through high-frequency, low-friction recurring content series."
+  },
+  {
+    "id": "linkedin-013",
+    "slug": "blog-to-carousel-converter",
+    "title": "The Blog-to-Carousel Converter",
+    "description": "Converts long-form blog posts into high-performing carousel slides under 30 words per slide",
+    "prompt": "Turn the pasted blog post into a LinkedIn carousel format. Extract 3–5 quick, punchy takeaways. Provide the exact text for each slide, ensuring the word count per slide is under 30 words.",
+    "category": "linkedin",
+    "platforms": ["any"],
+    "tags": ["carousel", "repurposing", "visual", "engagement"],
+    "difficulty": "beginner",
+    "featured": false,
+    "source": "Goldbear Media",
+    "useCase": "Repurposing long-form content into high-performing LinkedIn visual carousel assets."
+  },
+  {
+    "id": "linkedin-014",
+    "slug": "motivational-empathy-hook",
+    "title": "The Motivational Empathy Hook",
+    "description": "Validates audience frustration then pivots to an empowering mindset shift for deep emotional rapport",
+    "prompt": "Write a motivational post that speaks directly to a [target audience] who feels stuck with their [pain point, e.g. visibility or growth]. Validate their frustration, then pivot to an empowering mindset shift.",
+    "category": "linkedin",
+    "platforms": ["claude", "gemini"],
+    "tags": ["motivation", "empathy", "emotional", "mindset"],
+    "difficulty": "beginner",
+    "featured": false,
+    "source": "Goldbear Media",
+    "useCase": "Establishing deep emotional rapport with prospective clients through validated empathy."
+  },
+  {
+    "id": "linkedin-015",
+    "slug": "academic-networking-icebreaker",
+    "title": "The Academic Networking Icebreaker",
+    "description": "Writes hyper-targeted 75-word connection requests that reference the recipient's actual recent work",
+    "prompt": "Draft a personalized LinkedIn connection request. State my academic area of focus ([Focus]) and reference their recent work in [their research area]. Propose a mutual exchange of insights. Limit to 75 words.",
+    "category": "linkedin",
+    "platforms": ["chatgpt"],
+    "tags": ["networking", "connection-request", "academic", "personalized"],
+    "difficulty": "beginner",
+    "featured": false,
+    "source": "GeeksforGeeks",
+    "useCase": "Bypassing generic connection requests with hyper-targeted, relevance-driven academic networking."
+  },
+  {
+    "id": "linkedin-016",
+    "slug": "future-casting-thought-leader",
+    "title": "The Future-Casting Thought Leader",
+    "description": "Posts 3 bold 5-year industry predictions and asks the audience for their take in comments",
+    "prompt": "Explore a visionary concept of what the future of the field of [industry] might look like in 5 years. Outline 3 bold predictions and end by asking the audience to drop their ideas in the comments.",
+    "category": "linkedin",
+    "platforms": ["claude"],
+    "tags": ["future", "predictions", "thought-leadership", "visionary"],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "GeeksforGeeks",
+    "useCase": "Positioning the author as an industry visionary ahead of market trends."
+  },
+  {
+    "id": "linkedin-017",
+    "slug": "event-anticipation-builder",
+    "title": "The Event Anticipation Builder",
+    "description": "Capitalizes on conference hype to build real-world professional networks through public excitement posts",
+    "prompt": "Draft a post expressing excitement for the upcoming [event name]. Highlight the top 2 speakers I am looking forward to, and ask the network who else is attending to facilitate real-world meetups.",
+    "category": "linkedin",
+    "platforms": ["any"],
+    "tags": ["events", "networking", "conferences", "meetups"],
+    "difficulty": "beginner",
+    "featured": false,
+    "source": "GeeksforGeeks",
+    "useCase": "Capitalizing on conference hype to build offline professional networks through public online visibility."
+  },
+  {
+    "id": "linkedin-018",
+    "slug": "small-business-tool-transformer",
+    "title": "The Small Business Tool Transformer",
+    "description": "Transforms technical B2B articles into time-saving and ROI-focused LinkedIn social copy",
+    "prompt": "Transform this technical article about small business tools into a concise, engaging LinkedIn post. Focus on the time-saving benefits and ROI rather than the software specifications.",
+    "category": "linkedin",
+    "platforms": ["chatgpt"],
+    "tags": ["B2B", "tools", "ROI", "repurposing"],
+    "difficulty": "beginner",
+    "featured": false,
+    "source": "r/ChatGPTPro",
+    "useCase": "Translating dense B2B technical data into scroll-stopping social copy focused on real business outcomes."
   }
 ]
