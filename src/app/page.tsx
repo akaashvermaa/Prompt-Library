@@ -31,7 +31,7 @@ export default function Home() {
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </Link>
-            <Link href="#" className="btn-sec">Submit a prompt</Link>
+            <Link href="/submit" className="btn-sec">Submit a prompt</Link>
           </div>
         </div>
       </section>

@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export function Footer() {
@@ -33,16 +34,25 @@ export function Footer() {
           <div>
             <h5>Project</h5>
             <ul>
-              <li><Link href="#">Submit a prompt</Link></li>
-              <li><Link href="#">Editorial guidelines</Link></li>
-              <li><Link href="#">Changelog</Link></li>
-              <li><Link href="#">GitHub</Link></li>
+              <li><Link href="/submit">Submit a prompt</Link></li>
+              <li><Link href="/#">Editorial guidelines</Link></li>
+              <li><Link href="/#">Changelog</Link></li>
+              <li><Link href="/#">GitHub</Link></li>
             </ul>
           </div>
         </div>
         <div className="foot-bar">
           <span>© 2026 PROMPTVAULT — A LIBRARY, NOT A FEED</span>
-          <span>VOL.04 / BUILT WITH CARE</span>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+            <Link
+              href="/admin"
+              className="admin-link"
+              style={{ fontSize: '11px', textDecoration: 'none', padding: '6px 12px', border: '1px solid var(--line-2)', borderRadius: '999px' }}
+            >
+              Admin Panel
+            </Link>
+            <span>VOL.04 / BUILT WITH CARE</span>
+          </div>
         </div>
       </div>
     </footer>

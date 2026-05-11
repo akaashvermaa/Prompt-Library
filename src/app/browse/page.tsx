@@ -94,7 +94,8 @@ function BrowseContent() {
     }
   }, [params]);
 
-  return (
+  console.log("Rendering BrowseContent with totalPages:", totalPages, "currentPage:", currentPage);
+      return (
     <>
       {/* Search */}
       <div className="search-shell browse-content">

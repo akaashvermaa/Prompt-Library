@@ -214,13 +214,25 @@ section { padding: 120px 0; position: relative; }
 .loading-text { color: var(--muted); padding: 40px 0; font-family: monospace; font-size: 13; }
 
 /* Pagination */
-.pagination { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 60px; margin-bottom: 60px; }
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: var(--surface);
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
 .page-btn {
   padding: 8px 16px;
   border: 1px solid var(--line);
   border-radius: 6px;
   font-size: 14px;
   color: var(--muted);
+  background: var(--surface);
   transition: all 0.2s;
   cursor: pointer;
 }
@@ -233,6 +245,7 @@ section { padding: 120px 0; position: relative; }
   border-radius: 6px;
   font-size: 14px;
   color: var(--muted);
+  background: var(--surface);
   transition: all 0.2s;
   cursor: pointer;
   min-width: 36px;
