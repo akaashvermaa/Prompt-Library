@@ -7,12 +7,12 @@ import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { CopyButton } from "@/components/ui/CopyButton";
 import type { Platform } from "@/types";
 
-const TABS = ["all", "claude", "chatgpt", "gemini", "grok"] as const;
-const CATS = ["all", "study", "coding", "writing", "teaching", "business", "review", "testing", "linkedin", "image"];
+const TABS = ["any", "claude", "chatgpt", "gemini", "grok"] as const;
+const CATS = ["all", "study-learn", "write-create", "code-dev", "teaching", "business-marketing", "review-test", "testing", "career-brand", "image"];
 
 const CAT_LABEL: Record<string, string> = {
-  study: "Study", coding: "Code", writing: "Writing", teaching: "Teaching",
-  business: "Business", review: "Review", testing: "QA", linkedin: "LinkedIn", image: "Image",
+  "study-learn": "Study & Learn", "write-create": "Write & Create", "code-dev": "Code & Dev", teaching: "Teaching",
+  "business-marketing": "Business & Marketing", "review-test": "Review & Test", testing: "QA", "career-brand": "Career & Brand", image: "Image",
 };
 
 // Quick search suggestions
@@ -30,7 +30,7 @@ const SEARCH_SUGGESTIONS = [
 
 function BrowseContent() {
   const params = useSearchParams();
-  const [platform, setPlatform] = useState<Platform>("all");
+  const [platform, setPlatform] = useState<Platform>("any");
   const [category, setCategory] = useState("all");
   // Live search — no separate "commit" state needed
   const [query, setQuery] = useState(params.get("search") ?? "");
@@ -41,7 +41,7 @@ function BrowseContent() {
   const results = useMemo(() => {
     let out = ALL_PROMPTS;
 
-    if (platform !== "all") {
+    if (platform !== "any") {
       if (platform === "claude") {
         // For Claude, only show prompts that specifically include claude
         out = out.filter(p => p.platforms.includes("claude"));
@@ -95,7 +95,8 @@ function BrowseContent() {
   }, [params]);
 
   console.log("Rendering BrowseContent with totalPages:", totalPages, "currentPage:", currentPage);
-      return (
+
+  return (
     <>
       {/* Search */}
       <div className="search-shell browse-content">
@@ -135,43 +136,12 @@ function BrowseContent() {
                 setCurrentPage(1);
               }}
             >
-              {t === "all" ? "All models" : t === "chatgpt" ? "ChatGPT" : t.charAt(0).toUpperCase() + t.slice(1)}
+              {t === "any" ? "All models" : t === "chatgpt" ? "ChatGPT" : t.charAt(0).toUpperCase() + t.slice(1)}
             </button>
           ))}
         </div>
-        <div className="meta">Showing <span className="it">{paginatedResults.length}</span> of <span className="it">{results.length}</span> ({totalPages} pages)</div>
-
-        {/* Quick search suggestions */}
-        <div style={{marginTop: '20px'}}>
-          <div style={{fontSize: '13px', color: 'var(--muted-2)', marginBottom: '10px'}}>Quick search:</div>
-          <div style={{display: 'flex', flexWrap: 'wrap', gap: '8px'}}>
-            {SEARCH_SUGGESTIONS.slice(0, 6).map(suggestion => (
-              <button
-                key={suggestion}
-                onClick={() => setQuery(suggestion)}
-                style={{
-                  padding: '6px 12px',
-                  border: '1px solid var(--line)',
-                  borderRadius: '999px',
-                  fontSize: '12px',
-                  color: 'var(--muted)',
-                  background: 'var(--surface)',
-                  transition: 'all 0.2s',
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--amber)';
-                  e.currentTarget.style.color = 'var(--text)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'var(--line)';
-                  e.currentTarget.style.color = 'var(--muted)';
-                }}
-              >
-                {suggestion}
-              </button>
-            ))}
-          </div>
+        <div className="meta">
+          {results.length} prompt{results.length !== 1 ? 's' : ''}
         </div>
       </div>
 
@@ -200,6 +170,9 @@ function BrowseContent() {
           <Link key={p.id} href={`/prompt/${p.slug}`} className="bcard">
             <div className="row1">
               <span className="cat-tag">{CAT_LABEL[p.category] ?? p.category}</span>
+              <span className={`diff ${p.difficulty === 'beginner' ? 'd-beg' : p.difficulty === 'intermediate' ? 'd-int' : 'd-adv'}`}>
+                {p.difficulty.charAt(0).toUpperCase() + p.difficulty.slice(1)}
+              </span>
             </div>
             <h4>{p.title}</h4>
             <p>{p.description}</p>
@@ -207,33 +180,26 @@ function BrowseContent() {
               <div className="badges">
                 {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
               </div>
-              <span className="mono tag-mono">
+              <span className="mono" style={{ fontSize: 11, color: "var(--muted-2)" }}>
                 {p.tags.slice(0, 2).map(t => `#${t}`).join(" ")}
               </span>
             </div>
-
-            {/* Show "Paste this into" for image prompts */}
-            {p.category === 'image' && p.imagePlatforms && p.imagePlatforms.length > 0 && (
-              <div style={{
-                marginTop: '8px',
-                fontSize: '12px',
-                color: 'var(--muted)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '4px'
-              }}>
+            {p.imagePlatforms && p.imagePlatforms.length > 0 && (
+              <div className="image-platforms" style={{ position: 'absolute', bottom: 60, left: 16, right: 16, background: 'var(--surface)', padding: '12px', borderRadius: '6px', border: '1px solid var(--line)' }}>
                 <span style={{color: 'var(--amber)'}}>Paste this into →</span>
-                {p.imagePlatforms.map((ip, idx) => (
-                  <span key={ip} className="pbadge" style={{fontSize: '11px', padding: '2px 8px'}}>
-                    {ip === 'midjourney' ? 'Midjourney' :
-                     ip === 'dalle3' ? 'DALL-E 3' :
-                     ip === 'imagen4' ? 'Imagen 4' :
-                     ip === 'stablediffusion' ? 'Stable Diffusion' : ip}
-                  </span>
-                ))}
+                <div style={{ marginTop: '6px' }}>
+                  {p.imagePlatforms.map((ip, idx) => (
+                    <span key={ip} className="pbadge" style={{fontSize: '11px', padding: '2px 8px', marginRight: '6px', marginBottom: '4px', display: 'inline-block' }}>
+                      {ip === 'midjourney' ? 'Midjourney' :
+                       ip === 'dalle3' ? 'DALL-E 3' :
+                       ip === 'imagen4' ? 'Imagen 4' :
+                       ip === 'stablediffusion' ? 'Stable Diffusion' : ip}
+                    </span>
+                  ))}
+                </div>
               </div>
             )}
-            <div className="copy-container">
+            <div className="copy-container" style={{ position: 'absolute', top: 16, right: 16, opacity: 0, transition: 'opacity 0.2s' }}>
               <CopyButton text={p.prompt} />
             </div>
           </Link>
@@ -246,7 +212,7 @@ function BrowseContent() {
             No prompts match your filters.
           </p>
           <button
-            onClick={() => { setPlatform("all"); setCategory("all"); setQuery(""); }}
+            onClick={() => { setPlatform("any"); setCategory("all"); setQuery(""); }}
             className="btn-sec"
           >
             Clear all filters
@@ -254,9 +220,9 @@ function BrowseContent() {
         </div>
       )}
 
-      
       {/* Pagination */}
-      <div className="pagination">
+      {totalPages > 1 && (
+        <div className="pagination">
           <button
             onClick={() => setCurrentPage(p => Math.max(1, p - 1))}
             disabled={currentPage === 1}
@@ -299,7 +265,8 @@ function BrowseContent() {
           >
             Next
           </button>
-      </div>
+        </div>
+      )}
     </>
   );
 }

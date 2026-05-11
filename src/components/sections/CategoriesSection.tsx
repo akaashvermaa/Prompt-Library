@@ -2,15 +2,15 @@ import { getAllPrompts } from "@/lib/prompts";
 import Link from "next/link";
 
 const CATEGORIES = [
-  { slug: "study",    label: "Study",    italic: "Learning" },
-  { slug: "coding",   label: "Code",     italic: "Development" },
-  { slug: "writing",  label: "Writing",  italic: "Essays" },
-  { slug: "teaching", label: "Teaching", italic: "Explaining" },
-  { slug: "business", label: "Business", italic: "Email" },
-  { slug: "review",   label: "Review",   italic: "Feedback" },
-  { slug: "testing",  label: "QA",       italic: "Testing" },
-  { slug: "linkedin", label: "LinkedIn", italic: "Career" },
-  { slug: "image",    label: "Image",    italic: "Generation" },
+  { slug: "study-learn",     label: "Study & Learn",     italic: "Learning" },
+  { slug: "write-create",    label: "Write & Create",    italic: "Essays" },
+  { slug: "code-dev",        label: "Code & Dev",        italic: "Development" },
+  { slug: "teaching",        label: "Teaching",        italic: "Explaining" },
+  { slug: "business-marketing", label: "Business & Marketing", italic: "Email" },
+  { slug: "review-test",    label: "Review & Test",    italic: "Feedback" },
+  { slug: "testing",         label: "QA",              italic: "Testing" },
+  { slug: "career-brand",    label: "Career & Brand",   italic: "Career" },
+  { slug: "image",           label: "Image",           italic: "Generation" },
 ];
 
 const ArrowIcon = () => (

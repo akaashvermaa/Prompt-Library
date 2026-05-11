@@ -4,7 +4,7 @@ export interface Prompt {
   title: string
   description: string       // 1-line summary
   prompt: string            // The full detailed prompt
-  category: string          // "study" | "coding" | etc.
+  category: string          // "study-learn" | "write-create" | "code-dev" | "career-brand" | "business-marketing" | "review-test" | "image" | "teaching" | "testing"
   platforms: Platform[]     // ["chatgpt", "claude", "gemini"]
   imagePlatforms?: Platform[] // For image prompts: where to paste the prompt
   tags: string[]            // ["summarization", "beginner", etc.]
