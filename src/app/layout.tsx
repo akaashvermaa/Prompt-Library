@@ -3,7 +3,6 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { Cursor } from "@/components/Cursor";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 
@@ -22,7 +21,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         <div className="grain" />
-        <Cursor />
         <Navbar />
         {children}
         <Footer />

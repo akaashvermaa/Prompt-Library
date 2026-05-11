@@ -17,8 +17,8 @@ export function Hero() {
         <div className="hero-meta">
           <span className="bar" />
           <span>A library, not a feed</span>
-          <span>—</span>
-          <span>Vol. 04 / 2026</span>
+          
+          
         </div>
 
         <h1>
@@ -30,17 +30,17 @@ export function Hero() {
 
         <div className="hero-row">
           <p className="hero-sub">
-            A curated, living archive of <strong>tested prompts</strong> for Claude, ChatGPT,
-            Gemini and Grok. No fluff, no infinite scroll &mdash; just the ones that actually work,
+            A curated, living archive of <strong>tested prompts for text and image generation for Claude, ChatGPT,
+            Gemini and Grok</strong> . No fluff, no infinite scroll &mdash; just the ones that actually work,
             sorted by craft.
           </p>
           <div className="hero-stats">
             <div className="stat">
-              <div className="n">242</div>
+              <div className="n">272</div>
               <div className="l">Curated prompts</div>
             </div>
             <div className="stat">
-              <div className="n"><span className="it">8</span></div>
+              <div className="n"><span className="it">9</span></div>
               <div className="l">Categories</div>
             </div>
             <div className="stat">
@@ -59,7 +59,7 @@ export function Hero() {
                 </svg>
                 <input
                   type="text"
-                  placeholder={`Search 242 prompts — try "explain like I'm five"`}
+                  placeholder={`Search 96 prompts — try "explain like I'm five"`}
                   value={query}
                   onChange={e => setQuery(e.target.value)}
                   onKeyDown={e => e.key === "Enter" && search()}

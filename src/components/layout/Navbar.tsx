@@ -27,7 +27,7 @@ export function Navbar() {
         <div className="nav-cta">
           <span className="pill">
             <span className="dot" />
-            242 prompts indexed
+            96 prompts indexed
           </span>
         </div>
       </div>

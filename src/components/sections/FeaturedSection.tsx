@@ -23,7 +23,7 @@ export async function FeaturedSection() {
             <div className="eyebrow">Featured / handpicked</div>
             <h2>The ones we keep <span className="it">coming back</span> to.</h2>
           </div>
-          <p className="lede">A rotating shelf of prompts our editors actually use. Updated weekly — old favourites archive into Browse.</p>
+          <p className="lede">A rotating shelf of prompts our editors actually use. Updated weekly old favourites archive into Browse.</p>
         </div>
 
         <div className="feat-grid">
