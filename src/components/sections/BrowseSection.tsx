@@ -17,9 +17,16 @@ export function BrowseSection() {
   // Synchronous — no useEffect, no loading flash
   const visible = useMemo(() => {
     if (platform === "all") return ALL_PROMPTS;
-    return ALL_PROMPTS.filter(p =>
-      p.platforms.includes(platform as never) || p.platforms.includes("any" as never)
-    );
+
+    if (platform === "claude") {
+      // For Claude, only show prompts that specifically include claude
+      return ALL_PROMPTS.filter(p => p.platforms.includes("claude" as never));
+    } else {
+      // For other platforms, show prompts that include that platform OR "any"
+      return ALL_PROMPTS.filter(p =>
+        p.platforms.includes(platform as never) || p.platforms.includes("any" as never)
+      );
+    }
   }, [platform]);
 
   const shown = visible.slice(0, 12);
@@ -62,7 +69,7 @@ export function BrowseSection() {
                 <div className="badges">
                   {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
                 </div>
-                <span className="mono" style={{ fontSize: 11, color: "var(--muted-2)" }}>
+                <span className="mono tag-mono">
                   {p.tags.slice(0, 2).map(t => `#${t}`).join(" ")}
                 </span>
               </div>

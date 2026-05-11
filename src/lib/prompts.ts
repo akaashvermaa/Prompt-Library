@@ -9,6 +9,7 @@ import businessPrompts from '@/data/prompts/business.json'
 import reviewPrompts from '@/data/prompts/review.json'
 import testingPrompts from '@/data/prompts/testing.json'
 import linkedinPrompts from '@/data/prompts/linkedin.json'
+import imagePrompts from '@/data/prompts/image.json'
 
 // Synchronous export — client components use this directly for instant filtering
 export const ALL_PROMPTS: Prompt[] = [
@@ -20,6 +21,7 @@ export const ALL_PROMPTS: Prompt[] = [
   ...reviewPrompts,
   ...testingPrompts,
   ...linkedinPrompts,
+  ...imagePrompts,
 ] as Prompt[]
 
 export async function getAllPrompts(): Promise<Prompt[]> {
@@ -35,9 +37,15 @@ export async function getBySlug(slug: string): Promise<Prompt | null> {
 }
 
 export async function getPromptsByPlatform(platform: string): Promise<Prompt[]> {
-  return ALL_PROMPTS.filter(p =>
-    p.platforms.includes(platform as any) || p.platforms.includes('any')
-  )
+  if (platform === 'claude') {
+    // For Claude, only show prompts that specifically include claude
+    return ALL_PROMPTS.filter(p => p.platforms.includes('claude' as any))
+  } else {
+    // For other platforms, show prompts that include that platform OR "any"
+    return ALL_PROMPTS.filter(p =>
+      p.platforms.includes(platform as any) || p.platforms.includes('any')
+    )
+  }
 }
 
 export async function getFeaturedPrompts(): Promise<Prompt[]> {
@@ -66,9 +74,15 @@ export async function filterPrompts(options: {
     result = result.filter(p => p.category === options.category)
   }
   if (options.platform) {
-    result = result.filter(p =>
-      p.platforms.includes(options.platform as any) || p.platforms.includes('any')
-    )
+    if (options.platform === 'claude') {
+      // For Claude, only show prompts that specifically include claude
+      result = result.filter(p => p.platforms.includes('claude' as any))
+    } else {
+      // For other platforms, show prompts that include that platform OR "any"
+      result = result.filter(p =>
+        p.platforms.includes(options.platform as any) || p.platforms.includes('any')
+      )
+    }
   }
   if (options.difficulty) {
     result = result.filter(p => p.difficulty === options.difficulty)
