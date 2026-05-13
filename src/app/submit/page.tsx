@@ -37,7 +37,7 @@ export default function SubmitPage() {
     prompt: "",
     category: "study-learn",
     platforms: ["any"] as string[],
-    tags: [] as string[],
+    tags: "",
     imagePlatforms: [] as string[],
       });
 
@@ -80,9 +80,9 @@ export default function SubmitPage() {
 
     setIsSubmitting(true);
 
-    const tagsArray = typeof formData.tags === 'string'
+    const tagsArray = formData.tags
       ? formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag)
-      : formData.tags;
+      : [];
 
     const newSubmission: Submission = {
       id: Date.now().toString(),

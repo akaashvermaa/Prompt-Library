@@ -8,9 +8,10 @@ interface ActionBody {
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const resolvedParams = await params;
     const { action } = await request.json() as ActionBody;
 
     if (!action || !["approve", "reject"].includes(action)) {
@@ -23,7 +24,7 @@ export async function POST(
     // For approve action, you might want to add the prompt to the main prompts.json
     // For this example, we'll just remove the submission
     const listPath = path.join(process.cwd(), 'data', 'submissions', 'submissions.json');
-    const submissionPath = path.join(process.cwd(), 'data', 'submissions', `submission_${params.id}.json`);
+    const submissionPath = path.join(process.cwd(), 'data', 'submissions', `submission_${resolvedParams.id}.json`);
 
     // If approving, you might want to:
     // 1. Add to main prompts.json
@@ -36,7 +37,7 @@ export async function POST(
       const submissions = JSON.parse(existingData);
 
       // Find and remove the submission
-      const updatedSubmissions = submissions.filter((s: any) => s.id !== params.id);
+      const updatedSubmissions = submissions.filter((s: any) => s.id !== resolvedParams.id);
 
       // Write back the updated list
       await fs.writeFile(listPath, JSON.stringify(updatedSubmissions, null, 2));
