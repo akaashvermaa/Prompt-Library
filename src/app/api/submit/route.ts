@@ -1,24 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
-
-interface Submission {
-  id: string;
-  title: string;
-  description: string;
-  prompt: string;
-  category: string;
-  platforms: string[];
-  tags: string[];
-  imagePlatforms?: string[];
-  submittedAt: string;
-}
+import { supabase } from '@/lib/supabase';
 
 export async function POST(request: NextRequest) {
   try {
-    const submission: Submission = await request.json();
+    const submission = await request.json();
 
-    // Validate required fields
+    // Validate required fields loosely
     if (!submission.title || !submission.description || !submission.prompt || !submission.category) {
       return NextResponse.json(
         { message: 'Missing required fields' },
@@ -26,36 +13,27 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Ensure the submission directory exists
-    const submissionsDir = path.join(process.cwd(), 'data', 'submissions');
-    try {
-      await fs.access(submissionsDir);
-    } catch {
-      await fs.mkdir(submissionsDir, { recursive: true });
+    // Add a submitted timestamp if not present
+    if (!submission.submittedAt) {
+      submission.submittedAt = new Date().toISOString();
     }
 
-    // Save the submission to a unique file
-    const filename = `submission_${submission.id}.json`;
-    const filePath = path.join(submissionsDir, filename);
+    // Insert the entire JSON object into the `data` column
+    const { data, error } = await supabase
+      .from('submissions')
+      .insert([{ data: submission }])
+      .select();
 
-    await fs.writeFile(filePath, JSON.stringify(submission, null, 2));
-
-    // Also append to a submissions list file for easy access
-    const listPath = path.join(submissionsDir, 'submissions.json');
-    let submissionsList: Submission[] = [];
-
-    try {
-      const existingData = await fs.readFile(listPath, 'utf-8');
-      submissionsList = JSON.parse(existingData);
-    } catch {
-      // File doesn't exist or is empty, start with empty array
+    if (error) {
+      console.error('Supabase insert error:', error);
+      return NextResponse.json(
+        { message: 'Failed to save submission to database' },
+        { status: 500 }
+      );
     }
-
-    submissionsList.push(submission);
-    await fs.writeFile(listPath, JSON.stringify(submissionsList, null, 2));
 
     return NextResponse.json(
-      { message: 'Prompt submitted successfully', id: submission.id },
+      { message: 'Prompt submitted successfully', id: data?.[0]?.id },
       { status: 200 }
     );
   } catch (error) {
@@ -69,15 +47,23 @@ export async function POST(request: NextRequest) {
 
 export async function GET() {
   try {
-    const listPath = path.join(process.cwd(), 'data', 'submissions', 'submissions.json');
+    const { data, error } = await supabase
+      .from('submissions')
+      .select('id, data');
 
-    let submissions: Submission[] = [];
-    try {
-      const data = await fs.readFile(listPath, 'utf-8');
-      submissions = JSON.parse(data);
-    } catch {
-      // File doesn't exist, return empty array
+    if (error) {
+      console.error('Supabase fetch error:', error);
+      return NextResponse.json(
+        { message: 'Failed to fetch submissions' },
+        { status: 500 }
+      );
     }
+
+    // Return the JSON objects directly, merging the database ID if needed
+    const submissions = data.map(sub => ({
+      db_id: sub.id,
+      ...sub.data
+    }));
 
     return NextResponse.json(submissions);
   } catch (error) {

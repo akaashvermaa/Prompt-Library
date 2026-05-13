@@ -1,7 +1,7 @@
 "use client";
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import { ALL_PROMPTS } from "@/lib/prompts";
+import { Prompt } from "@/types";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
 
 const TABS = ["all", "claude", "chatgpt", "gemini", "grok"] as const;
@@ -11,23 +11,23 @@ const CAT_LABEL: Record<string, string> = {
   business: "Business", review: "Review", testing: "QA", linkedin: "LinkedIn",
 };
 
-export function BrowseSection() {
+export function BrowseSection({ prompts }: { prompts: Prompt[] }) {
   const [platform, setPlatform] = useState("all");
 
   // Synchronous — no useEffect, no loading flash
   const visible = useMemo(() => {
-    if (platform === "all") return ALL_PROMPTS;
+    if (platform === "all") return prompts;
 
     if (platform === "claude") {
       // For Claude, only show prompts that specifically include claude
-      return ALL_PROMPTS.filter(p => p.platforms.includes("claude" as never));
+      return prompts.filter(p => p.platforms.includes("claude" as never));
     } else {
       // For other platforms, show prompts that include that platform OR "any"
-      return ALL_PROMPTS.filter(p =>
+      return prompts.filter(p =>
         p.platforms.includes(platform as never) || p.platforms.includes("any" as never)
       );
     }
-  }, [platform]);
+  }, [platform, prompts]);
 
   const shown = visible.slice(0, 12);
 
@@ -36,7 +36,7 @@ export function BrowseSection() {
       <div className="wrap">
         <div className="sec-head">
           <div>
-            <div className="eyebrow">Browse / {ALL_PROMPTS.length} total</div>
+            <div className="eyebrow">Browse / {prompts.length} total</div>
             <h2>The whole <span className="it">stack</span>, filtered.</h2>
           </div>
           <p className="lede">Filter by model. Click any card to open the full prompt with copy &amp; variables.</p>
