@@ -5,14 +5,18 @@ import { FeaturedSection } from "@/components/sections/FeaturedSection";
 import { CategoriesSection } from "@/components/sections/CategoriesSection";
 import { BrowseSection } from "@/components/sections/BrowseSection";
 
-export default function Home() {
+import { getAllPrompts } from "@/lib/prompts";
+
+export default async function Home() {
+  const prompts = await getAllPrompts();
+  
   return (
     <>
       <Hero />
       <Marquee />
       <FeaturedSection />
       <CategoriesSection />
-      <BrowseSection />
+      <BrowseSection prompts={prompts} />
 
       {/* CTA */}
       <section className="cta-section">

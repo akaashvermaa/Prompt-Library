@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs/promises';
-import path from 'path';
+import { supabase } from '@/lib/supabase';
 
 interface ActionBody {
   action: "approve" | "reject";
@@ -21,45 +20,26 @@ export async function POST(
       );
     }
 
-    // For approve action, you might want to add the prompt to the main prompts.json
-    // For this example, we'll just remove the submission
-    const listPath = path.join(process.cwd(), 'data', 'submissions', 'submissions.json');
-    const submissionPath = path.join(process.cwd(), 'data', 'submissions', `submission_${resolvedParams.id}.json`);
+    // We can delete by matching the JSON data ID or the DB row ID. 
+    // Here we assume resolvedParams.id corresponds to the db_id or the json's internal id
+    // We will delete rows where the JSON contains the matching internal id.
+    const { error } = await supabase
+      .from('submissions')
+      .delete()
+      .filter('data->>id', 'eq', resolvedParams.id);
 
-    // If approving, you might want to:
-    // 1. Add to main prompts.json
-    // 2. Remove from submissions
-    // For now, we'll just remove it from the submissions list
-
-    try {
-      // Read the current submissions list
-      const existingData = await fs.readFile(listPath, 'utf-8');
-      const submissions = JSON.parse(existingData);
-
-      // Find and remove the submission
-      const updatedSubmissions = submissions.filter((s: any) => s.id !== resolvedParams.id);
-
-      // Write back the updated list
-      await fs.writeFile(listPath, JSON.stringify(updatedSubmissions, null, 2));
-
-      // Delete the individual submission file
-      try {
-        await fs.unlink(submissionPath);
-      } catch {
-        // File might not exist, ignore
-      }
-
-      return NextResponse.json(
-        { message: `Submission ${action}d successfully` },
-        { status: 200 }
-      );
-    } catch (error) {
-      console.error('Error updating submissions:', error);
+    if (error) {
+      console.error('Supabase delete error:', error);
       return NextResponse.json(
         { message: 'Failed to update submissions' },
         { status: 500 }
       );
     }
+
+    return NextResponse.json(
+      { message: `Submission ${action}d successfully` },
+      { status: 200 }
+    );
   } catch (error) {
     console.error('Error processing request:', error);
     return NextResponse.json(

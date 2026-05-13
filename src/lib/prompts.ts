@@ -1,65 +1,61 @@
 import { Prompt } from '@/types'
-
-// Static imports — no fs, works in server & client
-import studyPrompts from '@/data/prompts/study.json'
-import writingPrompts from '@/data/prompts/writing.json'
-import codingPrompts from '@/data/prompts/coding.json'
-import teachingPrompts from '@/data/prompts/teaching.json'
-import businessPrompts from '@/data/prompts/business.json'
-import reviewPrompts from '@/data/prompts/review.json'
-import testingPrompts from '@/data/prompts/testing.json'
-import linkedinPrompts from '@/data/prompts/linkedin.json'
-import imagePrompts from '@/data/prompts/image.json'
-
-// Synchronous export — client components use this directly for instant filtering
-export const ALL_PROMPTS: Prompt[] = [
-  ...studyPrompts,
-  ...writingPrompts,
-  ...codingPrompts,
-  ...teachingPrompts,
-  ...businessPrompts,
-  ...reviewPrompts,
-  ...testingPrompts,
-  ...linkedinPrompts,
-  ...imagePrompts,
-] as Prompt[]
+import { supabase } from '@/lib/supabase'
 
 export async function getAllPrompts(): Promise<Prompt[]> {
-  return ALL_PROMPTS
+  const { data, error } = await supabase.from('prompts').select('*');
+  if (error) {
+    console.error('Supabase fetch error:', error);
+    return [];
+  }
+  return data.map(mapDbToPrompt);
 }
 
 export async function getByCategory(category: string): Promise<Prompt[]> {
-  return ALL_PROMPTS.filter(p => p.category === category)
+  const { data, error } = await supabase.from('prompts').select('*').eq('category', category);
+  if (error) return [];
+  return data.map(mapDbToPrompt);
 }
 
 export async function getBySlug(slug: string): Promise<Prompt | null> {
-  return ALL_PROMPTS.find(p => p.slug === slug) ?? null
+  const { data, error } = await supabase.from('prompts').select('*').eq('slug', slug).single();
+  if (error || !data) return null;
+  return mapDbToPrompt(data);
 }
 
 export async function getPromptsByPlatform(platform: string): Promise<Prompt[]> {
+  // Use contains to search within the text array
+  let query = supabase.from('prompts').select('*');
+  
   if (platform === 'claude') {
-    // For Claude, only show prompts that specifically include claude
-    return ALL_PROMPTS.filter(p => p.platforms.includes('claude' as any))
+    query = query.contains('platforms', ['claude']);
   } else {
-    // For other platforms, show prompts that include that platform OR "any"
-    return ALL_PROMPTS.filter(p =>
-      p.platforms.includes(platform as any) || p.platforms.includes('any')
-    )
+    // Supabase filtering for array OR logic can be tricky, 
+    // but we can fetch all and filter or use an overlaps operator.
+    query = query.overlaps('platforms', [platform, 'any']);
   }
+  
+  const { data, error } = await query;
+  if (error) return [];
+  return data.map(mapDbToPrompt);
 }
 
 export async function getFeaturedPrompts(): Promise<Prompt[]> {
-  return ALL_PROMPTS.filter(p => p.featured)
+  const { data, error } = await supabase.from('prompts').select('*').eq('featured', true);
+  if (error) return [];
+  return data.map(mapDbToPrompt);
 }
 
 export async function searchPrompts(query: string): Promise<Prompt[]> {
-  const q = query.toLowerCase()
-  return ALL_PROMPTS.filter(p =>
+  const q = query.toLowerCase();
+  // Fetch all for now and filter. 
+  // In a large app, you'd use Supabase full-text search (fts)
+  const all = await getAllPrompts();
+  return all.filter(p =>
     p.title.toLowerCase().includes(q) ||
     p.description.toLowerCase().includes(q) ||
     p.tags.some(tag => tag.toLowerCase().includes(q)) ||
     p.prompt.toLowerCase().includes(q)
-  )
+  );
 }
 
 export async function filterPrompts(options: {
@@ -68,34 +64,40 @@ export async function filterPrompts(options: {
   difficulty?: string
   search?: string
 }): Promise<Prompt[]> {
-  let result = ALL_PROMPTS
+  let result = await getAllPrompts();
 
   if (options.category) {
-    result = result.filter(p => p.category === options.category)
+    result = result.filter(p => p.category === options.category);
   }
   if (options.platform) {
     if (options.platform === 'claude') {
-      // For Claude, only show prompts that specifically include claude
-      result = result.filter(p => p.platforms.includes('claude' as any))
+      result = result.filter(p => p.platforms.includes('claude' as any));
     } else {
-      // For other platforms, show prompts that include that platform OR "any"
       result = result.filter(p =>
         p.platforms.includes(options.platform as any) || p.platforms.includes('any')
-      )
+      );
     }
   }
   if (options.difficulty) {
-    result = result.filter(p => p.difficulty === options.difficulty)
+    result = result.filter(p => p.difficulty === options.difficulty);
   }
   if (options.search) {
-    const q = options.search.toLowerCase()
+    const q = options.search.toLowerCase();
     result = result.filter(p =>
       p.title.toLowerCase().includes(q) ||
       p.description.toLowerCase().includes(q) ||
       p.tags.some(tag => tag.toLowerCase().includes(q)) ||
       p.prompt.toLowerCase().includes(q)
-    )
+    );
   }
 
-  return result
+  return result;
+}
+
+// Helper to map DB columns (image_platforms) to app models (imagePlatforms)
+function mapDbToPrompt(row: any): Prompt {
+  return {
+    ...row,
+    imagePlatforms: row.image_platforms,
+  };
 }
