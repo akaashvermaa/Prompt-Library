@@ -6,7 +6,7 @@ export interface Prompt {
   prompt: string            // The full detailed prompt
   category: string          // "study-learn" | "write-create" | "code-dev" | "career-brand" | "business-marketing" | "review-test" | "image" | "teaching" | "testing"
   platforms: Platform[]     // ["chatgpt", "claude", "gemini"]
-  imagePlatforms?: Platform[] // For image prompts: where to paste the prompt
+  imagePlatforms?: string[] // For image prompts: where to paste the prompt
   tags: string[]            // ["summarization", "beginner", etc.]
   difficulty: "beginner" | "intermediate" | "advanced"
   featured: boolean
