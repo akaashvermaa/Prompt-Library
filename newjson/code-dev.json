@@ -25,7 +25,7 @@
     "id": "code-002",
     "slug": "edge-case-detective",
     "title": "The Edge Case Detective",
-    "description": "Finds all the ways your code can break \u2014 nulls, negatives, concurrent access, wrong data types",
+    "description": "Finds all the ways your code can break — nulls, negatives, concurrent access, wrong data types",
     "prompt": "You are a software tester with a malicious mindset. Your job is to find edge cases and ways to break this code. For the code snippet below, identify:\n\n1. What happens when inputs are null, undefined, or empty?\n2. What happens with negative numbers, zero, or very large numbers?\n3. What happens when arrays or lists are empty?\n4. What happens with concurrent access or race conditions?\n5. What happens with unusual data types?\n\nFor each issue, provide the specific scenario, the expected behavior, and how the code currently fails.\n\n[Paste your code here]",
     "category": "code-dev",
     "platforms": [
@@ -68,8 +68,8 @@
     "id": "code-004",
     "slug": "disciplined-diagnostician",
     "title": "The Disciplined Diagnostician",
-    "description": "Runs a strict reproduce \u2192 observe \u2192 hypothesize \u2192 test \u2192 localize \u2192 fix debugging protocol",
-    "prompt": "Execute a disciplined diagnosis loop for the following hard bug or performance regression.\n\nBug description: [describe the bug here]\nCode snippet: [paste relevant code]\n\nFollow this strict protocol:\n1. Reproduce \u2014 confirm the bug is real and consistent\n2. Observe \u2014 describe what is actually happening vs what should happen\n3. Hypothesize \u2014 list 3 possible root causes ranked by likelihood\n4. Test \u2014 describe how to falsify each hypothesis\n5. Localize \u2014 pinpoint the exact line or function responsible\n6. Fix \u2014 provide the corrected code\n7. Cleanup \u2014 describe the regression test to add after the fix",
+    "description": "Runs a strict reproduce → observe → hypothesize → test → localize → fix debugging protocol",
+    "prompt": "Execute a disciplined diagnosis loop for the following hard bug or performance regression.\n\nBug description: [describe the bug here]\nCode snippet: [paste relevant code]\n\nFollow this strict protocol:\n1. Reproduce — confirm the bug is real and consistent\n2. Observe — describe what is actually happening vs what should happen\n3. Hypothesize — list 3 possible root causes ranked by likelihood\n4. Test — describe how to falsify each hypothesis\n5. Localize — pinpoint the exact line or function responsible\n6. Fix — provide the corrected code\n7. Cleanup — describe the regression test to add after the fix",
     "category": "code-dev",
     "platforms": [
       "claude",
@@ -155,7 +155,7 @@
     "slug": "computer-use-operator-protocol",
     "title": "The Computer Use Operator Protocol",
     "description": "Builds safe browser/desktop AI agents with least-privilege, confirmation gates, and injection resistance",
-    "prompt": "Establish an Observe \u2192 Act \u2192 Verify operational loop for a browser or desktop agent performing the following task:\n\nTask: [describe the automated task here]\n\nEnforce:\n1. Principle of least privilege (agent only accesses what it needs)\n2. Mandatory confirmation gates before any destructive or irreversible actions\n3. Structural resistance against phishing and prompt-injection attacks\n4. A rollback protocol if any step fails\n5. Audit log format for every action taken",
+    "prompt": "Establish an Observe → Act → Verify operational loop for a browser or desktop agent performing the following task:\n\nTask: [describe the automated task here]\n\nEnforce:\n1. Principle of least privilege (agent only accesses what it needs)\n2. Mandatory confirmation gates before any destructive or irreversible actions\n3. Structural resistance against phishing and prompt-injection attacks\n4. A rollback protocol if any step fails\n5. Audit log format for every action taken",
     "category": "code-dev",
     "platforms": [
       "claude"
@@ -212,5 +212,758 @@
     "featured": false,
     "source": "GitHub",
     "useCase": "Building enterprise-grade, autonomous workflows that require strict permission boundaries, rollback capabilities, and continuous state persistence."
+  },
+  {
+    "id": "code-011",
+    "slug": "stack-trace-autopsy",
+    "title": "Stack Trace Autopsy",
+    "description": "You have a crash, an exception, or a production error and need a full breakdown, not just a quick fix.",
+    "prompt": "Act as a senior site reliability engineer doing a post-mortem. Analyze the\nfollowing stack trace completely:\n\nStack trace:\n[PASTE FULL STACK TRACE HERE]\n\nContext:\n- When it happens: [DESCRIBE THE TRIGGER — on login / under load / randomly]\n- Recent changes made before this started: [WHAT CHANGED]\n- Environment: [Dev / Staging / Production] + [runtime and version]\n- Frequency: [Always / Intermittent / Only under load]\n\nProvide:\n1. Line-by-line explanation of the stack trace in plain English — what each\n   frame means and why it appears\n2. Root cause identification with a confidence level (High / Medium / Low)\n   and your reasoning\n3. Environmental or config factors that likely contributed\n4. The exact corrected code with inline comments explaining each fix\n5. A regression test to confirm the fix holds under the same conditions\n6. A prevention strategy — what architectural or process change stops this\n   entire class of error from recurring",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "stack"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You have a crash, an exception, or a production error and need a full breakdown, not just a quick fix."
+  },
+  {
+    "id": "code-012",
+    "slug": "memory-leak-detective",
+    "title": "Memory Leak Detective",
+    "description": "Your app's memory keeps climbing over time, response times degrade, or the process eventually crashes.",
+    "prompt": "You are a performance engineer specializing in memory profiling. Analyze\nthe following code for memory leaks:\n\nCode:\n[PASTE CODE HERE]\n\nLanguage and runtime: [e.g., Node.js 20, Python 3.12, Java 17]\nObserved symptoms: [e.g., heap grows 50MB every hour, GC pauses increasing]\nEnvironment: [container size, load pattern]\n\nIdentify:\n1. Every potential memory leak source — unreleased references, unclosed\n   connections, growing caches, event listener accumulation, closure traps\n2. For each leak: the exact line(s), why it retains memory, and the severity\n   (Critical / High / Medium)\n3. The corrected code for each issue\n4. The profiling commands or tools to confirm the leak is gone\n5. Monitoring metrics to add so this gets caught early in future",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "memory"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Your app's memory keeps climbing over time, response times degrade, or the process eventually crashes."
+  },
+  {
+    "id": "code-013",
+    "slug": "race-condition-concurrency-debugger",
+    "title": "Race Condition & Concurrency Debugger",
+    "description": "You have bugs that only appear under concurrent load, flaky tests, or data corruption in multi-threaded code.",
+    "prompt": "Act as a concurrency expert. Debug the following code for race conditions,\ndeadlocks, and thread-safety issues:\n\nCode:\n[PASTE CODE HERE]\n\nProblem description: [WHAT GOES WRONG AND WHEN]\nConcurrency model: [threads / async-await / goroutines / actors]\nLanguage and version: [LANGUAGE + VERSION]\n\nProvide:\n1. Every race condition identified — which variables or resources are\n   unsafely shared, and under what timing does it fail\n2. Any deadlock risks — the exact lock acquisition order that causes it\n3. A thread-safe rewrite of the affected sections\n4. The synchronization primitives used and why they were chosen over\n   alternatives\n5. A stress test or deterministic test to reproduce and verify the fix\n6. Performance impact of the fix and whether a lock-free alternative exists",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "race"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You have bugs that only appear under concurrent load, flaky tests, or data corruption in multi-threaded code."
+  },
+  {
+    "id": "code-014",
+    "slug": "production-ready-function-generator",
+    "title": "Production-Ready Function Generator",
+    "description": "You need a single function or module written properly from scratch — not skeleton code, actual production-quality out...",
+    "prompt": "You are a senior [LANGUAGE] developer. Generate a complete, production-ready\nimplementation of the following:\n\nTask: [DESCRIBE EXACTLY WHAT THE FUNCTION MUST DO]\nLanguage and version: [e.g., Python 3.12, TypeScript 5.4]\nFramework context: [e.g., FastAPI, Express, Django — or \"standalone\"]\nPerformance constraints: [e.g., must handle 1000 req/s, <100ms p99]\nExternal dependencies allowed: [YES / NO — list approved libraries]\n\nThe output must include:\n1. Full implementation with no placeholder comments or TODOs\n2. Type hints / TypeScript types on every parameter and return value\n3. Input validation with clear error messages for every failure case\n4. Docstring or JSDoc covering purpose, params, returns, and exceptions\n5. Unit test stubs covering the happy path and at least 3 edge cases\n6. One usage example showing it integrated into a real caller",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "grok"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "production-ready"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need a single function or module written properly from scratch — not skeleton code, actual production-quality output."
+  },
+  {
+    "id": "code-015",
+    "slug": "full-crud-api-endpoint-builder",
+    "title": "Full CRUD API Endpoint Builder",
+    "description": "You need a complete, working API resource — not a template, but fully wired-up endpoints ready to drop into a codebase.",
+    "prompt": "Act as a backend engineer. Generate complete CRUD API endpoints for:\n\nResource name: [e.g., User, Product, Order]\nFramework: [e.g., FastAPI, Express/TypeScript, Spring Boot, Django REST]\nDatabase and ORM: [e.g., PostgreSQL + SQLAlchemy, MongoDB + Mongoose]\n\nFields:\n- [field name]: [type] — [required / optional] — [any constraints]\n- [field name]: [type] — [required / optional] — [any constraints]\n\nAuthentication: [JWT / API Key / Session / None]\nRequired behaviors:\n- Pagination on list endpoint (cursor-based preferred)\n- Input validation with descriptive error responses\n- Soft delete on the DELETE endpoint\n- Audit fields (created_at, updated_at, created_by)\n\nInclude:\n1. Model or schema definition\n2. All five endpoints: CREATE, READ one, LIST all (paginated), UPDATE, DELETE\n3. Request and response shapes for each endpoint\n4. Error handling with correct HTTP status codes\n5. At least one integration test per endpoint",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "full"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need a complete, working API resource — not a template, but fully wired-up endpoints ready to drop into a codebase."
+  },
+  {
+    "id": "code-016",
+    "slug": "mvp-boilerplate-scaffolder",
+    "title": "MVP Boilerplate Scaffolder",
+    "description": "Starting a new project and want a clean, opinionated structure rather than fighting config from scratch.",
+    "prompt": "You are an expert full-stack developer. Generate complete MVP boilerplate for:\n\nProduct description: [WHAT THE APP DOES IN 2 SENTENCES]\nTech stack:\n- Frontend: [e.g., React 18 + TypeScript + TailwindCSS]\n- Backend: [e.g., Node.js + Express / Python + FastAPI]\n- Database: [e.g., PostgreSQL + Prisma ORM]\n- Auth: [e.g., JWT, OAuth2, Clerk]\n- Hosting target: [e.g., AWS, Vercel + Railway, Fly.io]\n\nGenerate:\n1. Full project folder structure with every file listed\n2. Core config files: package.json / pyproject.toml, tsconfig, .env.example,\n   .gitignore, Dockerfile\n3. Database schema or model definitions\n4. Auth middleware wired up\n5. A working health-check endpoint\n6. README with setup instructions from git clone to running locally",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "mvp"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Starting a new project and want a clean, opinionated structure rather than fighting config from scratch."
+  },
+  {
+    "id": "code-017",
+    "slug": "comprehensive-unit-test-suite-writer",
+    "title": "Comprehensive Unit Test Suite Writer",
+    "description": "You have a function or class that needs serious test coverage, not just one or two happy-path checks.",
+    "prompt": "Act as a lead QA engineer. Write a complete unit test suite for the following:\n\nCode to test:\n[PASTE FUNCTION OR CLASS HERE]\n\nTesting framework: [e.g., Pytest, Jest, JUnit, RSpec]\nMock library: [e.g., unittest.mock, Jest mocks, Mockito]\n\nThe test suite must cover:\n1. Happy path — expected inputs producing expected outputs\n2. All boundary conditions — empty inputs, zero, max values, single items\n3. All error and exception paths — what the code throws and when\n4. Any null or undefined input scenarios\n5. At least one property-based or fuzz test if the framework supports it\n\nEach test must:\n- Have a descriptive name that reads like a sentence (test_returns_error_when_email_is_invalid)\n- Include an Arrange / Act / Assert comment structure\n- Mock all external dependencies — no real network or DB calls\n- Be fully deterministic — no randomness, no sleep(), no timing dependencies",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "comprehensive"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You have a function or class that needs serious test coverage, not just one or two happy-path checks."
+  },
+  {
+    "id": "code-018",
+    "slug": "end-to-end-test-scenario-generator",
+    "title": "End-to-End Test Scenario Generator",
+    "description": "You need to test a full user flow across the UI and backend, not just isolated units.",
+    "prompt": "You are a senior test automation engineer. Write end-to-end tests for the\nfollowing user flow:\n\nUser flow description:\n[DESCRIBE THE FLOW STEP BY STEP — e.g., User lands on login page →\nenters credentials → gets redirected to dashboard → creates a new project]\n\nTest framework: [Playwright / Cypress / Selenium]\nApplication type: [Web / Mobile Web]\nBase URL: [e.g., https://staging.myapp.com]\n\nGenerate tests covering:\n1. Full happy path — every step succeeds as expected\n2. Authentication edge cases — wrong password, expired session, locked account\n3. Form validation errors — required fields missing, invalid formats\n4. Network failure handling — what the UI shows when the API is down\n5. Access control — a user trying to reach a resource they should not see\n\nEach test must include:\n- Page Object Model structure (separate selectors from test logic)\n- Retry logic for flaky async waits\n- Screenshots on failure\n- A teardown block that cleans up test data",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "end-to-end"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need to test a full user flow across the UI and backend, not just isolated units."
+  },
+  {
+    "id": "code-019",
+    "slug": "mock-and-stub-factory",
+    "title": "Mock and Stub Factory",
+    "description": "You need to isolate a unit from its dependencies for testing and want correctly structured mocks rather than brittle ...",
+    "prompt": "Act as a test infrastructure engineer. Create mocks and stubs for the\nfollowing external dependencies:\n\nSystem under test:\n[PASTE THE CODE THAT CALLS EXTERNAL SERVICES]\n\nDependencies to mock:\n- [e.g., Stripe payment API]\n- [e.g., SendGrid email service]\n- [e.g., PostgreSQL database layer]\n\nMock framework: [Jest / Sinon / unittest.mock / Mockito]\n\nFor each dependency provide:\n1. A factory function that returns a correctly typed mock\n2. A success scenario response\n3. A rate-limit or timeout error scenario response\n4. A partial failure scenario (some items succeed, some fail)\n5. A spy setup to assert the mock was called with the right arguments\n6. A reset function to clear call history between tests",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "mock"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need to isolate a unit from its dependencies for testing and want correctly structured mocks rather than brittle ones."
+  },
+  {
+    "id": "code-020",
+    "slug": "microservices-architecture-designer",
+    "title": "Microservices Architecture Designer",
+    "description": "You are designing a new system or breaking up a monolith and need a complete, opinionated architecture before writing...",
+    "prompt": "Act as a principal software architect. Design a microservices architecture for:\n\nApplication: [DESCRIBE WHAT THE SYSTEM DOES]\nExpected scale: [e.g., 50,000 daily active users, 500 req/s at peak]\nTeam size: [e.g., 4 backend engineers, 2 frontend]\nCurrent state: [Greenfield / Existing monolith to migrate]\n\nProvide:\n1. Service boundary definitions — each service, its single responsibility,\n   and what it owns exclusively\n2. Communication patterns — which services use REST, which use gRPC, which\n   use async events (Kafka / RabbitMQ) and why\n3. Data management strategy — which service owns which database, how you\n   avoid cross-service DB joins\n4. Service discovery and API gateway approach\n5. Observability plan — distributed tracing, centralized logging, metrics\n6. A text-based architecture diagram\n7. Top 3 risks of this design and how to mitigate each",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "microservices"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You are designing a new system or breaking up a monolith and need a complete, opinionated architecture before writing code."
+  },
+  {
+    "id": "code-021",
+    "slug": "system-design-interview-style-breakdown",
+    "title": "System Design Interview-Style Breakdown",
+    "description": "Designing a large-scale system (URL shortener, Twitter clone, payment system, etc.) and want a rigorous structured br...",
+    "prompt": "You are a staff engineer. Walk through a complete system design for:\n\nSystem: [e.g., Design a URL shortening service like bit.ly]\nScale requirements:\n- Read:  [e.g., 10,000 requests per second]\n- Write: [e.g., 100 new URLs per second]\n- Storage: [e.g., 5 years of data, ~100 bytes per record]\nConstraints: [e.g., global availability, <50ms read latency, no auth needed]\n\nStructure your response as:\n1. Requirements clarification — functional and non-functional\n2. Capacity estimation — storage, bandwidth, memory calculations shown\n3. High-level architecture diagram (text-based)\n4. Core component deep-dives — database choice and schema, caching layer,\n   hashing strategy, CDN usage\n5. API design — endpoints, request/response shapes\n6. Bottlenecks identified and how you would scale past each one\n7. Trade-offs made and what you would do differently at 10x scale",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "system"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Designing a large-scale system (URL shortener, Twitter clone, payment system, etc.) and want a rigorous structured breakdown."
+  },
+  {
+    "id": "code-022",
+    "slug": "design-pattern-implementer",
+    "title": "Design Pattern Implementer",
+    "description": "You know you need a pattern (Observer, Strategy, CQRS, Saga, etc.) but want a concrete, real-world implementation — n...",
+    "prompt": "Act as a software design expert. Implement the [PATTERN NAME] pattern for\nthe following real-world use case:\n\nUse case: [DESCRIBE THE ACTUAL PROBLEM — e.g., \"We have 12 different\n          notification channels and adding a new one requires editing 6 files\"]\nLanguage: [LANGUAGE + VERSION]\nExisting code to integrate with:\n[PASTE RELEVANT EXISTING CODE IF ANY]\n\nProvide:\n1. An explanation of why this pattern fits this problem specifically\n2. Full implementation of the pattern in the given language — not pseudocode\n3. Integration example showing it wired into the existing code\n4. What would need to change to add a new variant (the extensibility test)\n5. The trade-offs of this pattern vs the most obvious alternative\n6. One anti-pattern warning — the wrong way people commonly implement this",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "grok"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "design"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You know you need a pattern (Observer, Strategy, CQRS, Saga, etc.) but want a concrete, real-world implementation — not a textbook toy example."
+  },
+  {
+    "id": "code-023",
+    "slug": "legacy-code-modernizer",
+    "title": "Legacy Code Modernizer",
+    "description": "You have old code — callback hell, class-based React, Python 2, jQuery spaghetti — that needs bringing up to current ...",
+    "prompt": "Act as a senior engineer specializing in modernization. Refactor the\nfollowing legacy code to current best practices:\n\nLegacy code:\n[PASTE LEGACY CODE HERE]\n\nLanguage version being migrated from: [e.g., Python 2.7, JavaScript ES5]\nLanguage version to migrate to: [e.g., Python 3.12, TypeScript 5.4]\nFramework changes: [e.g., class components → hooks, callbacks → async/await]\nConstraints: [e.g., public API must not change, no new dependencies]\n\nProvide:\n1. A before/after comparison for every changed section\n2. An explanation of each modernization and why it is better\n3. Any behavior differences between old and new (even subtle ones)\n4. A migration checklist if this is part of a larger codebase\n5. Tests to verify the refactored version is behaviorally identical",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "legacy"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You have old code — callback hell, class-based React, Python 2, jQuery spaghetti — that needs bringing up to current standards."
+  },
+  {
+    "id": "code-024",
+    "slug": "god-class-large-function-decomposer",
+    "title": "God Class / Large Function Decomposer",
+    "description": "You have a class or function that does far too much and needs breaking apart without breaking the behavior.",
+    "prompt": "You are a software architect focused on clean code. Decompose the following\noversized code:\n\nCode:\n[PASTE THE LARGE CLASS OR FUNCTION]\n\nContext: [What this code does in the system]\nConstraints:\n- [External API must remain unchanged: YES / NO]\n- [Database schema is fixed: YES / NO]\n- [Must not introduce new external dependencies: YES / NO]\n\nProvide:\n1. An analysis of the current responsibilities — list every distinct thing\n   this code does\n2. The proposed decomposition — what each new class or function is named,\n   what it owns, and what it does not own\n3. The full refactored code for each new unit\n4. The updated caller code showing how the pieces connect\n5. A characterization test for the original behavior that passes before\n   and after the refactor",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "god"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You have a class or function that does far too much and needs breaking apart without breaking the behavior."
+  },
+  {
+    "id": "code-025",
+    "slug": "async-await-migration-specialist",
+    "title": "Async/Await Migration Specialist",
+    "description": "Converting callback-based or Promise-chain code to clean async/await with proper error handling.",
+    "prompt": "Act as an async programming expert. Migrate the following code from\n[callbacks / Promise chains] to clean async/await:\n\nCode to migrate:\n[PASTE CODE HERE]\n\nLanguage: [JavaScript / TypeScript / Python]\nError handling requirement: [Crash fast / Recover and continue / Log and skip]\nConcurrency requirement: [Sequential / Parallel where possible]\n\nProvide:\n1. The fully migrated code using async/await throughout\n2. Proper try/catch placement — explain why each catch is placed where it is\n3. Parallel execution using Promise.all or asyncio.gather where appropriate,\n   with the reasoning for each parallelization decision\n4. Handling of partial failures — what happens when one async call fails mid-flow\n5. A side-by-side comparison showing how error handling changed\n6. Any edge cases where async/await behaves differently from the original",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "grok"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "async/await"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Converting callback-based or Promise-chain code to clean async/await with proper error handling."
+  },
+  {
+    "id": "code-026",
+    "slug": "rest-api-contract-designer",
+    "title": "REST API Contract Designer",
+    "description": "Designing a new API or auditing an existing one for consistency, correctness, and developer experience.",
+    "prompt": "Act as an API design expert. Design (or audit) a RESTful API for:\n\nProduct/feature: [DESCRIBE WHAT THE API DOES]\nConsumer: [Internal service / Mobile app / Third-party developers]\nAuth method: [JWT / OAuth2 / API Key]\n\nResources to cover:\n- [Resource 1]\n- [Resource 2]\n\nFor each endpoint provide:\n1. HTTP method and URL — following REST conventions strictly\n2. Request body schema with field types and validation rules\n3. Success response schema with HTTP status code\n4. All error responses with status codes and machine-readable error codes\n5. Pagination strategy for list endpoints\n6. Rate limiting headers to include\n7. Versioning approach (URI / header / query param) and the reasoning\n\nAlso provide:\n- Naming consistency rules for this API (casing, pluralization, nesting depth)\n- One complete OpenAPI YAML snippet for the most complex endpoint\n- Three API design decisions you made and what alternatives you rejected",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "rest"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Designing a new API or auditing an existing one for consistency, correctness, and developer experience."
+  },
+  {
+    "id": "code-027",
+    "slug": "graphql-schema-builder",
+    "title": "GraphQL Schema Builder",
+    "description": "Designing a GraphQL API from scratch or migrating from REST, and want a complete, resolver-connected schema.",
+    "prompt": "You are a GraphQL architect. Design a complete GraphQL schema for:\n\nDomain: [DESCRIBE THE BUSINESS DOMAIN]\nKey entities: [LIST THE MAIN DATA TYPES]\nAuth context: [How user identity is passed — JWT in header, etc.]\nPrimary consumers: [Web app / Mobile / Both]\n\nDeliver:\n1. Full SDL schema — all types, queries, mutations, subscriptions\n2. Input types with validation directives\n3. Resolver signatures for every query and mutation\n4. DataLoader setup to prevent N+1 query problems — show the batching logic\n5. Error handling approach — union types vs extensions vs throwing\n6. Pagination: implement Relay-spec cursor-based pagination on at least\n   one list field\n7. An example query and its expected response for the most complex operation",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "graphql"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Designing a GraphQL API from scratch or migrating from REST, and want a complete, resolver-connected schema."
+  },
+  {
+    "id": "code-028",
+    "slug": "github-actions-ci-cd-pipeline-builder",
+    "title": "GitHub Actions CI/CD Pipeline Builder",
+    "description": "Setting up or improving a CI/CD pipeline — want a real, working YAML file, not a generic template.",
+    "prompt": "Act as a DevOps engineer. Write a complete GitHub Actions CI/CD pipeline for:\n\nStack:\n- Language and version: [e.g., Node.js 20 / Python 3.12]\n- Framework: [e.g., Next.js, FastAPI, Django]\n- Test framework: [e.g., Jest, Pytest]\n- Containerized: [YES / NO]\n\nDeployment target: [e.g., AWS ECS, Vercel, Fly.io, GCP Cloud Run]\nBranch strategy: [e.g., main → production, develop → staging]\nSecrets to use: [list the secret names — e.g., AWS_ACCESS_KEY, DOCKER_TOKEN]\n\nThe pipeline must include:\n1. Trigger conditions — push, pull_request, manual dispatch\n2. Lint and format check job\n3. Unit and integration test job with coverage report uploaded as artifact\n4. Docker image build (multi-stage, minimal final image) and push to registry\n5. Deployment job with environment protection rules\n6. Rollback step triggered on deployment failure\n7. Slack or email notification on pipeline success and failure",
+    "category": "code-dev",
+    "platforms": [
+      "chatgpt",
+      "claude",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "github"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Setting up or improving a CI/CD pipeline — want a real, working YAML file, not a generic template."
+  },
+  {
+    "id": "code-029",
+    "slug": "dockerfile-optimizer",
+    "title": "Dockerfile Optimizer",
+    "description": "Your Docker images are too large, builds are slow, or your Dockerfile has security or caching problems.",
+    "prompt": "You are a containerization expert. Review and optimize the following Dockerfile:\n\nCurrent Dockerfile:\n[PASTE DOCKERFILE HERE]\n\nApplication type: [e.g., Python web app, Node.js API, Go binary]\nCurrent image size: [if known]\nCurrent build time: [if known]\nProduction or dev image: [PRODUCTION / DEV / BOTH NEEDED]\n\nProvide:\n1. An analysis of every problem in the current Dockerfile — wrong base image,\n   cache-busting mistakes, running as root, unnecessary layers, large files\n2. A fully optimized multi-stage Dockerfile with comments on each decision\n3. A .dockerignore file\n4. The expected size and build time improvement\n5. Security hardening steps applied — non-root user, read-only filesystem,\n   no unnecessary packages\n6. Docker Compose snippet for local development with hot reload",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "dockerfile"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Your Docker images are too large, builds are slow, or your Dockerfile has security or caching problems."
+  },
+  {
+    "id": "code-030",
+    "slug": "infrastructure-as-code-generator-terraform",
+    "title": "Infrastructure as Code Generator (Terraform)",
+    "description": "Standing up cloud infrastructure and want production-grade Terraform rather than click-ops.",
+    "prompt": "Act as a cloud infrastructure engineer. Write Terraform code to provision:\n\nCloud provider: [AWS / GCP / Azure]\nInfrastructure needed:\n- [e.g., ECS cluster with auto-scaling]\n- [e.g., RDS PostgreSQL with read replica]\n- [e.g., CloudFront CDN in front of S3]\n- [e.g., VPC with public and private subnets]\n\nEnvironment: [dev / staging / prod — or all three using workspaces]\nState backend: [S3 + DynamoDB / GCS / Terraform Cloud]\n\nGenerate:\n1. Full Terraform module structure (main.tf, variables.tf, outputs.tf,\n   versions.tf) for each resource\n2. All variables with types, descriptions, and sensible defaults\n3. Outputs for all values needed by other systems (ARNs, endpoints, IPs)\n4. Remote state config and locking\n5. Tagging strategy applied consistently across all resources\n6. A README explaining how to run plan and apply for each environment",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "infrastructure"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Standing up cloud infrastructure and want production-grade Terraform rather than click-ops."
+  },
+  {
+    "id": "code-031",
+    "slug": "developer-documentation-writer",
+    "title": "Developer Documentation Writer",
+    "description": "You need real documentation — not just inline comments, but proper reference docs a new team member can use.",
+    "prompt": "Act as a technical writer with deep engineering experience. Write complete\ndeveloper documentation for:\n\nCode:\n[PASTE FUNCTION, CLASS, OR MODULE]\n\nAudience: [Junior devs on the team / External API consumers / Both]\nDocumentation format: [Markdown / Sphinx RST / JSDoc / OpenAPI]\n\nStructure the documentation as:\n1. Overview — purpose, when to use this, and when NOT to use this\n2. Prerequisites and dependencies\n3. API reference — every method, parameter, return type, and exception,\n   with types clearly stated\n4. Three real usage examples progressing from simple to complex\n5. Common errors with their causes and solutions\n6. Performance notes — time complexity, known bottlenecks, recommended limits\n7. Changelog section (stub with the current version and date)",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "developer"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need real documentation — not just inline comments, but proper reference docs a new team member can use."
+  },
+  {
+    "id": "code-032",
+    "slug": "technical-specification-writer",
+    "title": "Technical Specification Writer",
+    "description": "A feature needs a proper spec before development starts — something engineers, PMs, and QA can all work from.",
+    "prompt": "You are a staff engineer. Write a complete technical specification for:\n\nFeature name: [FEATURE NAME]\nProblem it solves: [WHY THIS IS BEING BUILT]\nStakeholders: [Who requested it, who it affects]\n\nDocument must cover:\n1. Functional requirements — what the system must do, written as\n   numbered acceptance criteria\n2. Non-functional requirements — performance targets, availability SLA,\n   security requirements, compliance constraints\n3. Technical approach — chosen solution and the 2 alternatives rejected\n   with reasoning\n4. Data model changes — new tables, fields, or schema migrations required\n5. API contracts — new or changed endpoints with request/response shapes\n6. Sequence diagram (text-based) for the primary flow\n7. Testing strategy — unit, integration, and E2E coverage expectations\n8. Rollout plan — feature flag, canary, or full release, with rollback steps\n9. Open questions that must be resolved before development starts",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "technical"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "A feature needs a proper spec before development starts — something engineers, PMs, and QA can all work from."
+  },
+  {
+    "id": "code-033",
+    "slug": "readme-generator",
+    "title": "README Generator",
+    "description": "Your repo needs a proper README that actually helps people get started — not the default one-liner.",
+    "prompt": "Act as a developer advocate. Write a complete README.md for:\n\nProject name: [PROJECT NAME]\nWhat it does: [ONE PARAGRAPH DESCRIPTION]\nTech stack: [LIST LANGUAGES, FRAMEWORKS, DATABASES USED]\nTarget audience: [Who will use this — developers, end users, both]\n\nThe README must include:\n1. Project banner section with name, one-line description, and badges\n   (build status, coverage, license, version)\n2. Features list — what makes this worth using\n3. Prerequisites — exact versions required\n4. Installation — step-by-step from git clone to running, with every command\n5. Configuration — every environment variable documented with type,\n   default, and whether it is required\n6. Usage examples — at least 3 real-world examples with code blocks\n7. API reference section (or link to full docs)\n8. Contributing guide — branch naming, PR process, test requirements\n9. License section",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "grok"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "readme"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Your repo needs a proper README that actually helps people get started — not the default one-liner."
+  },
+  {
+    "id": "code-034",
+    "slug": "performance-profiling-optimization-guide",
+    "title": "Performance Profiling & Optimization Guide",
+    "description": "Your app is slow and you need a structured approach to finding and fixing bottlenecks — not random micro-optimizations.",
+    "prompt": "Act as a performance engineer. Profile and optimize the following:\n\nCode or system description:\n[PASTE CODE OR DESCRIBE THE SYSTEM BOTTLENECK]\n\nCurrent performance: [e.g., p50: 200ms, p99: 4000ms, throughput: 120 req/s]\nTarget performance: [e.g., p99 < 500ms, throughput > 1000 req/s]\nProfiling data available: [PASTE FLAME GRAPH TEXT / QUERY PLANS / NONE]\n\nProvide:\n1. Profiling approach — exact commands to run to gather data before touching code\n2. Bottleneck analysis — what is actually slow and why, with evidence\n3. Optimization plan ranked by expected impact vs implementation effort\n4. Optimized code for each change\n5. Before/after benchmark methodology — how to measure that the fix worked\n6. Caching opportunities — what to cache, at what layer, with TTL reasoning\n7. The one change that will give the biggest win and should be done first",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "performance"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Your app is slow and you need a structured approach to finding and fixing bottlenecks — not random micro-optimizations."
+  },
+  {
+    "id": "code-035",
+    "slug": "algorithm-complexity-analyzer-optimizer",
+    "title": "Algorithm Complexity Analyzer & Optimizer",
+    "description": "You suspect an algorithm is inefficient but want a rigorous analysis before rewriting it.",
+    "prompt": "You are a computer science expert. Analyze and optimize the following algorithm:\n\nCode:\n[PASTE THE ALGORITHM]\n\nInput characteristics:\n- Typical input size: [e.g., n = 1,000 / n = 10,000,000]\n- Input data shape: [e.g., nearly sorted, random, many duplicates]\n- Memory constraint: [e.g., must run in O(1) extra space]\n\nProvide:\n1. Time complexity analysis of the current implementation with the derivation\n   shown — not just the Big-O notation\n2. Space complexity analysis\n3. The specific input that hits the worst case\n4. An optimized implementation with its complexity analysis\n5. The trade-off between time and space for the optimized version\n6. A benchmark comparing the original and optimized versions with sample inputs\n7. When the original is actually preferable (small n, readability, etc.)",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "algorithm"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You suspect an algorithm is inefficient but want a rigorous analysis before rewriting it."
+  },
+  {
+    "id": "code-036",
+    "slug": "database-schema-designer",
+    "title": "Database Schema Designer",
+    "description": "Designing a database from requirements — want a normalized, indexed schema rather than figuring it out as you go.",
+    "prompt": "Act as a senior database architect. Design the database schema for:\n\nSystem description: [WHAT THE SYSTEM DOES]\nDatabase: [PostgreSQL / MySQL / MongoDB / DynamoDB]\nApproximate scale: [rows per table at 1 year, read/write ratio]\nAccess patterns (list the most frequent queries):\n- [e.g., fetch all orders for a user, sorted by date]\n- [e.g., count active subscriptions per plan]\n\nDeliver:\n1. Full schema with every table, column, data type, and constraint\n2. Primary keys, foreign keys, and unique constraints with reasoning\n3. Indexes — which columns get indexes, what type (B-tree, GIN, partial),\n   and why each one is needed for the stated access patterns\n4. Normalization analysis — why you chose the normal form you did, and\n   any deliberate denormalization with justification\n5. Migration SQL to create the schema from scratch\n6. Seed SQL with realistic sample data for local development",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "database"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Designing a database from requirements — want a normalized, indexed schema rather than figuring it out as you go."
+  },
+  {
+    "id": "code-037",
+    "slug": "database-migration-script-writer",
+    "title": "Database Migration Script Writer",
+    "description": "You need to alter a production schema safely without downtime or data loss.",
+    "prompt": "You are a database reliability engineer. Write a safe migration for:\n\nCurrent schema:\n[PASTE CURRENT TABLE DEFINITIONS]\n\nRequired change: [DESCRIBE WHAT NEEDS TO CHANGE — e.g., add column,\n                 rename column, split table, add index on large table]\n\nDatabase: [PostgreSQL / MySQL]\nTable size: [approximate row count and table size in GB]\nDowntime allowed: [ZERO / MAINTENANCE WINDOW OF X MINUTES]\n\nProvide:\n1. The migration SQL — using a safe, non-blocking approach for large tables\n2. A rollback SQL script to undo every change cleanly\n3. Backfill strategy if adding a non-null column to an existing table\n4. Index creation strategy — CONCURRENTLY for PostgreSQL, ALGORITHM=INPLACE\n   for MySQL, with estimated time based on table size\n5. Pre-migration checklist — things to verify before running\n6. Post-migration verification queries to confirm the change succeeded",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "database"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need to alter a production schema safely without downtime or data loss."
+  },
+  {
+    "id": "code-038",
+    "slug": "framework-version-migration-planner",
+    "title": "Framework Version Migration Planner",
+    "description": "Upgrading a major framework version (React 17→18, Django 3→5, Next.js 13→15, etc.) and need a complete, safe migratio...",
+    "prompt": "Act as a migration specialist. Plan the upgrade from [FRAMEWORK vX] to\n[FRAMEWORK vY] for:\n\nCurrent codebase size: [e.g., 80,000 lines, 200 components, 40 API routes]\nCurrent version: [EXACT CURRENT VERSION]\nTarget version: [EXACT TARGET VERSION]\nKey dependencies that must also be upgraded: [LIST THEM]\n\nProduce:\n1. Breaking changes — every breaking change between current and target version\n   that applies to this type of codebase\n2. File-by-file migration strategy — which files to change first and why\n3. Codemods available — automated migration scripts from the framework's\n   official tooling, with exact commands\n4. Manual changes required — things codemods cannot handle\n5. A phased rollout plan — how to migrate incrementally without a big-bang\n   cutover\n6. Testing checkpoints at each phase before proceeding\n7. A rollback plan if the migration needs to be aborted mid-way",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "framework"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Upgrading a major framework version (React 17→18, Django 3→5, Next.js 13→15, etc.) and need a complete, safe migration plan."
+  },
+  {
+    "id": "code-039",
+    "slug": "monolith-to-microservices-migration-planner",
+    "title": "Monolith to Microservices Migration Planner",
+    "description": "Breaking apart an existing monolith — need a realistic, incremental plan rather than a risky big rewrite.",
+    "prompt": "You are a principal architect. Plan the migration of the following monolith\nto microservices:\n\nMonolith description:\n[DESCRIBE THE CURRENT SYSTEM — language, framework, database, rough size]\n\nPain points driving the migration:\n- [e.g., deploy frequency is blocked by one slow team]\n- [e.g., one module consumes all memory and starves others]\n\nTeam structure: [NUMBER OF TEAMS AND THEIR DOMAINS]\nDowntime tolerance: [ZERO / PLANNED WINDOWS]\n\nProduce:\n1. Domain analysis using Domain-Driven Design — proposed bounded contexts\n   and which module of the monolith maps to each\n2. The Strangler Fig migration sequence — which service to extract first,\n   second, third, and why in that order\n3. The data ownership split — how shared database tables get separated\n   without breaking running features\n4. The anti-corruption layer design for the transition period\n5. Feature flag strategy to route traffic between old and new code\n6. Success metrics to confirm each extracted service is ready to own its domain\n7. Estimated timeline per extraction with team size assumptions",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "monolith"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Breaking apart an existing monolith — need a realistic, incremental plan rather than a risky big rewrite."
+  },
+  {
+    "id": "code-040",
+    "slug": "pull-request-reviewer",
+    "title": "Pull Request Reviewer",
+    "description": "Reviewing a PR and want a structured, senior-level review that goes beyond style comments.",
+    "prompt": "Act as a senior engineer doing a thorough pull request review. Review the\nfollowing diff:\n\nPR diff:\n[PASTE THE DIFF OR CHANGED CODE]\n\nPR description: [WHAT THIS PR IS SUPPOSED TO DO]\nCodebase context: [LANGUAGE, FRAMEWORK, WHAT THE SURROUNDING SYSTEM DOES]\nReview focus: [All issues / Security only / Performance only / Logic only]\n\nProvide your review as:\n1. Summary — does this PR do what the description claims? Yes / No / Partially\n2. Critical blockers — bugs, security holes, or data loss risks that must be\n   fixed before merge (tag each: BUG / SECURITY / DATA)\n3. Important improvements — not blockers but strongly recommended changes\n4. Nitpicks — style or minor improvements the author can take or leave\n5. Positive callouts — what was done well (required — at least one)\n6. Suggested test cases the PR is missing\n7. A merge recommendation: APPROVE / APPROVE WITH MINOR CHANGES / REQUEST CHANGES",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "grok",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "pull"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Reviewing a PR and want a structured, senior-level review that goes beyond style comments."
+  },
+  {
+    "id": "code-041",
+    "slug": "architecture-decision-record-adr-writer",
+    "title": "Architecture Decision Record (ADR) Writer",
+    "description": "You made a significant technical decision and need to document it in a way the team can reference and revisit later.",
+    "prompt": "Act as a staff engineer. Write an Architecture Decision Record for:\n\nDecision being made: [e.g., \"Choose between PostgreSQL and DynamoDB for\n                     the user-events store\"]\nContext: [WHAT PROBLEM TRIGGERED THIS DECISION]\nDecision maker(s): [WHO IS MAKING THIS CALL]\nDate: [TODAY'S DATE]\n\nThe ADR must include:\n1. Status: [Proposed / Accepted / Deprecated / Superseded by ADR-XXX]\n2. Context — the full situation that requires a decision, including constraints\n3. Decision — exactly what was decided, stated clearly\n4. Options considered — at least 3, each with honest pros and cons\n5. Consequences — what becomes easier, what becomes harder, what risks\n   are accepted by this decision\n6. Dissenting opinions — if any team members disagreed, record their concern\n7. Review date — when this decision should be revisited",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "architecture"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You made a significant technical decision and need to document it in a way the team can reference and revisit later."
+  },
+  {
+    "id": "code-042",
+    "slug": "react-component-architect",
+    "title": "React Component Architect",
+    "description": "Building a non-trivial React component and want it done properly — typed, accessible, tested, and reusable.",
+    "prompt": "You are a senior React engineer. Build a production-ready React component for:\n\nComponent purpose: [DESCRIBE EXACTLY WHAT IT DOES]\nFramework: React [VERSION] + TypeScript [VERSION]\nStyling: [TailwindCSS / CSS Modules / Styled Components / plain CSS]\nState management: [Local state only / Zustand / Redux / Context]\n\nRequirements:\n- [e.g., handles both controlled and uncontrolled usage]\n- [e.g., supports keyboard navigation and screen readers]\n- [e.g., renders a virtualized list of 10,000+ items]\n\nDeliver:\n1. Full TypeScript component with Props interface documented via JSDoc\n2. All state and side effects handled cleanly — no stale closures, no\n   unnecessary re-renders\n3. Accessibility: correct ARIA roles, keyboard event handling, focus management\n4. Error boundary integration\n5. A Storybook story with at least 3 variants (default, loading, error state)\n6. Unit tests with React Testing Library covering user interactions",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "react"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Building a non-trivial React component and want it done properly — typed, accessible, tested, and reusable."
+  },
+  {
+    "id": "code-043",
+    "slug": "frontend-performance-auditor",
+    "title": "Frontend Performance Auditor",
+    "description": "Your web app is slow on load or during interaction and you need a structured audit, not guesswork.",
+    "prompt": "Act as a frontend performance specialist. Audit the following for performance\nissues:\n\nCode or system:\n[PASTE COMPONENT TREE, BUNDLE CONFIG, OR DESCRIBE THE SETUP]\n\nObserved problems:\n- [e.g., LCP > 4s, FID > 200ms, bundle size 2.4MB]\n- [e.g., laggy scroll on the product listing page]\n\nTech stack: [React / Next.js / Vue / plain JS] + [bundler: Webpack/Vite/etc.]\n\nAudit across:\n1. Bundle size — unnecessary dependencies, duplicate packages, missing\n   tree-shaking, unoptimized images\n2. Render performance — unnecessary re-renders, missing memoization, heavy\n   computations on the main thread\n3. Loading strategy — code splitting opportunities, lazy loading, preloading\n   critical resources, font loading\n4. Core Web Vitals impact — what specifically hurts LCP, CLS, and INP\n5. Provide the top 5 fixes ranked by impact, with implementation code\n   for each and the expected metric improvement",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "frontend"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Your web app is slow on load or during interaction and you need a structured audit, not guesswork."
+  },
+  {
+    "id": "code-044",
+    "slug": "codebase-onboarding-accelerator",
+    "title": "Codebase Onboarding Accelerator",
+    "description": "You just joined a team or inherited a repo and need to understand how it works quickly.",
+    "prompt": "Act as a principal engineer onboarding a new senior developer. Analyze the\nfollowing codebase excerpt or description and produce a complete onboarding\nguide:\n\nCodebase:\n[PASTE KEY FILES OR DESCRIBE THE REPO STRUCTURE]\n\nLanguage and framework: [LANGUAGE + FRAMEWORK]\nMy background: [e.g., strong Python background, new to Django]\n\nProduce:\n1. Architecture overview — the main layers and how data flows through them\n   from a user request to a database response and back\n2. Module map — what each major directory and file does in one sentence\n3. The 5 most important files to read first and why\n4. Key conventions this codebase uses that differ from standard practices\n5. The most common task a developer does (e.g., add a new API endpoint) —\n   walk through it step by step\n6. Known gotchas, tech debt areas, and things to be careful about\n7. Glossary of domain-specific terms used in the codebase",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "gemini"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "codebase"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You just joined a team or inherited a repo and need to understand how it works quickly."
+  },
+  {
+    "id": "code-045",
+    "slug": "code-to-flowchart-explainer",
+    "title": "Code-to-Flowchart Explainer",
+    "description": "You need to explain complex logic to a non-technical stakeholder, write documentation, or simply understand a tangled...",
+    "prompt": "Act as a technical communicator. Take the following code and produce a\ncomplete, plain-English explanation of the logic flow:\n\nCode:\n[PASTE CODE HERE]\n\nAudience: [Non-technical PM / Junior developer / QA engineer]\nPurpose of this explanation: [Documentation / Stakeholder demo / Team review]\n\nProvide:\n1. A plain-English summary of what this code does in 3–5 sentences,\n   no jargon\n2. A numbered step-by-step walkthrough of the execution path —\n   what happens first, what decision is made, what branches are possible\n3. A text-based flowchart showing every branch and decision point\n4. The most likely failure point and what triggers it\n5. Three questions a non-technical stakeholder would likely ask, with answers\n6. One sentence explaining the business purpose this code serves",
+    "category": "code-dev",
+    "platforms": [
+      "claude",
+      "chatgpt",
+      "grok"
+    ],
+    "tags": [
+      "coding",
+      "development",
+      "code-to-flowchart"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need to explain complex logic to a non-technical stakeholder, write documentation, or simply understand a tangled flow yourself."
   }
 ]
