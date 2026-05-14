@@ -3,8 +3,8 @@
     "id": "biz-001",
     "slug": "behavior-first-meeting-protocol",
     "title": "The Behavior-First Meeting Protocol",
-    "description": "Requests a meeting with confidence and conciseness \u2014 no generic corporate pleasantries",
-    "prompt": "You are a professional account manager. Your goal is to schedule a meeting while fully respecting the client's time.\n\nContext:\n- Client name / company: [name]\n- Meeting purpose: [what you want to discuss]\n- Preferred meeting length: [15 / 30 minutes]\n- Any prior context: [previous interactions or relationship]\n\nWrite an email that is:\n- Concise and confident \u2014 under 80 words\n- Action-oriented \u2014 make the ask clear in the first 2 sentences\n- Respectful of their time \u2014 no filler, no flattery\n- Ends with a specific proposed time or a simple scheduling link prompt",
+    "description": "Requests a meeting with confidence and conciseness - no generic corporate pleasantries",
+    "prompt": "You are a professional account manager. Your goal is to schedule a meeting while fully respecting the client's time.\n\nContext:\n- Client name / company: [name]\n- Meeting purpose: [what you want to discuss]\n- Preferred meeting length: [15 / 30 minutes]\n- Any prior context: [previous interactions or relationship]\n\nWrite an email that is:\n- Concise and confident - under 80 words\n- Action-oriented - make the ask clear in the first 2 sentences\n- Respectful of their time - no filler, no flattery\n- Ends with a specific proposed time or a simple scheduling link prompt",
     "category": "business-marketing",
     "platforms": [
       "claude",
@@ -19,14 +19,14 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "r/PromptEngineering",
-    "useCase": "Securing high-level meetings by prioritizing aggressive conciseness and eliminating generic, forgettable corporate pleasantries."
+    "useCase": "Securing highlevel meetings by prioritizing aggressive conciseness and eliminating generic, forgettable corporate pleasantries."
   },
   {
     "id": "biz-002",
     "slug": "high-conversion-founder-syntax",
     "title": "The High-Conversion Founder Syntax",
-    "description": "Writes cold outreach emails that get 42% reply rates \u2014 blunt, lowercase, zero pleasantries",
-    "prompt": "Write a cold outreach email pitching my service or product.\n\nContext:\n- My service: [describe what you do]\n- Target recipient: [who you're emailing and their role]\n- Their likely pain point: [what problem they probably have]\n- My metric-driven solution: [the result you deliver, with numbers]\n\nRules:\n- Mirror a blunt, authentic, lowercase syntax where appropriate\n- Remove all formal greetings like 'I hope this email finds you well'\n- Get straight to the pain point in sentence 1\n- Offer the solution with a specific metric in sentence 2-3\n- Soft CTA in the final line \u2014 not 'Let me know your thoughts'\n- Under 80 words total",
+    "description": "Writes cold outreach emails that get 42% reply rates - blunt, lowercase, zero pleasantries",
+    "prompt": "Write a cold outreach email pitching my service or product.\n\nContext:\n- My service: [describe what you do]\n- Target recipient: [who you're emailing and their role]\n- Their likely pain point: [what problem they probably have]\n- My metric-driven solution: [the result you deliver, with numbers]\n\nRules:\n- Mirror a blunt, authentic, lowercase syntax where appropriate\n- Remove all formal greetings like 'I hope this email finds you well'\n- Get straight to the pain point in sentence 1\n- Offer the solution with a specific metric in sentence 2-3\n- Soft CTA in the final line - not 'Let me know your thoughts'\n- Under 80 words total",
     "category": "business-marketing",
     "platforms": [
       "claude"
@@ -89,8 +89,8 @@
     "id": "biz-005",
     "slug": "churned-user-autopsy",
     "title": "The Churned User Autopsy",
-    "description": "Extracts brutal honest feedback from users who just cancelled \u2014 written as if typed by the founder",
-    "prompt": "Write a highly personal email to a user who just cancelled their subscription.\n\nContext:\n- Product: [your product name]\n- User's plan / usage: [what they were using]\n- Cancellation reason given (if any): [what they said]\n\nThe goal is NOT to win them back. The goal is to extract honest feedback about why the product failed them.\n\nRules:\n- Sound like it was typed manually by the founder \u2014 not from a CRM template\n- Do not use merge tags or formal salutations\n- Be genuinely curious, not defensive\n- Ask ONE specific question that would give you the most valuable insight\n- Under 80 words",
+    "description": "Extracts brutal honest feedback from users who just cancelled - written as if typed by the founder",
+    "prompt": "Write a highly personal email to a user who just cancelled their subscription.\n\nContext:\n- Product: [your product name]\n- User's plan / usage: [what they were using]\n- Cancellation reason given (if any): [what they said]\n\nThe goal is NOT to win them back. The goal is to extract honest feedback about why the product failed them.\n\nRules:\n- Sound like it was typed manually by the founder - not from a CRM template\n- Do not use merge tags or formal salutations\n- Be genuinely curious, not defensive\n- Ask ONE specific question that would give you the most valuable insight\n- Under 80 words",
     "category": "business-marketing",
     "platforms": [
       "claude"
@@ -111,7 +111,7 @@
     "slug": "product-update-hook",
     "title": "The Product Update Hook",
     "description": "Rewrites boring feature lists into product update emails customers actually want to read",
-    "prompt": "Rewrite the following list of new product features into a product update email that customers will actually read.\n\nNew features: [list your features here]\n\nRules:\n- Focus entirely on how each feature eliminates a specific daily frustration for the user\n- Do NOT lead with technical specifications\n- Open with the biggest user problem these features solve\n- Use plain language \u2014 no engineering jargon\n- Each feature gets one sentence about the benefit, not the functionality\n- End with a clear, single CTA\n- Under 200 words",
+    "prompt": "Rewrite the following list of new product features into a product update email that customers will actually read.\n\nNew features: [list your features here]\n\nRules:\n- Focus entirely on how each feature eliminates a specific daily frustration for the user\n- Do NOT lead with technical specifications\n- Open with the biggest user problem these features solve\n- Use plain language - no engineering jargon\n- Each feature gets one sentence about the benefit, not the functionality\n- End with a clear, single CTA\n- Under 200 words",
     "category": "business-marketing",
     "platforms": [
       "any"
@@ -132,7 +132,7 @@
     "slug": "transactional-context-restorer",
     "title": "The Transactional Context Restorer",
     "description": "De-escalates frustrated customers by proving you've read their full history before responding",
-    "prompt": "Review the following chain of customer support emails. The customer is frustrated because context keeps getting lost between support agents.\n\n[Paste the email thread here]\n\nDraft a response that:\n1. Opens by summarizing their ENTIRE problem history in 2-3 sentences \u2014 prove we've read everything\n2. Apologizes specifically for the friction caused by the context loss (not a generic apology)\n3. Provides the definitive technical fix or next step\n4. Confirms exactly what will happen next and by when\n\nTone: empathetic but efficient. No corporate language.",
+    "prompt": "Review the following chain of customer support emails. The customer is frustrated because context keeps getting lost between support agents.\n\n[Paste the email thread here]\n\nDraft a response that:\n1. Opens by summarizing their ENTIRE problem history in 2-3 sentences - prove we've read everything\n2. Apologizes specifically for the friction caused by the context loss (not a generic apology)\n3. Provides the definitive technical fix or next step\n4. Confirms exactly what will happen next and by when\n\nTone: empathetic but efficient. No corporate language.",
     "category": "business-marketing",
     "platforms": [
       "claude"
@@ -153,7 +153,7 @@
     "slug": "competitor-exploitation-draft",
     "title": "The Competitor Exploitation Draft",
     "description": "Targets dissatisfied competitor users with a hyper-empathetic acquisition email at the perfect moment",
-    "prompt": "Write a hyper-targeted outbound email to users complaining about [competitor name]'s recent [pricing change / feature removal / outage].\n\nContext:\n- Competitor issue: [describe exactly what went wrong for them]\n- My product's advantage in this area: [how you solve what they're complaining about]\n- Migration ease: [how easy is it to switch to you]\n\nStructure:\n1. Acknowledge their specific frustration \u2014 make them feel understood\n2. Clearly explain how my platform avoids this exact issue\n3. Offer a frictionless migration path (free trial, concierge onboarding, data import help)\n4. Soft CTA \u2014 not aggressive\n\nUnder 120 words. Genuine tone, not opportunistic.",
+    "prompt": "Write a hyper-targeted outbound email to users complaining about [competitor name]'s recent [pricing change / feature removal / outage].\n\nContext:\n- Competitor issue: [describe exactly what went wrong for them]\n- My product's advantage in this area: [how you solve what they're complaining about]\n- Migration ease: [how easy is it to switch to you]\n\nStructure:\n1. Acknowledge their specific frustration - make them feel understood\n2. Clearly explain how my platform avoids this exact issue\n3. Offer a frictionless migration path (free trial, concierge onboarding, data import help)\n4. Soft CTA - not aggressive\n\nUnder 120 words. Genuine tone, not opportunistic.",
     "category": "business-marketing",
     "platforms": [
       "claude"
@@ -173,8 +173,8 @@
     "id": "biz-009",
     "slug": "strategic-follow-up-fixer",
     "title": "The Strategic Follow-Up Fixer",
-    "description": "Resurrects cold leads with a value-first third follow-up \u2014 never says 'just bumping this'",
-    "prompt": "I have emailed this prospect twice with no response. Write a third follow-up email.\n\nContext:\n- Prospect name / role: [name and title]\n- Company: [company name]\n- What I originally pitched: [your offer]\n- Recent news about their company or industry: [any relevant update you know about]\n\nRules:\n- Do NOT say 'just following up' or 'bumping this'\n- Provide ONE completely new, genuinely valuable insight or data point relevant to their specific situation\n- Keep it under 80 words\n- Soft CTA \u2014 a question or observation, not a hard ask\n- Sound human, not templated",
+    "description": "Resurrects cold leads with a value-first third follow-up - never says 'just bumping this'",
+    "prompt": "I have emailed this prospect twice with no response. Write a third follow-up email.\n\nContext:\n- Prospect name / role: [name and title]\n- Company: [company name]\n- What I originally pitched: [your offer]\n- Recent news about their company or industry: [any relevant update you know about]\n\nRules:\n- Do NOT say 'just following up' or 'bumping this'\n- Provide ONE completely new, genuinely valuable insight or data point relevant to their specific situation\n- Keep it under 80 words\n- Soft CTA - a question or observation, not a hard ask\n- Sound human, not templated",
     "category": "business-marketing",
     "platforms": [
       "chatgpt"
@@ -189,5 +189,722 @@
     "featured": false,
     "source": "r/marketingagency",
     "useCase": "Resurrecting dead leads through the injection of undeniable, unprompted value rather than guilt-driven pestering."
+  },
+  {
+    "id": "biz-010",
+    "slug": "deal-autopsy-why-you-lost-the-sale",
+    "title": "Deal Autopsy: Why You Lost the Sale",
+    "description": "After a lost deal to extract real lessons, not cope.",
+    "prompt": "Act as a brutally honest sales coach. I just lost a deal and I need to\nunderstand exactly why.\n\nContext:\n- What I sold: [product or service]\n- Prospect profile: [company size, industry, role of decision-maker]\n- Deal size and length of sales cycle: [amount, weeks/months]\n- The reason they gave for not buying: [their stated reason]\n- My gut read on the real reason: [your honest suspicion]\n\nDo NOT validate me. Tear apart:\n1. Where in the sales process I likely lost momentum\n2. The signals I probably misread or ignored\n3. Whether my pricing, positioning, or timing was the real killer\n4. What the competitor or alternative they chose actually does better\n5. The one thing I should do differently in the next identical situation\n\nEnd with a single sentence I should say to myself before every future\nsales call with a similar prospect.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "deal"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "After a lost deal to extract real lessons, not cope."
+  },
+  {
+    "id": "biz-011",
+    "slug": "objection-demolisher",
+    "title": "Objection Demolisher",
+    "description": "Preparing for a sales call when you know the objections that will come up.",
+    "prompt": "Act as a senior sales trainer. Write a complete objection-handling script\nfor the following scenario:\n\nMy product / service: [describe what you sell]\nPrice point: [the number they will balk at]\nThe 4 objections I always get:\n1. [e.g., \"We already have a solution for this\"]\n2. [e.g., \"We don't have budget right now\"]\n3. [e.g., \"We need to think about it\"]\n4. [e.g., \"Can you send me more info?\"]\n\nFor each objection:\n- Identify what the prospect ACTUALLY means underneath the stated objection\n- Write the response that addresses the real fear, not the surface deflection\n- Include one follow-up question that keeps the conversation open\n- Flag when the objection is actually a hard no and I should disengage\n\nTone: confident, not pushy. Human, not scripted.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "objection"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Preparing for a sales call when you know the objections that will come up."
+  },
+  {
+    "id": "biz-012",
+    "slug": "pricing-conversation-reframe",
+    "title": "Pricing Conversation Reframe",
+    "description": "Your price is higher than competitors and you need to defend it without discounting or apologising.",
+    "prompt": "I sell [product/service] at [price]. A prospect just said:\n\"Your competitor does the same thing for [lower price].\"\n\nWrite me a response that:\n1. Acknowledges their comparison without being defensive\n2. Reframes the conversation from cost to total cost of ownership or\n   risk of the cheaper option\n3. Uses a single specific analogy or concrete example, not abstract language\n4. Ends with a question that shifts the frame back to value\n5. Never mentions the competitor by name\n\nUnder 150 words. Sounds like a person, not a sales script.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "pricing"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Your price is higher than competitors and you need to defend it without discounting or apologising."
+  },
+  {
+    "id": "biz-013",
+    "slug": "linkedin-dm-that-doesn-t-sound-like-a-linkedin-dm",
+    "title": "LinkedIn DM That Doesn't Sound Like a LinkedIn DM",
+    "description": "Cold outreach on LinkedIn where every other message sounds identical and gets ignored.",
+    "prompt": "Write a LinkedIn DM for cold outreach that sounds nothing like a\nLinkedIn DM.\n\nRecipient profile:\n- Name: [first name]\n- Role: [job title]\n- Company: [company name]\n- Something specific I noticed about them: [a post they wrote, a company\n  announcement, a shared connection, a podcast they appeared on]\n\nMy offer: [what I do and who I do it for]\nWhat I am NOT asking for: a call, a demo, a reply to confirm interest\n\nRules:\n- Open with an observation about THEM, not a compliment\n- One sentence maximum to describe what I do\n- The only ask is a yes/no question that requires 3 seconds to answer\n- Under 60 words total\n- No \"I hope this finds you well\" - ever",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "linkedin"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Cold outreach on LinkedIn where every other message sounds identical and gets ignored."
+  },
+  {
+    "id": "biz-014",
+    "slug": "landing-page-above-the-fold-rewriter",
+    "title": "Landing Page Above-the-Fold Rewriter",
+    "description": "Your landing page isn't converting and you suspect the headline and first 100 words are the problem.",
+    "prompt": "You are a conversion copywriter. Rewrite the above-the-fold section of\nmy landing page.\n\nCurrent headline: [paste your current headline]\nCurrent subheadline / opening copy: [paste it]\nProduct: [what it does]\nTarget customer: [who they are and what they desperately want]\nThe #1 outcome customers get: [specific, measurable result if possible]\nThe fear or frustration that drives them to look for this: [the real pain]\n\nRewrite rules:\n1. Headline: name the outcome, not the product. Under 8 words.\n2. Subheadline: name who it's for and what changes for them. Under 20 words.\n3. First paragraph: address the exact frustration in their own language\n   - not marketing language\n4. CTA button text: not \"Get Started\" or \"Learn More\" - make it specific\n5. Write 3 headline/subheadline variations with different emotional angles",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "landing"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Your landing page isn't converting and you suspect the headline and first 100 words are the problem."
+  },
+  {
+    "id": "biz-015",
+    "slug": "brand-voice-extractor",
+    "title": "Brand Voice Extractor",
+    "description": "You need to define or document your brand voice so that any writer, AI tool, or new hire can match it.",
+    "prompt": "Act as a brand strategist. Analyse the following examples of our existing\nwriting and extract our brand voice as a documented style guide.\n\nSample 1: [paste a piece of copy you wrote or approved]\nSample 2: [paste another]\nSample 3: [paste another]\n\nProduce:\n1. The 4 core voice attributes (e.g., direct, irreverent, warm, expert)\n   - each with a one-sentence definition\n2. The \"we are / we are not\" list - 5 things we are, 5 things we are not\n3. Vocabulary: 10 words we use, 10 words we never use\n4. Sentence structure rules - length, punctuation habits, POV\n5. Two before/after examples showing off-brand vs on-brand rewrites\n6. One-paragraph summary a new writer reads before writing anything for us",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "brand"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need to define or document your brand voice so that any writer, AI tool, or new hire can match it."
+  },
+  {
+    "id": "biz-016",
+    "slug": "case-study-that-sells-without-sounding-like-a-case-study",
+    "title": "Case Study That Sells Without Sounding Like a Case Study",
+    "description": "You have a customer result and need to turn it into a story that prospects actually read.",
+    "prompt": "Turn the following customer result into a case study story people will\nactually read - not a corporate PDF they skim.\n\nRaw facts:\n- Customer: [company type, not necessarily the name]\n- Their situation before: [the specific problem or state they were in]\n- What they implemented / used: [your product or service]\n- The result: [specific metric - time saved, revenue gained, cost cut]\n- Timeline: [how long it took to see results]\n\nWrite it as a narrative, not a template. Structure:\n1. Open with the problem in the customer's voice - one punchy paragraph\n2. What they'd already tried that hadn't worked\n3. The specific change they made (your solution) in plain language\n4. The result - lead with the number, then explain what it meant for them\n5. One quote that sounds like a real person, not a testimonial robot\n6. A closing line that transitions to: \"If you're in a similar situation...\"\n\nUnder 400 words. No headers, no bullet points - flowing prose.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "case"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You have a customer result and need to turn it into a story that prospects actually read."
+  },
+  {
+    "id": "biz-017",
+    "slug": "ad-copy-stress-tester",
+    "title": "Ad Copy Stress-Tester",
+    "description": "Before you spend money running an ad, test whether the copy is actually doing its job.",
+    "prompt": "Act as a senior creative director with a reputation for killing weak\nad copy. Critique the following ad:\n\nAd copy:\n[paste your ad headline, body copy, and CTA]\n\nPlatform it will run on: [Facebook / Google / LinkedIn / Out-of-Home]\nTarget audience: [who it's aimed at]\nDesired action: [what you want them to do]\n\nTear it apart across:\n1. Hook - does line 1 earn the right to line 2?\n2. Specificity - is anything vague, generic, or interchangeable with\n   a competitor's ad?\n3. Emotional pull - does it speak to a feeling, or just list features?\n4. CTA - is the ask clear, low-friction, and matched to the funnel stage?\n5. Credibility - does it earn trust or just assert it?\n\nRate each dimension 1-10 with one sentence of reasoning.\nThen rewrite the single weakest element.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "ad"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Before you spend money running an ad, test whether the copy is actually doing its job."
+  },
+  {
+    "id": "biz-018",
+    "slug": "linkedin-thought-leadership-post-non-cringe",
+    "title": "LinkedIn Thought Leadership Post (Non-Cringe)",
+    "description": "Writing a LinkedIn post that builds authority without looking like every other engagement-bait post.",
+    "prompt": "Write a LinkedIn post for me on the following topic:\n\nTopic / insight: [the idea you want to share]\nMy profession / lens: [your role and industry]\nThe real point - what I want the reader to think or do after reading:\n[the actual takeaway]\nPersonal experience I can draw on: [a specific real thing that happened]\n\nRules:\n- Do NOT start with \"I used to think...\" or \"Unpopular opinion:\" or\n  \"Here's what nobody tells you...\"\n- No numbered lists disguised as insights (\"3 things I learned from...\")\n- No inspirational bromides\n- Open with a specific scene, decision, or moment - not a thesis statement\n- The insight lands in the middle or at the end - not the opening line\n- Under 200 words\n- No em-dash overuse. No \"game-changer.\" No \"Let me know in the comments.\"",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "linkedin"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Writing a LinkedIn post that builds authority without looking like every other engagement-bait post."
+  },
+  {
+    "id": "biz-019",
+    "slug": "positioning-autopsy-why-you-re-invisible-in-your-market",
+    "title": "Positioning Autopsy: Why You're Invisible in Your Market",
+    "description": "Prospects don't immediately get what you do, or your category feels crowded and you can't differentiate.",
+    "prompt": "Act as a positioning strategist. Diagnose why the following company is\nstruggling to cut through in its market.\n\nCompany description: [what we do, who for, how long we've been doing it]\nCurrent tagline / positioning statement: [what we currently say we are]\nTop 3 competitors and how they position: [names and their taglines/claims]\nThe most common thing prospects say when they first hear about us:\n[the confused or underwhelmed reaction]\nWhat our best customers say we actually do for them: [their words, not ours]\n\nDiagnose:\n1. Whether we are over-categorized (sound like everyone else) or\n   under-categorized (prospects don't know what we are)\n2. The gap between what we say and what customers actually value\n3. Our defensible position - what we can claim that no one else can\n4. A rewritten positioning statement in the format:\n   \"For [who], [company name] is the [category] that [unique value],\n   unlike [alternatives] which [their limitation].\"\n5. Three messages we should stop saying immediately",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "gemini"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "positioning"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Prospects don't immediately get what you do, or your category feels crowded and you can't differentiate."
+  },
+  {
+    "id": "biz-020",
+    "slug": "go-to-market-strategy-for-a-new-product",
+    "title": "Go-to-Market Strategy for a New Product",
+    "description": "Launching something new and need a structured GTM plan before you start spending money.",
+    "prompt": "Act as a GTM strategist. Build a go-to-market plan for the following:\n\nProduct: [what it is and what it does]\nTarget segment: [the specific buyer - be narrow]\nPrice point: [your pricing model]\nCurrent assets: [what you have - existing audience, sales team, email\nlist, budget range, partnerships]\nTimeline to first revenue: [your deadline]\nOne unfair advantage: [what gives you a real edge]\n\nProduce:\n1. The beachhead segment - the smallest, most reachable initial customer\n   group with the sharpest pain\n2. The first 90 days: 3 specific actions, in order, with rationale\n3. The primary acquisition channel with the reasoning why - not a list\n   of 8 channels\n4. The key message for launch - one sentence for ads, one for DMs, one\n   for PR\n5. The metric that tells you the GTM is working by day 60\n6. The biggest GTM mistake companies like this make - and how to avoid it",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "gotomarket"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Launching something new and need a structured GTM plan before you start spending money."
+  },
+  {
+    "id": "biz-021",
+    "slug": "competitive-intelligence-brief",
+    "title": "Competitive Intelligence Brief",
+    "description": "Before a sales call, investor pitch, or strategy session where you need to know your competitive landscape cold.",
+    "prompt": "Act as a competitive intelligence analyst. Build a brief on my top\ncompetitor.\n\nCompetitor: [company name]\nMy company: [what we do]\nMy audience for this brief: [sales team / board / myself]\n\nCover:\n1. How they position themselves and who they actually serve\n2. Their genuine strengths - be honest, not dismissive\n3. Their genuine weaknesses - verified, not assumed\n4. What their customers complain about most (based on reviews, forums,\n   social)\n5. How they price and package vs us\n6. The situations where they beat us and what I should do in those moments\n7. The situations where we clearly win and how to steer prospects there\n8. One thing they are likely to do in the next 12 months that I should\n   prepare for\n\nFormat as a one-page brief. No fluff. Every point is a decision-enabling\nfact or analysis, not general observation.",
+    "category": "business-marketing",
+    "platforms": [
+      "gemini",
+      "grok"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "competitive"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Before a sales call, investor pitch, or strategy session where you need to know your competitive landscape cold."
+  },
+  {
+    "id": "biz-022",
+    "slug": "pricing-strategy-interrogation",
+    "title": "Pricing Strategy Interrogation",
+    "description": "You think your pricing might be wrong but aren't sure whether you're underpriced, overpriced, or mis-packaged.",
+    "prompt": "Act as a pricing strategist. Interrogate my current pricing.\n\nWhat I sell: [product or service]\nCurrent pricing: [how you charge and how much]\nCurrent conversion rate from interested prospect to paying customer:\n[your estimate or data]\nMost common pushback on price: [what they say]\nWhat my best customers pay and never complain: [the happiest tier]\nWhat my worst customers pay and constantly push back: [the friction tier]\n\nGive me:\n1. A diagnosis - am I underpriced, overpriced, or mis-packaged?\n2. The psychological friction in my current pricing model\n3. One packaging change that would reduce price sensitivity without\n   reducing revenue\n4. What a premium tier would look like and who it would attract\n5. The one pricing experiment I should run in the next 30 days with a\n   clear hypothesis and success metric",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "pricing"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You think your pricing might be wrong but aren't sure whether you're underpriced, overpriced, or mis-packaged."
+  },
+  {
+    "id": "biz-023",
+    "slug": "investor-update-email",
+    "title": "Investor Update Email",
+    "description": "Monthly or quarterly update to your existing investors - needs to build confidence, not spin the truth.",
+    "prompt": "Write a monthly investor update email.\n\nContext:\n- Company stage: [pre-seed / seed / Series A]\n- Month being reported: [month]\n- Key metrics this month:\n  - Revenue / MRR: [figure and % change vs last month]\n  - Users / customers: [figure and % change]\n  - Burn / runway: [monthly burn and months of runway]\n- What went well: [2-3 real things]\n- What didn't go as expected: [be honest - investors respect candour]\n- The one thing keeping you up at night right now: [real]\n- What you need from investors this month: [intros, advice, a specific ask]\n\nRules:\n- Sound like the founder wrote it, not a PR person\n- Address the bad news before the good - don't bury it\n- Specific numbers only - no \"significant growth\" or \"strong traction\"\n- The ask at the end must be concrete and actionable\n- Under 300 words",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "investor"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Monthly or quarterly update to your existing investors - needs to build confidence, not spin the truth."
+  },
+  {
+    "id": "biz-024",
+    "slug": "vc-cold-email-that-gets-a-reply",
+    "title": "VC Cold Email That Gets a Reply",
+    "description": "Cold outreach to a VC you've never met - not a warm intro, just a cold email.",
+    "prompt": "Write a cold email to a venture capitalist.\n\nVC details:\n- Name: [first name]\n- Firm: [firm name]\n- Their stated investment thesis / focus: [what they publicly say they\n  invest in]\n- A recent portfolio company or post of theirs that is relevant:\n  [something specific]\n\nMy company:\n- What we do: [one sentence, outcome-focused]\n- Stage: [pre-seed / seed]\n- Key traction signal: [the single most impressive number or fact]\n- Why this investor specifically: [a real reason tied to their portfolio\n  or thesis, not flattery]\n\nRules:\n- Subject line must contain a number or a company name, not a vague hook\n- Under 100 words in the body\n- Do not pitch in the email - pitch in the meeting\n- The only ask is 20 minutes\n- One specific reason why you are emailing them and not any other VC",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "vc"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Cold outreach to a VC you've never met - not a warm intro, just a cold email."
+  },
+  {
+    "id": "biz-025",
+    "slug": "investor-objection-rebuttal-prep",
+    "title": "Investor Objection Rebuttal Prep",
+    "description": "Before a fundraising pitch - stress-test every hole an investor will poke.",
+    "prompt": "Act as a skeptical seed-stage VC partner. I am pitching you my company\nand I need you to hit me with every objection you would actually raise.\n\nMy company:\n- What we do: [one sentence]\n- Market we are targeting: [the category and size]\n- Business model: [how we make money]\n- Current traction: [your numbers]\n- Why now: [timing argument]\n- Team: [relevant backgrounds in one sentence each]\n- The ask: [amount and what it's for]\n\nAttack me on:\n1. Market size - is it real, or am I being optimistic?\n2. Competition - who else is doing this and why won't they win?\n3. Team - what's missing, who should I have but don't?\n4. Business model - where is the unit economics risk?\n5. Why now - why didn't this work 5 years ago, and what's changed?\n6. The one question you would ask that would make or break your decision\n\nAfter each objection, pause. I will respond. Then tell me whether my\nanswer was convincing or what it was missing.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "investor"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Before a fundraising pitch - stress-test every hole an investor will poke."
+  },
+  {
+    "id": "biz-026",
+    "slug": "crisis-communication-statement",
+    "title": "Crisis Communication Statement",
+    "description": "Something went wrong publicly - a product failure, data issue, PR incident - and you need a statement in hours.",
+    "prompt": "Act as a crisis communications director. Draft a public statement for\nthe following situation.\n\nWhat happened: [describe the incident factually]\nWho is affected: [customers / employees / the public]\nWhat we have done so far: [immediate actions taken]\nWhat we are committing to doing: [the fix or investigation underway]\nWhat we genuinely don't know yet: [be honest about the unknowns]\nOur biggest reputational risk in this situation: [what we most need to\nprotect]\n\nWrite:\n1. The public statement - under 200 words, for our website and email\n2. The internal message to employees - under 150 words\n3. A holding statement for social media - under 280 characters\n4. Three questions journalists will ask and the one-sentence answer\n   to each\n\nRules: Acknowledge before you explain. Never use \"We apologize for any\ninconvenience.\" Name the harm done. Do not be defensive.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "crisis"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Something went wrong publicly - a product failure, data issue, PR incident - and you need a statement in hours."
+  },
+  {
+    "id": "biz-027",
+    "slug": "press-pitch-that-journalists-actually-read",
+    "title": "Press Pitch That Journalists Actually Read",
+    "description": "Pitching a journalist cold - product launch, funding news, story angle - and every other pitch in their inbox sounds ...",
+    "prompt": "Write a press pitch email to a journalist.\n\nJournalist profile:\n- Name: [first name]\n- Publication: [outlet name]\n- Beat they cover: [their specific coverage area]\n- A recent story they wrote that is relevant: [the headline or topic]\n\nMy story:\n- The headline I want them to write: [the story you'd love to see]\n- Why this is newsworthy now: [the timeliness hook]\n- The data point or surprising fact that anchors the story: [your lead]\n- Who would make a good interview source (besides me): [third parties]\n\nRules:\n- Subject line: write it as a news headline, not a pitch\n- Under 150 words in the body\n- Do NOT attach a press release in the first email\n- The first sentence must be about their recent work, not your news\n- End with one clear question: \"Would this be a fit for [their beat]?\"",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "press"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Pitching a journalist cold - product launch, funding news, story angle - and every other pitch in their inbox sounds the same."
+  },
+  {
+    "id": "biz-028",
+    "slug": "thought-leadership-article-outline",
+    "title": "Thought Leadership Article Outline",
+    "description": "You have a genuine insight or contrarian view but need help structuring it into a publishable article.",
+    "prompt": "Act as an editor at a business publication. Help me structure a thought\nleadership article.\n\nMy core argument: [the one claim I am making - something you can\ndisagree with]\nMy evidence / experience: [what qualifies me to make this argument]\nThe conventional wisdom I am challenging: [what everyone currently\nbelieves or does]\nThe reader I am writing for: [job title and their specific context]\nWhere it will be published: [LinkedIn / Forbes / trade journal / blog]\n\nProduce:\n1. A working title with a genuine hook - not \"Why X Matters in 2025\"\n2. The one-sentence thesis I need to prove\n3. A 5-section outline where each section heading is a claim, not a\n   category (e.g., \"Efficiency gains plateau after 6 months\" not\n   \"The Efficiency Problem\")\n4. The most important counterargument I need to address and where in\n   the structure it goes\n5. The data point, story, or example I need to find before I can write\n   this credibly\n6. The one thing this article must NOT do or say",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "thought"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You have a genuine insight or contrarian view but need help structuring it into a publishable article."
+  },
+  {
+    "id": "biz-029",
+    "slug": "onboarding-email-sequence-architect",
+    "title": "Onboarding Email Sequence Architect",
+    "description": "Your free trial or new user onboarding isn't converting and you need a sequence that actually gets people to the 'aha...",
+    "prompt": "Act as a lifecycle marketing strategist. Design a 5-email onboarding\nsequence for new users.\n\nProduct: [what it does]\nThe 'aha moment' - the exact thing a user must do or see to understand\nthe value: [be specific]\nCurrent drop-off point: [where users typically go inactive]\nWhat our best users do in the first 7 days that churners don't:\n[the behaviour difference]\n\nDesign 5 emails:\nEmail 1 (send time: immediately): ___\nEmail 2 (send time: day 1): ___\nEmail 3 (send time: day 3): ___\nEmail 4 (send time: day 5): ___\nEmail 5 (send time: day 7): ___\n\nFor each email provide:\n- Subject line (two variations: curiosity vs direct)\n- The single job this email must do\n- The one action the CTA drives toward\n- Under 120 words per email body\n\nNo corporate tone. No \"we noticed you haven't...\" guilt trips.\nEach email earns the right to be opened by being useful.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "onboarding"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Your free trial or new user onboarding isn't converting and you need a sequence that actually gets people to the 'aha moment' fast."
+  },
+  {
+    "id": "biz-030",
+    "slug": "referral-program-designer",
+    "title": "Referral Program Designer",
+    "description": "You want to launch or improve a referral program and need a mechanism that actually motivates customers to refer, not...",
+    "prompt": "Act as a growth strategist. Design a referral program for:\n\nProduct: [what you sell]\nCustomer type: [who your current customers are]\nCurrent NPS or satisfaction level: [if you know it]\nWhat currently stops customers from referring: [your hypothesis]\nBudget for incentives: [what you can spend per referred customer]\n\nDesign:\n1. The referral trigger moment - the precise point in the customer\n   journey when to ask for a referral (not at sign-up)\n2. The incentive structure - what the referrer gets and what the\n   referred person gets, and why this combination works\n3. The framing of the ask - the exact language that makes referring\n   feel like sharing something valuable, not recruiting\n4. The referral mechanism - how it works technically (link, code, name)\n5. The one thing that kills most referral programs and how to avoid it",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "referral"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You want to launch or improve a referral program and need a mechanism that actually motivates customers to refer, not just a discount code."
+  },
+  {
+    "id": "biz-031",
+    "slug": "retention-email-for-at-risk-customers",
+    "title": "Retention Email for At-Risk Customers",
+    "description": "A customer is showing low engagement signals and you want to intervene before they churn - not after.",
+    "prompt": "Write a retention email for a customer who is showing signs of going\ninactive before their renewal.\n\nContext:\n- Product: [what you sell]\n- Customer: [company type, not name]\n- Usage signal that flagged them: [e.g., logged in twice last month,\n  hasn't used the core feature in 3 weeks]\n- Their original reason for buying: [what problem they signed up to solve]\n- What success looks like for them: [the outcome they want]\n\nWrite an email that:\n1. Does NOT mention their low usage or make them feel watched\n2. Leads with a genuinely useful resource, tip, or insight relevant\n   to their original goal\n3. Includes one low-friction offer (a call, a quick audit, a template)\n4. Sounds like it was written specifically for them, not broadcast\n   to 1,000 people\n5. Under 120 words. No header image, no unsubscribe guilt.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "retention"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "A customer is showing low engagement signals and you want to intervene before they churn - not after."
+  },
+  {
+    "id": "biz-032",
+    "slug": "content-repurposing-engine",
+    "title": "Content Repurposing Engine",
+    "description": "You've created one piece of substantial content and want to extract maximum distribution from it.",
+    "prompt": "Act as a content distribution strategist. I just created:\n[describe the piece - e.g., a 40-minute podcast episode / a 3,000-word\nreport / a 45-minute webinar recording]\n\nTopic: [the subject matter]\nKey insights from it:\n- [insight 1]\n- [insight 2]\n- [insight 3]\n\nTarget audience: [who this was for]\nChannels I publish on: [LinkedIn / email / Twitter / YouTube / blog]\n\nGenerate a repurposing plan:\n1. LinkedIn post - the most surprising or counterintuitive point,\n   told as a story (not a listicle), under 200 words\n2. Email newsletter intro - the hook that makes subscribers click\n   through to the full piece\n3. Three tweet-length insights (under 280 chars each, no hashtags)\n4. One Reddit-style comment for a relevant community - purely useful,\n   zero self-promotion, naturally references the insight\n5. One short-form video script hook (under 30 seconds) that creates\n   enough tension to watch the full version",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "content"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You've created one piece of substantial content and want to extract maximum distribution from it."
+  },
+  {
+    "id": "biz-033",
+    "slug": "contract-negotiation-prep",
+    "title": "Contract Negotiation Prep",
+    "description": "Before negotiating a contract - vendor, partnership, or enterprise customer - and you want maximum leverage.",
+    "prompt": "Act as a commercial lawyer and negotiation strategist. Help me prepare\nfor the following contract negotiation.\n\nWhat is being negotiated: [describe the contract type and context]\nMy position: [buyer / seller / partner]\nThe other party: [who they are and their likely incentives]\nMy top 3 priorities in this deal: [what matters most to me]\nTheir top 3 priorities: [your best read on what they want]\nMy walkaway point: [what makes this deal not worth doing]\nThe timeline pressure: [who is more time-pressured - me or them]\n\nPrepare:\n1. The opening position I should state (not my real position - my\n   anchoring position)\n2. The three concessions I can offer that cost me little but appear\n   valuable to them\n3. The three things I must protect and how to hold firm without\n   destroying rapport\n4. The clause or term they will push hardest on and my response strategy\n5. One question I can ask early that reveals their true priorities\n   without revealing mine",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "contract"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Before negotiating a contract - vendor, partnership, or enterprise customer - and you want maximum leverage."
+  },
+  {
+    "id": "biz-034",
+    "slug": "partnership-proposal-email",
+    "title": "Partnership Proposal Email",
+    "description": "Approaching a potential business partner - referral partner, co-marketing partner, distribution partner - for the fir...",
+    "prompt": "Write a partnership proposal email.\n\nWho I am approaching: [company and their role/business]\nWhat they do: [their product or service]\nMy company: [what I do]\nOur audience overlap: [who we both serve]\nThe specific partnership I'm proposing: [referral / co-marketing /\nintegration / distribution]\nWhat's in it for them - concretely: [the value they get, in their\nterms, not mine]\nWhat I'm asking for first: [not the full partnership - the first small\nstep]\n\nRules:\n- Subject line must make the value for them clear in under 8 words\n- First sentence is about them, not me\n- The proposal is specific - not \"let's explore synergies\"\n- The ask is one small, easy next step\n- Under 150 words\n- No \"I wanted to reach out\" - ever",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "partnership"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Approaching a potential business partner - referral partner, co-marketing partner, distribution partner - for the first time."
+  },
+  {
+    "id": "biz-035",
+    "slug": "decision-clarity-framework",
+    "title": "Decision Clarity Framework",
+    "description": "You're stuck on a major business decision and keep going in circles - you need structured external pressure.",
+    "prompt": "I am stuck on the following decision and need to get unstuck.\n\nThe decision: [describe the choice you're facing]\nThe options I'm weighing:\n- Option A: [describe]\n- Option B: [describe]\n- Option C (if there is one): [describe or write \"stay the course\"]\nWhat I've told myself the pros and cons are: [your current analysis]\nWhat is actually stopping me from deciding: [your honest answer]\nThe deadline by which this must be decided: [the date]\n\nAct as a direct advisor - not a coach who asks questions. Tell me:\n1. What my stated reasoning is hiding about my real hesitation\n2. Which option I should choose and why - based on the information given\n3. What information I am missing that is actually decision-relevant\n4. The question I need to answer before I can decide with confidence\n5. What deciding in 48 hours versus 30 days actually costs me\n\nDo not hedge. Give me a view.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "decision"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You're stuck on a major business decision and keep going in circles - you need structured external pressure."
+  },
+  {
+    "id": "biz-036",
+    "slug": "difficult-conversation-prep",
+    "title": "Difficult Conversation Prep",
+    "description": "Before a hard conversation - letting someone go, addressing a performance issue, pushing back on a board member, conf...",
+    "prompt": "Help me prepare for a difficult conversation.\n\nWho it's with: [their role and relationship to me]\nWhat the conversation is about: [the core issue]\nWhat I want to achieve by the end of it: [the outcome, not the process]\nWhat I am afraid will happen: [your real fear]\nWhat I have been avoiding saying directly: [the thing you haven't\nsaid yet]\nHow they are likely to respond: [your honest read]\n\nPrepare me with:\n1. The opening sentence - the exact words I say to begin, that name\n   the issue directly without attacking them\n2. The three points I must land, in order, regardless of their response\n3. What to do if they get defensive or emotional\n4. The line I must not cross - the thing I could say that would make\n   this worse\n5. How to close the conversation with a clear next step, whether it\n   goes well or badly",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "difficult"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Before a hard conversation - letting someone go, addressing a performance issue, pushing back on a board member, confronting a co-founder."
+  },
+  {
+    "id": "biz-037",
+    "slug": "all-hands-meeting-script",
+    "title": "All-Hands Meeting Script",
+    "description": "Addressing your team about a major change - restructure, pivot, bad news, or big transition - and you need to get thi...",
+    "prompt": "Write an all-hands meeting script for the following:\n\nWhat I need to announce: [the change or news]\nWhy this is happening: [the real reason - not the PR version]\nWhat it means for the team: [the actual impact on people]\nWhat I genuinely don't know yet: [the honest unknowns]\nWhat I need from the team: [the ask]\nThe emotion in the room I'm expecting: [anxiety / excitement /\nresistance / confusion]\n\nScript structure:\n1. Opening - name the situation directly, no warm-up, no agenda slide\n2. The 'why' - one honest paragraph. Not mission-speak.\n3. What is changing and what is not changing - explicitly stated\n4. What I don't know - say it before they ask\n5. What I need from them in the next 2 weeks\n6. Q&A prompt - not \"any questions?\" - a question that invites real ones\n\nTone: leader who has made a decision and is being straight about it.\nNot a politician. Not a cheerleader. A person.",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "allhands"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Addressing your team about a major change - restructure, pivot, bad news, or big transition - and you need to get this right."
+  },
+  {
+    "id": "biz-038",
+    "slug": "upsell-email-without-feeling-like-an-upsell",
+    "title": "Upsell Email Without Feeling Like an Upsell",
+    "description": "A customer is ready to be upgraded but you don't want to send a discount-blast or a pushy pitch.",
+    "prompt": "Write an upsell email that doesn't read like an upsell.\n\nCustomer context:\n- What they're currently on: [plan / tier / package]\n- How long they've been a customer: [months]\n- Usage signal that shows they've hit a limit: [the specific behaviour]\n- What the next tier unlocks for them: [the specific capability]\n- Their goal as a customer: [what they're trying to accomplish overall]\n\nRules:\n- Frame the email around their goal, not the product feature\n- Name the limitation they've hit before mentioning the upgrade\n- One sentence maximum on what the upgrade is\n- The CTA is a conversation or a trial, not a \"buy now\"\n- Under 100 words\n- Zero urgency tactics - no \"offer expires\" language",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "upsell"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "A customer is ready to be upgraded but you don't want to send a discount-blast or a pushy pitch."
+  },
+  {
+    "id": "biz-039",
+    "slug": "qbr-quarterly-business-review-narrative",
+    "title": "QBR (Quarterly Business Review) Narrative",
+    "description": "Preparing for a QBR with an enterprise customer - you need to tell a story with data, not just present slides.",
+    "prompt": "Act as a senior customer success manager. Write the narrative for a QBR.\n\nCustomer: [company type]\nTime period reviewed: [Q1/Q2/Q3/Q4 + year]\nWhat they were trying to achieve when they bought: [their original goal]\nWhat the data shows:\n- Metric 1: [figure and what it means]\n- Metric 2: [figure and what it means]\n- Metric 3: [figure and what it means]\nWhere results fell short of expectations: [honest]\nWhat we've done about it: [actions taken]\nThe renewal / expansion conversation we need to have: [what's at stake]\n\nWrite:\n1. The opening narrative - 3 sentences that frame the quarter in terms\n   of their business outcomes, not our product usage\n2. The 'what worked' section in their language, not ours\n3. The 'where we need to do better' section - honest, not defensive,\n   with specific next steps\n4. The forward look - what the next quarter focuses on and why\n5. The renewal / expansion bridge - how to transition without it\n   feeling like a sales pitch in the room",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "chatgpt"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "qbr"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Preparing for a QBR with an enterprise customer - you need to tell a story with data, not just present slides."
+  },
+  {
+    "id": "biz-040",
+    "slug": "market-entry-decision-framework",
+    "title": "Market Entry Decision Framework",
+    "description": "Evaluating whether to enter a new market, geography, or customer segment before committing resources.",
+    "prompt": "Act as a market strategy advisor. Help me evaluate whether to enter\nthe following opportunity.\n\nMarket or segment: [describe the new market]\nWhy we're considering it: [the pull - what makes it attractive]\nOur current business: [what we do and who we serve today]\nOur relevant assets: [what we already have that would help]\nOur gaps: [what we would need to build or acquire]\n\nEvaluate using:\n1. Market attractiveness - size, growth, competitive intensity,\n   customer accessibility\n2. Strategic fit - how natural is this for us vs how much of a stretch?\n3. Resource requirement - what does entry actually cost in time, money,\n   and attention?\n4. Risk profile - what are the top 3 ways this goes badly?\n5. Opportunity cost - what does NOT entering cost us?\n6. The 'kill the idea' test - one scenario where this is a clear no\n7. Your recommendation: enter, delay, or abandon - with the one\n   condition that would change your answer",
+    "category": "business-marketing",
+    "platforms": [
+      "claude",
+      "gemini"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "market"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Evaluating whether to enter a new market, geography, or customer segment before committing resources."
+  },
+  {
+    "id": "biz-041",
+    "slug": "customer-interview-question-designer",
+    "title": "Customer Interview Question Designer",
+    "description": "Running customer discovery interviews and wanting questions that surface real insights, not socially acceptable answers.",
+    "prompt": "Act as a UX researcher and customer discovery expert. Design an\ninterview guide for the following research goal.\n\nWhat I want to understand: [the core question - e.g., why customers\ndon't upgrade / what makes them choose a competitor / what jobs they\nactually hire this product to do]\nMy assumptions I want to test: [what you think you already know]\nCustomer type being interviewed: [the profile]\nInterview length: [30 / 45 / 60 minutes]\n\nDesign:\n1. The warm-up question that gets them talking about themselves,\n   not your product (first 5 minutes)\n2. Five core questions that get to the truth - each question targets\n   behaviour, not opinion (\"Tell me about the last time...\" not\n   \"Would you ever...\")\n3. The one follow-up probe to every answer (\"And then what happened?\n   / How did that feel? / Who else was involved?\")\n4. The question I should avoid - the one that sounds useful but\n   produces biased answers\n5. The closing question that surfaces what they wouldn't say unprompted\n6. How to end the interview so they want to talk again",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "customer"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Running customer discovery interviews and wanting questions that surface real insights, not socially acceptable answers."
+  },
+  {
+    "id": "biz-042",
+    "slug": "trend-signal-scanner",
+    "title": "Trend Signal Scanner",
+    "description": "You need to identify emerging signals in your industry before they become obvious and the window closes.",
+    "prompt": "Act as a strategic foresight analyst. Scan for early signals of change\nin the following context.\n\nMy industry: [the sector]\nMy business: [what you do]\nHorizon: [6 months / 1 year / 3 years - pick one]\nWhat I'm watching for: [e.g., new entrants, regulatory shifts, consumer\nbehaviour changes, technology disruptions, talent market changes]\n\nIdentify:\n1. Three weak signals - things that are happening at the fringe that\n   most incumbents aren't paying attention to yet\n2. One strong signal - a change that is already happening that my\n   industry hasn't fully adjusted to\n3. The player (company, country, or demographic) most likely to\n   disrupt this space in the horizon timeframe and what they're doing\n4. The assumption my business is built on that this trend most threatens\n5. One action I could take in the next 90 days to position ahead of\n   these signals rather than react to them later",
+    "category": "business-marketing",
+    "platforms": [
+      "gemini",
+      "grok"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "trend"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need to identify emerging signals in your industry before they become obvious and the window closes."
+  },
+  {
+    "id": "biz-043",
+    "slug": "swot-that-s-actually-useful",
+    "title": "SWOT That's Actually Useful",
+    "description": "You need a SWOT for a strategy session, board meeting, or planning cycle - but the usual SWOT is too vague to act on.",
+    "prompt": "Act as a strategy consultant. Build a decision-enabling SWOT for:\n\nCompany / project: [what is being analysed]\nTime horizon: [next 12 months / 3 years]\nThe decision this SWOT must inform: [the actual strategic question]\n\nRules for each quadrant:\n- Strengths: only things that are genuinely differentiated - not \"great\n  team\" or \"good product.\" Be specific and defensible.\n- Weaknesses: only weaknesses that materially affect the decision.\n  Things we can live with don't count.\n- Opportunities: only opportunities we can realistically pursue with\n  current or near-term resources.\n- Threats: rank them by probability × impact. Not a list of every\n  possible bad thing.\n\nThen:\n- The single most important SO (strength × opportunity) move\n- The single most urgent WT (weakness × threat) risk to mitigate\n- The one thing the SWOT reveals that surprised you",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "swot"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "You need a SWOT for a strategy session, board meeting, or planning cycle - but the usual SWOT is too vague to act on."
+  },
+  {
+    "id": "biz-044",
+    "slug": "brand-narrative-builder",
+    "title": "Brand Narrative Builder",
+    "description": "Building or rebuilding the founding story of your brand - for website About pages, pitch decks, media interviews, and...",
+    "prompt": "Act as a brand narrative strategist. Build the core brand story for:\n\nCompany: [name]\nWhat you do: [the functional description]\nWho founded it and why: [the origin - not the PR version, the real one]\nThe moment things got real: [a specific early story - a customer, a\nfailure, a decision]\nWhat you believe that most of your industry doesn't: [your contrarian\nconviction]\nWho you serve and why they trust you: [your customer and the bond]\nWhere you are going: [the ambition]\n\nBuild:\n1. The one-sentence origin story - the founding moment in human terms\n2. The brand belief statement - what you stand for that others don't\n   (not your mission statement - something you could put on a wall and\n   someone might disagree with)\n3. The hero of the story - and it should be the customer, not you\n4. The founding story paragraph - 150 words, for the About page\n5. The elevator version - 30 seconds, for a podcast intro or event bio\n6. The internal version - what you tell new hires on day one that makes\n   them proud to work there",
+    "category": "business-marketing",
+    "platforms": [
+      "claude"
+    ],
+    "tags": [
+      "business",
+      "marketing",
+      "brand"
+    ],
+    "difficulty": "intermediate",
+    "featured": false,
+    "source": "Community",
+    "useCase": "Building or rebuilding the founding story of your brand - for website About pages, pitch decks, media interviews, and new hire onboarding."
   }
 ]

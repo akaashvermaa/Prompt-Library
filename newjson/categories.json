@@ -21,7 +21,7 @@
     "id": "cat-002",
     "slug": "write-create",
     "label": "Write & Create",
-    "description": "Essays, content, scripts, social media, SEO — everything you need to put words into the world",
+    "description": "Essays, content, scripts, social media, SEO - everything you need to put words into the world",
     "icon": "✍️",
     "color": "violet",
     "count": 10,
@@ -75,7 +75,7 @@
     "description": "Cold email, sales outreach, executive prep, churn recovery, and high-conversion communication",
     "icon": "💼",
     "color": "orange",
-    "count": 9,
+    "count": 44,
     "featured": true,
     "includes": [
       "Cold outreach",

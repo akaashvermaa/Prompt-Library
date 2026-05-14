@@ -5,12 +5,10 @@ const CATEGORIES = [
   { slug: "study-learn",     label: "Study & Learn",     italic: "Learning" },
   { slug: "write-create",    label: "Write & Create",    italic: "Essays" },
   { slug: "code-dev",        label: "Code & Dev",        italic: "Development" },
-  { slug: "teaching",        label: "Teaching",        italic: "Explaining" },
   { slug: "business-marketing", label: "Business & Marketing", italic: "Email" },
   { slug: "review-test",    label: "Review & Test",    italic: "Feedback" },
-  { slug: "testing",         label: "QA",              italic: "Testing" },
   { slug: "career-brand",    label: "Career & Brand",   italic: "Career" },
-  { slug: "image",           label: "Image",           italic: "Generation" },
+  { slug: "image-prompts",   label: "Image",           italic: "Generation" },
 ];
 
 const ArrowIcon = () => (
@@ -32,7 +30,7 @@ export async function CategoriesSection() {
             <div className="eyebrow">Categories / index</div>
             <h2>Sorted by <span className="it">craft</span>, not by trend.</h2>
           </div>
-          <p className="lede">Nine working categories. Each prompt belongs to exactly one. No "misc", no tag soup.</p>
+          <p className="lede">Seven working categories. Each prompt belongs to exactly one. No "misc", no tag soup.</p>
         </div>
         <div className="cats">
           {CATEGORIES.map((cat, i) => (

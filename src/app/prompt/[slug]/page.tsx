@@ -62,7 +62,7 @@ export default async function PromptPage({ params }: { params: Promise<{ slug: s
               </div>
             </div>
 
-            {/* Right — Editor panel */}
+            {/* Right - Editor panel */}
             <div className="detail-right">
               <div className="editor-head">
                 <div className="dots">

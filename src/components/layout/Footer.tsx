@@ -42,7 +42,7 @@ export function Footer() {
           </div>
         </div>
         <div className="foot-bar">
-          <span>© 2026 PROMPTVAULT — A LIBRARY, NOT A FEED</span>
+          <span>© 2026 PROMPTVAULT - A LIBRARY, NOT A FEED</span>
           <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <Link
               href="/admin"
