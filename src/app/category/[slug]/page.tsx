@@ -13,7 +13,7 @@ const CAT_LABELS: Record<string,{ label: string; italic: string }> = {
   "review-test":    { label: "Review & Test",    italic: "Feedback" },
   testing:           { label: "QA",               italic: "Testing" },
   "career-brand":    { label: "Career & Brand",    italic: "Career" },
-  image:             { label: "Image",             italic: "Generation" },
+  "image-prompts":   { label: "Image",             italic: "Generation" },
 };
 
 export async function generateStaticParams() {
