@@ -217,7 +217,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 /* Hero */
 .hero { padding: 180px 0 100px; position: relative; }
 .hero-meta { display: flex; align-items: center; gap: 14px; color: var(--muted); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 36px; }
-.hero-meta .bar { width: 28px; height: 1px; background: var(--muted-2); }
 .hero h1 { font-family: "Instrument Serif", serif; font-weight: 400; font-size: clamp(64px, 11vw, 168px); line-height: 0.92; letter-spacing: -0.035em; }
 .hero h1 .it { font-style: italic; color: var(--amber); }
 .hero-row { display: grid; grid-template-columns: 1.4fr 1fr; gap: 80px; margin-top: 70px; align-items: end; }
@@ -280,7 +279,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 section { padding: 120px 0; position: relative; }
 .sec-head { display: flex; align-items: end; justify-content: space-between; margin-bottom: 64px; gap: 40px; }
 .sec-head .eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--amber); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
-.sec-head .eyebrow::before { content: ""; width: 24px; height: 1px; background: var(--amber); }
 .sec-head h2 { font-family: "Instrument Serif", serif; font-size: clamp(40px, 5.5vw, 76px); line-height: 1; letter-spacing: -0.02em; max-width: 780px; }
 .sec-head h2 .it { font-style: italic; color: var(--amber); }
 .sec-head .lede { font-size: 16px; color: var(--muted); max-width: 360px; line-height: 1.55; }

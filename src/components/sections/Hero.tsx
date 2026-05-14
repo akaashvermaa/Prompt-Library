@@ -15,7 +15,7 @@ export function Hero() {
     <header className="hero">
       <div className="wrap">
         <div className="hero-meta">
-          <span className="bar" />
+
           <span>A library, not a feed</span>
           
           
