@@ -8,7 +8,14 @@
     "color": "amber",
     "count": 20,
     "featured": true,
-    "includes": ["Study systems", "Active recall", "Spaced repetition", "Language practice", "Feynman technique", "30-day curricula"]
+    "includes": [
+      "Study systems",
+      "Active recall",
+      "Spaced repetition",
+      "Language practice",
+      "Feynman technique",
+      "30-day curricula"
+    ]
   },
   {
     "id": "cat-002",
@@ -19,7 +26,13 @@
     "color": "violet",
     "count": 10,
     "featured": true,
-    "includes": ["Essay editing", "Style synthesis", "Structural feedback", "Blog content", "Social media scripts"]
+    "includes": [
+      "Essay editing",
+      "Style synthesis",
+      "Structural feedback",
+      "Blog content",
+      "Social media scripts"
+    ]
   },
   {
     "id": "cat-003",
@@ -28,9 +41,15 @@
     "description": "Code review, debugging, security audits, SQL optimization, and agentic workflows",
     "icon": "💻",
     "color": "emerald",
-    "count": 10,
+    "count": 45,
     "featured": true,
-    "includes": ["Security review", "Edge case testing", "Debugging protocol", "SQL optimization", "Multi-agent design"]
+    "includes": [
+      "Security review",
+      "Edge case testing",
+      "Debugging protocol",
+      "SQL optimization",
+      "Multi-agent design"
+    ]
   },
   {
     "id": "cat-004",
@@ -41,7 +60,13 @@
     "color": "blue",
     "count": 9,
     "featured": true,
-    "includes": ["LinkedIn posts", "Headlines", "About section", "Experience bullets", "Vulnerable storytelling"]
+    "includes": [
+      "LinkedIn posts",
+      "Headlines",
+      "About section",
+      "Experience bullets",
+      "Vulnerable storytelling"
+    ]
   },
   {
     "id": "cat-005",
@@ -52,7 +77,13 @@
     "color": "orange",
     "count": 9,
     "featured": true,
-    "includes": ["Cold outreach", "ICP generation", "Churn recovery", "Executive negotiation", "Product updates"]
+    "includes": [
+      "Cold outreach",
+      "ICP generation",
+      "Churn recovery",
+      "Executive negotiation",
+      "Product updates"
+    ]
   },
   {
     "id": "cat-006",
@@ -63,7 +94,14 @@
     "color": "rose",
     "count": 18,
     "featured": true,
-    "includes": ["Brutal feedback", "Red team", "Pitch review", "Bug reports", "CI/CD pipelines", "Security penetration"]
+    "includes": [
+      "Brutal feedback",
+      "Red team",
+      "Pitch review",
+      "Bug reports",
+      "CI/CD pipelines",
+      "Security penetration"
+    ]
   },
   {
     "id": "cat-007",
@@ -74,6 +112,13 @@
     "color": "pink",
     "count": 20,
     "featured": true,
-    "includes": ["Headshots", "Product photography", "Social media", "Architecture", "Food", "Abstract art"]
+    "includes": [
+      "Headshots",
+      "Product photography",
+      "Social media",
+      "Architecture",
+      "Food",
+      "Abstract art"
+    ]
   }
 ]

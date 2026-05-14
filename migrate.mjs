@@ -16,7 +16,7 @@ if (!supabaseUrl || !supabaseAnonKey) {
 }
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
-const promptsDir = path.join(__dirname, 'src', 'data', 'prompts');
+const promptsDir = path.join(__dirname, 'newjson');
 
 async function migrate() {
   const files = fs.readdirSync(promptsDir);
