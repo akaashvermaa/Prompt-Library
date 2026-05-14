@@ -35,7 +35,7 @@ export default function AboutPage() {
         <div className="wrap">
           <div className="hero-meta">
             <span>About</span>
-            <div className="bar"></div>
+
             <span>Learn more about PromptVault</span>
           </div>
           <h1>
