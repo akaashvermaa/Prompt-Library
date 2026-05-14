@@ -1,5 +1,6 @@
 "use client";
 import { Suspense, useState, useMemo, useEffect } from "react";
+import { useDebounce } from "use-debounce";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Prompt, Platform } from "@/types";
@@ -18,21 +19,44 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
   const params = useSearchParams();
   const [platform, setPlatform] = useState<Platform>("any");
   const [category, setCategory] = useState("all");
-  // Live search — no separate "commit" state needed
+  // Live search — now with server-side debouncing
   const [query, setQuery] = useState(params.get("search") ?? "");
+  const [debouncedQuery] = useDebounce(query, 300);
+  const [serverResults, setServerResults] = useState<Prompt[] | null>(null);
+  const [isSearching, setIsSearching] = useState(false);
+
+  useEffect(() => {
+    if (!debouncedQuery || debouncedQuery.length < 2) {
+      setServerResults(null);
+      setIsSearching(false);
+      return;
+    }
+    setIsSearching(true);
+    fetch(`/api/search?q=${encodeURIComponent(debouncedQuery)}`)
+      .then(r => r.json())
+      .then(data => {
+        setServerResults(data);
+        setIsSearching(false);
+        setCurrentPage(1); // Reset page on new search
+      })
+      .catch(err => {
+        console.error("Search failed", err);
+        setIsSearching(false);
+      });
+  }, [debouncedQuery]);
+
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 
-  // Everything is synchronous — useMemo over the static array
+  // Mix server results and client filters
   const results = useMemo(() => {
-    let out = prompts;
+    // If we have server search results, start from those. Otherwise start from all props.
+    let out = serverResults !== null ? serverResults : prompts;
 
     if (platform !== "any") {
       if (platform === "claude") {
-        // For Claude, only show prompts that specifically include claude
         out = out.filter(p => p.platforms.includes("claude"));
       } else {
-        // For other platforms, show prompts that include that platform OR "any"
         out = out.filter(p =>
           p.platforms.includes(platform) || p.platforms.includes("any")
         );
@@ -43,7 +67,8 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
       out = out.filter(p => p.category === category);
     }
 
-    if (query.trim()) {
+    // Only do client-side filtering if server results aren't active (query is short)
+    if (serverResults === null && query.trim()) {
       const q = query.trim().toLowerCase();
       out = out.filter(p =>
         p.title.toLowerCase().includes(q) ||
@@ -55,7 +80,7 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
     }
 
     return out;
-  }, [platform, category, query, prompts]);
+  }, [platform, category, query, prompts, serverResults]);
 
   // Pagination logic
   const totalPages = Math.ceil(results.length / itemsPerPage);
@@ -103,8 +128,14 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
             </button>
           )}
         </div>
-        <div style={{fontSize: '14px', color: 'var(--muted)', marginTop: '8px'}}>
-          {query ? `Found ${results.length} prompt${results.length !== 1 ? 's' : ''} for "${query}"` : 'Search for "teaching", "essay", "code", etc.'}
+        <div style={{fontSize: '14px', color: 'var(--muted)', marginTop: '8px', display: 'flex', alignItems: 'center', gap: '8px'}}>
+          {isSearching ? (
+            <span style={{ color: 'var(--amber)' }}>Searching...</span>
+          ) : query ? (
+            `Found ${results.length} prompt${results.length !== 1 ? 's' : ''} for "${query}"`
+          ) : (
+            'Search for "teaching", "essay", "code", etc.'
+          )}
         </div>
       </div>
 
