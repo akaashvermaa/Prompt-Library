@@ -28,7 +28,7 @@
     "id": "img-002",
     "slug": "founder-creative-headshot",
     "title": "Founder / Creative Headshot",
-    "description": "Editorial-style portrait with natural window light — perfect for founders, creators, and personal brands",
+    "description": "Editorial-style portrait with natural window light - perfect for founders, creators, and personal brands",
     "prompt": "editorial portrait, young founder, confident relaxed expression, natural window light from left, minimal dark background, sharp eyes, slight smile, linen shirt, analog film grain, cinematic --ar 4:5 --style raw --v 6.1",
     "category": "image-prompts",
     "platforms": [
@@ -53,7 +53,7 @@
     "id": "img-003",
     "slug": "product-white-background",
     "title": "Product on White Background",
-    "description": "Clean e-commerce product shot on white — ready for Amazon, Shopify, or any online store",
+    "description": "Clean e-commerce product shot on white - ready for Amazon, Shopify, or any online store",
     "prompt": "A photo of a [product name] placed on a clean white studio surface. Soft diffused overhead lighting with subtle shadows beneath the product. Macro lens, hyper-realistic texture detail, commercial product photography style, white background, no props.",
     "category": "image-prompts",
     "platforms": [
@@ -80,7 +80,7 @@
     "id": "img-004",
     "slug": "lifestyle-product-shot",
     "title": "Lifestyle Product Shot",
-    "description": "Product in a warm, lived-in lifestyle context — for Instagram, ads, and editorial use",
+    "description": "Product in a warm, lived-in lifestyle context - for Instagram, ads, and editorial use",
     "prompt": "A [product] sitting on a rustic wooden table next to a ceramic coffee mug and an open book, warm afternoon sunlight streaming through a nearby window creating soft golden highlights. Editorial lifestyle photography, shallow depth of field, photorealistic.",
     "category": "image-prompts",
     "platforms": [
@@ -105,7 +105,7 @@
     "id": "img-005",
     "slug": "instagram-flat-lay",
     "title": "Instagram Flat Lay",
-    "description": "Aesthetic overhead flat lay for Instagram posts — clean, minimal, and editorial",
+    "description": "Aesthetic overhead flat lay for Instagram posts - clean, minimal, and editorial",
     "prompt": "An overhead flat lay photograph of [items e.g. a journal, coffee cup, flowers, and phone] arranged aesthetically on a white marble surface. Soft natural daylight, pastel color palette, editorial fashion magazine style. Do not include any text or letters in the image.",
     "category": "image-prompts",
     "platforms": [
@@ -130,7 +130,7 @@
     "id": "img-006",
     "slug": "youtube-thumbnail-background",
     "title": "YouTube Thumbnail Background",
-    "description": "Dramatic cinematic background for YouTube thumbnails — high contrast, no text, no people",
+    "description": "Dramatic cinematic background for YouTube thumbnails - high contrast, no text, no people",
     "prompt": "A dramatic cinematic background for a YouTube thumbnail. Deep dark blue and orange gradient sky, volumetric god rays of light breaking through storm clouds, hyper-detailed, ultra-wide 16:9 format, no people, no text, photorealistic.",
     "category": "image-prompts",
     "platforms": [
@@ -155,7 +155,7 @@
     "id": "img-007",
     "slug": "instagram-reel-cover",
     "title": "Instagram Reel Cover",
-    "description": "Vertical lifestyle cover image for Instagram Reels — golden hour, cinematic, scroll-stopping",
+    "description": "Vertical lifestyle cover image for Instagram Reels - golden hour, cinematic, scroll-stopping",
     "prompt": "vibrant lifestyle photo, golden hour beach, warm amber tones, bokeh background, person silhouette facing ocean, cinematic color grading, editorial quality --ar 9:16 --style raw --v 6.1",
     "category": "image-prompts",
     "platforms": [
@@ -205,7 +205,7 @@
     "id": "img-009",
     "slug": "logo-concept-exploration",
     "title": "Logo Concept Exploration",
-    "description": "Minimal geometric logo mark exploration — clean vector style, no text, white background",
+    "description": "Minimal geometric logo mark exploration - clean vector style, no text, white background",
     "prompt": "masterpiece, best quality, minimal logo design, geometric abstract mark, single color, clean vector style, white background, professional branding, negative space concept, no text, no gradients, sharp edges",
     "category": "image-prompts",
     "platforms": [
@@ -230,7 +230,7 @@
     "id": "img-010",
     "slug": "app-ui-mockup",
     "title": "App UI Mockup",
-    "description": "Photorealistic iPhone mockup showing a dark mode dashboard — perfect for portfolios and pitch decks",
+    "description": "Photorealistic iPhone mockup showing a dark mode dashboard - perfect for portfolios and pitch decks",
     "prompt": "A photorealistic mockup of a modern mobile app interface displayed on an iPhone 15 Pro on a clean dark desk. The screen shows a minimalist dashboard with dark mode UI, clean sans-serif typography, and subtle card components. Studio lighting, slight angle, professional tech photography style.",
     "category": "image-prompts",
     "platforms": [
@@ -255,7 +255,7 @@
     "id": "img-011",
     "slug": "cinematic-moody-portrait",
     "title": "Cinematic Moody Portrait",
-    "description": "Dramatic chiaroscuro portrait with deep shadows and film noir lighting — for creative projects",
+    "description": "Dramatic chiaroscuro portrait with deep shadows and film noir lighting - for creative projects",
     "prompt": "cinematic close-up portrait, dramatic chiaroscuro lighting, deep shadows, single key light from left, [subject description], film noir aesthetic, 85mm lens compression, shallow depth of field, analog grain --ar 4:5 --style raw --v 6.1",
     "category": "image-prompts",
     "platforms": [
@@ -280,7 +280,7 @@
     "id": "img-012",
     "slug": "cartoon-avatar",
     "title": "Cartoon Avatar",
-    "description": "Stylized flat vector cartoon avatar from a description — for profile pictures and personal branding",
+    "description": "Stylized flat vector cartoon avatar from a description - for profile pictures and personal branding",
     "prompt": "A stylized cartoon avatar of a [age] year old [gender] with [hair color] hair and [eye color] eyes, wearing [outfit]. Flat vector illustration style, clean bold outlines, vibrant colors, minimal background, Pixar-adjacent character design. No realistic rendering.",
     "category": "image-prompts",
     "platforms": [
@@ -305,7 +305,7 @@
     "id": "img-013",
     "slug": "fantasy-character-portrait",
     "title": "Fantasy Character Portrait",
-    "description": "Painterly fantasy character with intricate armor and dramatic rim lighting — for games and creative projects",
+    "description": "Painterly fantasy character with intricate armor and dramatic rim lighting - for games and creative projects",
     "prompt": "masterpiece, best quality, fantasy portrait, [character description], intricate armor detail, dramatic rim lighting, painterly style, dark atmospheric background, cinematic composition, 8k, sharp focus, artstation trending",
     "category": "image-prompts",
     "platforms": [
@@ -330,7 +330,7 @@
     "id": "img-014",
     "slug": "interior-design-visualization",
     "title": "Interior Design Visualization",
-    "description": "Photorealistic Scandinavian interior render — for architects, designers, and home decor brands",
+    "description": "Photorealistic Scandinavian interior render - for architects, designers, and home decor brands",
     "prompt": "A photo of a minimalist Scandinavian living room interior. White walls, natural oak wood flooring, a low-profile linen sofa in warm beige, a single fiddle-leaf fig plant in the corner. Soft diffused natural light from floor-to-ceiling windows. Architectural photography, wide angle, photorealistic.",
     "category": "image-prompts",
     "platforms": [
@@ -355,7 +355,7 @@
     "id": "img-015",
     "slug": "exterior-architecture-render",
     "title": "Exterior Architecture Render",
-    "description": "Photorealistic modern house exterior at golden hour — for architects and real estate",
+    "description": "Photorealistic modern house exterior at golden hour - for architects and real estate",
     "prompt": "A photorealistic architectural render of a modern minimalist house exterior. Concrete and glass facade, flat roof, surrounded by sparse desert landscaping with agave plants. Golden hour lighting casting long shadows. Wide angle, professional architectural photography, no people.",
     "category": "image-prompts",
     "platforms": [
@@ -430,7 +430,7 @@
     "id": "img-018",
     "slug": "abstract-wallpaper",
     "title": "Abstract Luxury Wallpaper",
-    "description": "Deep navy and molten gold fluid art — high-end desktop wallpaper or background asset",
+    "description": "Deep navy and molten gold fluid art - high-end desktop wallpaper or background asset",
     "prompt": "abstract fluid art, deep navy blue and molten gold ink in water, macro photography, swirling organic forms, high contrast, luxury aesthetic, 4K desktop wallpaper --ar 16:9 --style raw --v 6.1",
     "category": "image-prompts",
     "platforms": [
@@ -455,7 +455,7 @@
     "id": "img-019",
     "slug": "dark-cinematic-landscape",
     "title": "Dark Cinematic Landscape",
-    "description": "Epic wide-format landscape with lone figure — for book covers, posters, and cinematic projects",
+    "description": "Epic wide-format landscape with lone figure - for book covers, posters, and cinematic projects",
     "prompt": "vast dark cinematic landscape, lone figure standing on a cliff edge overlooking a stormy ocean at dusk, dramatic volumetric clouds, purple and deep teal color grade, epic scale, Terrence Malick cinematography --ar 21:9 --style raw --v 6.1",
     "category": "image-prompts",
     "platforms": [
@@ -481,7 +481,7 @@
     "slug": "meta-image-prompt-generator",
     "title": "Meta Image Prompt Generator",
     "description": "Use Claude to write optimized image prompts for Midjourney, DALL-E 3, and Stable Diffusion simultaneously",
-    "prompt": "You are an expert image prompt engineer. I want to generate an image of [describe your concept vaguely].\n\nWrite me 3 versions of this prompt:\n1. For Midjourney v6.1 — keyword-first, comma-separated, with --ar and --style parameters\n2. For DALL-E 3 — descriptive prose, complete sentences, with explicit negative constraints at the end\n3. For Stable Diffusion — quality tags first, comma-separated, with a negative prompt section\n\nEach prompt should be ready to copy and paste with no modifications needed.",
+    "prompt": "You are an expert image prompt engineer. I want to generate an image of [describe your concept vaguely].\n\nWrite me 3 versions of this prompt:\n1. For Midjourney v6.1 - keyword-first, comma-separated, with --ar and --style parameters\n2. For DALL-E 3 - descriptive prose, complete sentences, with explicit negative constraints at the end\n3. For Stable Diffusion - quality tags first, comma-separated, with a negative prompt section\n\nEach prompt should be ready to copy and paste with no modifications needed.",
     "category": "image-prompts",
     "platforms": [
       "claude"
@@ -508,7 +508,7 @@
     "slug": "luxury-perfume-cosmetics-hero-shot",
     "title": "Luxury Perfume / Cosmetics Hero Shot",
     "description": "High-end beauty brand campaign, magazine ad, website hero",
-    "prompt": "A [product name] perfume bottle made of frosted amber glass, placed on a\ncracked dry salt flat at blue hour. The bottle catches the last sliver of\norange horizon light. No props, no hands. Shot with a 100mm macro lens,\nf/2.2, extreme material detail on the glass stopper — subtle refraction\nvisible inside the liquid. Background is deep navy gradient sky. Commercial\nfragrance photography, Dior campaign quality.\n\nMidjourney version:\nluxury perfume bottle, frosted amber glass, cracked salt flat, blue hour,\norange rim light, macro lens, extreme glass refraction detail, deep navy\nsky, no text, commercial fragrance photography, Dior campaign quality\n--ar 4:5 --style raw --v 7",
+    "prompt": "A [product name] perfume bottle made of frosted amber glass, placed on a\ncracked dry salt flat at blue hour. The bottle catches the last sliver of\norange horizon light. No props, no hands. Shot with a 100mm macro lens,\nf/2.2, extreme material detail on the glass stopper - subtle refraction\nvisible inside the liquid. Background is deep navy gradient sky. Commercial\nfragrance photography, Dior campaign quality.\n\nMidjourney version:\nluxury perfume bottle, frosted amber glass, cracked salt flat, blue hour,\norange rim light, macro lens, extreme glass refraction detail, deep navy\nsky, no text, commercial fragrance photography, Dior campaign quality\n--ar 4:5 --style raw --v 7",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -533,7 +533,7 @@
     "slug": "skincare-product-with-ingredient-story",
     "title": "Skincare Product with Ingredient Story",
     "description": "DTC skincare brand, social media ads, Shopify hero image",
-    "prompt": "A glass serum bottle half-submerged in a bed of fresh [hero ingredient —\ne.g., rosehip seeds / turmeric roots / sea kelp]. Overhead shot, slightly\nangled at 15 degrees off vertical. Cool diffused daylight from a north-facing\nwindow. Matte ceramic surface beneath the ingredient pile. The product label\nis blurred and unreadable. Editorial clean beauty photography, no background\nclutter, soft shadow beneath the bottle, hyper-detailed ingredient texture.",
+    "prompt": "A glass serum bottle half-submerged in a bed of fresh [hero ingredient -\ne.g., rosehip seeds / turmeric roots / sea kelp]. Overhead shot, slightly\nangled at 15 degrees off vertical. Cool diffused daylight from a north-facing\nwindow. Matte ceramic surface beneath the ingredient pile. The product label\nis blurred and unreadable. Editorial clean beauty photography, no background\nclutter, soft shadow beneath the bottle, hyper-detailed ingredient texture.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -556,9 +556,9 @@
   {
     "id": "img-023",
     "slug": "watch-hero-shot-in-hand-lifestyle",
-    "title": "Watch Hero Shot — In-Hand Lifestyle",
+    "title": "Watch Hero Shot - In-Hand Lifestyle",
     "description": "Watch brand marketing, e-commerce, editorial feature",
-    "prompt": "Close-up of a man's wrist wearing a [watch description — e.g., matte black\ntitanium dive watch with a green dial] against an out-of-focus industrial\nconcrete wall. Natural midday light from above left. The watch crystal catches\na single specular highlight. Sleeve of a raw denim jacket partially visible.\nShot on a Leica Q3, 28mm, f/1.7. Skin texture realistic, subtle vein detail.\nEditorial men's watch photography, no additional props.",
+    "prompt": "Close-up of a man's wrist wearing a [watch description - e.g., matte black\ntitanium dive watch with a green dial] against an out-of-focus industrial\nconcrete wall. Natural midday light from above left. The watch crystal catches\na single specular highlight. Sleeve of a raw denim jacket partially visible.\nShot on a Leica Q3, 28mm, f/1.7. Skin texture realistic, subtle vein detail.\nEditorial men's watch photography, no additional props.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -582,7 +582,7 @@
     "slug": "premium-packaging-on-textured-surface",
     "title": "Premium Packaging on Textured Surface",
     "description": "Packaging concept, brand presentation, agency pitch",
-    "prompt": "A matte black rigid gift box with a [brand category — e.g., whisky / candle /\njewellery] product inside, lid open at 45 degrees, placed on aged brushed\nbrass sheet. Single overhead softbox light. The interior of the box is lined\nwith deep forest green tissue paper, slightly crumpled. The exterior has a\nblind-embossed logo visible only in raking light. Luxury packaging photography,\nno hands, no text visible, shadow falls naturally to the right.",
+    "prompt": "A matte black rigid gift box with a [brand category - e.g., whisky / candle /\njewellery] product inside, lid open at 45 degrees, placed on aged brushed\nbrass sheet. Single overhead softbox light. The interior of the box is lined\nwith deep forest green tissue paper, slightly crumpled. The exterior has a\nblind-embossed logo visible only in raking light. Luxury packaging photography,\nno hands, no text visible, shadow falls naturally to the right.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -605,9 +605,9 @@
   {
     "id": "img-025",
     "slug": "food-beverage-cut-fruit-macro",
-    "title": "Food & Beverage — Cut Fruit Macro",
+    "title": "Food & Beverage - Cut Fruit Macro",
     "description": "FMCG packaging, juice brand, health food marketing",
-    "prompt": "Extreme macro of a [fruit — e.g., blood orange / dragon fruit / yuzu] sliced\nin half, suspended mid-air with motion freeze at 1/8000s shutter. Fine water\nmist droplets visible on the cut surface. Background is pure deep black.\nSingle strobe from below illuminating the interior pulp — the translucency\nof the flesh glows. Commercial food photography, Canon R5, 180mm macro,\nISO 100. No shadows on background.\n\nMidjourney version:\nblood orange sliced in half, suspended mid-air, water droplets, extreme\nmacro, translucent glowing pulp, black background, single strobe from below,\ncommercial food photography, motion freeze --ar 1:1 --style raw --v 7",
+    "prompt": "Extreme macro of a [fruit - e.g., blood orange / dragon fruit / yuzu] sliced\nin half, suspended mid-air with motion freeze at 1/8000s shutter. Fine water\nmist droplets visible on the cut surface. Background is pure deep black.\nSingle strobe from below illuminating the interior pulp - the translucency\nof the flesh glows. Commercial food photography, Canon R5, 180mm macro,\nISO 100. No shadows on background.\n\nMidjourney version:\nblood orange sliced in half, suspended mid-air, water droplets, extreme\nmacro, translucent glowing pulp, black background, single strobe from below,\ncommercial food photography, motion freeze --ar 1:1 --style raw --v 7",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -630,7 +630,7 @@
   {
     "id": "img-026",
     "slug": "high-fashion-editorial-studio-minimalist",
-    "title": "High Fashion Editorial — Studio Minimalist",
+    "title": "High Fashion Editorial - Studio Minimalist",
     "description": "Fashion brand lookbook, editorial spread, agency portfolio",
     "prompt": "editorial fashion photograph, model in an oversized ivory raw-edge wool coat,\nstanding in an empty white infinity studio, harsh single overhead strobe\ncreating a pool of light with sharp falloff, strong downward shadow beneath\nthe chin, model looking down, movement in the coat hem, medium format camera\naesthetic, Raf Simons runway quality, no accessories, no background texture\n--ar 2:3 --style raw --v 7",
     "category": "image-prompts",
@@ -655,9 +655,9 @@
   {
     "id": "img-027",
     "slug": "fashion-lookbook-outdoor-location",
-    "title": "Fashion Lookbook — Outdoor Location",
+    "title": "Fashion Lookbook - Outdoor Location",
     "description": "Seasonal lookbook, streetwear brand, e-commerce editorial",
-    "prompt": "A model wearing [garment description — e.g., a washed indigo utility jacket\nover wide-leg beige trousers] walking through an empty covered parking garage\nat 7am. Sodium vapor ceiling lights cast a yellow wash from above. Wet\nconcrete floor creates a clean reflection beneath the figure. Shot from\nbehind at a slight low angle. Unposed, caught-in-motion feel. Shot on a\nContax 645 with Kodak Portra 800. Grain visible. No direct eye contact.",
+    "prompt": "A model wearing [garment description - e.g., a washed indigo utility jacket\nover wide-leg beige trousers] walking through an empty covered parking garage\nat 7am. Sodium vapor ceiling lights cast a yellow wash from above. Wet\nconcrete floor creates a clean reflection beneath the figure. Shot from\nbehind at a slight low angle. Unposed, caught-in-motion feel. Shot on a\nContax 645 with Kodak Portra 800. Grain visible. No direct eye contact.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -680,9 +680,9 @@
   {
     "id": "img-028",
     "slug": "jewellery-on-skin-extreme-close-up",
-    "title": "Jewellery on Skin — Extreme Close-Up",
+    "title": "Jewellery on Skin - Extreme Close-Up",
     "description": "Fine jewellery brand, luxury campaign, e-commerce detail shot",
-    "prompt": "Extreme close-up of a [jewellery piece — e.g., thin 18k gold chain necklace\nwith a raw sapphire pendant] resting on a collarbone. Natural window light\nfrom the left, soft and diffused through linen curtains. Skin in precise\nfocus — pore texture and fine hair visible. The sapphire facets catch a\nsingle point of light. Background is blurred shoulder of a cream silk garment.\nCommercial jewellery photography, no retouching on skin, no props.",
+    "prompt": "Extreme close-up of a [jewellery piece - e.g., thin 18k gold chain necklace\nwith a raw sapphire pendant] resting on a collarbone. Natural window light\nfrom the left, soft and diffused through linen curtains. Skin in precise\nfocus - pore texture and fine hair visible. The sapphire facets catch a\nsingle point of light. Background is blurred shoulder of a cream silk garment.\nCommercial jewellery photography, no retouching on skin, no props.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -704,9 +704,9 @@
   {
     "id": "img-029",
     "slug": "shoe-product-floating-against-minimal-background",
-    "title": "Shoe Product — Floating Against Minimal Background",
+    "title": "Shoe Product - Floating Against Minimal Background",
     "description": "Sneaker / footwear brand, e-commerce, campaign visual",
-    "prompt": "A [shoe description — e.g., low-top white leather trainer with gum sole]\nfloating at a 35-degree angle against a pale stone grey seamless background.\nLit with two large softboxes — one from each side — creating an even, clean\nshadow directly beneath the shoe. The leather texture is visible at the toe\ncap. Laces are perfectly tied. Commercial shoe photography, no hands, no\nenvironment, no props. Perfectly centred in frame.",
+    "prompt": "A [shoe description - e.g., low-top white leather trainer with gum sole]\nfloating at a 35-degree angle against a pale stone grey seamless background.\nLit with two large softboxes - one from each side - creating an even, clean\nshadow directly beneath the shoe. The leather texture is visible at the toe\ncap. Laces are perfectly tied. Commercial shoe photography, no hands, no\nenvironment, no props. Perfectly centred in frame.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -729,7 +729,7 @@
   {
     "id": "img-030",
     "slug": "brutalist-architecture-dramatic-dusk-light",
-    "title": "Brutalist Architecture — Dramatic Dusk Light",
+    "title": "Brutalist Architecture - Dramatic Dusk Light",
     "description": "Architecture studio portfolio, editorial, cultural institution",
     "prompt": "brutalist concrete cultural centre, raw béton brut facade with deep shadow\nrecesses, photographed at dusk, the sky a gradient of amber to deep violet,\nlong exposure blue in the reflective plaza puddles, a single lit interior\nwindow warm amber against the cold exterior, Tadao Ando influence, wide\nangle architectural photography, no people, no text --ar 16:9 --style raw\n--v 7",
     "category": "image-prompts",
@@ -754,9 +754,9 @@
   {
     "id": "img-031",
     "slug": "japandi-interior-morning-atmosphere",
-    "title": "Japandi Interior — Morning Atmosphere",
+    "title": "Japandi Interior - Morning Atmosphere",
     "description": "Interior design studio, real estate premium listing, hospitality brand",
-    "prompt": "A photorealistic render of a Japandi bedroom interior at 7am. Low platform\nbed with linen bedding in undyed natural white. A single bonsai on a low\nwalnut shelf. Shoji screen diffusing early morning light — the shadow of\nbamboo branches falls across the tatami floor. No art on walls. A ceramic\nbedside cup of green tea with visible steam. Wide angle, 24mm, architectural\nphotography quality. No people.",
+    "prompt": "A photorealistic render of a Japandi bedroom interior at 7am. Low platform\nbed with linen bedding in undyed natural white. A single bonsai on a low\nwalnut shelf. Shoji screen diffusing early morning light - the shadow of\nbamboo branches falls across the tatami floor. No art on walls. A ceramic\nbedside cup of green tea with visible steam. Wide angle, 24mm, architectural\nphotography quality. No people.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -779,9 +779,9 @@
   {
     "id": "img-032",
     "slug": "retail-store-interior-concept-design",
-    "title": "Retail Store Interior — Concept Design",
+    "title": "Retail Store Interior - Concept Design",
     "description": "Retail design concept presentation, brand identity, investor deck",
-    "prompt": "A photorealistic visualization of a premium [brand type — e.g., tea / skincare\n/ bookshop] retail store interior. Curved raw plaster walls in warm sand tone.\nRecessed lighting with tight beam angles creating pools of light on product\ndisplays. Aged brass fixture details. Terrazzo floor in off-white with grey\naggregate. No customers, no staff, shot from the entrance looking in —\nshowing the full depth of the space. Interior design photography quality.",
+    "prompt": "A photorealistic visualization of a premium [brand type - e.g., tea / skincare\n/ bookshop] retail store interior. Curved raw plaster walls in warm sand tone.\nRecessed lighting with tight beam angles creating pools of light on product\ndisplays. Aged brass fixture details. Terrazzo floor in off-white with grey\naggregate. No customers, no staff, shot from the entrance looking in -\nshowing the full depth of the space. Interior design photography quality.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -804,7 +804,7 @@
   {
     "id": "img-033",
     "slug": "treehouse-cabin-atmospheric-night-scene",
-    "title": "Treehouse / Cabin — Atmospheric Night Scene",
+    "title": "Treehouse / Cabin - Atmospheric Night Scene",
     "description": "Hospitality brand, travel editorial, short-term rental marketing",
     "prompt": "remote cedar treehouse perched in old-growth Douglas firs, photographed at\nnight, warm amber light glowing from inside through floor-to-ceiling glass\npanels, light snowfall beginning, the canopy catches the first dusting of\nsnow, deep navy sky above, no moon, stars slightly visible, fog in the valley\nbelow, long exposure 4 minutes, architectural photography, Airbnb Luxe quality\n--ar 16:9 --style raw --v 7",
     "category": "image-prompts",
@@ -827,7 +827,7 @@
   {
     "id": "img-034",
     "slug": "album-cover-conceptual-art-direction",
-    "title": "Album Cover — Conceptual Art Direction",
+    "title": "Album Cover - Conceptual Art Direction",
     "description": "Music artist release, Spotify canvas, merch",
     "prompt": "conceptual album cover, ambient electronic music, a single rusted metal chair\nsubmerged under perfectly clear shallow water, shot from directly above,\nthe chair casts a refracted shadow on the sandy bottom, hyper-real yet\nsurreal, muted aqua and oxidised copper tones, no text, no people, fine art\nphotography aesthetic, square format --ar 1:1 --style raw --v 7 --s 200",
     "category": "image-prompts",
@@ -850,9 +850,9 @@
   {
     "id": "img-035",
     "slug": "book-cover-literary-fiction",
-    "title": "Book Cover — Literary Fiction",
+    "title": "Book Cover - Literary Fiction",
     "description": "Publisher, self-published author, reading app thumbnail",
-    "prompt": "A literary fiction book cover image: a fog-filled valley at dawn seen from\nabove through a gap in dense pine trees — a lone country road cuts a straight\nline through the fog, disappearing into the white. Muted olive and grey\npalette, no people, no text, no artificial light. Printed on matte paper\naesthetic — slightly desaturated, fine grain. The composition leaves clear\nspace at the top third for a title.\n\nMidjourney version:\nliterary fiction book cover, fog-filled valley at dawn, aerial gap through\npine trees, single road disappearing into white fog, muted olive and grey,\nno people, no text, matte grain, title space at top --ar 2:3 --style raw\n--v 7 --s 150 --no text",
+    "prompt": "A literary fiction book cover image: a fog-filled valley at dawn seen from\nabove through a gap in dense pine trees - a lone country road cuts a straight\nline through the fog, disappearing into the white. Muted olive and grey\npalette, no people, no text, no artificial light. Printed on matte paper\naesthetic - slightly desaturated, fine grain. The composition leaves clear\nspace at the top third for a title.\n\nMidjourney version:\nliterary fiction book cover, fog-filled valley at dawn, aerial gap through\npine trees, single road disappearing into white fog, muted olive and grey,\nno people, no text, matte grain, title space at top --ar 2:3 --style raw\n--v 7 --s 150 --no text",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -876,7 +876,7 @@
     "slug": "brand-identity-mood-board-visual",
     "title": "Brand Identity Mood Board Visual",
     "description": "Brand agency presentation, identity deck, client pitch",
-    "prompt": "A styled flat lay of brand identity reference materials for a [brand\narchetype — e.g., premium Japanese whisky brand / sustainable outdoor\napparel / heritage leather goods] spread on a aged oak table. Items include:\ntorn kraft paper swatches in earthy tones, a small bottle of the brand's hero\nmaterial (leather / ceramic / glass), one dried botanical, a short stack of\nmatte paper business cards with blind embossing only. Overhead 4:5 format,\nnatural side light, no text visible.",
+    "prompt": "A styled flat lay of brand identity reference materials for a [brand\narchetype - e.g., premium Japanese whisky brand / sustainable outdoor\napparel / heritage leather goods] spread on a aged oak table. Items include:\ntorn kraft paper swatches in earthy tones, a small bottle of the brand's hero\nmaterial (leather / ceramic / glass), one dried botanical, a short stack of\nmatte paper business cards with blind embossing only. Overhead 4:5 format,\nnatural side light, no text visible.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -899,7 +899,7 @@
   {
     "id": "img-037",
     "slug": "magazine-cover-visual-no-text",
-    "title": "Magazine Cover Visual — No Text",
+    "title": "Magazine Cover Visual - No Text",
     "description": "Publisher concept, media brand pitch, editorial design",
     "prompt": "editorial magazine cover image, no text, a [subject: woman in her 60s\nwith silver hair] photographed in a clean white studio, direct eye contact,\nwearing a single-colour draped silk garment in warm terracotta, medium format\ncamera quality, soft even fill lighting with a touch of shadow under the jaw,\nzero retouching aesthetic, pores visible, Vogue Italia visual quality\n--ar 2:3 --style raw --v 7",
     "category": "image-prompts",
@@ -924,7 +924,7 @@
   {
     "id": "img-038",
     "slug": "sci-fi-environment-concept-art",
-    "title": "Sci-Fi Environment — Concept Art",
+    "title": "Sci-Fi Environment - Concept Art",
     "description": "Game studio, film pre-production, concept art portfolio",
     "prompt": "abandoned deep-space mining colony, pressurised dome cracked on one side,\nrust and mineral stain down the exterior, the interior illuminated only by\nemergency red lighting casting long shadows across abandoned drilling equipment,\noutside is airless red rock desert under a starless black sky, painted concept\nart style, matte painting quality, widescreen cinematic --ar 21:9 --style raw\n--v 7 --s 300",
     "category": "image-prompts",
@@ -949,7 +949,7 @@
     "slug": "surreal-advertising-visual",
     "title": "Surreal Advertising Visual",
     "description": "Creative agency, award-entry campaign visual, art director concept",
-    "prompt": "surreal advertising visual, a [product — e.g., glass water bottle] standing\nperfectly upright at the centre of a vast white salt flat, around it in a\nperfect circle, hundreds of dried flowers slowly being pulled toward it as\nif by magnetism, shot from a low angle, golden hour side light, hyper-real\nphotography with surreal impossible physics, no text, no person --ar 16:9\n--style raw --v 7 --s 250 --weird 150",
+    "prompt": "surreal advertising visual, a [product - e.g., glass water bottle] standing\nperfectly upright at the centre of a vast white salt flat, around it in a\nperfect circle, hundreds of dried flowers slowly being pulled toward it as\nif by magnetism, shot from a low angle, golden hour side light, hyper-real\nphotography with surreal impossible physics, no text, no person --ar 16:9\n--style raw --v 7 --s 250 --weird 150",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -970,9 +970,9 @@
   {
     "id": "img-040",
     "slug": "character-design-sheet-game-asset",
-    "title": "Character Design Sheet — Game Asset",
+    "title": "Character Design Sheet - Game Asset",
     "description": "Game studio, indie developer, character art brief",
-    "prompt": "masterpiece, best quality, character design sheet, [character concept — e.g.,\ndesert nomad scout in a low-tech dystopia] — three views: front, 3/4, back,\nconsistent lighting across all three panels, muted sand and charcoal palette\nwith a single accent colour (faded teal), detailed costume construction\nvisible — stitching, layered fabrics, utility pouches — concept art style,\nclean white background, no text labels, artstation quality",
+    "prompt": "masterpiece, best quality, character design sheet, [character concept - e.g.,\ndesert nomad scout in a low-tech dystopia] - three views: front, 3/4, back,\nconsistent lighting across all three panels, muted sand and charcoal palette\nwith a single accent colour (faded teal), detailed costume construction\nvisible - stitching, layered fabrics, utility pouches - concept art style,\nclean white background, no text labels, artstation quality",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -994,7 +994,7 @@
   {
     "id": "img-041",
     "slug": "bioluminescent-nature-fine-art",
-    "title": "Bioluminescent Nature — Fine Art",
+    "title": "Bioluminescent Nature - Fine Art",
     "description": "Limited edition print, gallery piece, creative portfolio",
     "prompt": "bioluminescent plankton illuminating shallow ocean waves breaking on a black\nsand beach at 2am, no moon, stars reflected in the wet sand between waves,\neach breaking wave a vivid electric blue-green, a small figure standing at\nthe shoreline with their back to camera for scale, long exposure 25 seconds,\nfine art nature photography, National Geographic quality, no artificial light\nsources except the bioluminescence --ar 16:9 --style raw --v 7",
     "category": "image-prompts",
@@ -1017,9 +1017,9 @@
   {
     "id": "img-042",
     "slug": "macro-texture-abstract-background-asset",
-    "title": "Macro Texture — Abstract Background Asset",
+    "title": "Macro Texture - Abstract Background Asset",
     "description": "Presentation background, brand texture asset, print design",
-    "prompt": "Extreme macro of [texture — e.g., hand-hammered copper sheet / raw concrete\nsurface / aged papyrus paper], shot at exactly 90 degrees to the surface,\nperfectly even raking light from the right side to emphasise surface relief,\nthe entire frame is texture with no reference to scale, muted and desaturated\ncolour palette, no artefacts, repeatable tile-ready quality, commercial\ntexture photography.",
+    "prompt": "Extreme macro of [texture - e.g., hand-hammered copper sheet / raw concrete\nsurface / aged papyrus paper], shot at exactly 90 degrees to the surface,\nperfectly even raking light from the right side to emphasise surface relief,\nthe entire frame is texture with no reference to scale, muted and desaturated\ncolour palette, no artefacts, repeatable tile-ready quality, commercial\ntexture photography.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1044,7 +1044,7 @@
     "slug": "neon-sign-in-dark-atmospheric-interior",
     "title": "Neon Sign in Dark Atmospheric Interior",
     "description": "Bar / restaurant branding, content creation, event backdrop",
-    "prompt": "A photorealistic neon sign reading \"[YOUR TEXT]\" mounted on an exposed dark\nbrick wall inside a dimly lit bar interior. The neon tubes are warm rose pink.\nThe surrounding wall is barely lit — just the neon glow and a faint cool\nbacklight behind the sign creating a halo. Foreground is slightly out of\nfocus — a blurred bar counter with glassware. No other text visible. Bar\nphotography aesthetic. Photorealistic, no illustrative style.\n\nBest platform note: Use Ideogram for text accuracy. Paste exact text in quotes.",
+    "prompt": "A photorealistic neon sign reading \"[YOUR TEXT]\" mounted on an exposed dark\nbrick wall inside a dimly lit bar interior. The neon tubes are warm rose pink.\nThe surrounding wall is barely lit - just the neon glow and a faint cool\nbacklight behind the sign creating a halo. Foreground is slightly out of\nfocus - a blurred bar counter with glassware. No other text visible. Bar\nphotography aesthetic. Photorealistic, no illustrative style.\n\nBest platform note: Use Ideogram for text accuracy. Paste exact text in quotes.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1068,7 +1068,7 @@
     "slug": "embossed-debossed-text-on-material",
     "title": "Embossed / Debossed Text on Material",
     "description": "Brand mockup, packaging design, stationery brand",
-    "prompt": "A photorealistic close-up of thick 600gsm cotton paper business card with the\ntext \"[BRAND NAME]\" debossed (pressed into the surface, not raised) in the\ncentre. Raking light from the left at 15 degrees to the surface reveals the\ndepth of the deboss. Paper texture is clearly visible — rough cotton grain.\nNo ink, no colour — only the deboss impression. Shot on a 100mm macro lens.\nLuxury stationery photography. Single card, centred, no background clutter.\n\nBest platform note: Use Ideogram for accurate text rendering.",
+    "prompt": "A photorealistic close-up of thick 600gsm cotton paper business card with the\ntext \"[BRAND NAME]\" debossed (pressed into the surface, not raised) in the\ncentre. Raking light from the left at 15 degrees to the surface reveals the\ndepth of the deboss. Paper texture is clearly visible - rough cotton grain.\nNo ink, no colour - only the deboss impression. Shot on a 100mm macro lens.\nLuxury stationery photography. Single card, centred, no background clutter.\n\nBest platform note: Use Ideogram for accurate text rendering.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1093,7 +1093,7 @@
     "slug": "street-signage-wayfinding-in-urban-scene",
     "title": "Street Signage / Wayfinding in Urban Scene",
     "description": "Brand design system, urban photography, wayfinding concept",
-    "prompt": "A photorealistic street-level photograph in a [city aesthetic — e.g.,\nmid-century Tokyo alley / Brutalist London side street / Haussmann Paris\ncourtyard] showing a wayfinding sign reading \"[YOUR TEXT]\" in a clean\nsans-serif typeface on a black powder-coated metal panel. The scene is\novercast — flat diffused daylight. No people. The sign post has aged\nslightly but the text is clear. Shot on a 35mm lens.\n\nBest platform note: Use Ideogram. Specify text in quotation marks exactly.",
+    "prompt": "A photorealistic street-level photograph in a [city aesthetic - e.g.,\nmid-century Tokyo alley / Brutalist London side street / Haussmann Paris\ncourtyard] showing a wayfinding sign reading \"[YOUR TEXT]\" in a clean\nsans-serif typeface on a black powder-coated metal panel. The scene is\novercast - flat diffused daylight. No people. The sign post has aged\nslightly but the text is clear. Shot on a 35mm lens.\n\nBest platform note: Use Ideogram. Specify text in quotation marks exactly.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1115,9 +1115,9 @@
   {
     "id": "img-046",
     "slug": "environmental-portrait-craft-or-profession",
-    "title": "Environmental Portrait — Craft or Profession",
+    "title": "Environmental Portrait - Craft or Profession",
     "description": "Brand storytelling, documentary editorial, About page photography",
-    "prompt": "A documentary-style environmental portrait of [subject description —\ne.g., a glassblower, early 50s, weathered hands] at work in their studio.\nThe room is dark except for the orange glow of the furnace at the left frame\nedge, which provides the key light — warm and directional. The subject is\nmid-process, focused, not looking at camera. Shot on a 35mm film camera,\nKodak Tri-X 400, pushed to ISO 1600. Grain heavy. No flash, no fill light.",
+    "prompt": "A documentary-style environmental portrait of [subject description -\ne.g., a glassblower, early 50s, weathered hands] at work in their studio.\nThe room is dark except for the orange glow of the furnace at the left frame\nedge, which provides the key light - warm and directional. The subject is\nmid-process, focused, not looking at camera. Shot on a 35mm film camera,\nKodak Tri-X 400, pushed to ISO 1600. Grain heavy. No flash, no fill light.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1140,9 +1140,9 @@
   {
     "id": "img-047",
     "slug": "silhouette-portrait-graphic-and-bold",
-    "title": "Silhouette Portrait — Graphic and Bold",
+    "title": "Silhouette Portrait - Graphic and Bold",
     "description": "Poster design, creative campaign, speaker profile visual",
-    "prompt": "A perfectly exposed silhouette of [subject description — e.g., a standing\nfigure with natural curly hair] against a large floor-to-ceiling window.\nOutside the window is a bright overcast white sky — the exposure is set\npurely for the exterior, rendering the interior figure as a perfect black\nshape. The rim of the hair catches a faint backlight halo. No facial features\nvisible. Clean and graphic. The figure is positioned slightly left of centre,\nleaving composition space to the right.\n\nMidjourney version:\nsilhouette portrait, figure with natural curly hair, floor-to-ceiling window,\novercast white sky background, pure black silhouette, subtle hair rim light,\ngraphic and bold, composition space right of frame --ar 4:5 --style raw --v 7",
+    "prompt": "A perfectly exposed silhouette of [subject description - e.g., a standing\nfigure with natural curly hair] against a large floor-to-ceiling window.\nOutside the window is a bright overcast white sky - the exposure is set\npurely for the exterior, rendering the interior figure as a perfect black\nshape. The rim of the hair catches a faint backlight halo. No facial features\nvisible. Clean and graphic. The figure is positioned slightly left of centre,\nleaving composition space to the right.\n\nMidjourney version:\nsilhouette portrait, figure with natural curly hair, floor-to-ceiling window,\novercast white sky background, pure black silhouette, subtle hair rim light,\ngraphic and bold, composition space right of frame --ar 4:5 --style raw --v 7",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1164,9 +1164,9 @@
   {
     "id": "img-048",
     "slug": "sports-athlete-motion-and-intensity",
-    "title": "Sports / Athlete — Motion and Intensity",
+    "title": "Sports / Athlete - Motion and Intensity",
     "description": "Sports brand campaign, athlete sponsor content, editorial",
-    "prompt": "A high-energy editorial sports photograph of [athlete description — e.g.,\na female sprinter leaving the starting blocks] captured at 1/4000s shutter.\nMotion blur in the hands and feet, face and torso in sharp focus. Shot from\na low angle — camera almost at track level — making the figure tower against\na pure white overcast sky. The kit colour is [colour]. No stadium, no crowd —\npure athlete against sky. Commercial sports photography, Nike campaign quality.",
+    "prompt": "A high-energy editorial sports photograph of [athlete description - e.g.,\na female sprinter leaving the starting blocks] captured at 1/4000s shutter.\nMotion blur in the hands and feet, face and torso in sharp focus. Shot from\na low angle - camera almost at track level - making the figure tower against\na pure white overcast sky. The kit colour is [colour]. No stadium, no crowd -\npure athlete against sky. Commercial sports photography, Nike campaign quality.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1191,7 +1191,7 @@
     "slug": "linkedin-thought-leadership-banner-image",
     "title": "LinkedIn Thought Leadership Banner Image",
     "description": "LinkedIn article banner, personal brand header, newsletter cover",
-    "prompt": "A clean professional banner image (16:9) for a thought leadership article\nabout [topic — e.g., the future of remote work / AI in healthcare / supply\nchain resilience]. Visual concept: [e.g., a single wooden desk with a laptop\nand a plant at a window overlooking a misty city skyline at dawn]. No people.\nMuted colour palette — cool blue-grey tones. No text, no infographics, no\nicons. Photorealistic, not illustrated. Leave the left third compositionally\nopen for text overlay.",
+    "prompt": "A clean professional banner image (16:9) for a thought leadership article\nabout [topic - e.g., the future of remote work / AI in healthcare / supply\nchain resilience]. Visual concept: [e.g., a single wooden desk with a laptop\nand a plant at a window overlooking a misty city skyline at dawn]. No people.\nMuted colour palette - cool blue-grey tones. No text, no infographics, no\nicons. Photorealistic, not illustrated. Leave the left third compositionally\nopen for text overlay.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1214,7 +1214,7 @@
   {
     "id": "img-050",
     "slug": "podcast-cover-art-bold-and-typographic",
-    "title": "Podcast Cover Art — Bold and Typographic",
+    "title": "Podcast Cover Art - Bold and Typographic",
     "description": "Podcast artwork (3000x3000px), Spotify / Apple Podcasts",
     "prompt": "A bold podcast cover art for a show called \"[PODCAST NAME]\" about [topic].\nDesign language: [e.g., brutalist, high-contrast, black background, single\nPantone red accent colour, large bold condensed typeface for the show name,\nsmaller subtitle underneath]. Geometric composition, no photography, no\nfaces, purely graphic and typographic. Square format.\n\nBest platform note: Use Ideogram for the final version with correct text.\nUse Midjourney (--no text) first to develop the visual concept and colour,\nthen recreate in Ideogram with text added.",
     "category": "image-prompts",
@@ -1238,9 +1238,9 @@
   {
     "id": "img-051",
     "slug": "twitter-x-header-abstract-visual-brand",
-    "title": "Twitter / X Header — Abstract Visual Brand",
+    "title": "Twitter / X Header - Abstract Visual Brand",
     "description": "Social profile header, personal brand, newsletter masthead",
-    "prompt": "abstract brand header image, [brand palette — e.g., warm terracotta, raw\nlinen, muted sage], horizontal format 3:1, a photographically textured\nsurface — e.g., aged plaster wall with subtle relief pattern — lit with\nextremely soft raking light, no objects, no people, no text, designed as a\nclean brand background with no focal point competing for attention, commercial\nphotography of texture, extremely high resolution --ar 3:1 --style raw --v 7",
+    "prompt": "abstract brand header image, [brand palette - e.g., warm terracotta, raw\nlinen, muted sage], horizontal format 3:1, a photographically textured\nsurface - e.g., aged plaster wall with subtle relief pattern - lit with\nextremely soft raking light, no objects, no people, no text, designed as a\nclean brand background with no focal point competing for attention, commercial\nphotography of texture, extremely high resolution --ar 3:1 --style raw --v 7",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1265,7 +1265,7 @@
     "slug": "risograph-print-style-illustration",
     "title": "Risograph Print Style Illustration",
     "description": "Zine cover, music poster, indie brand, editorial illustration",
-    "prompt": "risograph print illustration, [subject — e.g., a cyclist riding through a\nrain-soaked city at night], limited 3-colour palette (deep teal, warm coral,\noff-white), deliberate ink misregistration creating that hallmark riso offset,\nhalftone dot texture visible throughout, flat design, bold simplified shapes,\nno gradients, printed poster aesthetic --ar 2:3 --style raw --v 7 --s 200",
+    "prompt": "risograph print illustration, [subject - e.g., a cyclist riding through a\nrain-soaked city at night], limited 3-colour palette (deep teal, warm coral,\noff-white), deliberate ink misregistration creating that hallmark riso offset,\nhalftone dot texture visible throughout, flat design, bold simplified shapes,\nno gradients, printed poster aesthetic --ar 2:3 --style raw --v 7 --s 200",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1288,7 +1288,7 @@
     "slug": "architectural-blueprint-technical-drawing-style",
     "title": "Architectural Blueprint / Technical Drawing Style",
     "description": "Design brand identity, architect website, technical editorial",
-    "prompt": "A detailed architectural blueprint-style illustration of [subject — e.g.,\na mid-century modern house / a futuristic transit station / an artisan\ncoffee machine], rendered as a precise technical cross-section drawing.\nWhite lines on deep navy blue background. Dimension annotation lines visible.\nFine hatching for materials. No photographic elements. Draughting aesthetic,\n1960s technical drawing style. No text labels.",
+    "prompt": "A detailed architectural blueprint-style illustration of [subject - e.g.,\na mid-century modern house / a futuristic transit station / an artisan\ncoffee machine], rendered as a precise technical cross-section drawing.\nWhite lines on deep navy blue background. Dimension annotation lines visible.\nFine hatching for materials. No photographic elements. Draughting aesthetic,\n1960s technical drawing style. No text labels.",
     "category": "image-prompts",
     "platforms": [
       "any"
@@ -1312,7 +1312,7 @@
     "slug": "woodcut-linocut-print-style",
     "title": "Woodcut / Linocut Print Style",
     "description": "Craft beer label, artisan food brand, folk music poster",
-    "prompt": "woodcut print illustration, bold black and white relief carving style,\n[subject — e.g., a leaping salmon / a mountain range / an old lighthouse],\nstrong graphic contrast, visible gouge texture in the white areas, raw\nhand-carved aesthetic, rough paper texture as background, traditional Japanese\nmokuhanga influence, no colour, high contrast, square format --ar 1:1\n--style raw --v 7 --s 300",
+    "prompt": "woodcut print illustration, bold black and white relief carving style,\n[subject - e.g., a leaping salmon / a mountain range / an old lighthouse],\nstrong graphic contrast, visible gouge texture in the white areas, raw\nhand-carved aesthetic, rough paper texture as background, traditional Japanese\nmokuhanga influence, no colour, high contrast, square format --ar 1:1\n--style raw --v 7 --s 300",
     "category": "image-prompts",
     "platforms": [
       "any"

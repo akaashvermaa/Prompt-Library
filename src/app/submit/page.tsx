@@ -286,7 +286,7 @@ export default function SubmitPage() {
                 </div>
 
                 {/* Image Platforms (conditionally shown) */}
-                {formData.category === 'image' && (
+                {formData.category === 'image-prompts' && (
                   <div>
                     <label style={{
                       fontSize: '14px',

@@ -31,7 +31,7 @@ export function Hero() {
         <div className="hero-row">
           <p className="hero-sub">
             A curated, living archive of <strong>tested prompts for text and image generation for Claude, ChatGPT,
-            Gemini and Grok</strong> . No fluff, no infinite scroll &mdash; just the ones that actually work,
+            Gemini and Grok</strong> . No fluff, no infinite scroll - just the ones that actually work,
             sorted by craft.
           </p>
           <div className="hero-stats">
@@ -40,7 +40,7 @@ export function Hero() {
               <div className="l">Curated prompts</div>
             </div>
             <div className="stat">
-              <div className="n"><span className="it">9</span></div>
+              <div className="n"><span className="it">7</span></div>
               <div className="l">Categories</div>
             </div>
             <div className="stat">
@@ -59,7 +59,7 @@ export function Hero() {
                 </svg>
                 <input
                   type="text"
-                  placeholder={`Search 96 prompts — try "explain like I'm five"`}
+                  placeholder={`Search 96 prompts - try "explain like I'm five"`}
                   value={query}
                   onChange={e => setQuery(e.target.value)}
                   onKeyDown={e => e.key === "Enter" && search()}

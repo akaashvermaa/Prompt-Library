@@ -8,18 +8,18 @@ import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { CopyButton } from "@/components/ui/CopyButton";
 
 const TABS = ["any", "claude", "chatgpt", "gemini", "grok"] as const;
-const CATS = ["all", "study-learn", "write-create", "code-dev", "teaching", "business-marketing", "review-test", "testing", "career-brand", "image"];
+const CATS = ["all", "study-learn", "write-create", "code-dev", "business-marketing", "review-test", "career-brand", "image-prompts"];
 
 const CAT_LABEL: Record<string, string> = {
-  "study-learn": "Study & Learn", "write-create": "Write & Create", "code-dev": "Code & Dev", teaching: "Teaching",
-  "business-marketing": "Business & Marketing", "review-test": "Review & Test", testing: "QA", "career-brand": "Career & Brand", image: "Image",
+  "study-learn": "Study & Learn", "write-create": "Write & Create", "code-dev": "Code & Dev",
+  "business-marketing": "Business & Marketing", "review-test": "Review & Test", "career-brand": "Career & Brand", "image-prompts": "Image Prompts",
 };
 
 export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
   const params = useSearchParams();
   const [platform, setPlatform] = useState<Platform>("any");
   const [category, setCategory] = useState("all");
-  // Live search — now with server-side debouncing
+  // Live search - now with server-side debouncing
   const [query, setQuery] = useState(params.get("search") ?? "");
   const [debouncedQuery] = useDebounce(query, 300);
   const [serverResults, setServerResults] = useState<Prompt[] | null>(null);
@@ -75,7 +75,7 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
         p.description.toLowerCase().includes(q) ||
         p.tags.some(t => t.toLowerCase().includes(q)) ||
         p.prompt.toLowerCase().includes(q) ||
-        (p.category === 'image' && p.imagePlatforms?.some(ip => ip.toLowerCase().includes(q)))
+        (p.category === 'image-prompts' && p.imagePlatforms?.some(ip => ip.toLowerCase().includes(q)))
       );
     }
 

@@ -7,14 +7,14 @@ import { PlatformBadge } from "@/components/ui/PlatformBadge";
 const TABS = ["all", "claude", "chatgpt", "gemini", "grok"] as const;
 
 const CAT_LABEL: Record<string, string> = {
-  study: "Study", coding: "Code", writing: "Writing", teaching: "Teaching",
-  business: "Business", review: "Review", testing: "QA", linkedin: "LinkedIn",
+  "study-learn": "Study & Learn", "write-create": "Write & Create", "code-dev": "Code & Dev",
+  "business-marketing": "Business & Marketing", "review-test": "Review & Test", "career-brand": "Career & Brand", "image-prompts": "Image Prompts",
 };
 
 export function BrowseSection({ prompts }: { prompts: Prompt[] }) {
   const [platform, setPlatform] = useState("all");
 
-  // Synchronous — no useEffect, no loading flash
+  // Synchronous - no useEffect, no loading flash
   const visible = useMemo(() => {
     if (platform === "all") return prompts;
 
