@@ -4,7 +4,6 @@
     "slug": "study-learn",
     "label": "Study & Learn",
     "description": "Active recall, spaced repetition, language learning, and study systems that actually work",
-    "icon": "📚",
     "color": "amber",
     "count": 20,
     "featured": true,
@@ -22,7 +21,6 @@
     "slug": "write-create",
     "label": "Write & Create",
     "description": "Essays, content, scripts, social media, SEO - everything you need to put words into the world",
-    "icon": "✍️",
     "color": "violet",
     "count": 10,
     "featured": true,
@@ -39,7 +37,6 @@
     "slug": "code-dev",
     "label": "Code & Dev",
     "description": "Code review, debugging, security audits, SQL optimization, and agentic workflows",
-    "icon": "💻",
     "color": "emerald",
     "count": 45,
     "featured": true,
@@ -56,7 +53,6 @@
     "slug": "career-brand",
     "label": "Career & Brand",
     "description": "LinkedIn content, profile optimization, personal branding, and contract review",
-    "icon": "🚀",
     "color": "blue",
     "count": 9,
     "featured": true,
@@ -73,7 +69,6 @@
     "slug": "business-marketing",
     "label": "Business & Marketing",
     "description": "Cold email, sales outreach, executive prep, churn recovery, and high-conversion communication",
-    "icon": "💼",
     "color": "orange",
     "count": 44,
     "featured": true,
@@ -90,7 +85,6 @@
     "slug": "review-test",
     "label": "Review & Test",
     "description": "Honest critiques, red-team reviews, QA testing, bug reports, and validation frameworks",
-    "icon": "🔍",
     "color": "rose",
     "count": 18,
     "featured": true,
@@ -108,7 +102,6 @@
     "slug": "image-prompts",
     "label": "Image Prompts",
     "description": "Ready-to-copy prompts for Midjourney, DALL-E 3, Stable Diffusion, and Grok",
-    "icon": "🎨",
     "color": "pink",
     "count": 55,
     "featured": true,
@@ -119,6 +112,50 @@
       "Architecture",
       "Food",
       "Abstract art"
+    ]
+  },
+  {
+    "id": "cat-008",
+    "slug": "ai-agents",
+    "label": "AI Agents",
+    "description": "Prompts for autonomous AI agents, multi-agent systems, and vibe coding workflows.",
+    "color": "cyan",
+    "count": 0,
+    "featured": false,
+    "includes": [
+      "Vibe coding",
+      "Cursor workflows",
+      "Automated tasks",
+      "System prompts",
+      "Agent instructions"
+    ]
+  },
+  {
+    "id": "cat-008",
+    "slug": "instagram",
+    "label": "Instagram",
+    "description": "Tailored prompts for Instagram posts, reels, and aesthetics.",
+    "count": 7,
+    "featured": false,
+    "includes": [
+      "Posts",
+      "Reels",
+      "Aesthetics",
+      "Captions"
+    ]
+  },
+  {
+    "id": "cat-009",
+    "slug": "youtube",
+    "label": "YouTube",
+    "description": "Prompts tailored for YouTube videos, scripts, and thumbnails.",
+    "count": 4,
+    "featured": false,
+    "includes": [
+      "Thumbnails",
+      "Scripts",
+      "Hooks",
+      "Video Ideas"
     ]
   }
 ]

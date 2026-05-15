@@ -2,6 +2,8 @@ import { Suspense } from "react";
 import { getAllPrompts } from "@/lib/prompts";
 import { BrowseContent } from "./BrowseClient";
 
+export const revalidate = 0;
+
 export default async function BrowsePage() {
   // Fetch from Supabase on the server
   const prompts = await getAllPrompts();

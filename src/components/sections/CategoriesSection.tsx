@@ -9,13 +9,12 @@ const CATEGORIES = [
   { slug: "review-test",    label: "Critical",    italic: "Review" },
   { slug: "career-brand",    label: "Professional",   italic: "Growth" },
   { slug: "image-prompts",   label: "Visual",           italic: "Generation" },
+  { slug: "ai-agents",       label: "Agentic",          italic: "Workflows" },
+  { slug: "instagram",       label: "Instagram",        italic: "Socials" },
+  { slug: "youtube",         label: "YouTube",          italic: "Video" },
 ];
 
-const ArrowIcon = () => (
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-    <path d="M5 12h14M13 5l7 7-7 7"/>
-  </svg>
-);
+const ArrowIcon = () => null;
 
 export async function CategoriesSection() {
   const all = await getAllPrompts();
@@ -30,7 +29,7 @@ export async function CategoriesSection() {
             <div className="eyebrow">Categories / index</div>
             <h2>Sorted by <span className="it">craft</span>, not by trend.</h2>
           </div>
-          <p className="lede">Seven working categories. Each prompt belongs to exactly one. No "misc", no tag soup.</p>
+          <p className="lede">Ten working categories. Each prompt belongs to exactly one. No "misc", no tag soup.</p>
         </div>
         <div className="cats">
           {CATEGORIES.map((cat, i) => (

@@ -22,7 +22,17 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "Expert synthesis",
-    "useCase": "Generating a professional LinkedIn profile photo or corporate headshot without a photographer."
+    "useCase": "Generating a professional LinkedIn profile photo or corporate headshot without a photographer.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "age",
+      "gender",
+      "hair color"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-002",
@@ -47,7 +57,13 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "Expert synthesis",
-    "useCase": "Creating an authentic, editorial-style portrait for personal branding, About pages, or speaker profiles."
+    "useCase": "Creating an authentic, editorial-style portrait for personal branding, About pages, or speaker profiles.",
+    "estimatedTime": "3 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-003",
@@ -74,107 +90,15 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "Expert synthesis",
-    "useCase": "Generating clean product photography for e-commerce listings without a studio setup."
-  },
-  {
-    "id": "img-004",
-    "slug": "lifestyle-product-shot",
-    "title": "Lifestyle Product Shot",
-    "description": "Product in a warm, lived-in lifestyle context - for Instagram, ads, and editorial use",
-    "prompt": "A [product] sitting on a rustic wooden table next to a ceramic coffee mug and an open book, warm afternoon sunlight streaming through a nearby window creating soft golden highlights. Editorial lifestyle photography, shallow depth of field, photorealistic.",
-    "category": "image-prompts",
-    "platforms": [
-      "dalle3"
+    "useCase": "Generating clean product photography for e-commerce listings without a studio setup.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "product name"
     ],
-    "imagePlatforms": [
-      "dalle3"
-    ],
-    "tags": [
-      "product",
-      "lifestyle",
-      "instagram",
-      "advertising",
-      "warm"
-    ],
-    "difficulty": "beginner",
-    "featured": false,
-    "source": "Expert synthesis",
-    "useCase": "Creating lifestyle-context product images for social media ads and brand marketing without a shoot."
-  },
-  {
-    "id": "img-005",
-    "slug": "instagram-flat-lay",
-    "title": "Instagram Flat Lay",
-    "description": "Aesthetic overhead flat lay for Instagram posts - clean, minimal, and editorial",
-    "prompt": "An overhead flat lay photograph of [items e.g. a journal, coffee cup, flowers, and phone] arranged aesthetically on a white marble surface. Soft natural daylight, pastel color palette, editorial fashion magazine style. Do not include any text or letters in the image.",
-    "category": "image-prompts",
-    "platforms": [
-      "dalle3"
-    ],
-    "imagePlatforms": [
-      "dalle3"
-    ],
-    "tags": [
-      "instagram",
-      "flat-lay",
-      "aesthetic",
-      "content-creation",
-      "overhead"
-    ],
-    "difficulty": "beginner",
-    "featured": false,
-    "source": "Expert synthesis",
-    "useCase": "Creating polished flat lay content for Instagram feeds without a photographer or props."
-  },
-  {
-    "id": "img-006",
-    "slug": "youtube-thumbnail-background",
-    "title": "YouTube Thumbnail Background",
-    "description": "Dramatic cinematic background for YouTube thumbnails - high contrast, no text, no people",
-    "prompt": "A dramatic cinematic background for a YouTube thumbnail. Deep dark blue and orange gradient sky, volumetric god rays of light breaking through storm clouds, hyper-detailed, ultra-wide 16:9 format, no people, no text, photorealistic.",
-    "category": "image-prompts",
-    "platforms": [
-      "grok"
-    ],
-    "imagePlatforms": [
-      "grok"
-    ],
-    "tags": [
-      "youtube",
-      "thumbnail",
-      "cinematic",
-      "background",
-      "content-creation"
-    ],
-    "difficulty": "beginner",
-    "featured": false,
-    "source": "Expert synthesis",
-    "useCase": "Generating eye-catching YouTube thumbnail backgrounds that boost click-through rates."
-  },
-  {
-    "id": "img-007",
-    "slug": "instagram-reel-cover",
-    "title": "Instagram Reel Cover",
-    "description": "Vertical lifestyle cover image for Instagram Reels - golden hour, cinematic, scroll-stopping",
-    "prompt": "vibrant lifestyle photo, golden hour beach, warm amber tones, bokeh background, person silhouette facing ocean, cinematic color grading, editorial quality --ar 9:16 --style raw --v 6.1",
-    "category": "image-prompts",
-    "platforms": [
-      "midjourney"
-    ],
-    "imagePlatforms": [
-      "midjourney"
-    ],
-    "tags": [
-      "instagram",
-      "reels",
-      "vertical",
-      "lifestyle",
-      "golden-hour"
-    ],
-    "difficulty": "beginner",
-    "featured": false,
-    "source": "Expert synthesis",
-    "useCase": "Creating cinematic cover frames for Instagram Reels that stop the scroll."
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-008",
@@ -199,7 +123,15 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "Expert synthesis",
-    "useCase": "Creating vintage-style posters for events, travel brands, or decorative design projects."
+    "useCase": "Creating vintage-style posters for events, travel brands, or decorative design projects.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "city name"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-009",
@@ -224,7 +156,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Expert synthesis",
-    "useCase": "Exploring logo mark directions quickly before working with a designer."
+    "useCase": "Exploring logo mark directions quickly before working with a designer.",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-010",
@@ -249,7 +187,13 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "Expert synthesis",
-    "useCase": "Creating realistic app mockup visuals for portfolios, pitch decks, and product presentations."
+    "useCase": "Creating realistic app mockup visuals for portfolios, pitch decks, and product presentations.",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-011",
@@ -274,7 +218,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Expert synthesis",
-    "useCase": "Generating dramatic character portraits for creative projects, book covers, or editorial use."
+    "useCase": "Generating dramatic character portraits for creative projects, book covers, or editorial use.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "subject description"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-012",
@@ -299,7 +251,19 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "Expert synthesis",
-    "useCase": "Creating a fun, stylized avatar for social media profiles, Discord, or personal branding."
+    "useCase": "Creating a fun, stylized avatar for social media profiles, Discord, or personal branding.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "age",
+      "gender",
+      "hair color",
+      "eye color",
+      "outfit"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-013",
@@ -324,7 +288,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Expert synthesis",
-    "useCase": "Generating fantasy character art for games, D&D campaigns, book covers, or creative projects."
+    "useCase": "Generating fantasy character art for games, D&D campaigns, book covers, or creative projects.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "character description"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-014",
@@ -349,7 +321,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Expert synthesis",
-    "useCase": "Visualizing interior design concepts for client presentations or mood boards without 3D software."
+    "useCase": "Visualizing interior design concepts for client presentations or mood boards without 3D software.",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-015",
@@ -374,7 +352,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Expert synthesis",
-    "useCase": "Generating architectural exterior concepts for client pitches or real estate marketing."
+    "useCase": "Generating architectural exterior concepts for client pitches or real estate marketing.",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-016",
@@ -399,32 +383,15 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "Expert synthesis",
-    "useCase": "Creating professional food photography for restaurant menus, food blogs, or delivery apps."
-  },
-  {
-    "id": "img-017",
-    "slug": "coffee-shop-aesthetic",
-    "title": "Coffee Shop Aesthetic",
-    "description": "Warm cozy latte art close-up for lifestyle brands, bloggers, and cafe marketing",
-    "prompt": "A photorealistic close-up of a ceramic cup of latte art on a worn wooden cafe table. Morning light filtering through a window creating warm golden tones. A blurred open book in the background. Lifestyle photography, soft bokeh, film grain, cozy autumn aesthetic.",
-    "category": "image-prompts",
-    "platforms": [
-      "dalle3"
+    "useCase": "Creating professional food photography for restaurant menus, food blogs, or delivery apps.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "dish name"
     ],
-    "imagePlatforms": [
-      "dalle3"
-    ],
-    "tags": [
-      "lifestyle",
-      "coffee",
-      "aesthetic",
-      "cozy",
-      "instagram"
-    ],
-    "difficulty": "beginner",
-    "featured": false,
-    "source": "Expert synthesis",
-    "useCase": "Generating warm lifestyle imagery for cafes, lifestyle brands, and personal blogs."
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-018",
@@ -449,7 +416,13 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "Expert synthesis",
-    "useCase": "Creating premium abstract backgrounds for desktop wallpapers, presentations, or brand assets."
+    "useCase": "Creating premium abstract backgrounds for desktop wallpapers, presentations, or brand assets.",
+    "estimatedTime": "3 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-019",
@@ -474,7 +447,13 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "Expert synthesis",
-    "useCase": "Creating cinematic landscape visuals for book covers, film posters, or editorial projects."
+    "useCase": "Creating cinematic landscape visuals for book covers, film posters, or editorial projects.",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-020",
@@ -501,7 +480,15 @@
     "difficulty": "advanced",
     "featured": true,
     "source": "Expert synthesis",
-    "useCase": "Generating platform-optimized image prompts for any concept across all major image generators at once."
+    "useCase": "Generating platform-optimized image prompts for any concept across all major image generators at once.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe your concept vaguely"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-021",
@@ -526,7 +513,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "High-end beauty brand campaign, magazine ad, website hero"
+    "useCase": "High-end beauty brand campaign, magazine ad, website hero",
+    "estimatedTime": "5 min",
+    "variables": [
+      "product name"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-022",
@@ -551,7 +546,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "DTC skincare brand, social media ads, Shopify hero image"
+    "useCase": "DTC skincare brand, social media ads, Shopify hero image",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-023",
@@ -575,7 +576,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Watch brand marketing, e-commerce, editorial feature"
+    "useCase": "Watch brand marketing, e-commerce, editorial feature",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-024",
@@ -600,7 +607,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Packaging concept, brand presentation, agency pitch"
+    "useCase": "Packaging concept, brand presentation, agency pitch",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-025",
@@ -625,7 +638,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "FMCG packaging, juice brand, health food marketing"
+    "useCase": "FMCG packaging, juice brand, health food marketing",
+    "estimatedTime": "5 min",
+    "variables": [
+      "fruit - e.g., blood orange / dragon fruit / yuzu"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-026",
@@ -650,7 +671,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Fashion brand lookbook, editorial spread, agency portfolio"
+    "useCase": "Fashion brand lookbook, editorial spread, agency portfolio",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-027",
@@ -675,7 +702,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Seasonal lookbook, streetwear brand, e-commerce editorial"
+    "useCase": "Seasonal lookbook, streetwear brand, e-commerce editorial",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-028",
@@ -699,7 +732,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Fine jewellery brand, luxury campaign, e-commerce detail shot"
+    "useCase": "Fine jewellery brand, luxury campaign, e-commerce detail shot",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-029",
@@ -724,7 +763,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Sneaker / footwear brand, e-commerce, campaign visual"
+    "useCase": "Sneaker / footwear brand, e-commerce, campaign visual",
+    "estimatedTime": "5 min",
+    "variables": [
+      "shoe description - e.g., low-top white leather trainer with gum sole"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-030",
@@ -749,7 +796,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Architecture studio portfolio, editorial, cultural institution"
+    "useCase": "Architecture studio portfolio, editorial, cultural institution",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-031",
@@ -774,7 +827,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Interior design studio, real estate premium listing, hospitality brand"
+    "useCase": "Interior design studio, real estate premium listing, hospitality brand",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-032",
@@ -799,7 +858,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Retail design concept presentation, brand identity, investor deck"
+    "useCase": "Retail design concept presentation, brand identity, investor deck",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-033",
@@ -822,7 +887,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Hospitality brand, travel editorial, short-term rental marketing"
+    "useCase": "Hospitality brand, travel editorial, short-term rental marketing",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-034",
@@ -845,7 +916,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Music artist release, Spotify canvas, merch"
+    "useCase": "Music artist release, Spotify canvas, merch",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-035",
@@ -869,7 +946,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Publisher, self-published author, reading app thumbnail"
+    "useCase": "Publisher, self-published author, reading app thumbnail",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-036",
@@ -894,7 +977,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Brand agency presentation, identity deck, client pitch"
+    "useCase": "Brand agency presentation, identity deck, client pitch",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-037",
@@ -919,7 +1008,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Publisher concept, media brand pitch, editorial design"
+    "useCase": "Publisher concept, media brand pitch, editorial design",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-038",
@@ -942,7 +1037,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Game studio, film pre-production, concept art portfolio"
+    "useCase": "Game studio, film pre-production, concept art portfolio",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-039",
@@ -965,7 +1066,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Creative agency, award-entry campaign visual, art director concept"
+    "useCase": "Creative agency, award-entry campaign visual, art director concept",
+    "estimatedTime": "5 min",
+    "variables": [
+      "product - e.g., glass water bottle"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-040",
@@ -989,7 +1098,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Game studio, indie developer, character art brief"
+    "useCase": "Game studio, indie developer, character art brief",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-041",
@@ -1012,7 +1127,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Limited edition print, gallery piece, creative portfolio"
+    "useCase": "Limited edition print, gallery piece, creative portfolio",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-042",
@@ -1037,7 +1158,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Presentation background, brand texture asset, print design"
+    "useCase": "Presentation background, brand texture asset, print design",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-043",
@@ -1061,7 +1188,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Bar / restaurant branding, content creation, event backdrop"
+    "useCase": "Bar / restaurant branding, content creation, event backdrop",
+    "estimatedTime": "5 min",
+    "variables": [
+      "YOUR TEXT"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-044",
@@ -1086,7 +1221,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Brand mockup, packaging design, stationery brand"
+    "useCase": "Brand mockup, packaging design, stationery brand",
+    "estimatedTime": "5 min",
+    "variables": [
+      "BRAND NAME"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-045",
@@ -1110,7 +1253,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Brand design system, urban photography, wayfinding concept"
+    "useCase": "Brand design system, urban photography, wayfinding concept",
+    "estimatedTime": "5 min",
+    "variables": [
+      "YOUR TEXT"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-046",
@@ -1135,7 +1286,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Brand storytelling, documentary editorial, About page photography"
+    "useCase": "Brand storytelling, documentary editorial, About page photography",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-047",
@@ -1159,7 +1316,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Poster design, creative campaign, speaker profile visual"
+    "useCase": "Poster design, creative campaign, speaker profile visual",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-048",
@@ -1184,7 +1347,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Sports brand campaign, athlete sponsor content, editorial"
+    "useCase": "Sports brand campaign, athlete sponsor content, editorial",
+    "estimatedTime": "5 min",
+    "variables": [
+      "colour"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-049",
@@ -1209,7 +1380,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "LinkedIn article banner, personal brand header, newsletter cover"
+    "useCase": "LinkedIn article banner, personal brand header, newsletter cover",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-050",
@@ -1233,7 +1410,16 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Podcast artwork (3000x3000px), Spotify / Apple Podcasts"
+    "useCase": "Podcast artwork (3000x3000px), Spotify / Apple Podcasts",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PODCAST NAME",
+      "topic"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-051",
@@ -1258,7 +1444,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Social profile header, personal brand, newsletter masthead"
+    "useCase": "Social profile header, personal brand, newsletter masthead",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-052",
@@ -1281,7 +1473,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Zine cover, music poster, indie brand, editorial illustration"
+    "useCase": "Zine cover, music poster, indie brand, editorial illustration",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-053",
@@ -1305,7 +1503,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Design brand identity, architect website, technical editorial"
+    "useCase": "Design brand identity, architect website, technical editorial",
+    "estimatedTime": "5 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-054",
@@ -1329,7 +1533,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Craft beer label, artisan food brand, folk music poster"
+    "useCase": "Craft beer label, artisan food brand, folk music poster",
+    "estimatedTime": "5 min",
+    "variables": [
+      "subject - e.g., a leaping salmon / a mountain range / an old lighthouse"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "img-055",
@@ -1353,6 +1565,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Any project where you want a genuinely strong prompt, not a generic one"
+    "useCase": "Any project where you want a genuinely strong prompt, not a generic one",
+    "estimatedTime": "5 min",
+    "variables": [
+      "e.g., perfume campaign / book cover / game concept art",
+      "Midjourney / Flux Pro / DALL-E 3",
+      "describe it roughly, even vaguely",
+      "e.g., melancholy / powerful / serene",
+      "name photographers, directors, painters, or brands",
+      "e.g., AI clichés, purple gradients, overly clean CGI look"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   }
 ]

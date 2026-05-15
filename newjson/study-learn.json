@@ -19,7 +19,13 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "r/PromptEngineering",
-    "useCase": "Establishing a foundational, highly structured framework for learning when motivation is lacking."
+    "useCase": "Establishing a foundational, highly structured framework for learning when motivation is lacking.",
+    "estimatedTime": "3 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-002",
@@ -40,7 +46,13 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Eliminating decision fatigue by outlining exact daily procedural tasks."
+    "useCase": "Eliminating decision fatigue by outlining exact daily procedural tasks.",
+    "estimatedTime": "3 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-003",
@@ -61,7 +73,15 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Bypassing procrastination by algorithmically determining the highest-impact study targets."
+    "useCase": "Bypassing procrastination by algorithmically determining the highest-impact study targets.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "list your subjects here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-004",
@@ -83,7 +103,13 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Improving long-term retention rather than merely tracking passive reading time."
+    "useCase": "Improving long-term retention rather than merely tracking passive reading time.",
+    "estimatedTime": "3 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-005",
@@ -104,7 +130,13 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Architecting a physical and psychological environment that naturally repels focus disruption."
+    "useCase": "Architecting a physical and psychological environment that naturally repels focus disruption.",
+    "estimatedTime": "3 min",
+    "variables": [],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-006",
@@ -126,7 +158,15 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "r/ChatGPTPromptGenius",
-    "useCase": "Converting passive reading materials into aggressive, active retrieval exercises to destroy the illusion of mastery."
+    "useCase": "Converting passive reading materials into aggressive, active retrieval exercises to destroy the illusion of mastery.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "paste your text or topic here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-007",
@@ -147,7 +187,15 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "r/ChatGPTPromptGenius",
-    "useCase": "Preventing the rapid decay of newly learned information by scheduling scientifically backed review intervals."
+    "useCase": "Preventing the rapid decay of newly learned information by scheduling scientifically backed review intervals.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "insert topic here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-008",
@@ -168,7 +216,17 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Building lateral problem-solving skills by forcing the brain to context-switch rapidly."
+    "useCase": "Building lateral problem-solving skills by forcing the brain to context-switch rapidly.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "topic 1",
+      "topic 2",
+      "topic 3"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-009",
@@ -189,7 +247,16 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Connecting novel, complex data structures to existing, well-understood mental models."
+    "useCase": "Connecting novel, complex data structures to existing, well-understood mental models.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "new concept",
+      "a concept I already know well"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-010",
@@ -210,14 +277,23 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "r/ChatGPTPromptGenius",
-    "useCase": "Artificially increasing the cognitive load of simplistic material to ensure it anchors in long-term memory."
+    "useCase": "Artificially increasing the cognitive load of simplistic material to ensure it anchors in long-term memory.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "topic",
+      "paste your material here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-011",
     "slug": "first-principles-breaker",
     "title": "The First-Principles Breaker",
     "description": "Strips any topic down to its most basic, jargon-free foundational truths",
-    "prompt": "Explain this topic from first principles: [topic].\n\nRules:\n- Remove ALL jargon. If a technical term is unavoidable, define it immediately.\n- Focus only on the core ideas that are absolutely necessary to understand the topic\n- Start from what we know for certain, then build up\n- If I can't understand this after reading your explanation, the explanation failed \u2014 not me",
+    "prompt": "Explain this topic from first principles: [topic].\n\nRules:\n- Remove ALL jargon. If a technical term is unavoidable, define it immediately.\n- Focus only on the core ideas that are absolutely necessary to understand the topic\n- Start from what we know for certain, then build up\n- If I can't understand this after reading your explanation, the explanation failed — not me",
     "category": "study-learn",
     "platforms": [
       "chatgpt"
@@ -231,7 +307,15 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "r/PromptEngineering",
-    "useCase": "Deconstructing overwhelmingly complex systems into their most basic, undeniable foundational truths to ensure baseline comprehension."
+    "useCase": "Deconstructing overwhelmingly complex systems into their most basic, undeniable foundational truths to ensure baseline comprehension.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "topic"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-012",
@@ -253,14 +337,22 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Establishing a macro-level cognitive map before diving into granular, technical specifics that cause cognitive overload."
+    "useCase": "Establishing a macro-level cognitive map before diving into granular, technical specifics that cause cognitive overload.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "subject"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-013",
     "slug": "feynman-teacher",
     "title": "The Feynman Teacher",
     "description": "Makes you explain a topic in your own words, then pinpoints exactly where your understanding breaks down",
-    "prompt": "Ask me to explain this topic in my own words: [topic].\n\nAfter I give my explanation:\n1. Point out exactly where my explanation is unclear or logically incorrect\n2. Identify any gaps \u2014 things I skipped that are actually critical\n3. Tell me what I got right (specifically, not generically)\n4. Re-explain only the parts I got wrong, as simply as possible\n\nDo not let me get away with vague explanations. If I say 'it kind of works like...' push me to be precise.",
+    "prompt": "Ask me to explain this topic in my own words: [topic].\n\nAfter I give my explanation:\n1. Point out exactly where my explanation is unclear or logically incorrect\n2. Identify any gaps — things I skipped that are actually critical\n3. Tell me what I got right (specifically, not generically)\n4. Re-explain only the parts I got wrong, as simply as possible\n\nDo not let me get away with vague explanations. If I say 'it kind of works like...' push me to be precise.",
     "category": "study-learn",
     "platforms": [
       "chatgpt"
@@ -274,14 +366,22 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "r/PromptEngineering",
-    "useCase": "Exposing hidden gaps in comprehension by forcing the learner to articulate concepts actively, revealing true understanding versus mere familiarity."
+    "useCase": "Exposing hidden gaps in comprehension by forcing the learner to articulate concepts actively, revealing true understanding versus mere familiarity.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "topic"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-014",
     "slug": "example-accelerator",
     "title": "The Example Accelerator",
-    "description": "Explains any concept through 3 tiered examples \u2014 simple, practical, and advanced",
-    "prompt": "Explain this concept using exactly 3 examples: [concept]\n\n- Example 1 \u2014 Simple: Use the most everyday, relatable scenario possible. A child should understand this.\n- Example 2 \u2014 Practical: Show how this concept applies in a real professional or academic context.\n- Example 3 \u2014 Advanced: Show a complex, nuanced application that an expert would encounter.\n\nKeep each example explanation under 4 sentences. No filler.",
+    "description": "Explains any concept through 3 tiered examples — simple, practical, and advanced",
+    "prompt": "Explain this concept using exactly 3 examples: [concept]\n\n- Example 1 — Simple: Use the most everyday, relatable scenario possible. A child should understand this.\n- Example 2 — Practical: Show how this concept applies in a real professional or academic context.\n- Example 3 — Advanced: Show a complex, nuanced application that an expert would encounter.\n\nKeep each example explanation under 4 sentences. No filler.",
     "category": "study-learn",
     "platforms": [
       "any"
@@ -295,7 +395,15 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Bridging the gap between abstract theoretical frameworks and concrete, real-world application through tiered complexity."
+    "useCase": "Bridging the gap between abstract theoretical frameworks and concrete, real-world application through tiered complexity.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "concept"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-015",
@@ -316,7 +424,15 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Converting abstract, difficult-to-retain data points into sticky, highly memorable cognitive hooks."
+    "useCase": "Converting abstract, difficult-to-retain data points into sticky, highly memorable cognitive hooks.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "topic or concept"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-016",
@@ -337,14 +453,22 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Confirming knowledge acquisition rapidly and continually to prevent the accidental memorization of incorrect data structures."
+    "useCase": "Confirming knowledge acquisition rapidly and continually to prevent the accidental memorization of incorrect data structures.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "topic"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-017",
     "slug": "30-day-fast-learning-system",
     "title": "The 30-Day Fast Learning System",
-    "description": "Builds a full month-long curriculum in 4 weekly phases \u2014 clarity, understanding, recall, application",
-    "prompt": "Create a 30-day fast learning plan for mastering: [subject or skill]\n\nBreak it into 4 weekly themes:\n- Week 1: Clarity (understand what this subject is and its core structure)\n- Week 2: Understanding (go deep on the most important concepts)\n- Week 3: Recall (actively test and reinforce everything learned)\n- Week 4: Application (use the knowledge on real problems)\n\nFor each week, give daily learning tasks that take under 30 minutes per day. Be specific \u2014 tell me exactly what to do each day, not just general advice.",
+    "description": "Builds a full month-long curriculum in 4 weekly phases — clarity, understanding, recall, application",
+    "prompt": "Create a 30-day fast learning plan for mastering: [subject or skill]\n\nBreak it into 4 weekly themes:\n- Week 1: Clarity (understand what this subject is and its core structure)\n- Week 2: Understanding (go deep on the most important concepts)\n- Week 3: Recall (actively test and reinforce everything learned)\n- Week 4: Application (use the knowledge on real problems)\n\nFor each week, give daily learning tasks that take under 30 minutes per day. Be specific — tell me exactly what to do each day, not just general advice.",
     "category": "study-learn",
     "platforms": [
       "claude"
@@ -358,7 +482,15 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "r/PromptEngineering",
-    "useCase": "Architecting a long-term, low-friction curriculum to master entirely new disciplines sequentially without experiencing burnout."
+    "useCase": "Architecting a long-term, low-friction curriculum to master entirely new disciplines sequentially without experiencing burnout.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "subject or skill"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-018",
@@ -380,7 +512,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Preventing cognitive overwhelm by enforcing strict, linear progression through highly complicated subject matter."
+    "useCase": "Preventing cognitive overwhelm by enforcing strict, linear progression through highly complicated subject matter.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "topic"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-019",
@@ -401,7 +541,16 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Acting as a ruthless intellectual auditor that prevents the AI from smoothing over poor explanations with false validation."
+    "useCase": "Acting as a ruthless intellectual auditor that prevents the AI from smoothing over poor explanations with false validation.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "topic",
+      "write your explanation here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "study-020",
@@ -422,6 +571,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "r/ChatGPTPromptGenius",
-    "useCase": "Forcing professionals to apply passive meeting notes to active problem-solving scenarios, ensuring alignment on strategic decisions."
+    "useCase": "Forcing professionals to apply passive meeting notes to active problem-solving scenarios, ensuring alignment on strategic decisions.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "meeting name / date",
+      "Paste your notes here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   }
 ]

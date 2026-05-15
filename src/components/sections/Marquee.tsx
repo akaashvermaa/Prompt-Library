@@ -17,7 +17,7 @@ export function Marquee() {
       <div className="strip-track">
         {ALL.map((item, i) => (
           <span key={i} className="strip-item">
-            <span className="star">✦</span>
+            <span className="star"></span>
             {item.italic ? <span className="it">{item.label}</span> : item.label}
           </span>
         ))}

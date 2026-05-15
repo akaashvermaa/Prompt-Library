@@ -7,19 +7,26 @@ export async function getAllPrompts(): Promise<Prompt[]> {
     console.error('Supabase fetch error:', error);
     return [];
   }
-  return data.map(mapDbToPrompt);
+  return sortPromptsByCredibility(data.map(mapDbToPrompt));
 }
 
 export async function getByCategory(category: string): Promise<Prompt[]> {
   const { data, error } = await supabase.from('prompts').select('*').eq('category', category);
   if (error) return [];
-  return data.map(mapDbToPrompt);
+  return sortPromptsByCredibility(data.map(mapDbToPrompt));
 }
 
 export async function getBySlug(slug: string): Promise<Prompt | null> {
   const { data, error } = await supabase.from('prompts').select('*').eq('slug', slug).single();
   if (error || !data) return null;
   return mapDbToPrompt(data);
+}
+
+export async function getPromptsByIds(ids: string[]): Promise<Prompt[]> {
+  if (!ids || ids.length === 0) return [];
+  const { data, error } = await supabase.from('prompts').select('*').in('id', ids);
+  if (error) return [];
+  return data.map(mapDbToPrompt);
 }
 
 export async function getPromptsByPlatform(platform: string): Promise<Prompt[]> {
@@ -36,13 +43,13 @@ export async function getPromptsByPlatform(platform: string): Promise<Prompt[]> 
   
   const { data, error } = await query;
   if (error) return [];
-  return data.map(mapDbToPrompt);
+  return sortPromptsByCredibility(data.map(mapDbToPrompt));
 }
 
 export async function getFeaturedPrompts(): Promise<Prompt[]> {
   const { data, error } = await supabase.from('prompts').select('*').eq('featured', true);
   if (error) return [];
-  return data.map(mapDbToPrompt);
+  return sortPromptsByCredibility(data.map(mapDbToPrompt));
 }
 
 export async function searchPrompts(query: string): Promise<Prompt[]> {
@@ -50,12 +57,12 @@ export async function searchPrompts(query: string): Promise<Prompt[]> {
   // Fetch all for now and filter. 
   // In a large app, you'd use Supabase full-text search (fts)
   const all = await getAllPrompts();
-  return all.filter(p =>
+  return sortPromptsByCredibility(all.filter(p =>
     p.title.toLowerCase().includes(q) ||
     p.description.toLowerCase().includes(q) ||
     p.tags.some(tag => tag.toLowerCase().includes(q)) ||
     p.prompt.toLowerCase().includes(q)
-  );
+  ));
 }
 
 export async function filterPrompts(options: {
@@ -91,7 +98,7 @@ export async function filterPrompts(options: {
     );
   }
 
-  return result;
+  return sortPromptsByCredibility(result);
 }
 
 // Helper to map DB columns (image_platforms) to app models (imagePlatforms)
@@ -99,5 +106,38 @@ function mapDbToPrompt(row: any): Prompt {
   return {
     ...row,
     imagePlatforms: row.image_platforms,
+    estimatedTime: row.estimated_time || '5 min',
+    exampleOutput: row.example_output || '',
+    updatedAt: row.updated_at_str || '2026-05',
+    copyCount: row.copy_count || 0,
+    relatedPrompts: row.related_prompts || [],
+    variables: row.variables || [],
   };
+}
+
+// Sorts prompts by credibility and simulated usage metrics
+function sortPromptsByCredibility(prompts: Prompt[]): Prompt[] {
+  return prompts.sort((a, b) => {
+    // 1. Featured prompts represent the highest credibility
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    
+    // 2. Proxies for "usage" and versatility: Number of supported platforms
+    const aPlatformCount = a.platforms.length + (a.imagePlatforms?.length || 0);
+    const bPlatformCount = b.platforms.length + (b.imagePlatforms?.length || 0);
+    if (aPlatformCount !== bPlatformCount) {
+      return bPlatformCount - aPlatformCount; // Higher count first
+    }
+    
+    // 3. Proxies for "hotness": Broadest usability (Beginner > Intermediate > Advanced)
+    const difficultyScore = { beginner: 3, intermediate: 2, advanced: 1 };
+    const aDiff = difficultyScore[a.difficulty] || 0;
+    const bDiff = difficultyScore[b.difficulty] || 0;
+    if (aDiff !== bDiff) {
+      return bDiff - aDiff;
+    }
+    
+    // 4. Fallback deterministic sort by title
+    return a.title.localeCompare(b.title);
+  });
 }

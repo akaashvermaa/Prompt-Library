@@ -8,11 +8,11 @@ import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { CopyButton } from "@/components/ui/CopyButton";
 
 const TABS = ["any", "claude", "chatgpt", "gemini", "grok"] as const;
-const CATS = ["all", "study-learn", "write-create", "code-dev", "business-marketing", "review-test", "career-brand", "image-prompts"];
+const CATS = ["all", "study-learn", "write-create", "code-dev", "business-marketing", "review-test", "career-brand", "image-prompts", "ai-agents", "instagram", "youtube"];
 
 const CAT_LABEL: Record<string, string> = {
   "study-learn": "Academic Study", "write-create": "Creative Writing", "code-dev": "Software Engineering",
-  "business-marketing": "Strategic Marketing", "review-test": "Critical Review", "career-brand": "Professional Growth", "image-prompts": "Visual Generation",
+  "business-marketing": "Strategic Marketing", "review-test": "Critical Review", "career-brand": "Professional Growth", "image-prompts": "Visual Generation", "ai-agents": "Agentic Workflows", "instagram": "Instagram Socials", "youtube": "YouTube Video",
 };
 
 export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
@@ -110,9 +110,7 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
       {/* Search */}
       <div className="search-shell browse-content">
         <div className="search">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" />
-          </svg>
+          
           <input
             type="text"
             placeholder="Search prompts by keywords, topics, or tags..."

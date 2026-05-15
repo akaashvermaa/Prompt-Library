@@ -41,7 +41,13 @@ async function migrate() {
       image_platforms: p.imagePlatforms || [],
       tags: p.tags || [],
       difficulty: p.difficulty || 'beginner',
-      featured: p.featured || false
+      featured: p.featured || false,
+      estimated_time: p.estimatedTime || '5 min',
+      variables: p.variables || [],
+      example_output: p.exampleOutput || '',
+      updated_at_str: p.updatedAt || '2026-05',
+      copy_count: p.copyCount || 0,
+      related_prompts: p.relatedPrompts || []
     }));
 
     // Upsert into Supabase
