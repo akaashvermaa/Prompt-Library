@@ -10,7 +10,7 @@ import { LikeButton } from "@/components/ui/LikeButton";
 const SIZES = ["large", "tall", "", "", "wide", ""];
 
 export function SavedSection({ featuredPrompts }: { featuredPrompts: Prompt[] }) {
-  const { user } = useAuth();
+  const { user, openAuthModal } = useAuth();
   const { likedIds, loading: likesLoading } = useLikes();
   const [savedPrompts, setSavedPrompts] = useState<Prompt[]>([]);
   const [loading, setLoading] = useState(true);
@@ -47,23 +47,38 @@ export function SavedSection({ featuredPrompts }: { featuredPrompts: Prompt[] })
       <div className="wrap">
         <div className="sec-head" style={{ display: 'block' }}>
           <div className="eyebrow">
-            {hasSaved ? "Saved / your collection" : "Featured / handpicked"}
+            {hasSaved ? "Saved / your collection" : "Collection / your favorites"}
           </div>
           <h2 style={{ marginBottom: '24px' }}>
             {hasSaved ? (
               <>Prompts you <span className="it">loved.</span></>
             ) : (
-              <>The ones we keep <span className="it">coming back</span> to.</>
+              <>Your personal <span className="it">vault</span> awaits.</>
             )}
           </h2>
           <p className="lede" style={{ maxWidth: '600px', marginBottom: '48px' }}>
             {hasSaved 
               ? "Your personal shortcut to high-performance prompts. Quick access to your most used architectures."
-              : "A rotating shelf of prompts our editors actually use. Updated weekly, old favourites archive into Browse."}
+              : "Save your favorite architectures for instant access. Sign in to start building your own personal library."}
           </p>
         </div>
 
-        {!hasSaved && user && (
+        {!user && (
+          <div className="none-liked-notice" style={{ marginBottom: '60px', padding: '32px', background: 'var(--surface)', border: '1px dashed var(--line)', borderRadius: '16px' }}>
+             <p style={{ color: 'var(--muted)', fontSize: '15px' }}>
+                <strong>Sign in to save prompts.</strong> Build your own library and sync it across devices. 
+                <button 
+                  onClick={() => openAuthModal("login")}
+                  style={{ marginLeft: '12px', color: 'var(--amber)', fontWeight: 600, textDecoration: 'underline', cursor: 'pointer', background: 'none', border: 'none', padding: 0 }}
+                >
+                  Sign in now
+                </button>
+                <span style={{ marginLeft: '12px', opacity: 0.6 }}>Recommended for you ↓</span>
+             </p>
+          </div>
+        )}
+
+        {user && !hasSaved && (
           <div className="none-liked-notice" style={{ marginBottom: '60px', padding: '32px', background: 'var(--surface)', border: '1px dashed var(--line)', borderRadius: '16px' }}>
              <p style={{ color: 'var(--muted)', fontSize: '15px' }}>
                 <strong>No prompts saved yet.</strong> Hit the heart on any prompt while browsing to build your own collection. 
