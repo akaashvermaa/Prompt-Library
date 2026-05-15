@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { AuthProvider } from "@/lib/auth-context";
+import { AuthModal } from "@/components/ui/AuthModal";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 
@@ -20,10 +22,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
       </head>
       <body>
-        <div className="grain" />
-        <Navbar />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <div className="grain" />
+          <Navbar />
+          <AuthModal />
+          {children}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

@@ -1,10 +1,10 @@
-[
+﻿[
   {
     "id": "career-001",
     "slug": "transformative-lesson-formatter",
     "title": "The Transformative Lesson Formatter",
     "description": "Converts professional experiences into high-engagement LinkedIn narratives with real takeaways",
-    "prompt": "Write a LinkedIn post sharing 3 lessons I've learned from [describe a recent client project or business experience].\n\nRules:\n- Each lesson must be specific and actionable, not generic\n- Include a concrete takeaway for [target audience, e.g. small business owners / developers / designers]\n- Open with a hook that stops the scroll — not 'I'm excited to share'\n- End with a question that invites comments\n- Keep it under 200 words\n- No bullet point lists — write in short punchy paragraphs",
+    "prompt": "Write a LinkedIn post sharing 3 lessons I've learned from [describe a recent client project or business experience].\n\nRules:\n- Each lesson must be specific and actionable, not generic\n- Include a concrete takeaway for [target audience, e.g. small business owners / developers / designers]\n- Open with a hook that stops the scroll - not 'I'm excited to share'\n- End with a question that invites comments\n- Keep it under 200 words\n- No bullet point lists - write in short punchy paragraphs",
     "category": "career-brand",
     "platforms": [
       "chatgpt"
@@ -34,7 +34,7 @@
     "slug": "common-problem-solver",
     "title": "The Common Problem Solver",
     "description": "Positions you as an authority by addressing a pain point your audience struggles with every day",
-    "prompt": "Write a LinkedIn post explaining why many [target audience, e.g. service providers / freelancers / startup founders] struggle with [specific problem] and how to overcome it.\n\nStructure:\n1. Open by naming the pain — make the reader feel seen\n2. Explain WHY this problem happens (the root cause most people miss)\n3. Give 2-3 specific, actionable solutions\n4. Close with a line that positions you as someone who has solved this\n\nKeep it under 250 words. Conversational tone. No corporate speak.",
+    "prompt": "Write a LinkedIn post explaining why many [target audience, e.g. service providers / freelancers / startup founders] struggle with [specific problem] and how to overcome it.\n\nStructure:\n1. Open by naming the pain - make the reader feel seen\n2. Explain WHY this problem happens (the root cause most people miss)\n3. Give 2-3 specific, actionable solutions\n4. Close with a line that positions you as someone who has solved this\n\nKeep it under 250 words. Conversational tone. No corporate speak.",
     "category": "career-brand",
     "platforms": [
       "claude"
@@ -64,7 +64,7 @@
     "slug": "client-success-story-arc",
     "title": "The Client Success Story Arc",
     "description": "Builds a compelling before/after client transformation post with measurable results and social proof",
-    "prompt": "Draft a LinkedIn client transformation post.\n\nDetails to include:\n- Client situation BEFORE working with me: [describe the problem]\n- What we did together: [describe the solution or service]\n- Measurable result AFTER: [describe the outcome with numbers if possible]\n\nRules:\n- Focus on the client's journey, not on how great I am\n- Use specific numbers wherever possible (% increase, time saved, revenue gained)\n- Do not make it sound like an ad — make it sound like a story\n- End with one insight other people can take away from this result\n- Under 200 words",
+    "prompt": "Draft a LinkedIn client transformation post.\n\nDetails to include:\n- Client situation BEFORE working with me: [describe the problem]\n- What we did together: [describe the solution or service]\n- Measurable result AFTER: [describe the outcome with numbers if possible]\n\nRules:\n- Focus on the client's journey, not on how great I am\n- Use specific numbers wherever possible (% increase, time saved, revenue gained)\n- Do not make it sound like an ad - make it sound like a story\n- End with one insight other people can take away from this result\n- Under 200 words",
     "category": "career-brand",
     "platforms": [
       "chatgpt"
@@ -95,7 +95,7 @@
     "slug": "confusing-topic-breakdown",
     "title": "The Confusing Topic Breakdown",
     "description": "Simplifies a complex industry topic so even non-experts can understand and engage",
-    "prompt": "Write a LinkedIn post simplifying [confusing industry topic] so a complete non-expert can understand it.\n\nRules:\n- Open with why this topic matters to your audience (make them care first)\n- Use one analogy to explain the core idea\n- Break it down in plain language — no jargon unless immediately explained\n- End with one practical implication: 'What this means for you is...'\n- Target length: 150-200 words\n- Tone: intelligent but approachable, not condescending",
+    "prompt": "Write a LinkedIn post simplifying [confusing industry topic] so a complete non-expert can understand it.\n\nRules:\n- Open with why this topic matters to your audience (make them care first)\n- Use one analogy to explain the core idea\n- Break it down in plain language - no jargon unless immediately explained\n- End with one practical implication: 'What this means for you is...'\n- Target length: 150-200 words\n- Tone: intelligent but approachable, not condescending",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -124,7 +124,7 @@
     "slug": "industry-myth-debunker",
     "title": "The Industry Myth Debunker",
     "description": "Creates conversation-starting posts by challenging a common misconception in your industry",
-    "prompt": "Create a LinkedIn post that challenges a common myth in my industry: [industry or niche]\n\nMy chosen myth: [state the myth you want to debunk]\n\nStructure:\n1. State the myth boldly — make people who believe it feel called out (politely)\n2. Explain why this myth exists and why people believe it\n3. Reveal the actual truth with evidence or personal experience\n4. End with a question to spark debate in the comments\n\nTone: confident, not preachy. You can be slightly controversial but not offensive. Under 200 words.",
+    "prompt": "Create a LinkedIn post that challenges a common myth in my industry: [industry or niche]\n\nMy chosen myth: [state the myth you want to debunk]\n\nStructure:\n1. State the myth boldly - make people who believe it feel called out (politely)\n2. Explain why this myth exists and why people believe it\n3. Reveal the actual truth with evidence or personal experience\n4. End with a question to spark debate in the comments\n\nTone: confident, not preachy. You can be slightly controversial but not offensive. Under 200 words.",
     "category": "career-brand",
     "platforms": [
       "chatgpt",
@@ -155,7 +155,7 @@
     "slug": "headline-optimizer",
     "title": "The Headline Optimizer",
     "description": "Creates a keyword-rich LinkedIn headline that captures attention and ranks in recruiter searches",
-    "prompt": "Help me create a LinkedIn headline that effectively communicates my experience, qualifications, and unique value.\n\nConsider:\n- Incorporating keywords relevant to my industry (from my resume below)\n- Showcasing my passion or mission statement\n- Making it a snapshot that captures attention immediately — not a job title\n- It should answer: 'Why should someone click on my profile?'\n\nGenerate 3 headline options ranging from professional to bold.\n\nMy resume / background: [paste your resume or key details here]",
+    "prompt": "Help me create a LinkedIn headline that effectively communicates my experience, qualifications, and unique value.\n\nConsider:\n- Incorporating keywords relevant to my industry (from my resume below)\n- Showcasing my passion or mission statement\n- Making it a snapshot that captures attention immediately - not a job title\n- It should answer: 'Why should someone click on my profile?'\n\nGenerate 3 headline options ranging from professional to bold.\n\nMy resume / background: [paste your resume or key details here]",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -184,7 +184,7 @@
     "slug": "150-word-summary-crafter",
     "title": "The 150-Word Summary Crafter",
     "description": "Writes a conversational LinkedIn About section that feels human, not like a corporate resume",
-    "prompt": "Craft a concise and compelling summary for my LinkedIn About section.\n\nRequirements:\n- Highlight my professional journey, key skills, and what makes me unique\n- Tone: conversational and warm — NOT a resume rewrite\n- Must NOT exceed 150 words\n- Start with something other than 'I am a...'\n- End with a clear call to action (what I want people to do after reading)\n\nMy background: [paste your resume or write a brief description of your experience]",
+    "prompt": "Craft a concise and compelling summary for my LinkedIn About section.\n\nRequirements:\n- Highlight my professional journey, key skills, and what makes me unique\n- Tone: conversational and warm - NOT a resume rewrite\n- Must NOT exceed 150 words\n- Start with something other than 'I am a...'\n- End with a clear call to action (what I want people to do after reading)\n\nMy background: [paste your resume or write a brief description of your experience]",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -214,7 +214,7 @@
     "slug": "experience-section-impact-generator",
     "title": "The Experience Section Impact Generator",
     "description": "Rewrites job descriptions into metric-driven achievement statements that prove organizational impact",
-    "prompt": "Craft impactful entries for my LinkedIn Experience section that go beyond job descriptions.\n\nFor each role, share:\n- Not just what I did — but HOW my contributions made a measurable difference\n- Action verbs that show initiative and ownership\n- Quantified achievements wherever possible (%, $, time saved, users impacted)\n- Context that highlights the value I brought to the organization\n\nDo NOT just rephrase my job description. Transform duties into achievements.\n\nMy resume / job history: [paste your experience here]",
+    "prompt": "Craft impactful entries for my LinkedIn Experience section that go beyond job descriptions.\n\nFor each role, share:\n- Not just what I did - but HOW my contributions made a measurable difference\n- Action verbs that show initiative and ownership\n- Quantified achievements wherever possible (%, $, time saved, users impacted)\n- Context that highlights the value I brought to the organization\n\nDo NOT just rephrase my job description. Transform duties into achievements.\n\nMy resume / job history: [paste your experience here]",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -242,8 +242,8 @@
     "id": "career-009",
     "slug": "vulnerable-business-story",
     "title": "The Vulnerable Business Story",
-    "description": "Writes an authentic post about a professional failure or challenge — the content type that builds the deepest trust",
-    "prompt": "Write a LinkedIn post about a time I faced a significant challenge or failure in [work / business / career].\n\nDetails: [describe the situation briefly]\n\nStructure:\n1. Open with the moment things went wrong — put the reader in the scene\n2. Describe what I tried that didn't work\n3. What I finally learned from it (the real insight, not a cliché)\n4. How it changed how I work or think now\n\nRules:\n- Be genuinely vulnerable — not performatively vulnerable\n- Do NOT end with 'Everything happens for a reason'\n- Under 220 words\n- No bullet points — narrative paragraphs only",
+    "description": "Writes an authentic post about a professional failure or challenge - the content type that builds the deepest trust",
+    "prompt": "Write a LinkedIn post about a time I faced a significant challenge or failure in [work / business / career].\n\nDetails: [describe the situation briefly]\n\nStructure:\n1. Open with the moment things went wrong - put the reader in the scene\n2. Describe what I tried that didn't work\n3. What I finally learned from it (the real insight, not a cliché)\n4. How it changed how I work or think now\n\nRules:\n- Be genuinely vulnerable - not performatively vulnerable\n- Do NOT end with 'Everything happens for a reason'\n- Under 220 words\n- No bullet points - narrative paragraphs only",
     "category": "career-brand",
     "platforms": [
       "claude"
@@ -273,7 +273,7 @@
     "slug": "cold-dm-connection-opener",
     "title": "The Cold DM Connection Opener",
     "description": "Crafts a warm, signal-based LinkedIn DM that gets replies without feeling like a pitch",
-    "prompt": "Write a LinkedIn DM to [Recipient Name], a [their job title] at [company], who I've never spoken to but want to connect with for [reason: collaboration / advice / partnership / job opportunity].\n\nRules:\n- Open by referencing something specific about them (recent post, shared industry, mutual connection)\n- Do NOT say 'I came across your profile' or 'I wanted to reach out'\n- Make the message about THEM, not about what you want\n- Keep it under 80 words — respect their time\n- End with one low-friction ask (not a call request, something softer like a question or a shared resource)\n- Tone: warm, peer-to-peer, genuinely curious",
+    "prompt": "Write a LinkedIn DM to [Recipient Name], a [their job title] at [company], who I've never spoken to but want to connect with for [reason: collaboration / advice / partnership / job opportunity].\n\nRules:\n- Open by referencing something specific about them (recent post, shared industry, mutual connection)\n- Do NOT say 'I came across your profile' or 'I wanted to reach out'\n- Make the message about THEM, not about what you want\n- Keep it under 80 words - respect their time\n- End with one low-friction ask (not a call request, something softer like a question or a shared resource)\n- Tone: warm, peer-to-peer, genuinely curious",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -306,7 +306,7 @@
     "slug": "weekly-content-plan-builder",
     "title": "The Weekly Content Plan Builder",
     "description": "Generates a full 5-day LinkedIn content calendar tailored to your niche, audience, and goals",
-    "prompt": "Create a 5-day LinkedIn content plan for someone who works in [industry/niche] and wants to grow their audience of [target audience, e.g. early-stage founders / HR professionals / product designers].\n\nFor each day, provide:\n- Content type (story / opinion / how-to / data insight / personal)\n- A specific post angle or hook idea\n- The engagement goal (comments / shares / DMs / saves)\n- One sentence on WHY this content type works on that day\n\nMake the week feel varied and human — not a content factory. Avoid repetitive formats.",
+    "prompt": "Create a 5-day LinkedIn content plan for someone who works in [industry/niche] and wants to grow their audience of [target audience, e.g. early-stage founders / HR professionals / product designers].\n\nFor each day, provide:\n- Content type (story / opinion / how-to / data insight / personal)\n- A specific post angle or hook idea\n- The engagement goal (comments / shares / DMs / saves)\n- One sentence on WHY this content type works on that day\n\nMake the week feel varied and human - not a content factory. Avoid repetitive formats.",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -337,8 +337,8 @@
     "id": "career-012",
     "slug": "turning-point-story",
     "title": "The Turning Point Story",
-    "description": "Writes a belief-shift post where you reveal what changed your professional worldview — high-performing narrative format",
-    "prompt": "Write a LinkedIn post about a moment when [your industry / profession / career approach] fundamentally changed for me.\n\nDetails: [describe the experience or moment briefly]\n\nStructure:\n1. Describe what I believed BEFORE — make it relatable, not naive\n2. Name the exact moment or experience that shifted everything\n3. What I believe and do differently NOW as a result\n4. Why this matters for [target audience]\n\nRules:\n- The turning point must feel specific and real, not cinematic\n- Do NOT frame this as a 'glow up' story\n- 230–300 words\n- End with a question that challenges the reader's own assumptions",
+    "description": "Writes a belief-shift post where you reveal what changed your professional worldview - high-performing narrative format",
+    "prompt": "Write a LinkedIn post about a moment when [your industry / profession / career approach] fundamentally changed for me.\n\nDetails: [describe the experience or moment briefly]\n\nStructure:\n1. Describe what I believed BEFORE - make it relatable, not naive\n2. Name the exact moment or experience that shifted everything\n3. What I believe and do differently NOW as a result\n4. Why this matters for [target audience]\n\nRules:\n- The turning point must feel specific and real, not cinematic\n- Do NOT frame this as a 'glow up' story\n- 230–300 words\n- End with a question that challenges the reader's own assumptions",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -402,7 +402,7 @@
     "slug": "values-in-action-post",
     "title": "The Values in Action Post",
     "description": "Shows a professional value through a concrete real-world situation rather than just declaring it",
-    "prompt": "Write a LinkedIn post showing how I applied [core value, e.g. transparency / patience / decisiveness / empathy] in a real professional situation.\n\nSituation: [describe briefly what happened]\n\nStructure:\n1. Describe the situation without making yourself the hero\n2. Show HOW you applied the value — through specific action, not just attitude\n3. What happened as a result\n4. One line on why this value matters in your work more broadly\n\nRules:\n- The value should be shown through behavior, NEVER just stated ('I value transparency')\n- No moral lecturing — let the story do the work\n- 180–250 words\n- Tone: grounded, matter-of-fact, genuine",
+    "prompt": "Write a LinkedIn post showing how I applied [core value, e.g. transparency / patience / decisiveness / empathy] in a real professional situation.\n\nSituation: [describe briefly what happened]\n\nStructure:\n1. Describe the situation without making yourself the hero\n2. Show HOW you applied the value - through specific action, not just attitude\n3. What happened as a result\n4. One line on why this value matters in your work more broadly\n\nRules:\n- The value should be shown through behavior, NEVER just stated ('I value transparency')\n- No moral lecturing - let the story do the work\n- 180–250 words\n- Tone: grounded, matter-of-fact, genuine",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -432,7 +432,7 @@
     "slug": "contrarian-opinion-post",
     "title": "The Contrarian Opinion Post",
     "description": "Builds thought leadership by arguing the opposite of a widely-held professional belief with logic and evidence",
-    "prompt": "Write a LinkedIn post arguing against this common belief in my industry: [state the popular opinion]\n\nMy actual view: [state what you believe instead]\n\nStructure:\n1. State the popular belief clearly — enough that people who hold it nod along\n2. Explain WHY most people believe it (steel-man the other side)\n3. Reveal why you think it's wrong or incomplete, with a specific reason or example\n4. What the alternative approach actually looks like in practice\n5. End with a direct question to invite debate\n\nRules:\n- Be confident, not arrogant\n- Never mock people who hold the mainstream view\n- Under 220 words\n- One opinion per post — don't dilute it",
+    "prompt": "Write a LinkedIn post arguing against this common belief in my industry: [state the popular opinion]\n\nMy actual view: [state what you believe instead]\n\nStructure:\n1. State the popular belief clearly - enough that people who hold it nod along\n2. Explain WHY most people believe it (steel-man the other side)\n3. Reveal why you think it's wrong or incomplete, with a specific reason or example\n4. What the alternative approach actually looks like in practice\n5. End with a direct question to invite debate\n\nRules:\n- Be confident, not arrogant\n- Never mock people who hold the mainstream view\n- Under 220 words\n- One opinion per post - don't dilute it",
     "category": "career-brand",
     "platforms": [
       "chatgpt",
@@ -462,8 +462,8 @@
     "id": "career-016",
     "slug": "professional-evolution-post",
     "title": "The Professional Evolution Post",
-    "description": "Traces how your thinking on a skill or topic has matured over years — the format that signals depth and growth mindset",
-    "prompt": "Write a LinkedIn post tracing how my thinking on [topic or skill] has evolved over [timeframe, e.g. 3 years / my career].\n\nCover:\n- What I believed or did when I started\n- The experience or realization that made me rethink it\n- What I believe and do now — and why it's better\n\nRules:\n- Show the progression as natural, earned growth — not a dramatic transformation\n- Be honest about why the earlier approach made sense at the time\n- Don't frame past-you as foolish\n- 250–320 words\n- Reflective, authentic tone — not inspirational-speaker energy",
+    "description": "Traces how your thinking on a skill or topic has matured over years - the format that signals depth and growth mindset",
+    "prompt": "Write a LinkedIn post tracing how my thinking on [topic or skill] has evolved over [timeframe, e.g. 3 years / my career].\n\nCover:\n- What I believed or did when I started\n- The experience or realization that made me rethink it\n- What I believe and do now - and why it's better\n\nRules:\n- Show the progression as natural, earned growth - not a dramatic transformation\n- Be honest about why the earlier approach made sense at the time\n- Don't frame past-you as foolish\n- 250–320 words\n- Reflective, authentic tone - not inspirational-speaker energy",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -494,7 +494,7 @@
     "slug": "industry-report-reaction-post",
     "title": "The Industry Report Reaction Post",
     "description": "Turns a data report or trend finding into an opinion post that positions you as an informed analyst",
-    "prompt": "Write a LinkedIn post reacting to a recent insight or finding I came across: [paste the report excerpt or describe the finding]\n\nSource: [name of report or publication]\n\nStructure:\n1. Briefly introduce what the data says and why it matters to [your audience]\n2. Share your genuine reaction — do you agree, disagree, find it surprising?\n3. Add one insight from your own experience that supports or complicates the data\n4. What should your audience practically do with this information?\n\nRules:\n- Do NOT just summarize the report — add your perspective\n- Cite the source credibly but briefly\n- Under 200 words\n- End with a question that prompts others to share what they've noticed",
+    "prompt": "Write a LinkedIn post reacting to a recent insight or finding I came across: [paste the report excerpt or describe the finding]\n\nSource: [name of report or publication]\n\nStructure:\n1. Briefly introduce what the data says and why it matters to [your audience]\n2. Share your genuine reaction - do you agree, disagree, find it surprising?\n3. Add one insight from your own experience that supports or complicates the data\n4. What should your audience practically do with this information?\n\nRules:\n- Do NOT just summarize the report - add your perspective\n- Cite the source credibly but briefly\n- Under 200 words\n- End with a question that prompts others to share what they've noticed",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -525,7 +525,7 @@
     "slug": "skill-breakdown-post",
     "title": "The Skill Breakdown Post",
     "description": "Teaches your audience one specific professional skill in a structured, actionable LinkedIn post",
-    "prompt": "Write a LinkedIn post teaching [target audience] how to do [specific skill or task] that I've mastered through experience.\n\nSkill: [describe it in one line]\n\nStructure:\n1. Open by naming the exact pain or mistake most people make with this skill\n2. Walk through the skill in 3-4 specific, sequenced steps\n3. Name one common mistake to avoid\n4. Close with a result they can expect once they apply it\n\nRules:\n- Every step must be actionable, not vague ('be more strategic' is not a step)\n- Use plain language — no jargon without explanation\n- Under 250 words\n- This is a teaching post, not a sales post — give real value",
+    "prompt": "Write a LinkedIn post teaching [target audience] how to do [specific skill or task] that I've mastered through experience.\n\nSkill: [describe it in one line]\n\nStructure:\n1. Open by naming the exact pain or mistake most people make with this skill\n2. Walk through the skill in 3-4 specific, sequenced steps\n3. Name one common mistake to avoid\n4. Close with a result they can expect once they apply it\n\nRules:\n- Every step must be actionable, not vague ('be more strategic' is not a step)\n- Use plain language - no jargon without explanation\n- Under 250 words\n- This is a teaching post, not a sales post - give real value",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -556,7 +556,7 @@
     "slug": "networking-comment-crafter",
     "title": "The Networking Comment Crafter",
     "description": "Writes a high-value comment on a thought leader's post that builds your visibility without being sycophantic",
-    "prompt": "Write a LinkedIn comment on this post by [thought leader's name]: [paste or summarize their post]\n\nMy industry / background: [describe briefly]\n\nRules:\n- Start with a genuine acknowledgement of one specific point — not 'Great post!'\n- Add a perspective, counterpoint, or supporting experience from my own work\n- Ask a follow-up question that deepens the discussion\n- Maximum 5 sentences — comments must not be essays\n- Tone: peer-to-peer, not fan-like\n- NEVER compliment the person's brilliance — compliment the idea",
+    "prompt": "Write a LinkedIn comment on this post by [thought leader's name]: [paste or summarize their post]\n\nMy industry / background: [describe briefly]\n\nRules:\n- Start with a genuine acknowledgement of one specific point - not 'Great post!'\n- Add a perspective, counterpoint, or supporting experience from my own work\n- Ask a follow-up question that deepens the discussion\n- Maximum 5 sentences - comments must not be essays\n- Tone: peer-to-peer, not fan-like\n- NEVER compliment the person's brilliance - compliment the idea",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -588,7 +588,7 @@
     "slug": "profile-audit-prompt",
     "title": "The Full Profile Audit",
     "description": "Gets a brutally honest, section-by-section critique of your LinkedIn profile with specific improvement actions",
-    "prompt": "Audit my LinkedIn profile and give me a brutal, specific, section-by-section critique.\n\nMy profile text: [paste your full LinkedIn profile text — headline, about, experience, skills]\nMy goal: [e.g. attract clients / land a senior role / build a thought-leadership brand]\nMy target audience: [who you want to reach]\n\nFor each section (Headline, About, Experience, Skills, Featured), tell me:\n1. What's working\n2. What's weak or missing\n3. One specific rewrite or action to fix it\n\nDon't be polite — be useful. Prioritize the top 3 changes that will have the biggest impact.",
+    "prompt": "Audit my LinkedIn profile and give me a brutal, specific, section-by-section critique.\n\nMy profile text: [paste your full LinkedIn profile text - headline, about, experience, skills]\nMy goal: [e.g. attract clients / land a senior role / build a thought-leadership brand]\nMy target audience: [who you want to reach]\n\nFor each section (Headline, About, Experience, Skills, Featured), tell me:\n1. What's working\n2. What's weak or missing\n3. One specific rewrite or action to fix it\n\nDon't be polite - be useful. Prioritize the top 3 changes that will have the biggest impact.",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -606,7 +606,7 @@
     "useCase": "Systematically identifying and fixing the specific profile weaknesses that are costing you recruiter attention, inbound leads, and profile views.",
     "estimatedTime": "3 min",
     "variables": [
-      "paste your full LinkedIn profile text — headline, about, experience, skills",
+      "paste your full LinkedIn profile text - headline, about, experience, skills",
       "e.g. attract clients / land a senior role / build a thought-leadership brand",
       "who you want to reach"
     ],
@@ -620,7 +620,7 @@
     "slug": "email-to-client-deliverable",
     "title": "The Client Deliverable Email",
     "description": "Writes a polished email sending a deliverable to a client with clear context, next steps, and professional tone",
-    "prompt": "Write a professional email to a client delivering [type of deliverable, e.g. report / design / proposal / analysis].\n\nContext:\n- What I'm delivering: [describe it briefly]\n- Key things they should know or pay attention to: [2-3 specific points]\n- What happens next: [next steps, deadline, or action needed from them]\n- Tone needed: [formal / warm / concise]\n\nRules:\n- Subject line must be specific, not 'Deliverable Attached'\n- Open without 'Please find attached'\n- Make it easy to skim — they're busy\n- Close with ONE clear action item for them\n- Under 150 words in the body",
+    "prompt": "Write a professional email to a client delivering [type of deliverable, e.g. report / design / proposal / analysis].\n\nContext:\n- What I'm delivering: [describe it briefly]\n- Key things they should know or pay attention to: [2-3 specific points]\n- What happens next: [next steps, deadline, or action needed from them]\n- Tone needed: [formal / warm / concise]\n\nRules:\n- Subject line must be specific, not 'Deliverable Attached'\n- Open without 'Please find attached'\n- Make it easy to skim - they're busy\n- Close with ONE clear action item for them\n- Under 150 words in the body",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -653,7 +653,7 @@
     "slug": "difficult-feedback-email",
     "title": "The Difficult Feedback Email",
     "description": "Drafts a clear, respectful email delivering constructive criticism to a colleague or direct report",
-    "prompt": "Help me write an email to [colleague / direct report / contractor] giving feedback about [specific issue or behavior].\n\nSituation: [describe what happened, what the impact was]\nMy relationship with them: [manager / peer / client-facing role]\nDesired outcome: [behavior change / alignment / acknowledgement]\n\nRules:\n- Open with a neutral observation, not a judgment ('I noticed X' not 'You always do X')\n- Name the impact clearly and specifically\n- Give one concrete suggestion for what to do differently\n- Invite a response — don't make it a one-way verdict\n- Tone: direct but respectful, not passive-aggressive\n- Under 200 words",
+    "prompt": "Help me write an email to [colleague / direct report / contractor] giving feedback about [specific issue or behavior].\n\nSituation: [describe what happened, what the impact was]\nMy relationship with them: [manager / peer / client-facing role]\nDesired outcome: [behavior change / alignment / acknowledgement]\n\nRules:\n- Open with a neutral observation, not a judgment ('I noticed X' not 'You always do X')\n- Name the impact clearly and specifically\n- Give one concrete suggestion for what to do differently\n- Invite a response - don't make it a one-way verdict\n- Tone: direct but respectful, not passive-aggressive\n- Under 200 words",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -668,7 +668,7 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Talaera",
-    "useCase": "Navigating one of the hardest daily professional tasks — giving feedback — in a way that preserves the relationship and actually changes behavior.",
+    "useCase": "Navigating one of the hardest daily professional tasks - giving feedback - in a way that preserves the relationship and actually changes behavior.",
     "estimatedTime": "5 min",
     "variables": [
       "colleague / direct report / contractor",
@@ -687,7 +687,7 @@
     "slug": "meeting-summary-action-items",
     "title": "The Meeting Summary Generator",
     "description": "Converts raw meeting notes into a clean, scannable summary with decisions made and action items assigned",
-    "prompt": "Turn these messy meeting notes into a clean, professional summary with action items.\n\nMeeting type: [e.g. client review / team standup / strategy session]\nAttendees: [list names and roles briefly]\nRaw notes: [paste your rough notes here]\n\nOutput format:\n1. Meeting Purpose (1 sentence)\n2. Key Decisions Made (bullet points, max 5)\n3. Action Items (Who / What / By When — table format)\n4. Open Questions / Parking Lot\n5. Next Meeting: [date if known]\n\nRules:\n- Be ruthlessly concise — no padding\n- Only include what was actually decided or assigned\n- Flag anything that's still unresolved",
+    "prompt": "Turn these messy meeting notes into a clean, professional summary with action items.\n\nMeeting type: [e.g. client review / team standup / strategy session]\nAttendees: [list names and roles briefly]\nRaw notes: [paste your rough notes here]\n\nOutput format:\n1. Meeting Purpose (1 sentence)\n2. Key Decisions Made (bullet points, max 5)\n3. Action Items (Who / What / By When - table format)\n4. Open Questions / Parking Lot\n5. Next Meeting: [date if known]\n\nRules:\n- Be ruthlessly concise - no padding\n- Only include what was actually decided or assigned\n- Flag anything that's still unresolved",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -719,7 +719,7 @@
     "slug": "negotiation-prep-script",
     "title": "The Salary Negotiation Prep Script",
     "description": "Prepares a complete negotiation strategy with opening lines, counterpoints, and walk-away anchors for salary or contract talks",
-    "prompt": "Help me prepare for a salary / rate negotiation.\n\nContext:\n- Role I'm negotiating for: [job title]\n- Their offer: [amount]\n- My target: [amount]\n- My walk-away number: [amount]\n- My strongest leverage points: [experience, competing offer, market rate, unique skills]\n\nGive me:\n1. An opening statement to start the negotiation (confident, not aggressive)\n2. 2 responses to common pushbacks (e.g. 'budget is fixed', 'we can revisit after 6 months')\n3. How to handle a lowball counter\n4. A graceful close — whether I accept or decline\n\nTone: professional, calm, and anchored in value — not desperation",
+    "prompt": "Help me prepare for a salary / rate negotiation.\n\nContext:\n- Role I'm negotiating for: [job title]\n- Their offer: [amount]\n- My target: [amount]\n- My walk-away number: [amount]\n- My strongest leverage points: [experience, competing offer, market rate, unique skills]\n\nGive me:\n1. An opening statement to start the negotiation (confident, not aggressive)\n2. 2 responses to common pushbacks (e.g. 'budget is fixed', 'we can revisit after 6 months')\n3. How to handle a lowball counter\n4. A graceful close - whether I accept or decline\n\nTone: professional, calm, and anchored in value - not desperation",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -783,8 +783,8 @@
     "id": "career-026",
     "slug": "thought-leader-comment-thread",
     "title": "The Comment Thread Authority Play",
-    "description": "Writes a mini thought-leadership piece designed to live as a comment — a growth hack used by top LinkedIn creators",
-    "prompt": "Write a comment I can post under popular LinkedIn posts about [topic] that demonstrates expertise without hijacking the original post.\n\nMy perspective / take on this topic: [share your honest view in a few words]\n\nRules:\n- Start by briefly acknowledging something true in the original (not flattery)\n- Contribute a new angle, data point, or nuance the original post missed\n- Keep it to 3-4 short paragraphs — this is a comment, not a post\n- End with a question that invites the original poster or other commenters to engage\n- Tone: collegial, confident, generous — not competitive",
+    "description": "Writes a mini thought-leadership piece designed to live as a comment - a growth hack used by top LinkedIn creators",
+    "prompt": "Write a comment I can post under popular LinkedIn posts about [topic] that demonstrates expertise without hijacking the original post.\n\nMy perspective / take on this topic: [share your honest view in a few words]\n\nRules:\n- Start by briefly acknowledging something true in the original (not flattery)\n- Contribute a new angle, data point, or nuance the original post missed\n- Keep it to 3-4 short paragraphs - this is a comment, not a post\n- End with a question that invites the original poster or other commenters to engage\n- Tone: collegial, confident, generous - not competitive",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -815,7 +815,7 @@
     "slug": "career-pivot-announcement",
     "title": "The Career Pivot Announcement",
     "description": "Writes a confident, narrative career change post that controls the story and invites opportunity instead of sympathy",
-    "prompt": "Write a LinkedIn post announcing that I'm transitioning from [previous career / role] to [new career / role].\n\nContext:\n- Why I'm making this change: [honest reason — as much as you want to share]\n- What I'm bringing from my old career: [transferable skills or experience]\n- What I'm excited about in the new direction: [specific, not generic]\n- What kind of connections or opportunities I'm looking for now: [specific]\n\nRules:\n- Do NOT frame this as a crisis or a restart from zero\n- Own the transition with confidence — you're not apologizing for it\n- Show continuity — your old experience is an asset, not irrelevant\n- Under 220 words\n- End with a clear call to action: who should reach out and why",
+    "prompt": "Write a LinkedIn post announcing that I'm transitioning from [previous career / role] to [new career / role].\n\nContext:\n- Why I'm making this change: [honest reason - as much as you want to share]\n- What I'm bringing from my old career: [transferable skills or experience]\n- What I'm excited about in the new direction: [specific, not generic]\n- What kind of connections or opportunities I'm looking for now: [specific]\n\nRules:\n- Do NOT frame this as a crisis or a restart from zero\n- Own the transition with confidence - you're not apologizing for it\n- Show continuity - your old experience is an asset, not irrelevant\n- Under 220 words\n- End with a clear call to action: who should reach out and why",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -835,7 +835,7 @@
     "variables": [
       "previous career / role",
       "new career / role",
-      "honest reason — as much as you want to share",
+      "honest reason - as much as you want to share",
       "transferable skills or experience",
       "specific, not generic",
       "specific"
@@ -850,7 +850,7 @@
     "slug": "weekly-reflection-journal",
     "title": "The Weekly Professional Reflection",
     "description": "Runs a structured weekly review of your work to identify wins, lessons, and next week's priorities",
-    "prompt": "Act as my executive coach. Run me through a weekly professional review.\n\nThis week in summary: [describe your week in rough notes — what you worked on, how it went, what felt hard]\n\nAsk me to reflect on:\n1. What was my biggest win this week and what made it possible?\n2. Where did I lose time or energy to low-value work?\n3. One decision I made that I'd make differently\n4. What's one thing I'm avoiding that I need to face next week?\n5. What's my single highest-leverage priority for Monday morning?\n\nRespond like a coach — ask follow-up questions if my answers are too vague. Push me to be specific.",
+    "prompt": "Act as my executive coach. Run me through a weekly professional review.\n\nThis week in summary: [describe your week in rough notes - what you worked on, how it went, what felt hard]\n\nAsk me to reflect on:\n1. What was my biggest win this week and what made it possible?\n2. Where did I lose time or energy to low-value work?\n3. One decision I made that I'd make differently\n4. What's one thing I'm avoiding that I need to face next week?\n5. What's my single highest-leverage priority for Monday morning?\n\nRespond like a coach - ask follow-up questions if my answers are too vague. Push me to be specific.",
     "category": "career-brand",
     "platforms": [
       "claude"
@@ -867,7 +867,7 @@
     "useCase": "Building the habit of intentional weekly reflection that top performers use to course-correct quickly and compound professional growth over time.",
     "estimatedTime": "3 min",
     "variables": [
-      "describe your week in rough notes — what you worked on, how it went, what felt hard"
+      "describe your week in rough notes - what you worked on, how it went, what felt hard"
     ],
     "exampleOutput": "",
     "updatedAt": "2026-05",
@@ -893,7 +893,7 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "Talaera",
-    "useCase": "Communicating up effectively by distilling complex work into the format busy executives actually read — saving your ideas from being ignored.",
+    "useCase": "Communicating up effectively by distilling complex work into the format busy executives actually read - saving your ideas from being ignored.",
     "estimatedTime": "5 min",
     "variables": [
       "paste your report, proposal, or key points",
@@ -910,7 +910,7 @@
     "slug": "personal-brand-positioning-statement",
     "title": "The Personal Brand Positioning Statement",
     "description": "Defines your unique professional positioning in one clear paragraph you can use across your bio, website, and pitch",
-    "prompt": "Help me write a personal brand positioning statement — one paragraph that defines who I am professionally, who I serve, and what makes me different.\n\nAbout me:\n- What I do: [role / service / expertise]\n- Who I help: [target audience]\n- The problem I solve: [specific pain point]\n- What makes my approach different: [your unique angle, method, or perspective]\n- Proof point: [one result, credential, or experience that validates you]\n\nRules:\n- Write 3 versions: one for a LinkedIn About section, one for a website hero line, one for a verbal 30-second intro\n- No buzzwords ('passionate', 'results-driven', 'strategic thinker')\n- Each version should feel like a different format, not the same thing shortened",
+    "prompt": "Help me write a personal brand positioning statement - one paragraph that defines who I am professionally, who I serve, and what makes me different.\n\nAbout me:\n- What I do: [role / service / expertise]\n- Who I help: [target audience]\n- The problem I solve: [specific pain point]\n- What makes my approach different: [your unique angle, method, or perspective]\n- Proof point: [one result, credential, or experience that validates you]\n\nRules:\n- Write 3 versions: one for a LinkedIn About section, one for a website hero line, one for a verbal 30-second intro\n- No buzzwords ('passionate', 'results-driven', 'strategic thinker')\n- Each version should feel like a different format, not the same thing shortened",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -944,7 +944,7 @@
     "slug": "job-description-decoder",
     "title": "The Job Description Decoder",
     "description": "Analyzes a job posting to extract the real requirements, red flags, and hidden priorities between the lines",
-    "prompt": "Analyze this job description and give me what's really being said between the lines.\n\nJob description: [paste the full job posting]\n\nTell me:\n1. The top 3 skills they will actually filter on (vs. nice-to-haves)\n2. What this company or team is likely struggling with right now based on the language used\n3. Any red flags in the language (e.g. 'wear many hats', 'fast-paced environment') and what they might mean\n4. The exact keywords I should use if I apply — for their ATS and human readers\n5. One question I should ask in the interview to understand whether this role is actually a good fit for me",
+    "prompt": "Analyze this job description and give me what's really being said between the lines.\n\nJob description: [paste the full job posting]\n\nTell me:\n1. The top 3 skills they will actually filter on (vs. nice-to-haves)\n2. What this company or team is likely struggling with right now based on the language used\n3. Any red flags in the language (e.g. 'wear many hats', 'fast-paced environment') and what they might mean\n4. The exact keywords I should use if I apply - for their ATS and human readers\n5. One question I should ask in the interview to understand whether this role is actually a good fit for me",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -1010,7 +1010,7 @@
     "slug": "case-study-one-pager",
     "title": "The Case Study One-Pager",
     "description": "Writes a compact, compelling case study document you can share in proposals, decks, or your LinkedIn featured section",
-    "prompt": "Write a one-page case study I can share with prospective clients.\n\nDetails:\n- Client type (keep anonymous or use first name only): [describe client]\n- Their situation before: [describe the problem or starting point]\n- What I did: [describe your service or approach]\n- Results after: [describe measurable outcomes — numbers are gold]\n- Timeframe: [how long it took]\n- Client quote or reaction (optional): [if you have one]\n\nFormat:\n- Headline: A result-focused title (e.g. 'How [Client Type] Increased X by Y in Z Weeks')\n- The Before: 2-3 sentences\n- What We Did: 3-4 bullet points\n- The After: 2-3 sentences with metrics\n- Key Takeaway: 1 sentence for the reader\n\nKeep total length under 250 words.",
+    "prompt": "Write a one-page case study I can share with prospective clients.\n\nDetails:\n- Client type (keep anonymous or use first name only): [describe client]\n- Their situation before: [describe the problem or starting point]\n- What I did: [describe your service or approach]\n- Results after: [describe measurable outcomes - numbers are gold]\n- Timeframe: [how long it took]\n- Client quote or reaction (optional): [if you have one]\n\nFormat:\n- Headline: A result-focused title (e.g. 'How [Client Type] Increased X by Y in Z Weeks')\n- The Before: 2-3 sentences\n- What We Did: 3-4 bullet points\n- The After: 2-3 sentences with metrics\n- Key Takeaway: 1 sentence for the reader\n\nKeep total length under 250 words.",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -1030,7 +1030,7 @@
       "describe client",
       "describe the problem or starting point",
       "describe your service or approach",
-      "describe measurable outcomes — numbers are gold",
+      "describe measurable outcomes - numbers are gold",
       "how long it took",
       "if you have one",
       "Client Type"
@@ -1045,7 +1045,7 @@
     "slug": "morning-priority-setter",
     "title": "The Morning Priority Setter",
     "description": "Uses AI as an executive coach to clarify your top priorities and mental state at the start of each workday",
-    "prompt": "Act as my executive coach for the next 5 minutes. Help me set up my day.\n\nHere's my context:\n- What's on my plate today: [rough task list]\n- My energy level right now (1-10): [number]\n- What I'm most anxious about: [the thing that's sitting heavy]\n- My one non-negotiable outcome for today: [what must get done]\n\nTell me:\n1. What to put first on my calendar and why\n2. What I should deprioritize or drop today without guilt\n3. One question I should ask myself at 3pm to check if I'm on track\n4. A one-sentence intention for the day based on what I told you\n\nBe direct — I don't need motivation, I need clarity.",
+    "prompt": "Act as my executive coach for the next 5 minutes. Help me set up my day.\n\nHere's my context:\n- What's on my plate today: [rough task list]\n- My energy level right now (1-10): [number]\n- What I'm most anxious about: [the thing that's sitting heavy]\n- My one non-negotiable outcome for today: [what must get done]\n\nTell me:\n1. What to put first on my calendar and why\n2. What I should deprioritize or drop today without guilt\n3. One question I should ask myself at 3pm to check if I'm on track\n4. A one-sentence intention for the day based on what I told you\n\nBe direct - I don't need motivation, I need clarity.",
     "category": "career-brand",
     "platforms": [
       "claude"
@@ -1059,7 +1059,7 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "Best of Motivation",
-    "useCase": "Starting each workday with intention and clarity instead of reacting to whatever lands in your inbox first — the habit that separates high-output professionals.",
+    "useCase": "Starting each workday with intention and clarity instead of reacting to whatever lands in your inbox first - the habit that separates high-output professionals.",
     "estimatedTime": "3 min",
     "variables": [
       "rough task list",
@@ -1077,7 +1077,7 @@
     "slug": "ask-for-referral-message",
     "title": "The Referral Request Message",
     "description": "Writes a non-awkward message asking a past colleague or client for a referral, recommendation, or introduction",
-    "prompt": "Write a message asking [colleague / client / manager / collaborator] for a referral or recommendation.\n\nContext:\n- My relationship with them: [how we worked together, when]\n- What I'm asking for: [LinkedIn recommendation / client referral / intro to someone specific]\n- What I want them to highlight: [2-3 specific things you'd like them to mention]\n- Why now: [brief context — new role, new service, expanding]\n\nRules:\n- Open by referencing something genuine from your time working together\n- Make the ask specific and easy — tell them exactly what you need\n- Give them an out — never pressure\n- Include a 2-3 sentence draft they can use or customize (reduce friction)\n- Under 120 words total\n- Tone: warm, grateful, not desperate",
+    "prompt": "Write a message asking [colleague / client / manager / collaborator] for a referral or recommendation.\n\nContext:\n- My relationship with them: [how we worked together, when]\n- What I'm asking for: [LinkedIn recommendation / client referral / intro to someone specific]\n- What I want them to highlight: [2-3 specific things you'd like them to mention]\n- Why now: [brief context - new role, new service, expanding]\n\nRules:\n- Open by referencing something genuine from your time working together\n- Make the ask specific and easy - tell them exactly what you need\n- Give them an out - never pressure\n- Include a 2-3 sentence draft they can use or customize (reduce friction)\n- Under 120 words total\n- Tone: warm, grateful, not desperate",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -1092,14 +1092,14 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "Letterdrop",
-    "useCase": "Getting past clients and colleagues to actively advocate for you — turning your existing relationship capital into inbound opportunities.",
+    "useCase": "Getting past clients and colleagues to actively advocate for you - turning your existing relationship capital into inbound opportunities.",
     "estimatedTime": "3 min",
     "variables": [
       "colleague / client / manager / collaborator",
       "how we worked together, when",
       "LinkedIn recommendation / client referral / intro to someone specific",
       "2-3 specific things you'd like them to mention",
-      "brief context — new role, new service, expanding"
+      "brief context - new role, new service, expanding"
     ],
     "exampleOutput": "",
     "updatedAt": "2026-05",
@@ -1111,7 +1111,7 @@
     "slug": "pricing-confidence-framing",
     "title": "The Pricing Confidence Framer",
     "description": "Helps freelancers and consultants communicate their rates with confidence and frame value instead of defending cost",
-    "prompt": "Help me write a confident response to a client who has asked 'What do you charge?' or 'Can you do it cheaper?'\n\nMy context:\n- My rate: [your price or package]\n- What's included: [briefly describe what they get]\n- The client's situation: [what they're trying to achieve]\n- Their likely objection: [it's too expensive / they got cheaper quotes / budget is tight]\n\nGive me:\n1. A confident opening response when they ask my rate (not apologetic, not over-explaining)\n2. A response if they say it's too expensive that reframes value without discounting\n3. A response if they push for a lower price — with one alternative option that protects your rate\n\nTone: calm, confident, client-focused — never defensive.",
+    "prompt": "Help me write a confident response to a client who has asked 'What do you charge?' or 'Can you do it cheaper?'\n\nMy context:\n- My rate: [your price or package]\n- What's included: [briefly describe what they get]\n- The client's situation: [what they're trying to achieve]\n- Their likely objection: [it's too expensive / they got cheaper quotes / budget is tight]\n\nGive me:\n1. A confident opening response when they ask my rate (not apologetic, not over-explaining)\n2. A response if they say it's too expensive that reframes value without discounting\n3. A response if they push for a lower price - with one alternative option that protects your rate\n\nTone: calm, confident, client-focused - never defensive.",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -1144,7 +1144,7 @@
     "slug": "thought-leadership-series-planner",
     "title": "The Thought Leadership Series Planner",
     "description": "Designs a 4-week LinkedIn content series around one topic that builds authority progressively each week",
-    "prompt": "Design a 4-week LinkedIn thought leadership series for me on the topic of [your expertise area].\n\nMy audience: [who you're writing for]\nMy angle / POV: [what makes your perspective on this topic different]\nMy goal with this series: [grow followers / attract clients / establish expertise]\n\nFor each of the 4 weeks, give me:\n- The weekly theme and why it comes in that order\n- A specific post title or hook for that week\n- The content format (story / data / how-to / opinion)\n- What you want the reader to feel, think, or do after reading\n\nThe series should build — each week should reference or deepen the previous one. Week 4 should have a clear CTA that converts attention into action.",
+    "prompt": "Design a 4-week LinkedIn thought leadership series for me on the topic of [your expertise area].\n\nMy audience: [who you're writing for]\nMy angle / POV: [what makes your perspective on this topic different]\nMy goal with this series: [grow followers / attract clients / establish expertise]\n\nFor each of the 4 weeks, give me:\n- The weekly theme and why it comes in that order\n- A specific post title or hook for that week\n- The content format (story / data / how-to / opinion)\n- What you want the reader to feel, think, or do after reading\n\nThe series should build - each week should reference or deepen the previous one. Week 4 should have a clear CTA that converts attention into action.",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -1211,7 +1211,7 @@
     "slug": "decision-clarity-framework",
     "title": "The Decision Clarity Framework",
     "description": "Uses AI as a thinking partner to break through complex professional decisions with structured logic and honest trade-off analysis",
-    "prompt": "Help me think through a decision I'm stuck on.\n\nThe decision: [describe what you're deciding between]\nOptions I'm considering: [list 2-4 options]\nWhat I already know: [any constraints, facts, or preferences]\nWhat's making this hard: [the real reason you're stuck — fear, missing info, competing values?]\n\nWalk me through:\n1. What information would make this decision easy? (And do I have it?)\n2. What does each option cost me that I might not be seeing clearly?\n3. What would I advise a respected colleague to do if they had this same decision?\n4. What's the reversibility of each option?\n5. Based on everything — what does the data point toward, even if my gut resists it?\n\nDon't tell me what to decide. Help me think more clearly.",
+    "prompt": "Help me think through a decision I'm stuck on.\n\nThe decision: [describe what you're deciding between]\nOptions I'm considering: [list 2-4 options]\nWhat I already know: [any constraints, facts, or preferences]\nWhat's making this hard: [the real reason you're stuck - fear, missing info, competing values?]\n\nWalk me through:\n1. What information would make this decision easy? (And do I have it?)\n2. What does each option cost me that I might not be seeing clearly?\n3. What would I advise a respected colleague to do if they had this same decision?\n4. What's the reversibility of each option?\n5. Based on everything - what does the data point toward, even if my gut resists it?\n\nDon't tell me what to decide. Help me think more clearly.",
     "category": "career-brand",
     "platforms": [
       "claude"
@@ -1225,13 +1225,13 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Fusion Hawk",
-    "useCase": "Using AI as a structured thinking partner to cut through decision paralysis — the skill that separates reactive professionals from strategic ones.",
+    "useCase": "Using AI as a structured thinking partner to cut through decision paralysis - the skill that separates reactive professionals from strategic ones.",
     "estimatedTime": "5 min",
     "variables": [
       "describe what you're deciding between",
       "list 2-4 options",
       "any constraints, facts, or preferences",
-      "the real reason you're stuck — fear, missing info, competing values?"
+      "the real reason you're stuck - fear, missing info, competing values?"
     ],
     "exampleOutput": "",
     "updatedAt": "2026-05",
@@ -1243,7 +1243,7 @@
     "slug": "swot-personal-career",
     "title": "The Personal Career SWOT",
     "description": "Runs a brutally honest SWOT analysis on your career positioning to identify where to invest and what to stop ignoring",
-    "prompt": "Run a SWOT analysis on my professional career positioning right now.\n\nMy context:\n- Current role and industry: [describe]\n- Career goal in the next 2 years: [be specific]\n- What I think I'm good at: [list 3-5 things]\n- What I know I struggle with: [be honest]\n- Market context: [any industry trends or changes relevant to your field]\n\nFor each quadrant (Strengths / Weaknesses / Opportunities / Threats):\n- Give me 3-4 real, specific points — not generic\n- For each item, add one implication: 'This means you should...'\n\nEnd with: the single biggest leverage point I should focus on in the next 90 days to improve my career position.",
+    "prompt": "Run a SWOT analysis on my professional career positioning right now.\n\nMy context:\n- Current role and industry: [describe]\n- Career goal in the next 2 years: [be specific]\n- What I think I'm good at: [list 3-5 things]\n- What I know I struggle with: [be honest]\n- Market context: [any industry trends or changes relevant to your field]\n\nFor each quadrant (Strengths / Weaknesses / Opportunities / Threats):\n- Give me 3-4 real, specific points - not generic\n- For each item, add one implication: 'This means you should...'\n\nEnd with: the single biggest leverage point I should focus on in the next 90 days to improve my career position.",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -1276,8 +1276,8 @@
     "id": "career-042",
     "slug": "farewell-post-graceful-exit",
     "title": "The Graceful Exit Post",
-    "description": "Writes a professional LinkedIn post announcing you're leaving a role — one that burns no bridges and opens new doors",
-    "prompt": "Write a LinkedIn post announcing that I'm leaving my role at [company] after [X years/months].\n\nContext:\n- Why I'm leaving (share only what's appropriate): [moving on for growth / new opportunity / personal reasons / layoff]\n- What I want to thank the company / team for: [specific, genuine]\n- What I learned or built there: [2-3 real things]\n- What's next for me (if I can share): [next role / open to opportunities / taking time]\n\nRules:\n- Warm but not gushing — avoid 'best experience of my life' energy\n- Keep it under 180 words\n- If I'm open to work, include a single clear sentence about what I'm looking for\n- Leave every person, team, and the company with dignity\n- End with something that invites connection, not sympathy",
+    "description": "Writes a professional LinkedIn post announcing you're leaving a role - one that burns no bridges and opens new doors",
+    "prompt": "Write a LinkedIn post announcing that I'm leaving my role at [company] after [X years/months].\n\nContext:\n- Why I'm leaving (share only what's appropriate): [moving on for growth / new opportunity / personal reasons / layoff]\n- What I want to thank the company / team for: [specific, genuine]\n- What I learned or built there: [2-3 real things]\n- What's next for me (if I can share): [next role / open to opportunities / taking time]\n\nRules:\n- Warm but not gushing - avoid 'best experience of my life' energy\n- Keep it under 180 words\n- If I'm open to work, include a single clear sentence about what I'm looking for\n- Leave every person, team, and the company with dignity\n- End with something that invites connection, not sympathy",
     "category": "career-brand",
     "platforms": [
       "any"
@@ -1310,8 +1310,8 @@
     "id": "career-043",
     "slug": "cold-email-for-opportunities",
     "title": "The Cold Email for Hidden Opportunities",
-    "description": "Writes a cold email to a company or hiring manager for roles that aren't publicly posted — the 80% of jobs that never get advertised",
-    "prompt": "Write a cold email to [specific person / hiring manager / founder] at [company] expressing interest in working with them — even though there's no open role advertised.\n\nContext:\n- Why this company specifically: [genuine reason — product, mission, growth stage]\n- What I bring that they'd care about: [specific skill, result, or experience]\n- What kind of role I'm looking for: [be specific but flexible]\n- One piece of research about them I can reference: [recent news, product launch, content they published]\n\nRules:\n- Subject line must earn an open — no 'Exploring Opportunities'\n- Under 150 words in the body\n- One clear, low-friction ask (15-min call, not 'let me know if there's a fit')\n- Prove you researched them — one specific, genuine observation\n- Tone: peer-to-peer, not job-seeker-to-gatekeeper",
+    "description": "Writes a cold email to a company or hiring manager for roles that aren't publicly posted - the 80% of jobs that never get advertised",
+    "prompt": "Write a cold email to [specific person / hiring manager / founder] at [company] expressing interest in working with them - even though there's no open role advertised.\n\nContext:\n- Why this company specifically: [genuine reason - product, mission, growth stage]\n- What I bring that they'd care about: [specific skill, result, or experience]\n- What kind of role I'm looking for: [be specific but flexible]\n- One piece of research about them I can reference: [recent news, product launch, content they published]\n\nRules:\n- Subject line must earn an open - no 'Exploring Opportunities'\n- Under 150 words in the body\n- One clear, low-friction ask (15-min call, not 'let me know if there's a fit')\n- Prove you researched them - one specific, genuine observation\n- Tone: peer-to-peer, not job-seeker-to-gatekeeper",
     "category": "career-brand",
     "platforms": [
       "claude",
@@ -1326,12 +1326,12 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "Goldbear Media",
-    "useCase": "Accessing the hidden job market by proactively reaching out before roles are posted — where the best opportunities and least competition exist.",
+    "useCase": "Accessing the hidden job market by proactively reaching out before roles are posted - where the best opportunities and least competition exist.",
     "estimatedTime": "5 min",
     "variables": [
       "specific person / hiring manager / founder",
       "company",
-      "genuine reason — product, mission, growth stage",
+      "genuine reason - product, mission, growth stage",
       "specific skill, result, or experience",
       "be specific but flexible",
       "recent news, product launch, content they published"
@@ -1346,7 +1346,7 @@
     "slug": "interview-story-bank-builder",
     "title": "The Interview Story Bank Builder",
     "description": "Builds a library of structured STAR-format stories from your experience that can answer any behavioral interview question",
-    "prompt": "Help me build a personal story bank for job interviews.\n\nMy experience: [paste relevant resume sections or describe key projects and roles]\nTypes of roles I'm interviewing for: [describe]\n\nFor each of the following behavioral question categories, extract or build a strong STAR-format story from my experience:\n1. Leadership / influence without authority\n2. Handling failure or a major mistake\n3. Dealing with a difficult stakeholder or colleague\n4. Working under pressure or to a tight deadline\n5. Driving a result through ambiguity\n\nFor each story:\n- Situation (1-2 sentences)\n- Task (what was your specific role)\n- Action (what you specifically did — most detail here)\n- Result (quantified if possible)\n- Which common interview questions this story answers",
+    "prompt": "Help me build a personal story bank for job interviews.\n\nMy experience: [paste relevant resume sections or describe key projects and roles]\nTypes of roles I'm interviewing for: [describe]\n\nFor each of the following behavioral question categories, extract or build a strong STAR-format story from my experience:\n1. Leadership / influence without authority\n2. Handling failure or a major mistake\n3. Dealing with a difficult stakeholder or colleague\n4. Working under pressure or to a tight deadline\n5. Driving a result through ambiguity\n\nFor each story:\n- Situation (1-2 sentences)\n- Task (what was your specific role)\n- Action (what you specifically did - most detail here)\n- Result (quantified if possible)\n- Which common interview questions this story answers",
     "category": "career-brand",
     "platforms": [
       "claude",

@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "study-001",
     "slug": "study-system-builder",
@@ -293,7 +293,7 @@
     "slug": "first-principles-breaker",
     "title": "The First-Principles Breaker",
     "description": "Strips any topic down to its most basic, jargon-free foundational truths",
-    "prompt": "Explain this topic from first principles: [topic].\n\nRules:\n- Remove ALL jargon. If a technical term is unavoidable, define it immediately.\n- Focus only on the core ideas that are absolutely necessary to understand the topic\n- Start from what we know for certain, then build up\n- If I can't understand this after reading your explanation, the explanation failed — not me",
+    "prompt": "Explain this topic from first principles: [topic].\n\nRules:\n- Remove ALL jargon. If a technical term is unavoidable, define it immediately.\n- Focus only on the core ideas that are absolutely necessary to understand the topic\n- Start from what we know for certain, then build up\n- If I can't understand this after reading your explanation, the explanation failed - not me",
     "category": "study-learn",
     "platforms": [
       "chatgpt"
@@ -352,7 +352,7 @@
     "slug": "feynman-teacher",
     "title": "The Feynman Teacher",
     "description": "Makes you explain a topic in your own words, then pinpoints exactly where your understanding breaks down",
-    "prompt": "Ask me to explain this topic in my own words: [topic].\n\nAfter I give my explanation:\n1. Point out exactly where my explanation is unclear or logically incorrect\n2. Identify any gaps — things I skipped that are actually critical\n3. Tell me what I got right (specifically, not generically)\n4. Re-explain only the parts I got wrong, as simply as possible\n\nDo not let me get away with vague explanations. If I say 'it kind of works like...' push me to be precise.",
+    "prompt": "Ask me to explain this topic in my own words: [topic].\n\nAfter I give my explanation:\n1. Point out exactly where my explanation is unclear or logically incorrect\n2. Identify any gaps - things I skipped that are actually critical\n3. Tell me what I got right (specifically, not generically)\n4. Re-explain only the parts I got wrong, as simply as possible\n\nDo not let me get away with vague explanations. If I say 'it kind of works like...' push me to be precise.",
     "category": "study-learn",
     "platforms": [
       "chatgpt"
@@ -380,8 +380,8 @@
     "id": "study-014",
     "slug": "example-accelerator",
     "title": "The Example Accelerator",
-    "description": "Explains any concept through 3 tiered examples — simple, practical, and advanced",
-    "prompt": "Explain this concept using exactly 3 examples: [concept]\n\n- Example 1 — Simple: Use the most everyday, relatable scenario possible. A child should understand this.\n- Example 2 — Practical: Show how this concept applies in a real professional or academic context.\n- Example 3 — Advanced: Show a complex, nuanced application that an expert would encounter.\n\nKeep each example explanation under 4 sentences. No filler.",
+    "description": "Explains any concept through 3 tiered examples - simple, practical, and advanced",
+    "prompt": "Explain this concept using exactly 3 examples: [concept]\n\n- Example 1 - Simple: Use the most everyday, relatable scenario possible. A child should understand this.\n- Example 2 - Practical: Show how this concept applies in a real professional or academic context.\n- Example 3 - Advanced: Show a complex, nuanced application that an expert would encounter.\n\nKeep each example explanation under 4 sentences. No filler.",
     "category": "study-learn",
     "platforms": [
       "any"
@@ -467,8 +467,8 @@
     "id": "study-017",
     "slug": "30-day-fast-learning-system",
     "title": "The 30-Day Fast Learning System",
-    "description": "Builds a full month-long curriculum in 4 weekly phases — clarity, understanding, recall, application",
-    "prompt": "Create a 30-day fast learning plan for mastering: [subject or skill]\n\nBreak it into 4 weekly themes:\n- Week 1: Clarity (understand what this subject is and its core structure)\n- Week 2: Understanding (go deep on the most important concepts)\n- Week 3: Recall (actively test and reinforce everything learned)\n- Week 4: Application (use the knowledge on real problems)\n\nFor each week, give daily learning tasks that take under 30 minutes per day. Be specific — tell me exactly what to do each day, not just general advice.",
+    "description": "Builds a full month-long curriculum in 4 weekly phases - clarity, understanding, recall, application",
+    "prompt": "Create a 30-day fast learning plan for mastering: [subject or skill]\n\nBreak it into 4 weekly themes:\n- Week 1: Clarity (understand what this subject is and its core structure)\n- Week 2: Understanding (go deep on the most important concepts)\n- Week 3: Recall (actively test and reinforce everything learned)\n- Week 4: Application (use the knowledge on real problems)\n\nFor each week, give daily learning tasks that take under 30 minutes per day. Be specific - tell me exactly what to do each day, not just general advice.",
     "category": "study-learn",
     "platforms": [
       "claude"

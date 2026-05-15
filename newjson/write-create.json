@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "write-001",
     "slug": "primary-growth-edge-evaluator",
@@ -63,7 +63,7 @@
     "slug": "plagiarism-suspect-scanner",
     "title": "The Plagiarism Suspect Scanner",
     "description": "Detects sudden register shifts and unsupported sophistication that signal AI assistance or plagiarism",
-    "prompt": "Read the following essay specifically looking for authenticity markers.\n\nFlag any of the following:\n- Sudden register shifts (tone changes dramatically between paragraphs)\n- Unsupported sophistication (vocabulary or arguments inconsistent with the writer's level)\n- Phrases that sound generated rather than written\n- Structural perfection inconsistent with the rest of the writing\n\nIf plagiarism or AI assistance is suspected: flag as 'voice inconsistency — possible AI assistance — recommend conference' and do NOT produce strengths or growth areas. Return the essay to the teacher for review.\n\n[Paste essay here]",
+    "prompt": "Read the following essay specifically looking for authenticity markers.\n\nFlag any of the following:\n- Sudden register shifts (tone changes dramatically between paragraphs)\n- Unsupported sophistication (vocabulary or arguments inconsistent with the writer's level)\n- Phrases that sound generated rather than written\n- Structural perfection inconsistent with the rest of the writing\n\nIf plagiarism or AI assistance is suspected: flag as 'voice inconsistency - possible AI assistance - recommend conference' and do NOT produce strengths or growth areas. Return the essay to the teacher for review.\n\n[Paste essay here]",
     "category": "write-create",
     "platforms": [
       "chatgpt",
@@ -83,7 +83,7 @@
     "variables": [
       "Paste essay here"
     ],
-    "exampleOutput": "Voice inconsistency detected — possible AI assistance. Paragraph 2 uses phrases like 'multifaceted paradigm shifts' and 'symbiotic synthesis' which starkly contrast with the colloquial phrasing in paragraph 1 ('it was a really big deal'). Recommend conference.",
+    "exampleOutput": "Voice inconsistency detected - possible AI assistance. Paragraph 2 uses phrases like 'multifaceted paradigm shifts' and 'symbiotic synthesis' which starkly contrast with the colloquial phrasing in paragraph 1 ('it was a really big deal'). Recommend conference.",
     "updatedAt": "2026-05",
     "copyCount": 0,
     "relatedPrompts": []
@@ -93,7 +93,7 @@
     "slug": "holistic-rubric-band-estimator",
     "title": "The Holistic Rubric Band Estimator",
     "description": "Finds genuine strengths and estimates a rubric band with specific textual evidence",
-    "prompt": "Read the following essay with a constructive lens. Find genuine strengths — even weak essays do something well.\n\nRequirements:\n1. Strengths must be SPECIFIC, not generic (e.g. 'the transition in paragraph 3 creates momentum' not 'good flow')\n2. Pull at least 2 specific quotes from the essay as evidence\n3. Estimate a holistic rubric band (e.g. 6+1 Traits: 3 of 5 — Adequate). Label this as a rough placement, not a final grade.\n4. Give one specific next step to move up one band\n\n[Paste essay here]",
+    "prompt": "Read the following essay with a constructive lens. Find genuine strengths - even weak essays do something well.\n\nRequirements:\n1. Strengths must be SPECIFIC, not generic (e.g. 'the transition in paragraph 3 creates momentum' not 'good flow')\n2. Pull at least 2 specific quotes from the essay as evidence\n3. Estimate a holistic rubric band (e.g. 6+1 Traits: 3 of 5 - Adequate). Label this as a rough placement, not a final grade.\n4. Give one specific next step to move up one band\n\n[Paste essay here]",
     "category": "write-create",
     "platforms": [
       "any"
@@ -150,7 +150,7 @@
     "id": "write-006",
     "slug": "humanized-style-synthesizer",
     "title": "The Humanized Style Synthesizer",
-    "description": "Extracts your exact writing style and applies it to new content — bypasses robotic AI tone",
+    "description": "Extracts your exact writing style and applies it to new content - bypasses robotic AI tone",
     "prompt": "Analyze the provided text sample to extract the exact syntactical rhythm, vocabulary distribution, and stylistic idiosyncrasies of the author.\n\nText sample: [paste a sample of your writing here]\n\nNow write a new piece on [topic] strictly adhering to this extracted style. Rules:\n- Use short, punchy sentences where the original does\n- Inject subtle conversational transitions\n- Avoid standard AI connective tissue like 'Furthermore,' or 'In conclusion'\n- Mirror the emotional temperature of the original text\n- Do NOT make it sound AI-generated",
     "category": "write-create",
     "platforms": [
@@ -180,7 +180,7 @@
     "id": "write-007",
     "slug": "book-course-structural-architect",
     "title": "The Book / Course Structural Architect",
-    "description": "Generates an exhaustive modular skeleton for books or courses — no content, just structure",
+    "description": "Generates an exhaustive modular skeleton for books or courses - no content, just structure",
     "prompt": "Generate an exhaustive, non-fiction course or book architecture on [topic].\n\nEstablish a modular hierarchy containing:\n- Parts (major sections)\n- Chapters (within each part)\n- Sub-lessons or sub-sections (within each chapter)\n\nFor each module define:\n1. The central thesis of that module\n2. Three mandatory learning objectives\n3. One key concept the reader must leave understanding\n\nDo NOT generate the actual content. Output only the structural skeleton in rigorous detail.",
     "category": "write-create",
     "platforms": [
@@ -211,7 +211,7 @@
     "slug": "embed-and-warrant-evaluator",
     "title": "The Embed-and-Warrant Evaluator",
     "description": "Finds every dropped quote in an essay and shows how to properly embed and connect evidence to claims",
-    "prompt": "Review the following essay. Locate every piece of evidence or quote used.\n\nFor each piece of evidence, analyze the student's 'warrant' — how they explain why the evidence supports the claim.\n\nFlag all 'dropped quotes' where evidence is presented without proper framing or connection to the argument.\n\nFor ONE of the dropped quotes, provide a model example of how to correctly execute the embed-and-warrant move.\n\n[Paste essay here]",
+    "prompt": "Review the following essay. Locate every piece of evidence or quote used.\n\nFor each piece of evidence, analyze the student's 'warrant' - how they explain why the evidence supports the claim.\n\nFlag all 'dropped quotes' where evidence is presented without proper framing or connection to the argument.\n\nFor ONE of the dropped quotes, provide a model example of how to correctly execute the embed-and-warrant move.\n\n[Paste essay here]",
     "category": "write-create",
     "platforms": [
       "claude"
@@ -240,7 +240,7 @@
     "slug": "non-generic-strength-finder",
     "title": "The Non-Generic Strength Finder",
     "description": "Identifies the single strongest rhetorical move in an essay with hyper-specific reasoning",
-    "prompt": "Review the following essay. Identify the single strongest rhetorical move the student made.\n\nRules:\n- The strength must be HIGHLY SPECIFIC (e.g. 'the verb concedes on line 14 does precise rhetorical work' — not 'good word choice')\n- Reference the exact location in the text\n- Explain in 2-3 sentences WHY this specific move was effective rhetorically\n- Do not list multiple strengths — find the one best move only\n\n[Paste essay here]",
+    "prompt": "Review the following essay. Identify the single strongest rhetorical move the student made.\n\nRules:\n- The strength must be HIGHLY SPECIFIC (e.g. 'the verb concedes on line 14 does precise rhetorical work' - not 'good word choice')\n- Reference the exact location in the text\n- Explain in 2-3 sentences WHY this specific move was effective rhetorically\n- Do not list multiple strengths - find the one best move only\n\n[Paste essay here]",
     "category": "write-create",
     "platforms": [
       "chatgpt"
@@ -269,7 +269,7 @@
     "slug": "tone-and-reception-adapter",
     "title": "The Tone & Reception Adapter",
     "description": "Calibrates all feedback to match the specific psychological profile and learning style of the writer",
-    "prompt": "Review the following essay and generate feedback.\n\nStudent tone note: [describe how the student responds to feedback — e.g. 'Responds well to direct, specific moves. Shuts down with vague praise.' or 'Needs encouragement first before critique.']\n\nCalibrate ALL feedback to align perfectly with this psychological profile:\n- Match the directness level to what the student can absorb\n- Lead with what will make them most receptive\n- Avoid any phrasing patterns that cause shutdown\n- Maximize the probability that the feedback is actually acted upon\n\n[Paste essay here]",
+    "prompt": "Review the following essay and generate feedback.\n\nStudent tone note: [describe how the student responds to feedback - e.g. 'Responds well to direct, specific moves. Shuts down with vague praise.' or 'Needs encouragement first before critique.']\n\nCalibrate ALL feedback to align perfectly with this psychological profile:\n- Match the directness level to what the student can absorb\n- Lead with what will make them most receptive\n- Avoid any phrasing patterns that cause shutdown\n- Maximize the probability that the feedback is actually acted upon\n\n[Paste essay here]",
     "category": "write-create",
     "platforms": [
       "gemini",
@@ -287,10 +287,10 @@
     "useCase": "Modulating the delivery of academic critique to match the psychological resilience and learning style of the specific student.",
     "estimatedTime": "5 min",
     "variables": [
-      "describe how the student responds to feedback — e.g. 'Responds well to direct, specific moves. Shuts down with vague praise.' or 'Needs encouragement first before critique.'",
+      "describe how the student responds to feedback - e.g. 'Responds well to direct, specific moves. Shuts down with vague praise.' or 'Needs encouragement first before critique.'",
       "Paste essay here"
     ],
-    "exampleOutput": "Student profile: Needs encouragement first. Feedback: 'You have a fantastic instinct for pacing here—the story moves quickly and keeps me reading. To make it even stronger, let's look at paragraph two. What if we added one detail about how the room smelled?'",
+    "exampleOutput": "Student profile: Needs encouragement first. Feedback: 'You have a fantastic instinct for pacing here-the story moves quickly and keeps me reading. To make it even stronger, let's look at paragraph two. What if we added one detail about how the room smelled?'",
     "updatedAt": "2026-05",
     "copyCount": 0,
     "relatedPrompts": []
@@ -300,7 +300,7 @@
     "slug": "character-backstory-architect",
     "title": "The Character Backstory Architect",
     "description": "Builds a psychologically layered character biography that explains behavior, wounds, and wants without telling the reader directly",
-    "prompt": "Build a deep backstory for a fictional character with the following surface details:\n\nName: [character name]\nRole in story: [protagonist / antagonist / supporting]\nGenre: [fiction genre]\nWhat the reader sees: [surface behavior]\n\nFor this character, construct:\n1. The formative wound (a specific childhood or past experience that shaped their core belief)\n2. The core belief they formed from that wound (e.g. 'Love always ends in abandonment')\n3. Their greatest fear — and how it secretly drives their decisions\n4. The mask they wear (how they present to the world vs. who they really are)\n5. What they want vs. what they actually need\n6. The lie they tell themselves that the story must eventually break\n\nRules:\n- No backstory elements should be stated in the story — they should only SHOW in behavior\n- The wound must be specific, not generic (not 'difficult childhood' but a single scene)\n- This character must feel like a real person, not a type",
+    "prompt": "Build a deep backstory for a fictional character with the following surface details:\n\nName: [character name]\nRole in story: [protagonist / antagonist / supporting]\nGenre: [fiction genre]\nWhat the reader sees: [surface behavior]\n\nFor this character, construct:\n1. The formative wound (a specific childhood or past experience that shaped their core belief)\n2. The core belief they formed from that wound (e.g. 'Love always ends in abandonment')\n3. Their greatest fear - and how it secretly drives their decisions\n4. The mask they wear (how they present to the world vs. who they really are)\n5. What they want vs. what they actually need\n6. The lie they tell themselves that the story must eventually break\n\nRules:\n- No backstory elements should be stated in the story - they should only SHOW in behavior\n- The wound must be specific, not generic (not 'difficult childhood' but a single scene)\n- This character must feel like a real person, not a type",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -336,7 +336,7 @@
     "slug": "scene-tension-injector",
     "title": "The Scene Tension Injector",
     "description": "Rewrites a flat scene by identifying exactly where tension is missing and injecting conflict at every level",
-    "prompt": "Read this scene and diagnose why it feels flat or slow:\n\n[Paste your scene here]\n\nFor this scene, identify:\n1. Where the reader's question (what happens next?) disappears\n2. Which character wants something and what is actively blocking them RIGHT NOW in this scene\n3. The subtext gap — what is unsaid between characters that should be creating friction\n4. One moment where you can raise the stakes without adding plot\n\nThen rewrite the weakest paragraph of this scene with tension injected at three levels:\n- External (physical / environmental conflict)\n- Interpersonal (between characters)\n- Internal (the POV character's inner conflict)\n\nDo not add new plot events. Use only what is already on the page.",
+    "prompt": "Read this scene and diagnose why it feels flat or slow:\n\n[Paste your scene here]\n\nFor this scene, identify:\n1. Where the reader's question (what happens next?) disappears\n2. Which character wants something and what is actively blocking them RIGHT NOW in this scene\n3. The subtext gap - what is unsaid between characters that should be creating friction\n4. One moment where you can raise the stakes without adding plot\n\nThen rewrite the weakest paragraph of this scene with tension injected at three levels:\n- External (physical / environmental conflict)\n- Interpersonal (between characters)\n- Internal (the POV character's inner conflict)\n\nDo not add new plot events. Use only what is already on the page.",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -369,7 +369,7 @@
     "slug": "dialogue-subtext-rewriter",
     "title": "The Dialogue Subtext Rewriter",
     "description": "Identifies on-the-nose dialogue and rewrites it so characters say one thing while meaning something entirely different",
-    "prompt": "Read the following dialogue exchange:\n\n[Paste dialogue here]\n\nContext: [character relationship]\n\nDiagnose:\n1. Which lines are 'on the nose' — where characters say exactly what they mean\n2. Where the emotional truth of the scene is being stated instead of dramatized\n\nThen rewrite the entire exchange so:\n- Neither character says what they actually mean\n- The reader can still feel exactly what each character wants\n- At least one line works on two completely different levels depending on how you read it\n- The dialogue sounds like real speech, not literary performance\n\nAfter the rewrite, annotate two lines explaining what the subtext is doing.",
+    "prompt": "Read the following dialogue exchange:\n\n[Paste dialogue here]\n\nContext: [character relationship]\n\nDiagnose:\n1. Which lines are 'on the nose' - where characters say exactly what they mean\n2. Where the emotional truth of the scene is being stated instead of dramatized\n\nThen rewrite the entire exchange so:\n- Neither character says what they actually mean\n- The reader can still feel exactly what each character wants\n- At least one line works on two completely different levels depending on how you read it\n- The dialogue sounds like real speech, not literary performance\n\nAfter the rewrite, annotate two lines explaining what the subtext is doing.",
     "category": "write-create",
     "platforms": [
       "claude"
@@ -383,7 +383,7 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "Goldbear Media",
-    "useCase": "Elevating dialogue from functional to literary by teaching the craft of subtext — the gap between what characters say and what they mean.",
+    "useCase": "Elevating dialogue from functional to literary by teaching the craft of subtext - the gap between what characters say and what they mean.",
     "estimatedTime": "10 min",
     "variables": [
       "Paste dialogue here",
@@ -472,8 +472,8 @@
     "id": "write-016",
     "slug": "world-building-framework",
     "title": "The World-Building Framework",
-    "description": "Constructs a complete, internally consistent fictional world with rules, history, and culture — without info-dumping it into the prose",
-    "prompt": "Build the world for my story with the following seed:\n\nGenre: [fantasy / sci-fi / alternate history / other]\nCore concept: [core concept]\nTime period or setting: [description]\nTone: [dark / hopeful / satirical / epic]\n\nDevelop the world across these dimensions:\n1. The Rules (what is different from our world — physics, magic, technology, society)\n2. The History (what happened before page one that created the current tension)\n3. The Power Structure (who controls what and why)\n4. The Fault Lines (where conflict is baked into the society)\n5. What ordinary people's daily lives look like\n6. Three specific sensory details unique to this world that would never appear in ours\n\nRules:\n- Every element should create story potential, not just flavor\n- Do NOT write info-dump paragraphs — write this as a writer's bible, not exposition\n- Flag two world details that could become plot points",
+    "description": "Constructs a complete, internally consistent fictional world with rules, history, and culture - without info-dumping it into the prose",
+    "prompt": "Build the world for my story with the following seed:\n\nGenre: [fantasy / sci-fi / alternate history / other]\nCore concept: [core concept]\nTime period or setting: [description]\nTone: [dark / hopeful / satirical / epic]\n\nDevelop the world across these dimensions:\n1. The Rules (what is different from our world - physics, magic, technology, society)\n2. The History (what happened before page one that created the current tension)\n3. The Power Structure (who controls what and why)\n4. The Fault Lines (where conflict is baked into the society)\n5. What ordinary people's daily lives look like\n6. Three specific sensory details unique to this world that would never appear in ours\n\nRules:\n- Every element should create story potential, not just flavor\n- Do NOT write info-dump paragraphs - write this as a writer's bible, not exposition\n- Flag two world details that could become plot points",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -488,7 +488,7 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Write With AI",
-    "useCase": "Building immersive, story-generative fictional worlds that feel lived-in rather than constructed — before writing a word of prose.",
+    "useCase": "Building immersive, story-generative fictional worlds that feel lived-in rather than constructed - before writing a word of prose.",
     "estimatedTime": "5 min",
     "variables": [
       "fantasy / sci-fi / alternate history / other",
@@ -506,7 +506,7 @@
     "slug": "pov-lens-switcher",
     "title": "The POV Lens Switcher",
     "description": "Rewrites the same scene from three different points of view to reveal which perspective creates the most narrative power",
-    "prompt": "Take this scene and rewrite it from three different points of view:\n\nOriginal scene: [paste your scene here]\nCharacters present in the scene: [characters]\n\nRewrite it from:\n1. POV Character A: [character motivation]\n2. POV Character B: [name] — their specific motivation in this scene\n3. An unreliable or limited narrator who misreads what is actually happening\n\nFor each version:\n- Change only perspective, not plot events\n- Show what information each character has access to — and what they don't\n- Let the reader understand something that the POV character cannot\n\nAfter the three versions, give a one-paragraph analysis: which POV creates the most dramatic irony, and why?",
+    "prompt": "Take this scene and rewrite it from three different points of view:\n\nOriginal scene: [paste your scene here]\nCharacters present in the scene: [characters]\n\nRewrite it from:\n1. POV Character A: [character motivation]\n2. POV Character B: [name] - their specific motivation in this scene\n3. An unreliable or limited narrator who misreads what is actually happening\n\nFor each version:\n- Change only perspective, not plot events\n- Show what information each character has access to - and what they don't\n- Let the reader understand something that the POV character cannot\n\nAfter the three versions, give a one-paragraph analysis: which POV creates the most dramatic irony, and why?",
     "category": "write-create",
     "platforms": [
       "claude"
@@ -538,7 +538,7 @@
     "slug": "flash-fiction-engine",
     "title": "The Flash Fiction Engine",
     "description": "Writes a complete, emotionally resonant story in under 300 words with a beginning, complication, and gut-punch ending",
-    "prompt": "Write a flash fiction story under 300 words using these constraints:\n\nOpening situation: [starting moment]\nGenre: [genre]\nRequired emotional landing: [desired emotion]\nOne constraint: [constraint]\n\nRules:\n- Every sentence must earn its place — no scene-setting for its own sake\n- The ending must feel both surprising AND inevitable in retrospect\n- The story must have a clear turn — a moment where something changes\n- Do NOT explain the emotion at the end — create it\n- Under 300 words, exact count provided at the end",
+    "prompt": "Write a flash fiction story under 300 words using these constraints:\n\nOpening situation: [starting moment]\nGenre: [genre]\nRequired emotional landing: [desired emotion]\nOne constraint: [constraint]\n\nRules:\n- Every sentence must earn its place - no scene-setting for its own sake\n- The ending must feel both surprising AND inevitable in retrospect\n- The story must have a clear turn - a moment where something changes\n- Do NOT explain the emotion at the end - create it\n- Under 300 words, exact count provided at the end",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -571,7 +571,7 @@
     "slug": "seo-blog-post-full-draft",
     "title": "The SEO Blog Post Full Draft",
     "description": "Produces a complete, human-sounding SEO blog post that satisfies search intent without reading like it was written by a robot",
-    "prompt": "Write a complete SEO-optimized blog post with the following specs:\n\nTopic: [topic]\nPrimary keyword: [primary keyword]\nSecondary keywords: [secondary keywords]\nTarget audience: [target audience]\nTone: [tone]\nWord count: [word count]\nBusiness goal: [business goal]\n\nStructure:\n1. Hook (opens with a question, surprising fact, or direct pain point — no 'In today's world')\n2. What this post covers (clear, fast)\n3. Main body sections with H2 headings that include keywords naturally\n4. One specific example or mini case study\n5. Common mistake section\n6. Conclusion with one clear CTA\n\nRules:\n- Primary keyword in H1, first 100 words, and conclusion\n- Write for humans first, search engines second\n- No filler sentences — every paragraph adds information\n- Meta description (155 chars) at the end",
+    "prompt": "Write a complete SEO-optimized blog post with the following specs:\n\nTopic: [topic]\nPrimary keyword: [primary keyword]\nSecondary keywords: [secondary keywords]\nTarget audience: [target audience]\nTone: [tone]\nWord count: [word count]\nBusiness goal: [business goal]\n\nStructure:\n1. Hook (opens with a question, surprising fact, or direct pain point - no 'In today's world')\n2. What this post covers (clear, fast)\n3. Main body sections with H2 headings that include keywords naturally\n4. One specific example or mini case study\n5. Common mistake section\n6. Conclusion with one clear CTA\n\nRules:\n- Primary keyword in H1, first 100 words, and conclusion\n- Write for humans first, search engines second\n- No filler sentences - every paragraph adds information\n- Meta description (155 chars) at the end",
     "category": "write-create",
     "platforms": [
       "any"
@@ -630,7 +630,7 @@
       "content samples",
       "brand context"
     ],
-    "exampleOutput": "Vocabulary patterns: We use 'build', 'craft', and 'forge' — we never use 'hack' or 'leverage'. Sentence structure: Punchy openers. Longer explanatory middle sentences. Tone adjectives: Relentless, optimistic, precise. Voice test: 'Would an experienced mentor say this over coffee?'",
+    "exampleOutput": "Vocabulary patterns: We use 'build', 'craft', and 'forge' - we never use 'hack' or 'leverage'. Sentence structure: Punchy openers. Longer explanatory middle sentences. Tone adjectives: Relentless, optimistic, precise. Voice test: 'Would an experienced mentor say this over coffee?'",
     "updatedAt": "2026-05",
     "copyCount": 0,
     "relatedPrompts": [
@@ -643,7 +643,7 @@
     "slug": "landing-page-copy-converter",
     "title": "The Landing Page Copy Converter",
     "description": "Writes high-converting landing page copy using proven psychological frameworks without sounding salesy or manipulative",
-    "prompt": "Write landing page copy for the following product or service:\n\nProduct / Service: [product]\nTarget customer: [target audience]\nCore pain point: [core pain point]\nPrimary benefit: [primary benefit]\nKey differentiator: [key differentiator]\nSocial proof available: [social proof]\nCTA goal: [cta goal]\n\nWrite:\n1. Hero headline (outcome-focused, not feature-focused)\n2. Sub-headline (adds specificity or addresses the skeptic)\n3. Problem section (make them feel deeply understood)\n4. Solution section (how you solve it — benefits, not features)\n5. Social proof block (use the proof provided)\n6. Objection handler (address the #1 reason they might not convert)\n7. CTA (specific, low-friction, value-forward)\n\nNo hyperbole. No 'revolutionary' or 'game-changing'. Write like a trusted friend who knows the product.",
+    "prompt": "Write landing page copy for the following product or service:\n\nProduct / Service: [product]\nTarget customer: [target audience]\nCore pain point: [core pain point]\nPrimary benefit: [primary benefit]\nKey differentiator: [key differentiator]\nSocial proof available: [social proof]\nCTA goal: [cta goal]\n\nWrite:\n1. Hero headline (outcome-focused, not feature-focused)\n2. Sub-headline (adds specificity or addresses the skeptic)\n3. Problem section (make them feel deeply understood)\n4. Solution section (how you solve it - benefits, not features)\n5. Social proof block (use the proof provided)\n6. Objection handler (address the #1 reason they might not convert)\n7. CTA (specific, low-friction, value-forward)\n\nNo hyperbole. No 'revolutionary' or 'game-changing'. Write like a trusted friend who knows the product.",
     "category": "write-create",
     "platforms": [
       "any"
@@ -681,7 +681,7 @@
     "slug": "email-sequence-architect",
     "title": "The Email Sequence Architect",
     "description": "Builds a complete 5-email nurture sequence that moves a cold subscriber toward a purchase decision naturally",
-    "prompt": "Write a 5-email nurture sequence for the following:\n\nProduct / offer: [product]\nAudience: [audience]\nTheir biggest problem: [biggest problem]\nSequence goal: [sequence goal]\nBrand tone: [brand tone]\n\nFor each email provide:\n- Subject line (and one A/B variant)\n- Preview text\n- Full email body\n- CTA\n\nEmail 1: Welcome + immediate value (deliver on the opt-in promise)\nEmail 2: Teach something specific that proves your expertise\nEmail 3: Story or case study showing transformation\nEmail 4: Address the #1 objection or fear\nEmail 5: Clear offer with urgency that feels earned, not manufactured\n\nRules:\n- Each email should feel like it was written by a person, not a sequence\n- Open rates live and die in subject lines — make them earn the click\n- Never use 'I hope this email finds you well'\n- Vary length: not all emails should be the same word count",
+    "prompt": "Write a 5-email nurture sequence for the following:\n\nProduct / offer: [product]\nAudience: [audience]\nTheir biggest problem: [biggest problem]\nSequence goal: [sequence goal]\nBrand tone: [brand tone]\n\nFor each email provide:\n- Subject line (and one A/B variant)\n- Preview text\n- Full email body\n- CTA\n\nEmail 1: Welcome + immediate value (deliver on the opt-in promise)\nEmail 2: Teach something specific that proves your expertise\nEmail 3: Story or case study showing transformation\nEmail 4: Address the #1 objection or fear\nEmail 5: Clear offer with urgency that feels earned, not manufactured\n\nRules:\n- Each email should feel like it was written by a person, not a sequence\n- Open rates live and die in subject lines - make them earn the click\n- Never use 'I hope this email finds you well'\n- Vary length: not all emails should be the same word count",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -747,7 +747,7 @@
     "slug": "screenwriting-scene-header",
     "title": "The Screenplay Scene Writer",
     "description": "Writes a properly formatted screenplay scene with action lines, character voice, and subtext baked in",
-    "prompt": "Write a screenplay scene with the following parameters:\n\nSetting: [setting]\nCharacters in scene: [characters]\nWhat this scene must accomplish plot-wise: [plot goal]\nWhat this scene must accomplish emotionally: [emotional goal]\nSubtext: [subtext]\n\nFormat requirements:\n- Proper screenplay format (scene heading, action lines, character cues, dialogue)\n- Action lines: present tense, visual only — if it can't be filmed, cut it\n- Dialogue: each character must sound distinct — different rhythm, vocabulary, sentence length\n- Scene length: 1.5 to 3 pages equivalent\n\nRules:\n- No on-the-nose dialogue\n- At least one moment of visual storytelling (something shown, not said)\n- End the scene at a different emotional place than it started",
+    "prompt": "Write a screenplay scene with the following parameters:\n\nSetting: [setting]\nCharacters in scene: [characters]\nWhat this scene must accomplish plot-wise: [plot goal]\nWhat this scene must accomplish emotionally: [emotional goal]\nSubtext: [subtext]\n\nFormat requirements:\n- Proper screenplay format (scene heading, action lines, character cues, dialogue)\n- Action lines: present tense, visual only - if it can't be filmed, cut it\n- Dialogue: each character must sound distinct - different rhythm, vocabulary, sentence length\n- Scene length: 1.5 to 3 pages equivalent\n\nRules:\n- No on-the-nose dialogue\n- At least one moment of visual storytelling (something shown, not said)\n- End the scene at a different emotional place than it started",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -780,8 +780,8 @@
     "id": "write-026",
     "slug": "prose-style-diagnosis",
     "title": "The Prose Style Diagnosis",
-    "description": "Identifies exactly what is making your prose feel weak, flat, or generic — and rewrites one paragraph as a model",
-    "prompt": "Diagnose the prose style in the following writing sample:\n\n[writing sample]\n\nAnalyze:\n1. Sentence variety (is every sentence the same length and structure?)\n2. Passive vs. active voice ratio\n3. Over-reliance on adverbs or weak verbs (e.g. 'walked slowly' vs. 'shuffled')\n4. Telling vs. showing ratio\n5. Abstraction vs. concrete imagery\n6. Rhythm — does the prose have cadence or does it plod?\n\nDiagnose the single biggest prose weakness with a specific label (e.g. 'verb weakness', 'over-qualification', 'abstraction habit').\n\nThen: rewrite the weakest paragraph from the sample, fixing only that one issue. Show the before and after side by side.\n\nDo NOT rewrite the whole sample. Teach through one surgical example.",
+    "description": "Identifies exactly what is making your prose feel weak, flat, or generic - and rewrites one paragraph as a model",
+    "prompt": "Diagnose the prose style in the following writing sample:\n\n[writing sample]\n\nAnalyze:\n1. Sentence variety (is every sentence the same length and structure?)\n2. Passive vs. active voice ratio\n3. Over-reliance on adverbs or weak verbs (e.g. 'walked slowly' vs. 'shuffled')\n4. Telling vs. showing ratio\n5. Abstraction vs. concrete imagery\n6. Rhythm - does the prose have cadence or does it plod?\n\nDiagnose the single biggest prose weakness with a specific label (e.g. 'verb weakness', 'over-qualification', 'abstraction habit').\n\nThen: rewrite the weakest paragraph from the sample, fixing only that one issue. Show the before and after side by side.\n\nDo NOT rewrite the whole sample. Teach through one surgical example.",
     "category": "write-create",
     "platforms": [
       "claude"
@@ -813,7 +813,7 @@
     "slug": "memoir-scene-excavator",
     "title": "The Memoir Scene Excavator",
     "description": "Turns a real personal memory into a fully dramatized memoir scene with sensory detail, emotion, and meaning",
-    "prompt": "Help me turn a personal memory into a memoir scene.\n\nThe memory: [memory]\nWho else was there: [people present]\nHow old were you: [age]\nWhat you felt at the time: [emotional state]\nWhat you understand now that you didn't then: [insight]\n\nWrite this as a fully dramatized memoir scene:\n- Open in the middle of the action, not with background\n- Use sensory detail (what you saw, heard, smelled — specific, not generic)\n- Include at least one line of real or reconstructed dialogue\n- Let the scene reveal meaning through what happens, not through author commentary\n- End with one short reflection sentence — no more\n\nTone: honest, specific, no sentimentality. Emotion comes from the facts, not the adjectives.",
+    "prompt": "Help me turn a personal memory into a memoir scene.\n\nThe memory: [memory]\nWho else was there: [people present]\nHow old were you: [age]\nWhat you felt at the time: [emotional state]\nWhat you understand now that you didn't then: [insight]\n\nWrite this as a fully dramatized memoir scene:\n- Open in the middle of the action, not with background\n- Use sensory detail (what you saw, heard, smelled - specific, not generic)\n- Include at least one line of real or reconstructed dialogue\n- Let the scene reveal meaning through what happens, not through author commentary\n- End with one short reflection sentence - no more\n\nTone: honest, specific, no sentimentality. Emotion comes from the facts, not the adjectives.",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -847,7 +847,7 @@
     "slug": "newsletter-issue-builder",
     "title": "The Newsletter Issue Builder",
     "description": "Writes a complete, high-retention newsletter issue with a personal hook, core value section, and a memorable close",
-    "prompt": "Write a complete newsletter issue for my audience.\n\nNewsletter name / niche: [newsletter niche]\nAudience: [audience]\nThis issue's core topic: [core topic]\nPersonal angle: [personal angle]\nTone: [tone]\n\nStructure:\n1. Subject line (+ one A/B variant)\n2. Personal opening hook (3-4 sentences — makes it feel like a letter, not a broadcast)\n3. Main value section (the insight, lesson, or resource — 250-400 words)\n4. One specific recommendation (tool / book / resource / idea — with a genuine take on why)\n5. Closing line (memorable, not 'thanks for reading')\n6. PS (the most-read line in any email — make it count)\n\nRules:\n- Write as a person, not a brand\n- No bullet point lists in the main value section — narrative paragraphs only\n- Every section should make the reader glad they opened it",
+    "prompt": "Write a complete newsletter issue for my audience.\n\nNewsletter name / niche: [newsletter niche]\nAudience: [audience]\nThis issue's core topic: [core topic]\nPersonal angle: [personal angle]\nTone: [tone]\n\nStructure:\n1. Subject line (+ one A/B variant)\n2. Personal opening hook (3-4 sentences - makes it feel like a letter, not a broadcast)\n3. Main value section (the insight, lesson, or resource - 250-400 words)\n4. One specific recommendation (tool / book / resource / idea - with a genuine take on why)\n5. Closing line (memorable, not 'thanks for reading')\n6. PS (the most-read line in any email - make it count)\n\nRules:\n- Write as a person, not a brand\n- No bullet point lists in the main value section - narrative paragraphs only\n- Every section should make the reader glad they opened it",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -862,7 +862,7 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "Goldbear Media",
-    "useCase": "Writing newsletter issues that feel personal and editorial rather than corporate and automated — driving opens, reads, and replies.",
+    "useCase": "Writing newsletter issues that feel personal and editorial rather than corporate and automated - driving opens, reads, and replies.",
     "estimatedTime": "3 min",
     "variables": [
       "newsletter niche",
@@ -881,7 +881,7 @@
     "slug": "product-description-sensory",
     "title": "The Sensory Product Description Writer",
     "description": "Writes product descriptions that sell through sensory experience and emotional aspiration rather than feature lists",
-    "prompt": "Write a product description for the following item:\n\nProduct: [product name]\nTarget customer: [target customer]\nTop 3 features: [features]\nEmotional benefit: [emotional benefit]\nBrand tone: [brand tone]\nWhere it appears: [placement]\n\nWrite THREE versions:\n1. Long (150-200 words) — full sensory and aspirational experience\n2. Medium (75 words) — for a category page or ad\n3. Short (25 words) — for a caption or label\n\nRules:\n- Lead with the emotional benefit, not the feature\n- Use at least two sensory details (what it feels like, sounds like, looks like in use)\n- Never use 'high-quality', 'premium', 'best-in-class' — prove it, don't claim it\n- Each version must feel complete, not truncated",
+    "prompt": "Write a product description for the following item:\n\nProduct: [product name]\nTarget customer: [target customer]\nTop 3 features: [features]\nEmotional benefit: [emotional benefit]\nBrand tone: [brand tone]\nWhere it appears: [placement]\n\nWrite THREE versions:\n1. Long (150-200 words) - full sensory and aspirational experience\n2. Medium (75 words) - for a category page or ad\n3. Short (25 words) - for a caption or label\n\nRules:\n- Lead with the emotional benefit, not the feature\n- Use at least two sensory details (what it feels like, sounds like, looks like in use)\n- Never use 'high-quality', 'premium', 'best-in-class' - prove it, don't claim it\n- Each version must feel complete, not truncated",
     "category": "write-create",
     "platforms": [
       "any"
@@ -915,7 +915,7 @@
     "slug": "about-page-rewrite",
     "title": "The About Page Rewrite",
     "description": "Transforms a generic, self-focused About page into a customer-centric narrative that builds instant trust and connection",
-    "prompt": "Rewrite my About page so it builds trust and resonates with my target customer — not just describes me.\n\nMy current About page: [current copy]\nMy business / what I do: [description]\nMy target customer and their biggest problem: [describe]\nMy unique background or angle: [unique background]\nThe emotional tone I want: [emotional tone]\n\nStructure the rewrite as:\n1. Opening that speaks TO the reader's situation (not 'Hi, I'm [name]')\n2. The moment that led me to this work (story, not biography)\n3. What I believe that most in my field don't\n4. Who I specifically help — and who I'm NOT for (this builds trust)\n5. A brief credibility section (facts, not bravado)\n6. A direct invitation to connect or work together\n\nRules:\n- Every paragraph should make the reader feel understood, not impressed\n- No mission statements or vision statements\n- Under 350 words total",
+    "prompt": "Rewrite my About page so it builds trust and resonates with my target customer - not just describes me.\n\nMy current About page: [current copy]\nMy business / what I do: [description]\nMy target customer and their biggest problem: [describe]\nMy unique background or angle: [unique background]\nThe emotional tone I want: [emotional tone]\n\nStructure the rewrite as:\n1. Opening that speaks TO the reader's situation (not 'Hi, I'm [name]')\n2. The moment that led me to this work (story, not biography)\n3. What I believe that most in my field don't\n4. Who I specifically help - and who I'm NOT for (this builds trust)\n5. A brief credibility section (facts, not bravado)\n6. A direct invitation to connect or work together\n\nRules:\n- Every paragraph should make the reader feel understood, not impressed\n- No mission statements or vision statements\n- Under 350 words total",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -953,7 +953,7 @@
     "slug": "long-form-article-outliner",
     "title": "The Long-Form Article Outliner",
     "description": "Builds a complete, reader-first outline for a 2000+ word article that holds attention from top to bottom",
-    "prompt": "Create a complete outline for a long-form article on the following:\n\nTopic: [topic]\nPrimary keyword: [primary keyword]\nTarget reader: [target reader]\nReader's biggest question coming into this article: [core question]\nBusiness or creative goal: [business goal]\n\nOutline structure:\n- H1: final headline\n- Hook strategy (what type of opening — story / stat / question / bold claim)\n- H2 sections (5-8), each with:\n  - The section's core point in one sentence\n  - 2-3 sub-points to cover\n  - One example or evidence type to include\n- Transition logic between sections (why does section 3 come before section 4?)\n- Conclusion approach\n- CTA\n\nAlso flag: where does reader attention typically drop in this type of article, and what can the structure do to fight that?",
+    "prompt": "Create a complete outline for a long-form article on the following:\n\nTopic: [topic]\nPrimary keyword: [primary keyword]\nTarget reader: [target reader]\nReader's biggest question coming into this article: [core question]\nBusiness or creative goal: [business goal]\n\nOutline structure:\n- H1: final headline\n- Hook strategy (what type of opening - story / stat / question / bold claim)\n- H2 sections (5-8), each with:\n  - The section's core point in one sentence\n  - 2-3 sub-points to cover\n  - One example or evidence type to include\n- Transition logic between sections (why does section 3 come before section 4?)\n- Conclusion approach\n- CTA\n\nAlso flag: where does reader attention typically drop in this type of article, and what can the structure do to fight that?",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1020,8 +1020,8 @@
     "id": "write-033",
     "slug": "feedback-without-rewriting",
     "title": "The Feedback Without Rewriting Protocol",
-    "description": "Gives deep editorial feedback on any piece of writing without rewriting it — teaches the writer to improve their own work",
-    "prompt": "Give me editorial feedback on the following piece of writing — but do NOT rewrite anything for me.\n\n[writing sample]\n\nMy goal with this piece: [goal]\nMy audience: [audience]\nWhat I think is weakest about it: [weakest point]\n\nFeedback must:\n1. Identify the single most important structural problem (big picture)\n2. Identify two sentences that are doing the least work — and explain why, without fixing them\n3. Flag one moment where the writing actually breaks through — what made it work?\n4. Ask me three questions that, if I could answer them, would make the next draft stronger\n5. Give me one specific technique or craft principle to apply in revision\n\nDo NOT produce a rewrite. Every note should make me a better writer, not a better copy-paster.",
+    "description": "Gives deep editorial feedback on any piece of writing without rewriting it - teaches the writer to improve their own work",
+    "prompt": "Give me editorial feedback on the following piece of writing - but do NOT rewrite anything for me.\n\n[writing sample]\n\nMy goal with this piece: [goal]\nMy audience: [audience]\nWhat I think is weakest about it: [weakest point]\n\nFeedback must:\n1. Identify the single most important structural problem (big picture)\n2. Identify two sentences that are doing the least work - and explain why, without fixing them\n3. Flag one moment where the writing actually breaks through - what made it work?\n4. Ask me three questions that, if I could answer them, would make the next draft stronger\n5. Give me one specific technique or craft principle to apply in revision\n\nDo NOT produce a rewrite. Every note should make me a better writer, not a better copy-paster.",
     "category": "write-create",
     "platforms": [
       "claude"
@@ -1043,7 +1043,7 @@
       "audience",
       "weakest point"
     ],
-    "exampleOutput": "Feedback: 1. The structural problem is pacing; you spend 3 paragraphs on backstory before the inciting incident. 2. 'It was a very nice day outside' is doing the least work—it sets a generic mood without adding specific atmosphere. 3. Question for revision: What does the protagonist actively *want* in page 2?",
+    "exampleOutput": "Feedback: 1. The structural problem is pacing; you spend 3 paragraphs on backstory before the inciting incident. 2. 'It was a very nice day outside' is doing the least work-it sets a generic mood without adding specific atmosphere. 3. Question for revision: What does the protagonist actively *want* in page 2?",
     "updatedAt": "2026-05",
     "copyCount": 0,
     "relatedPrompts": []
@@ -1053,7 +1053,7 @@
     "slug": "antagonist-motivation-builder",
     "title": "The Antagonist Motivation Builder",
     "description": "Makes your villain three-dimensional by ensuring they have a coherent worldview that makes complete sense from their own perspective",
-    "prompt": "Build the internal logic for my story's antagonist:\n\nAntagonist name: [name]\nWhat they do in the story: [role]\nWhat the protagonist wants to stop them from doing: [protagonist goal]\n\nFor the antagonist, construct:\n1. Their origin belief — the experience that made them who they are\n2. Their internal logic — explain the world EXACTLY as they see it (write this from their first-person perspective for one paragraph)\n3. Why, from their view, they are the hero of the story\n4. The one thing they genuinely love or protect (a humanizing element)\n5. The moral line they will not cross — and why (even antagonists have one)\n6. What they would need to see or hear to change their path (even if the story never gives it to them)\n\nRules:\n- The antagonist must never be evil for evil's sake\n- Their logic must be internally consistent, even if morally wrong\n- A reader should be able to understand — not excuse — every choice they make",
+    "prompt": "Build the internal logic for my story's antagonist:\n\nAntagonist name: [name]\nWhat they do in the story: [role]\nWhat the protagonist wants to stop them from doing: [protagonist goal]\n\nFor the antagonist, construct:\n1. Their origin belief - the experience that made them who they are\n2. Their internal logic - explain the world EXACTLY as they see it (write this from their first-person perspective for one paragraph)\n3. Why, from their view, they are the hero of the story\n4. The one thing they genuinely love or protect (a humanizing element)\n5. The moral line they will not cross - and why (even antagonists have one)\n6. What they would need to see or hear to change their path (even if the story never gives it to them)\n\nRules:\n- The antagonist must never be evil for evil's sake\n- Their logic must be internally consistent, even if morally wrong\n- A reader should be able to understand - not excuse - every choice they make",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1084,8 +1084,8 @@
     "id": "write-035",
     "slug": "writers-block-obliterator",
     "title": "The Writer's Block Obliterator",
-    "description": "Diagnoses the real reason you're stuck and gives a specific, targeted exercise to break through — not generic advice",
-    "prompt": "I'm stuck on my writing. Help me diagnose the real problem and break through it.\n\nWhat I'm working on: [project description]\nWhere exactly I'm stuck: [where stuck]\nHow long I've been stuck: [time stuck]\nWhat I've tried: [attempted fixes]\nMy honest guess about why I'm stuck: [suspected cause]\n\nDiagnose the type of block from these possibilities:\n- Fear of the next scene (you know what has to happen but don't want to write it)\n- Structural confusion (you don't know what happens next because the structure is broken upstream)\n- Voice loss (you've lost the sound of the piece)\n- Perfectionism paralysis (you keep rewriting instead of moving forward)\n- Wrong POV or wrong scene (you're trying to write a scene the story doesn't need)\n\nBased on the diagnosis, give me ONE specific exercise — not general advice — to do in the next 20 minutes to break through.",
+    "description": "Diagnoses the real reason you're stuck and gives a specific, targeted exercise to break through - not generic advice",
+    "prompt": "I'm stuck on my writing. Help me diagnose the real problem and break through it.\n\nWhat I'm working on: [project description]\nWhere exactly I'm stuck: [where stuck]\nHow long I've been stuck: [time stuck]\nWhat I've tried: [attempted fixes]\nMy honest guess about why I'm stuck: [suspected cause]\n\nDiagnose the type of block from these possibilities:\n- Fear of the next scene (you know what has to happen but don't want to write it)\n- Structural confusion (you don't know what happens next because the structure is broken upstream)\n- Voice loss (you've lost the sound of the piece)\n- Perfectionism paralysis (you keep rewriting instead of moving forward)\n- Wrong POV or wrong scene (you're trying to write a scene the story doesn't need)\n\nBased on the diagnosis, give me ONE specific exercise - not general advice - to do in the next 20 minutes to break through.",
     "category": "write-create",
     "platforms": [
       "claude"
@@ -1120,8 +1120,8 @@
     "id": "write-036",
     "slug": "meta-description-batch-writer",
     "title": "The Meta Description Batch Writer",
-    "description": "Writes SEO meta descriptions for multiple pages at once — each unique, within character limits, and engineered for clicks",
-    "prompt": "Write SEO meta descriptions for the following pages:\n\nPages to write for: [pages]\nWebsite context: [website context]\nClick goal: [click goal]\n\nFor each page deliver:\n- Meta description (150-160 characters exactly — include character count)\n- One A/B variant with a different angle\n\nRules for each meta description:\n- Include the primary keyword naturally\n- Use an active verb\n- Address what the reader will GET from clicking (not just what the page is about)\n- Create a subtle urgency or curiosity without clickbait\n- Never start with the website name\n- Each must be completely unique — no template recycling across pages",
+    "description": "Writes SEO meta descriptions for multiple pages at once - each unique, within character limits, and engineered for clicks",
+    "prompt": "Write SEO meta descriptions for the following pages:\n\nPages to write for: [pages]\nWebsite context: [website context]\nClick goal: [click goal]\n\nFor each page deliver:\n- Meta description (150-160 characters exactly - include character count)\n- One A/B variant with a different angle\n\nRules for each meta description:\n- Include the primary keyword naturally\n- Use an active verb\n- Address what the reader will GET from clicking (not just what the page is about)\n- Create a subtle urgency or curiosity without clickbait\n- Never start with the website name\n- Each must be completely unique - no template recycling across pages",
     "category": "write-create",
     "platforms": [
       "any"
@@ -1135,7 +1135,7 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "SEO.ai",
-    "useCase": "Systematically producing click-optimized meta descriptions at scale — one of the highest-leverage, lowest-effort SEO improvements available.",
+    "useCase": "Systematically producing click-optimized meta descriptions at scale - one of the highest-leverage, lowest-effort SEO improvements available.",
     "estimatedTime": "3 min",
     "variables": [
       "pages",
@@ -1151,8 +1151,8 @@
     "id": "write-037",
     "slug": "creative-nonfiction-scene-opener",
     "title": "The Creative Nonfiction Scene Opener",
-    "description": "Opens a true story, essay, or journalistic piece in media res — dropping the reader into the action before context",
-    "prompt": "Write an in-media-res opening scene for a creative nonfiction piece.\n\nThe true event or situation: [true event]\nThe larger story this opening belongs to: [larger story]\nThe emotional tone of the piece: [emotional tone]\nWho the narrator is: [narrator]\n\nRules:\n- Open in the middle of action or sensation — no establishing context\n- No 'It was a Tuesday in March' openings\n- The reader should be disoriented in a good way — curious, not confused\n- Introduce one specific sensory detail that anchors the scene physically\n- End the opening scene at a moment of tension or unanswered question\n- 150-250 words only — this is an opening, not a full draft\n\nAfter the scene, explain in two sentences: what question does this opening plant, and how does it connect to the piece's larger meaning?",
+    "description": "Opens a true story, essay, or journalistic piece in media res - dropping the reader into the action before context",
+    "prompt": "Write an in-media-res opening scene for a creative nonfiction piece.\n\nThe true event or situation: [true event]\nThe larger story this opening belongs to: [larger story]\nThe emotional tone of the piece: [emotional tone]\nWho the narrator is: [narrator]\n\nRules:\n- Open in the middle of action or sensation - no establishing context\n- No 'It was a Tuesday in March' openings\n- The reader should be disoriented in a good way - curious, not confused\n- Introduce one specific sensory detail that anchors the scene physically\n- End the opening scene at a moment of tension or unanswered question\n- 150-250 words only - this is an opening, not a full draft\n\nAfter the scene, explain in two sentences: what question does this opening plant, and how does it connect to the piece's larger meaning?",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1185,7 +1185,7 @@
     "slug": "copy-humanizer",
     "title": "The Copy Humanizer",
     "description": "Takes robotic, AI-generated or corporate copy and rewrites it to sound like it came from a real person",
-    "prompt": "The following copy sounds robotic, corporate, or AI-generated. Rewrite it to sound like a real person wrote it.\n\nOriginal copy: [original copy]\nWho wrote it (persona): [persona]\nTheir personality in 3 words: [personality]\nWho they're writing to: [audience]\n\nRewrite rules:\n- Break at least two grammatical 'rules' that real writers break intentionally\n- Use at least one contraction per paragraph\n- Replace any phrase that sounds like it was generated (e.g. 'In today's fast-paced world', 'leverage synergies', 'at the end of the day')\n- Add one moment of genuine specificity that a robot wouldn't invent\n- Vary sentence length aggressively — mix very short with longer\n- Read it aloud test: if it sounds awkward spoken, rewrite it\n\nShow original and rewrite side by side.",
+    "prompt": "The following copy sounds robotic, corporate, or AI-generated. Rewrite it to sound like a real person wrote it.\n\nOriginal copy: [original copy]\nWho wrote it (persona): [persona]\nTheir personality in 3 words: [personality]\nWho they're writing to: [audience]\n\nRewrite rules:\n- Break at least two grammatical 'rules' that real writers break intentionally\n- Use at least one contraction per paragraph\n- Replace any phrase that sounds like it was generated (e.g. 'In today's fast-paced world', 'leverage synergies', 'at the end of the day')\n- Add one moment of genuine specificity that a robot wouldn't invent\n- Vary sentence length aggressively - mix very short with longer\n- Read it aloud test: if it sounds awkward spoken, rewrite it\n\nShow original and rewrite side by side.",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1217,8 +1217,8 @@
     "id": "write-039",
     "slug": "argument-steel-man",
     "title": "The Steel-Man Argument Builder",
-    "description": "Builds the strongest possible version of an argument you disagree with — sharpening your own position in the process",
-    "prompt": "Help me steel-man the following argument or position that I disagree with:\n\nThe position I'm arguing against: [opposing position]\nMy own position: [my position]\nContext: [context]\n\nBuild the strongest possible version of the opposing argument:\n1. State the core claim in its most rigorous, charitable form\n2. Give 3 of the best supporting arguments with real-world evidence or logic\n3. Acknowledge where this position is genuinely correct (the part you must concede)\n4. Identify the strongest objection to YOUR position that this argument raises\n\nThen:\n5. Given this steel-manned version — what is the most sophisticated rebuttal you can make?\n6. What part of your original position needs to be modified to survive this challenge?\n\nDo not caricature the opposing view. Make it as strong as possible before dismantling it.",
+    "description": "Builds the strongest possible version of an argument you disagree with - sharpening your own position in the process",
+    "prompt": "Help me steel-man the following argument or position that I disagree with:\n\nThe position I'm arguing against: [opposing position]\nMy own position: [my position]\nContext: [context]\n\nBuild the strongest possible version of the opposing argument:\n1. State the core claim in its most rigorous, charitable form\n2. Give 3 of the best supporting arguments with real-world evidence or logic\n3. Acknowledge where this position is genuinely correct (the part you must concede)\n4. Identify the strongest objection to YOUR position that this argument raises\n\nThen:\n5. Given this steel-manned version - what is the most sophisticated rebuttal you can make?\n6. What part of your original position needs to be modified to survive this challenge?\n\nDo not caricature the opposing view. Make it as strong as possible before dismantling it.",
     "category": "write-create",
     "platforms": [
       "claude"
@@ -1239,7 +1239,7 @@
       "my position",
       "context"
     ],
-    "exampleOutput": "Steel-manned opposing argument: Remote work damages junior employee development. Supporting argument: Junior staff learn implicitly through osmosis—overhearing senior devs solve problems or asking quick questions. The rebuttal must address this valid point by proposing structured, intentional mentorship systems that replace passive office learning.",
+    "exampleOutput": "Steel-manned opposing argument: Remote work damages junior employee development. Supporting argument: Junior staff learn implicitly through osmosis-overhearing senior devs solve problems or asking quick questions. The rebuttal must address this valid point by proposing structured, intentional mentorship systems that replace passive office learning.",
     "updatedAt": "2026-05",
     "copyCount": 0,
     "relatedPrompts": []
@@ -1249,7 +1249,7 @@
     "slug": "personal-essay-idea-extractor",
     "title": "The Personal Essay Idea Extractor",
     "description": "Mines your real life for compelling personal essay ideas by identifying the moments that contain universal resonance",
-    "prompt": "Help me find personal essay ideas worth writing.\n\nTell me about yourself by answering these:\n1. A time you were deeply embarrassed and later understood why it mattered\n2. A belief you held for years that turned out to be completely wrong\n3. Something you know how to do that most people don't — and how you learned it\n4. A small, ordinary moment from your life that you keep returning to mentally\n5. The thing your family never talked about but everyone knew\n\nMy answers: [answers]\n\nFrom my answers, identify:\n- 3 personal essay concepts with genuine universal resonance\n- For each: the surface story (what happened) AND the deeper subject (what it's really about)\n- The type of reader who would find this essay necessary to read\n- A potential opening line for each\n\nRule: do not choose the most dramatic answer — choose the most specific and most universal.",
+    "prompt": "Help me find personal essay ideas worth writing.\n\nTell me about yourself by answering these:\n1. A time you were deeply embarrassed and later understood why it mattered\n2. A belief you held for years that turned out to be completely wrong\n3. Something you know how to do that most people don't - and how you learned it\n4. A small, ordinary moment from your life that you keep returning to mentally\n5. The thing your family never talked about but everyone knew\n\nMy answers: [answers]\n\nFrom my answers, identify:\n- 3 personal essay concepts with genuine universal resonance\n- For each: the surface story (what happened) AND the deeper subject (what it's really about)\n- The type of reader who would find this essay necessary to read\n- A potential opening line for each\n\nRule: do not choose the most dramatic answer - choose the most specific and most universal.",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1264,7 +1264,7 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "Goldbear Media",
-    "useCase": "Discovering the essay ideas already buried in your own lived experience that carry universal meaning — the source most writers overlook.",
+    "useCase": "Discovering the essay ideas already buried in your own lived experience that carry universal meaning - the source most writers overlook.",
     "estimatedTime": "3 min",
     "variables": [
       "answers"
@@ -1279,7 +1279,7 @@
     "slug": "plot-hole-detective",
     "title": "The Plot Hole Detective",
     "description": "Systematically stress-tests a story's logic to find inconsistencies, motivation gaps, and cause-effect failures before they reach readers",
-    "prompt": "Stress-test my story for plot holes and logic failures.\n\nStory summary: [story summary]\nGenre: [genre]\nCharacters and their goals: [characters]\n\nTest for:\n1. Motivation gaps (does any character do something their established personality wouldn't support?)\n2. Cause-effect failures (does any event happen without adequate cause?)\n3. Convenient coincidences (does the plot rely on lucky timing or unexplained coincidence?)\n4. Information problems (does a character know something they shouldn't, or not know something they would?)\n5. Timeline inconsistencies\n6. Thematic contradictions (does the ending contradict what the story seems to be about?)\n\nFor each hole found:\n- Name the specific problem\n- Explain why it breaks the reader's suspension of disbelief\n- Suggest one structural fix (not a patch — a real solution)\n\nRank issues by severity: critical / moderate / minor.",
+    "prompt": "Stress-test my story for plot holes and logic failures.\n\nStory summary: [story summary]\nGenre: [genre]\nCharacters and their goals: [characters]\n\nTest for:\n1. Motivation gaps (does any character do something their established personality wouldn't support?)\n2. Cause-effect failures (does any event happen without adequate cause?)\n3. Convenient coincidences (does the plot rely on lucky timing or unexplained coincidence?)\n4. Information problems (does a character know something they shouldn't, or not know something they would?)\n5. Timeline inconsistencies\n6. Thematic contradictions (does the ending contradict what the story seems to be about?)\n\nFor each hole found:\n- Name the specific problem\n- Explain why it breaks the reader's suspension of disbelief\n- Suggest one structural fix (not a patch - a real solution)\n\nRank issues by severity: critical / moderate / minor.",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1294,7 +1294,7 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "FictionAI",
-    "useCase": "Catching story logic failures before readers do — protecting the immersive reading experience by stress-testing plot mechanics systematically.",
+    "useCase": "Catching story logic failures before readers do - protecting the immersive reading experience by stress-testing plot mechanics systematically.",
     "estimatedTime": "5 min",
     "variables": [
       "story summary",
@@ -1310,8 +1310,8 @@
     "id": "write-042",
     "slug": "show-dont-tell-rewriter",
     "title": "The Show Don't Tell Rewriter",
-    "description": "Takes telling statements and rewrites them as shown scenes — teaching the single most transformative craft skill in fiction",
-    "prompt": "Apply the 'show don't tell' principle to the following passages from my writing.\n\n[telling examples]\n\nFor each:\n1. Identify what is being told (the emotion, quality, or state being stated)\n2. Rewrite it as a shown moment — a specific action, piece of dialogue, physical sensation, or detail that makes the reader FEEL it without being told\n3. Explain in one sentence: what technique did the rewrite use? (concrete detail / body language / dialogue / environment / action)\n\nExample of the transformation:\nTELLING: 'She was nervous.'\nSHOWING: 'She tore the corner of the napkin into four perfect strips and then tore those into four more.'\n\nRules:\n- The shown version must not use the emotion word at all\n- It must communicate the same information without explanation\n- It should be MORE specific, not longer",
+    "description": "Takes telling statements and rewrites them as shown scenes - teaching the single most transformative craft skill in fiction",
+    "prompt": "Apply the 'show don't tell' principle to the following passages from my writing.\n\n[telling examples]\n\nFor each:\n1. Identify what is being told (the emotion, quality, or state being stated)\n2. Rewrite it as a shown moment - a specific action, piece of dialogue, physical sensation, or detail that makes the reader FEEL it without being told\n3. Explain in one sentence: what technique did the rewrite use? (concrete detail / body language / dialogue / environment / action)\n\nExample of the transformation:\nTELLING: 'She was nervous.'\nSHOWING: 'She tore the corner of the napkin into four perfect strips and then tore those into four more.'\n\nRules:\n- The shown version must not use the emotion word at all\n- It must communicate the same information without explanation\n- It should be MORE specific, not longer",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1326,7 +1326,7 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "r/ChatGPTPromptGenius",
-    "useCase": "Teaching the single most impactful craft upgrade in fiction — converting flat telling statements into vivid, immersive shown moments.",
+    "useCase": "Teaching the single most impactful craft upgrade in fiction - converting flat telling statements into vivid, immersive shown moments.",
     "estimatedTime": "3 min",
     "variables": [
       "telling examples"
@@ -1341,7 +1341,7 @@
     "slug": "grant-proposal-writer",
     "title": "The Grant Proposal Writer",
     "description": "Writes a compelling arts or creative project grant proposal that conveys necessity, vision, and feasibility to funding committees",
-    "prompt": "Write a grant proposal for a creative or arts project.\n\nProject name: [title]\nFunding organization: [funding organization]\nGrant amount requested: [grant amount]\nProject description: [project description]\nArtistic rationale: [artistic rationale]\nYour background / credentials: [credentials]\nBudget overview: [budget]\nTimeline: [timeline]\nCommunity impact: [community impact]\n\nStructure:\n1. Project overview (compelling, not bureaucratic — make them want to read on)\n2. Artistic statement (why this? why you? why now?)\n3. Project details and methodology\n4. Timeline and milestones\n5. Budget narrative (justify each line item's necessity)\n6. Anticipated outcomes and evaluation\n7. Closing statement\n\nTone: confident, specific, and mission-driven. Grant committees fund vision AND viability — show both.",
+    "prompt": "Write a grant proposal for a creative or arts project.\n\nProject name: [title]\nFunding organization: [funding organization]\nGrant amount requested: [grant amount]\nProject description: [project description]\nArtistic rationale: [artistic rationale]\nYour background / credentials: [credentials]\nBudget overview: [budget]\nTimeline: [timeline]\nCommunity impact: [community impact]\n\nStructure:\n1. Project overview (compelling, not bureaucratic - make them want to read on)\n2. Artistic statement (why this? why you? why now?)\n3. Project details and methodology\n4. Timeline and milestones\n5. Budget narrative (justify each line item's necessity)\n6. Anticipated outcomes and evaluation\n7. Closing statement\n\nTone: confident, specific, and mission-driven. Grant committees fund vision AND viability - show both.",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1356,7 +1356,7 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "Goldbear Media",
-    "useCase": "Writing grant proposals that win funding by balancing artistic vision with organizational clarity — the combination most proposals fail to achieve.",
+    "useCase": "Writing grant proposals that win funding by balancing artistic vision with organizational clarity - the combination most proposals fail to achieve.",
     "estimatedTime": "10 min",
     "variables": [
       "title",
@@ -1379,7 +1379,7 @@
     "slug": "twitter-thread-authority-builder",
     "title": "The Twitter Thread Authority Builder",
     "description": "Writes a viral-ready Twitter/X thread that teaches one idea deeply and builds your credibility with every tweet",
-    "prompt": "Write a Twitter/X thread on the following topic:\n\nTopic: [core topic]\nYour credentials / experience with this topic: [credentials]\nTarget audience: [target audience]\nCore insight: [core insight]\n\nThread structure:\n- Tweet 1: Hook (makes them stop scrolling and click 'show more' — no 'thread:' opener)\n- Tweets 2-8: Core content (one specific point per tweet — each must standalone)\n- Tweet 9: The counterintuitive insight (the thing most people get wrong)\n- Tweet 10: Summary + what to do next\n- Tweet 11: CTA (follow / reply / save)\n\nRules:\n- Every tweet under 280 characters\n- Tweet 1 must work with no context — a stranger must feel compelled to read the next\n- Vary tweet length: some short and punchy, some explanatory\n- At least 3 tweets should be genuinely unexpected\n- No numbering within tweets ('1/11' style is fine but avoid '1. First...')",
+    "prompt": "Write a Twitter/X thread on the following topic:\n\nTopic: [core topic]\nYour credentials / experience with this topic: [credentials]\nTarget audience: [target audience]\nCore insight: [core insight]\n\nThread structure:\n- Tweet 1: Hook (makes them stop scrolling and click 'show more' - no 'thread:' opener)\n- Tweets 2-8: Core content (one specific point per tweet - each must standalone)\n- Tweet 9: The counterintuitive insight (the thing most people get wrong)\n- Tweet 10: Summary + what to do next\n- Tweet 11: CTA (follow / reply / save)\n\nRules:\n- Every tweet under 280 characters\n- Tweet 1 must work with no context - a stranger must feel compelled to read the next\n- Vary tweet length: some short and punchy, some explanatory\n- At least 3 tweets should be genuinely unexpected\n- No numbering within tweets ('1/11' style is fine but avoid '1. First...')",
     "category": "write-create",
     "platforms": [
       "claude",
@@ -1412,7 +1412,7 @@
     "slug": "sensitivity-read-diagnostic",
     "title": "The Sensitivity Read Diagnostic",
     "description": "Flags potentially harmful, stereotyped, or culturally inaccurate representations in fiction before publication",
-    "prompt": "Perform a sensitivity diagnostic on the following excerpt from my manuscript.\n\n[excerpt]\n\nCharacters flagged for review: [flagged characters]\nContext: [context]\nMy background: [author background]\n\nReview for:\n1. Stereotyping (does any character function primarily as a type rather than a person?)\n2. Tokenism (is a character's identity their entire personality?)\n3. Trauma voyeurism (is a character's marginalized experience used as plot device rather than humanity?)\n4. Dialect or language (is any character's speech written in a way that 'others' them?)\n5. Power dynamics (do the narrative choices inadvertently center the wrong perspective?)\n\nFor each issue found:\n- Name the specific problem with a line reference\n- Explain what harm it risks\n- Suggest a revision direction (not a full rewrite — a direction)\n\nAlso flag: what is the excerpt doing well in terms of authentic representation?",
+    "prompt": "Perform a sensitivity diagnostic on the following excerpt from my manuscript.\n\n[excerpt]\n\nCharacters flagged for review: [flagged characters]\nContext: [context]\nMy background: [author background]\n\nReview for:\n1. Stereotyping (does any character function primarily as a type rather than a person?)\n2. Tokenism (is a character's identity their entire personality?)\n3. Trauma voyeurism (is a character's marginalized experience used as plot device rather than humanity?)\n4. Dialect or language (is any character's speech written in a way that 'others' them?)\n5. Power dynamics (do the narrative choices inadvertently center the wrong perspective?)\n\nFor each issue found:\n- Name the specific problem with a line reference\n- Explain what harm it risks\n- Suggest a revision direction (not a full rewrite - a direction)\n\nAlso flag: what is the excerpt doing well in terms of authentic representation?",
     "category": "write-create",
     "platforms": [
       "claude"
@@ -1426,7 +1426,7 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "Goldbear Media",
-    "useCase": "Catching harmful stereotypes, tokenism, and cultural inaccuracies in manuscripts before they reach readers — protecting both the story and the author.",
+    "useCase": "Catching harmful stereotypes, tokenism, and cultural inaccuracies in manuscripts before they reach readers - protecting both the story and the author.",
     "estimatedTime": "10 min",
     "variables": [
       "excerpt",
