@@ -14,11 +14,9 @@ export function Hero() {
   return (
     <header className="hero">
       <div className="wrap">
-        <div className="hero-meta">
 
+        <div className="hero-meta">
           <span>A library, not a feed</span>
-          
-          
         </div>
 
         <h1>
@@ -28,49 +26,28 @@ export function Hero() {
           <span>keeping around.</span>
         </h1>
 
-        <div className="hero-row">
-          <p className="hero-sub">
-            A curated, living archive of <strong>tested prompts for text and image generation for Claude, ChatGPT,
-            Gemini and Grok</strong> . No fluff, no infinite scroll - just the ones that actually work,
-            sorted by craft.
-          </p>
-          <div className="hero-stats">
-            <div className="stat">
-              <div className="n">272</div>
-              <div className="l">Curated prompts</div>
-            </div>
-            <div className="stat">
-              <div className="n"><span className="it">7</span></div>
-              <div className="l">Categories</div>
-            </div>
-            <div className="stat">
-              <div className="n">4</div>
-              <div className="l">Models</div>
-            </div>
-          </div>
-        </div>
+        <p className="hero-sub">
+          A curated, living archive of <strong>tested AI prompts for text and image generation</strong>.
+          No fluff, no infinite scroll-just the ones that actually work, engineered for Claude, ChatGPT, Gemini and Grok.
+        </p>
 
-        <div className="hero-row" style={{ marginTop: 90, alignItems: "start" }}>
-          <div>
+        <div className="hero-search-row">
+          <div className="hero-search-col">
             <div className="search-shell">
               <div className="search">
-                
                 <input
                   type="text"
-                  placeholder={`Search 96 prompts - try "explain like I'm five"`}
+                  placeholder={`Search the library - try "explain like I'm five"`}
                   value={query}
                   onChange={e => setQuery(e.target.value)}
                   onKeyDown={e => e.key === "Enter" && search()}
                 />
-                <button className="search-btn" onClick={search}>
-                  Search
-                  
-                </button>
+                <button className="search-btn" onClick={search}>Search</button>
               </div>
             </div>
             <div className="quick">
               <span className="label">Try:</span>
-              {["code review","essay outline","cold email","study buddy","teach me"].map(c => (
+              {["code review", "essay outline", "cold email", "study buddy", "teach me"].map(c => (
                 <span key={c} className="chip" onClick={() => { setQuery(c); router.push(`/browse?search=${encodeURIComponent(c)}`); }}>{c}</span>
               ))}
             </div>
@@ -94,13 +71,11 @@ export function Hero() {
                 <span className="pbadge pb-gpt">ChatGPT</span>
                 <span className="pbadge pb-gemini">Gemini</span>
               </div>
-              <button className="copy-mini">
-                
-                Copy prompt
-              </button>
+              <button className="copy-mini">Copy prompt</button>
             </div>
           </div>
         </div>
+
       </div>
     </header>
   );

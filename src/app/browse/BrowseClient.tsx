@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { Prompt, Platform } from "@/types";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { CopyButton } from "@/components/ui/CopyButton";
+import { LikeButton } from "@/components/ui/LikeButton";
 
 const TABS = ["any", "claude", "chatgpt", "gemini", "grok"] as const;
 const CATS = ["all", "study-learn", "write-create", "code-dev", "business-marketing", "review-test", "career-brand", "image-prompts", "ai-agents", "instagram", "youtube"];
@@ -212,7 +213,8 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
                 {p.tags.slice(0, 2).map(t => `#${t}`).join(" ")}
               </span>
             </div>
-            <div className="copy-container" style={{ position: 'absolute', top: 16, right: 16, opacity: 0, transition: 'opacity 0.2s' }}>
+            <div className="bcard-actions">
+              <LikeButton promptId={p.id} />
               <CopyButton text={p.prompt} />
             </div>
           </Link>

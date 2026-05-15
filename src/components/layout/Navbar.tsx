@@ -1,36 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useAuth } from "@/lib/auth-context";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
-  const [submissionsCount, setSubmissionsCount] = useState(0);
+  const { user, signOut, openAuthModal } = useAuth();
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", fn);
     return () => window.removeEventListener("scroll", fn);
   }, []);
-
-  useEffect(() => {
-    fetchSubmissionsCount();
-  }, []);
-
-  const fetchSubmissionsCount = async () => {
-    try {
-      // Use fetch API to get submissions count
-      const response = await fetch('/api/submit', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const data = await response.json();
-      setSubmissionsCount(data.length);
-    } catch (error) {
-      console.error('Error fetching submissions count:', error);
-    }
-  };
 
   return (
     <nav className={`nav${scrolled ? " scrolled" : ""}`} id="nav">
@@ -42,19 +23,26 @@ export function Navbar() {
         <div className="nav-links">
           <Link href="/browse">Browse</Link>
           <Link href="/#categories">Categories</Link>
-          <Link href="/#featured">Featured</Link>
+          <Link href="/liked">Saved</Link>
           <Link href="/submit">Submit</Link>
           <Link href="/about">About</Link>
         </div>
         <div className="nav-cta">
           <span className="pill">
             <span className="dot" />
-            96 prompts indexed
+            Library Live
           </span>
-          {submissionsCount > 0 && (
-            <span className="pill" style={{ background: 'rgba(244, 167, 56, 0.15)', borderColor: 'var(--amber)', color: 'var(--amber)' }}>
-              {submissionsCount} submission{submissionsCount > 1 ? 's' : ''} pending
-            </span>
+          {user ? (
+            <div className="nav-user">
+              <span className="nav-user-email">
+                {user.user_metadata?.full_name || user.email?.split("@")[0]}
+              </span>
+              <button className="nav-signout" onClick={signOut}>Sign out</button>
+            </div>
+          ) : (
+            <button className="nav-login-btn" onClick={() => openAuthModal("login")}>
+              Sign in
+            </button>
           )}
         </div>
       </div>
