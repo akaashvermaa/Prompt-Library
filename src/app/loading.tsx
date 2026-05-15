@@ -17,7 +17,17 @@ const QUOTES = [
   "Every great prompt starts with a single word.",
   "Polishing tokens... 99% complete (not really, but soon).",
   "Don't worry, the AI is just overthinking it.",
-  "Stay curious. The best prompts are yet to be written."
+  "Stay curious. The best prompts are yet to be written.",
+  "A prompt is just a bridge between human thought and machine logic.",
+  "Did you know? Large Language Models don't 'think', they calculate the next most likely token.",
+  "The secret to a great prompt isn't complexity, it's clarity.",
+  "Building the future of human-AI collaboration, one architecture at a time.",
+  "Every token generated is a tiny miracle of statistical probability.",
+  "A good prompt is like a key to a vault of infinite knowledge.",
+  "Your intention is the data, the prompt is the filter.",
+  "The best AI output starts with the best human input.",
+  "Unlocking the latent space of a billion parameters...",
+  "Prompting: the art of speaking to a machine in the language of thought."
 ];
 
 export default function Loading() {

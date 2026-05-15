@@ -37,7 +37,7 @@ export function Hero() {
               <div className="search">
                 <input
                   type="text"
-                  placeholder={`Search the library - try "explain like I'm five"`}
+                  placeholder={`Search architectures - try "Expert architect"`}
                   value={query}
                   onChange={e => setQuery(e.target.value)}
                   onKeyDown={e => e.key === "Enter" && search()}

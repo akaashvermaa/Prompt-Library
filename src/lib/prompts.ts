@@ -112,7 +112,37 @@ function mapDbToPrompt(row: any): Prompt {
     copyCount: row.copy_count || 0,
     relatedPrompts: row.related_prompts || [],
     variables: row.variables || [],
+    authorName: row.author_name,
+    githubUrl: row.github_url,
+    linkedinUrl: row.linkedin_url,
   };
+}
+
+export async function getLeaderboard() {
+  const { data, error } = await supabase
+    .from('prompts')
+    .select('author_name, github_url, linkedin_url, featured')
+    .not('author_name', 'is', null);
+
+  if (error) return [];
+
+  const authors: Record<string, any> = {};
+  
+  data.forEach(p => {
+    if (!authors[p.author_name]) {
+      authors[p.author_name] = {
+        name: p.author_name,
+        github: p.github_url,
+        linkedin: p.linkedin_url,
+        count: 0,
+        quality: 0
+      };
+    }
+    authors[p.author_name].count += 1;
+    if (p.featured) authors[p.author_name].quality += 1;
+  });
+
+  return Object.values(authors).sort((a, b) => b.count - a.count);
 }
 
 // Sorts prompts by credibility and simulated usage metrics

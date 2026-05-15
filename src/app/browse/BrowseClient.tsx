@@ -189,7 +189,7 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
               <p>{p.description}</p>
               {p.imagePlatforms && p.imagePlatforms.length > 0 && (
                 <div className="image-platforms" style={{ background: 'var(--surface)', padding: '12px', borderRadius: '6px', border: '1px solid var(--line)', marginTop: 'auto' }}>
-                  <span style={{color: 'var(--amber)'}}>Paste this into →</span>
+                  <span style={{color: 'var(--amber)'}}>Paste this into:</span>
                   <div style={{ marginTop: '6px' }}>
                     {p.imagePlatforms.map((ip) => (
                       <span key={ip} className="pbadge" style={{fontSize: '11px', padding: '2px 8px', marginRight: '6px', marginBottom: '4px', display: 'inline-block' }}>

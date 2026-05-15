@@ -13,19 +13,17 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <div className="page-pt">
+    <div className="page-pt page-fade">
       {/* Hero */}
       <section className="hero" style={{ padding: '40px 0 60px' }}>
         <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <div className="eyebrow">A humble mission</div>
-              <h1>
-                Built for <span className="it">humans</span>,<br />
-                powered by community.
-              </h1>
-            </div>
-            <p className="lede">
+          <div className="sec-head" style={{ display: 'block' }}>
+            <div className="eyebrow">A humble mission</div>
+            <h1 style={{ marginBottom: '24px' }}>
+              Built for <span className="it">humans</span>,<br />
+              powered by community.
+            </h1>
+            <p className="lede" style={{ maxWidth: '600px' }}>
               PromptVault isn't just a library. It's a humble attempt to make the future of AI accessible, one shared prompt at a time.
             </p>
           </div>

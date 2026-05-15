@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { Leaderboard } from "@/components/sections/Leaderboard";
 
 interface Submission {
   id: string;
@@ -12,6 +13,9 @@ interface Submission {
   tags: string[];
   imagePlatforms?: string[];
   submittedAt: string;
+  authorName?: string;
+  githubUrl?: string;
+  linkedinUrl?: string;
 }
 
 const CATEGORIES = ["study-learn", "write-create", "code-dev", "teaching", "business-marketing", "review-test", "testing", "career-brand", "image"];
@@ -39,17 +43,17 @@ export default function SubmitPage() {
     platforms: ["any"] as string[],
     tags: "",
     imagePlatforms: [] as string[],
-      });
+    authorName: "",
+    githubUrl: "",
+    linkedinUrl: "",
+  });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState<{ type: 'success' | 'error', message: string } | null>(null);
 
   const handlePlatformToggle = (platform: string) => {
     if (platform === "any") {
-      setFormData(prev => ({
-        ...prev,
-        platforms: ["any"]
-      }));
+      setFormData(prev => ({ ...prev, platforms: ["any"] }));
     } else {
       setFormData(prev => {
         const updatedPlatforms = prev.platforms.filter(p => p !== "any");
@@ -72,18 +76,12 @@ export default function SubmitPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     if (!formData.title.trim() || !formData.description.trim() || !formData.prompt.trim()) {
       setSubmitMessage({ type: 'error', message: 'Please fill in all required fields' });
       return;
     }
-
     setIsSubmitting(true);
-
-    const tagsArray = formData.tags
-      ? formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag)
-      : [];
-
+    const tagsArray = formData.tags ? formData.tags.split(',').map(tag => tag.trim()).filter(Boolean) : [];
     const newSubmission: Submission = {
       id: Date.now().toString(),
       title: formData.title.trim(),
@@ -93,30 +91,25 @@ export default function SubmitPage() {
       platforms: formData.platforms,
       tags: tagsArray,
       imagePlatforms: formData.imagePlatforms.length > 0 ? formData.imagePlatforms : undefined,
-      submittedAt: new Date().toISOString()
+      submittedAt: new Date().toISOString(),
+      authorName: formData.authorName.trim() || undefined,
+      githubUrl: formData.githubUrl.trim() || undefined,
+      linkedinUrl: formData.linkedinUrl.trim() || undefined,
     };
 
     try {
-      // Save to submissions.json
       const response = await fetch('/api/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newSubmission),
       });
-
       if (response.ok) {
         setSubmitMessage({ type: 'success', message: 'Prompt submitted successfully! Admin will review it.' });
         setFormData({
-          title: "",
-          description: "",
-          prompt: "",
-          category: "study-learn",
-          platforms: ["any"],
-          tags: "",
-          imagePlatforms: [],
-                  });
+          title: "", description: "", prompt: "", category: "study-learn",
+          platforms: ["any"], tags: "", imagePlatforms: [],
+          authorName: "", githubUrl: "", linkedinUrl: ""
+        });
       } else {
         const error = await response.json();
         setSubmitMessage({ type: 'error', message: error.message || 'Failed to submit prompt' });
@@ -129,298 +122,167 @@ export default function SubmitPage() {
   };
 
   return (
-    <div className="page-pt">
+    <div className="page-pt page-fade">
       <section>
         <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <div className="eyebrow">Submit a Prompt</div>
-              <h2>Share your <span className="it">favorite</span> prompt</h2>
-            </div>
-            <p className="lede">Your submission will be reviewed by admin before being added to the library.</p>
+          <div className="sec-head" style={{ display: 'block', marginBottom: '64px' }}>
+            <div className="eyebrow">Submit & Contribute</div>
+            <h2 style={{ marginBottom: '24px' }}>Build the <span className="it">archive.</span></h2>
+            <p className="lede" style={{ maxWidth: '600px' }}>
+              Your submissions help grow the most curated library of dense prompts. 
+              Top contributors are recognized in our global Hall of Contributors.
+            </p>
           </div>
 
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            {submitMessage && (
-              <div style={{
-                padding: '16px 24px',
-                borderRadius: '8px',
-                marginBottom: '24px',
-                background: submitMessage.type === 'success'
-                  ? 'rgba(118, 184, 156, 0.1)'
-                  : 'rgba(212, 108, 108, 0.1)',
-                border: `1px solid ${submitMessage.type === 'success' ? '#76b89c' : '#d46c6c'}`,
-                color: submitMessage.type === 'success' ? '#76b89c' : '#d46c6c'
-              }}>
-                {submitMessage.message}
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit}>
-              <div style={{ display: 'grid', gap: '32px' }}>
-                {/* Title */}
-                <div>
-                  <label style={{
-                    fontSize: '14px',
-                    color: 'var(--muted)',
-                    marginBottom: '8px',
-                    display: 'block'
-                  }}>
-                    Prompt Title *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    value={formData.title}
-                    onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
-                    style={{
-                      width: '100%',
-                      padding: '14px 20px',
-                      background: 'var(--surface)',
-                      border: '1px solid var(--line)',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      color: 'var(--text)',
-                      fontFamily: 'inherit'
-                    }}
-                    placeholder="e.g., The Study System Builder"
-                  />
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 360px', gap: '80px', alignItems: 'start' }}>
+            <div className="submit-form-container">
+              {submitMessage && (
+                <div style={{
+                  padding: '16px 24px', borderRadius: '12px', marginBottom: '40px',
+                  background: submitMessage.type === 'success' ? 'rgba(118, 184, 156, 0.1)' : 'rgba(212, 108, 108, 0.1)',
+                  border: `1px solid ${submitMessage.type === 'success' ? '#76b89c' : '#d46c6c'}`,
+                  color: submitMessage.type === 'success' ? '#76b89c' : '#d46c6c',
+                  fontSize: '14px'
+                }}>
+                  {submitMessage.message}
                 </div>
+              )}
 
-                {/* Description */}
-                <div>
-                  <label style={{
-                    fontSize: '14px',
-                    color: 'var(--muted)',
-                    marginBottom: '8px',
-                    display: 'block'
-                  }}>
-                    Description *
-                  </label>
-                  <textarea
-                    required
-                    value={formData.description}
-                    onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-                    rows={3}
-                    style={{
-                      width: '100%',
-                      padding: '14px 20px',
-                      background: 'var(--surface)',
-                      border: '1px solid var(--line)',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      color: 'var(--text)',
-                      fontFamily: 'inherit',
-                      resize: 'vertical'
-                    }}
-                    placeholder="Briefly describe what this prompt does and its purpose"
-                  />
-                </div>
-
-                {/* Category */}
-                <div>
-                  <label style={{
-                    fontSize: '14px',
-                    color: 'var(--muted)',
-                    marginBottom: '12px',
-                    display: 'block'
-                  }}>
-                    Category *
-                  </label>
-                  <select
-                    required
-                    value={formData.category}
-                    onChange={(e) => setFormData(prev => ({ ...prev, category: e.target.value }))}
-                    style={{
-                      width: '100%',
-                      padding: '14px 20px',
-                      background: 'var(--surface)',
-                      border: '1px solid var(--line)',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      color: 'var(--text)',
-                      fontFamily: 'inherit'
-                    }}
-                  >
-                    {CATEGORIES.map(cat => (
-                      <option key={cat} value={cat}>{CATEGORY_LABELS[cat]}</option>
-                    ))}
-                  </select>
-                </div>
-
-                {/* Platforms */}
-                <div>
-                  <label style={{
-                    fontSize: '14px',
-                    color: 'var(--muted)',
-                    marginBottom: '12px',
-                    display: 'block'
-                  }}>
-                    Compatible Models *
-                  </label>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                    {PLATFORMS.map(platform => (
-                      <button
-                        key={platform}
-                        type="button"
-                        onClick={() => handlePlatformToggle(platform)}
-                        style={{
-                          padding: '8px 16px',
-                          border: `1px solid ${formData.platforms.includes(platform) ? 'var(--amber)' : 'var(--line)'}`,
-                          borderRadius: '999px',
-                          fontSize: '14px',
-                          background: formData.platforms.includes(platform)
-                            ? 'var(--amber)'
-                            : 'var(--surface)',
-                          color: formData.platforms.includes(platform)
-                            ? 'var(--amber-ink)'
-                            : 'var(--muted)',
-                          cursor: 'pointer',
-                          transition: 'all 0.2s'
-                        }}
-                      >
-                        {platform === 'any' ? 'Any Model' : platform.charAt(0).toUpperCase() + platform.slice(1)}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Image Platforms (conditionally shown) */}
-                {formData.category === 'image-prompts' && (
-                  <div>
-                    <label style={{
-                      fontSize: '14px',
-                      color: 'var(--muted)',
-                      marginBottom: '12px',
-                      display: 'block'
-                    }}>
-                      Image Generation Platforms
-                    </label>
-                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-                      {IMAGE_PLATFORMS.map(platform => (
-                        <button
-                          key={platform}
-                          type="button"
-                          onClick={() => handleImagePlatformToggle(platform)}
-                          style={{
-                            padding: '8px 16px',
-                            border: `1px solid ${formData.imagePlatforms.includes(platform) ? 'var(--amber)' : 'var(--line)'}`,
-                            borderRadius: '999px',
-                            fontSize: '14px',
-                            background: formData.imagePlatforms.includes(platform)
-                              ? 'var(--amber)'
-                              : 'var(--surface)',
-                            color: formData.imagePlatforms.includes(platform)
-                              ? 'var(--amber-ink)'
-                              : 'var(--muted)',
-                            cursor: 'pointer',
-                            transition: 'all 0.2s'
-                          }}
-                        >
-                          {platform.charAt(0).toUpperCase() + platform.slice(1)}
-                        </button>
-                      ))}
+              <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '40px' }}>
+                {/* Section 1: Contributor Info */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+                  <div style={{ fontSize: '11px', color: 'var(--amber)', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>01. Contributor Information</div>
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+                    <div className="form-group">
+                      <label className="refine-label">Display Name <span style={{ opacity: 0.5, textTransform: 'none', marginLeft: '4px' }}>(Optional)</span></label>
+                      <input
+                        type="text"
+                        className="refine-textarea"
+                        style={{ minHeight: 'auto', width: '100%', padding: '14px' }}
+                        value={formData.authorName}
+                        onChange={(e) => setFormData(prev => ({ ...prev, authorName: e.target.value }))}
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label className="refine-label">GitHub URL <span style={{ opacity: 0.5, textTransform: 'none', marginLeft: '4px' }}>(Optional)</span></label>
+                      <input
+                        type="url"
+                        className="refine-textarea"
+                        style={{ minHeight: 'auto', width: '100%', padding: '14px' }}
+                        value={formData.githubUrl}
+                        onChange={(e) => setFormData(prev => ({ ...prev, githubUrl: e.target.value }))}
+                        placeholder="https://github.com/..."
+                      />
                     </div>
                   </div>
-                )}
-
-                {/* Tags */}
-                <div>
-                  <label style={{
-                    fontSize: '14px',
-                    color: 'var(--muted)',
-                    marginBottom: '8px',
-                    display: 'block'
-                  }}>
-                    Tags (comma-separated)
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.tags}
-                    onChange={(e) => setFormData(prev => ({ ...prev, tags: e.target.value }))}
-                    style={{
-                      width: '100%',
-                      padding: '14px 20px',
-                      background: 'var(--surface)',
-                      border: '1px solid var(--line)',
-                      borderRadius: '8px',
-                      fontSize: '16px',
-                      color: 'var(--text)',
-                      fontFamily: 'inherit'
-                    }}
-                    placeholder="e.g., planning, productivity, organization"
-                  />
+                  <div className="form-group">
+                    <label className="refine-label">LinkedIn URL <span style={{ opacity: 0.5, textTransform: 'none', marginLeft: '4px' }}>(Optional)</span></label>
+                    <input
+                      type="url"
+                      className="refine-textarea"
+                      style={{ minHeight: 'auto', width: '100%', padding: '14px' }}
+                      value={formData.linkedinUrl}
+                      onChange={(e) => setFormData(prev => ({ ...prev, linkedinUrl: e.target.value }))}
+                      placeholder="https://linkedin.com/in/..."
+                    />
+                    <p style={{ fontSize: '11px', color: 'var(--amber)', marginTop: '8px', opacity: 0.8 }}>
+                      Provide these and we'll give you a shoutout on the website if your prompt is featured!
+                    </p>
+                  </div>
                 </div>
 
-                {/* Prompt */}
-                <div>
-                  <label style={{
-                    fontSize: '14px',
-                    color: 'var(--muted)',
-                    marginBottom: '8px',
-                    display: 'block'
-                  }}>
-                    Prompt Text *
-                  </label>
-                  <textarea
-                    required
-                    value={formData.prompt}
-                    onChange={(e) => setFormData(prev => ({ ...prev, prompt: e.target.value }))}
-                    rows={10}
-                    style={{
-                      width: '100%',
-                      padding: '20px',
-                      background: 'var(--surface)',
-                      border: '1px solid var(--line)',
-                      borderRadius: '8px',
-                      fontSize: '14px',
-                      color: 'var(--text)',
-                      fontFamily: '"JetBrains Mono", monospace',
-                      resize: 'vertical',
-                      lineHeight: '1.6'
-                    }}
-                    placeholder="Paste your complete prompt here..."
-                  />
+                <div style={{ height: '1px', background: 'var(--line)', opacity: 0.5 }} />
+
+                {/* Section 2: Prompt Details */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
+                  <div style={{ fontSize: '11px', color: 'var(--amber)', letterSpacing: '0.1em', textTransform: 'uppercase', fontWeight: 600 }}>02. Prompt Details</div>
+                  
+                  <div className="form-group">
+                    <label className="refine-label">Prompt Title *</label>
+                    <input
+                      type="text" required
+                      className="refine-textarea" style={{ minHeight: 'auto', width: '100%', padding: '14px' }}
+                      value={formData.title}
+                      onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
+                      placeholder="e.g., The Study System Builder"
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label className="refine-label">Short Description *</label>
+                    <textarea
+                      required className="refine-textarea" style={{ minHeight: '100px', width: '100%' }}
+                      value={formData.description}
+                      onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
+                      placeholder="Briefly describe what this prompt does and its purpose"
+                    />
+                  </div>
+
+                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+                    <div className="form-group">
+                      <label className="refine-label">Category *</label>
+                      <select
+                        required className="refine-textarea" style={{ minHeight: 'auto', padding: '14px', width: '100%' }}
+                        value={formData.category}
+                        onChange={(e) => setFormData(prev => ({ ...prev, category: e.target.value }))}
+                      >
+                        {CATEGORIES.map(cat => (
+                          <option key={cat} value={cat}>{CATEGORY_LABELS[cat]}</option>
+                        ))}
+                      </select>
+                    </div>
+
+                    <div className="form-group">
+                      <label className="refine-label">Compatible Models *</label>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '4px' }}>
+                        {PLATFORMS.map(platform => (
+                          <button
+                            key={platform} type="button"
+                            onClick={() => handlePlatformToggle(platform)}
+                            className={`ftab ${formData.platforms.includes(platform) ? 'active' : ''}`}
+                            style={{ padding: '6px 12px', fontSize: '11px', minHeight: 'auto' }}
+                          >
+                            {platform === 'any' ? 'Any' : platform.charAt(0).toUpperCase() + platform.slice(1)}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="form-group">
+                    <label className="refine-label">Full Prompt Architecture *</label>
+                    <textarea
+                      required className="refine-textarea" style={{ minHeight: '300px', width: '100%', fontFamily: '"JetBrains Mono", monospace', fontSize: '13px' }}
+                      value={formData.prompt}
+                      onChange={(e) => setFormData(prev => ({ ...prev, prompt: e.target.value }))}
+                      placeholder="Paste your complete prompt here..."
+                    />
+                  </div>
                 </div>
 
-                {/* Submit Button */}
-                <div>
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    style={{
-                      padding: '16px 32px',
-                      background: 'var(--amber)',
-                      color: 'var(--amber-ink)',
-                      border: 'none',
-                      borderRadius: '999px',
-                      fontSize: '16px',
-                      fontWeight: '500',
-                      cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                      transition: 'transform 0.2s',
-                      width: '100%'
-                    }}
-                    onMouseEnter={(e) => {
-                      if (!isSubmitting) e.currentTarget.style.transform = 'translateY(-2px)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.transform = 'translateY(0)';
-                    }}
-                  >
-                    {isSubmitting ? 'Submitting...' : 'Submit Prompt for Review'}
-                  </button>
+                <button
+                  type="submit" disabled={isSubmitting}
+                  className="refine-primary-btn" style={{ margin: 0, padding: '20px', borderRadius: '12px' }}
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit Architecture for Review'}
+                </button>
+              </form>
+            </div>
+
+            <aside style={{ position: 'sticky', top: '120px' }}>
+              <Leaderboard />
+              
+              <div style={{ padding: '32px', background: 'var(--surface)', border: '1px solid var(--line)', borderRadius: '16px', marginTop: '32px' }}>
+                <h4 style={{ fontSize: '15px', fontWeight: 600, marginBottom: '16px', color: 'var(--amber)' }}>Contributor Guidelines</h4>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '16px', fontSize: '13px', color: 'var(--muted)', lineHeight: '1.6' }}>
+                  <p>• High-density architectures only.</p>
+                  <p>• Ensure all variables are clearly marked.</p>
+                  <p>• Provide a clear description of the persona and task.</p>
+                  <p>• Links will be verified before listing on the Hall of Contributors.</p>
                 </div>
               </div>
-            </form>
-
-            <div style={{ marginTop: '40px', textAlign: 'center', color: 'var(--muted)' }}>
-              <p>Your submission will be reviewed by admin before being added to the public library.</p>
-              <p style={{ marginTop: '8px' }}>
-                <Link href="/browse" style={{ color: 'var(--amber)', textDecoration: 'none' }}>
-                  ← Back to Browse
-                </Link>
-              </p>
-            </div>
+            </aside>
           </div>
         </div>
       </section>
