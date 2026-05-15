@@ -114,7 +114,7 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
           
           <input
             type="text"
-            placeholder="Search prompts by keywords, topics, or tags..."
+            placeholder="Search by keywords, tasks, or prompt types..."
             value={query}
             onChange={e => setQuery(e.target.value)}
           />
@@ -129,38 +129,43 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
         </div>
         <div style={{fontSize: '14px', color: 'var(--muted)', marginTop: '8px', display: 'flex', alignItems: 'center', gap: '8px'}}>
           {isSearching ? (
-            <span style={{ color: 'var(--amber)' }}>Searching...</span>
+            <span style={{ color: 'var(--amber)' }}>Searching our library...</span>
           ) : query ? (
             `Found ${results.length} prompt${results.length !== 1 ? 's' : ''} for "${query}"`
           ) : (
-            'Search for "teaching", "essay", "code", etc.'
+            'Try "Expert architect", "LinkedIn hook", or "Code debugger"...'
           )}
         </div>
       </div>
 
       {/* Model tabs */}
-      <div className="browse-head">
+      <div className="browse-head" style={{ marginBottom: '24px', border: 'none', paddingBottom: 0 }}>
         <div className="filter-tabs">
-          {TABS.map(t => (
-            <button
-              key={t}
-              className={`ftab${platform === t ? " active" : ""}`}
-              onClick={() => {
-                setPlatform(t as Platform);
-                setCurrentPage(1);
-              }}
-            >
-              {t === "any" ? "All models" : t === "chatgpt" ? "ChatGPT" : t.charAt(0).toUpperCase() + t.slice(1)}
-            </button>
-          ))}
-        </div>
-        <div className="meta">
-          {results.length} prompt{results.length !== 1 ? 's' : ''}
+          <div style={{ fontSize: '11px', color: 'var(--muted-2)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px', width: '100%' }}>
+            Select Model
+          </div>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            {TABS.map(t => (
+              <button
+                key={t}
+                className={`ftab${platform === t ? " active" : ""}`}
+                onClick={() => {
+                  setPlatform(t as Platform);
+                  setCurrentPage(1);
+                }}
+              >
+                {t === "any" ? "All models" : t === "chatgpt" ? "ChatGPT" : t.charAt(0).toUpperCase() + t.slice(1)}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Category tabs */}
-      <div className="cat-tabs">
+      <div className="cat-tabs" style={{ marginBottom: '48px' }}>
+        <div style={{ fontSize: '11px', color: 'var(--muted-2)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px', paddingLeft: '8px' }}>
+          Select Category
+        </div>
         <div style={{display: 'flex', gap: '8px', flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: '4px', scrollbarWidth: 'none'}}>
           {CATS.map(c => (
             <button

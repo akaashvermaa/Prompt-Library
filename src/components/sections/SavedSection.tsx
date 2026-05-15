@@ -43,22 +43,20 @@ export function SavedSection({ featuredPrompts }: { featuredPrompts: Prompt[] })
   }
 
   return (
-    <section id="saved-section">
+    <section id="saved-section" style={{ padding: '140px 0' }}>
       <div className="wrap">
-        <div className="sec-head">
-          <div>
-            <div className="eyebrow">
-              {hasSaved ? "Saved / your collection" : "Featured / handpicked"}
-            </div>
-            <h2>
-              {hasSaved ? (
-                <>Prompts you <span className="it">loved.</span></>
-              ) : (
-                <>The ones we keep <span className="it">coming back</span> to.</>
-              )}
-            </h2>
+        <div className="sec-head" style={{ display: 'block' }}>
+          <div className="eyebrow">
+            {hasSaved ? "Saved / your collection" : "Featured / handpicked"}
           </div>
-          <p className="lede">
+          <h2 style={{ marginBottom: '24px' }}>
+            {hasSaved ? (
+              <>Prompts you <span className="it">loved.</span></>
+            ) : (
+              <>The ones we keep <span className="it">coming back</span> to.</>
+            )}
+          </h2>
+          <p className="lede" style={{ maxWidth: '600px', marginBottom: '48px' }}>
             {hasSaved 
               ? "Your personal shortcut to high-performance prompts. Quick access to your most used architectures."
               : "A rotating shelf of prompts our editors actually use. Updated weekly, old favourites archive into Browse."}
@@ -66,8 +64,8 @@ export function SavedSection({ featuredPrompts }: { featuredPrompts: Prompt[] })
         </div>
 
         {!hasSaved && user && (
-          <div className="none-liked-notice" style={{ marginBottom: '40px', padding: '24px', background: 'var(--surface)', border: '1px dashed var(--line)', borderRadius: '12px' }}>
-             <p style={{ color: 'var(--muted)', fontSize: '14px' }}>
+          <div className="none-liked-notice" style={{ marginBottom: '60px', padding: '32px', background: 'var(--surface)', border: '1px dashed var(--line)', borderRadius: '16px' }}>
+             <p style={{ color: 'var(--muted)', fontSize: '15px' }}>
                 <strong>No prompts saved yet.</strong> Hit the heart on any prompt while browsing to build your own collection. 
                 <span style={{ marginLeft: '8px', color: 'var(--amber)' }}>Recommended for you ↓</span>
              </p>
