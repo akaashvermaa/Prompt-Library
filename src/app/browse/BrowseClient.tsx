@@ -11,8 +11,8 @@ const TABS = ["any", "claude", "chatgpt", "gemini", "grok"] as const;
 const CATS = ["all", "study-learn", "write-create", "code-dev", "business-marketing", "review-test", "career-brand", "image-prompts"];
 
 const CAT_LABEL: Record<string, string> = {
-  "study-learn": "Study & Learn", "write-create": "Write & Create", "code-dev": "Code & Dev",
-  "business-marketing": "Business & Marketing", "review-test": "Review & Test", "career-brand": "Career & Brand", "image-prompts": "Image Prompts",
+  "study-learn": "Academic Study", "write-create": "Creative Writing", "code-dev": "Software Engineering",
+  "business-marketing": "Strategic Marketing", "review-test": "Critical Review", "career-brand": "Professional Growth", "image-prompts": "Visual Generation",
 };
 
 export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
@@ -191,16 +191,8 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
             </div>
             <h4>{p.title}</h4>
             <p>{p.description}</p>
-            <div className="foot">
-              <div className="badges">
-                {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
-              </div>
-              <span className="mono" style={{ fontSize: 11, color: "var(--muted-2)" }}>
-                {p.tags.slice(0, 2).map(t => `#${t}`).join(" ")}
-              </span>
-            </div>
             {p.imagePlatforms && p.imagePlatforms.length > 0 && (
-              <div className="image-platforms" style={{ position: 'absolute', bottom: 60, left: 16, right: 16, background: 'var(--surface)', padding: '12px', borderRadius: '6px', border: '1px solid var(--line)' }}>
+              <div className="image-platforms" style={{ background: 'var(--surface)', padding: '12px', borderRadius: '6px', border: '1px solid var(--line)', marginTop: 'auto' }}>
                 <span style={{color: 'var(--amber)'}}>Paste this into →</span>
                 <div style={{ marginTop: '6px' }}>
                   {p.imagePlatforms.map((ip, idx) => (
@@ -214,6 +206,14 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
                 </div>
               </div>
             )}
+            <div className="foot" style={p.imagePlatforms && p.imagePlatforms.length > 0 ? { marginTop: 0 } : {}}>
+              <div className="badges">
+                {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
+              </div>
+              <span className="mono" style={{ fontSize: 11, color: "var(--muted-2)" }}>
+                {p.tags.slice(0, 2).map(t => `#${t}`).join(" ")}
+              </span>
+            </div>
             <div className="copy-container" style={{ position: 'absolute', top: 16, right: 16, opacity: 0, transition: 'opacity 0.2s' }}>
               <CopyButton text={p.prompt} />
             </div>

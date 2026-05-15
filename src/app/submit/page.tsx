@@ -19,15 +19,15 @@ const PLATFORMS = ["claude", "chatgpt", "gemini", "grok", "any"];
 const IMAGE_PLATFORMS = ["midjourney", "dalle3", "imagen4", "stablediffusion"];
 
 const CATEGORY_LABELS: Record<string, string> = {
-  "study-learn": "Study & Learn",
-  "write-create": "Write & Create",
-  "code-dev": "Code & Dev",
-  teaching: "Teaching",
-  "business-marketing": "Business & Marketing",
-  "review-test": "Review & Test",
-  testing: "QA",
-  "career-brand": "Career & Brand",
-  image: "Image"
+  "study-learn": "Academic Study",
+  "write-create": "Creative Writing",
+  "code-dev": "Software Engineering",
+  teaching: "Educational Teaching",
+  "business-marketing": "Strategic Marketing",
+  "review-test": "Critical Review",
+  testing: "Quality Assurance",
+  "career-brand": "Professional Growth",
+  image: "Visual Generation"
 };
 
 export default function SubmitPage() {
