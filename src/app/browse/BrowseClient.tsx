@@ -209,13 +209,10 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
               <div className="badges">
                 {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
               </div>
-              <span className="mono" style={{ fontSize: 11, color: "var(--muted-2)" }}>
-                {p.tags.slice(0, 2).map(t => `#${t}`).join(" ")}
-              </span>
-            </div>
-            <div className="bcard-actions">
-              <LikeButton promptId={p.id} />
-              <CopyButton text={p.prompt} />
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <LikeButton promptId={p.id} />
+                <CopyButton text={p.prompt} />
+              </div>
             </div>
           </Link>
         ))}
