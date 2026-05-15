@@ -19,7 +19,15 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "Medium",
-    "useCase": "Conducting immediate, aggressive pre-commit audits to catch severe structural and security flaws while eliminating stylistic noise."
+    "useCase": "Conducting immediate, aggressive pre-commit audits to catch severe structural and security flaws while eliminating stylistic noise.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "Paste your code here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-002",
@@ -41,7 +49,15 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "Medium",
-    "useCase": "Exposing boundary condition vulnerabilities by modeling adversarial threat vectors and extreme data inputs."
+    "useCase": "Exposing boundary condition vulnerabilities by modeling adversarial threat vectors and extreme data inputs.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "Paste your code here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-003",
@@ -62,7 +78,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Medium",
-    "useCase": "Preventing technical debt accumulation by enforcing SOLID principles, eliminating code duplication, and ensuring semantic clarity."
+    "useCase": "Preventing technical debt accumulation by enforcing SOLID principles, eliminating code duplication, and ensuring semantic clarity.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "Paste your code here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-004",
@@ -84,7 +108,16 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "GitHub",
-    "useCase": "Methodically tracking down deeply embedded logic flaws or subtle timing regressions rather than guessing at symptom fixes."
+    "useCase": "Methodically tracking down deeply embedded logic flaws or subtle timing regressions rather than guessing at symptom fixes.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe the bug here",
+      "paste relevant code"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-005",
@@ -105,7 +138,15 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "GitHub",
-    "useCase": "Designing the complex topology and communication protocols necessary for multi-agent AI ecosystems to function asynchronously."
+    "useCase": "Designing the complex topology and communication protocols necessary for multi-agent AI ecosystems to function asynchronously.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe your system here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-006",
@@ -127,7 +168,16 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "GitHub",
-    "useCase": "Gaining rapid, accurate comprehension of undocumented, monolithic, or highly abstract legacy codebases."
+    "useCase": "Gaining rapid, accurate comprehension of undocumented, monolithic, or highly abstract legacy codebases.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "Paste your code here",
+      "specific variable or function"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-007",
@@ -148,7 +198,15 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "GitHub",
-    "useCase": "Restructuring legacy, highly inefficient database queries into optimized, scalable commands that prevent N+1 issues."
+    "useCase": "Restructuring legacy, highly inefficient database queries into optimized, scalable commands that prevent N+1 issues.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "Paste your SQL query here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-008",
@@ -169,7 +227,15 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "GitHub",
-    "useCase": "Creating safe, bounded runtime environments for AI agents executing tasks directly on host operating systems or active browsers."
+    "useCase": "Creating safe, bounded runtime environments for AI agents executing tasks directly on host operating systems or active browsers.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe the automated task here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-009",
@@ -190,7 +256,15 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "GitHub",
-    "useCase": "Modularizing raw AI capabilities into distinct, verifiable, and highly documented functional units for larger agent frameworks."
+    "useCase": "Modularizing raw AI capabilities into distinct, verifiable, and highly documented functional units for larger agent frameworks.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe what the skill should do"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-010",
@@ -211,7 +285,15 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "GitHub",
-    "useCase": "Building enterprise-grade, autonomous workflows that require strict permission boundaries, rollback capabilities, and continuous state persistence."
+    "useCase": "Building enterprise-grade, autonomous workflows that require strict permission boundaries, rollback capabilities, and continuous state persistence.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe your enterprise workflow"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-011",
@@ -232,7 +314,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You have a crash, an exception, or a production error and need a full breakdown, not just a quick fix."
+    "useCase": "You have a crash, an exception, or a production error and need a full breakdown, not just a quick fix.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE FULL STACK TRACE HERE",
+      "DESCRIBE THE TRIGGER - on login / under load / randomly",
+      "WHAT CHANGED",
+      "Dev / Staging / Production",
+      "runtime and version",
+      "Always / Intermittent / Only under load"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-012",
@@ -254,7 +349,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Your app's memory keeps climbing over time, response times degrade, or the process eventually crashes."
+    "useCase": "Your app's memory keeps climbing over time, response times degrade, or the process eventually crashes.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE CODE HERE",
+      "e.g., Node.js 20, Python 3.12, Java 17",
+      "e.g., heap grows 50MB every hour, GC pauses increasing",
+      "container size, load pattern"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-013",
@@ -275,7 +381,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You have bugs that only appear under concurrent load, flaky tests, or data corruption in multi-threaded code."
+    "useCase": "You have bugs that only appear under concurrent load, flaky tests, or data corruption in multi-threaded code.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE CODE HERE",
+      "WHAT GOES WRONG AND WHEN",
+      "threads / async-await / goroutines / actors",
+      "LANGUAGE + VERSION"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-014",
@@ -297,7 +414,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need a single function or module written properly from scratch - not skeleton code, actual production-quality output."
+    "useCase": "You need a single function or module written properly from scratch - not skeleton code, actual production-quality output.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "LANGUAGE",
+      "DESCRIBE EXACTLY WHAT THE FUNCTION MUST DO",
+      "e.g., Python 3.12, TypeScript 5.4",
+      "e.g., FastAPI, Express, Django - or \"standalone\"",
+      "e.g., must handle 1000 req/s, <100ms p99",
+      "YES / NO - list approved libraries"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-015",
@@ -319,7 +449,22 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need a complete, working API resource - not a template, but fully wired-up endpoints ready to drop into a codebase."
+    "useCase": "You need a complete, working API resource - not a template, but fully wired-up endpoints ready to drop into a codebase.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "e.g., User, Product, Order",
+      "e.g., FastAPI, Express/TypeScript, Spring Boot, Django REST",
+      "e.g., PostgreSQL + SQLAlchemy, MongoDB + Mongoose",
+      "field name",
+      "type",
+      "required / optional",
+      "any constraints",
+      "JWT / API Key / Session / None"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-016",
@@ -340,7 +485,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Starting a new project and want a clean, opinionated structure rather than fighting config from scratch."
+    "useCase": "Starting a new project and want a clean, opinionated structure rather than fighting config from scratch.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "WHAT THE APP DOES IN 2 SENTENCES",
+      "e.g., React 18 + TypeScript + TailwindCSS",
+      "e.g., Node.js + Express / Python + FastAPI",
+      "e.g., PostgreSQL + Prisma ORM",
+      "e.g., JWT, OAuth2, Clerk",
+      "e.g., AWS, Vercel + Railway, Fly.io"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-017",
@@ -362,7 +520,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You have a function or class that needs serious test coverage, not just one or two happy-path checks."
+    "useCase": "You have a function or class that needs serious test coverage, not just one or two happy-path checks.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE FUNCTION OR CLASS HERE",
+      "e.g., Pytest, Jest, JUnit, RSpec",
+      "e.g., unittest.mock, Jest mocks, Mockito"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-018",
@@ -383,7 +551,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need to test a full user flow across the UI and backend, not just isolated units."
+    "useCase": "You need to test a full user flow across the UI and backend, not just isolated units.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "Playwright / Cypress / Selenium",
+      "Web / Mobile Web",
+      "e.g., https://staging.myapp.com"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-019",
@@ -404,7 +582,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need to isolate a unit from its dependencies for testing and want correctly structured mocks rather than brittle ones."
+    "useCase": "You need to isolate a unit from its dependencies for testing and want correctly structured mocks rather than brittle ones.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE THE CODE THAT CALLS EXTERNAL SERVICES",
+      "e.g., Stripe payment API",
+      "e.g., SendGrid email service",
+      "e.g., PostgreSQL database layer",
+      "Jest / Sinon / unittest.mock / Mockito"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-020",
@@ -426,7 +616,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You are designing a new system or breaking up a monolith and need a complete, opinionated architecture before writing code."
+    "useCase": "You are designing a new system or breaking up a monolith and need a complete, opinionated architecture before writing code.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "DESCRIBE WHAT THE SYSTEM DOES",
+      "e.g., 50,000 daily active users, 500 req/s at peak",
+      "e.g., 4 backend engineers, 2 frontend",
+      "Greenfield / Existing monolith to migrate"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-021",
@@ -447,7 +648,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Designing a large-scale system (URL shortener, Twitter clone, payment system, etc.) and want a rigorous structured breakdown."
+    "useCase": "Designing a large-scale system (URL shortener, Twitter clone, payment system, etc.) and want a rigorous structured breakdown.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "e.g., Design a URL shortening service like bit.ly",
+      "e.g., 10,000 requests per second",
+      "e.g., 100 new URLs per second",
+      "e.g., 5 years of data, ~100 bytes per record",
+      "e.g., global availability, <50ms read latency, no auth needed"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-022",
@@ -469,7 +682,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You know you need a pattern (Observer, Strategy, CQRS, Saga, etc.) but want a concrete, real-world implementation - not a textbook toy example."
+    "useCase": "You know you need a pattern (Observer, Strategy, CQRS, Saga, etc.) but want a concrete, real-world implementation - not a textbook toy example.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PATTERN NAME",
+      "LANGUAGE + VERSION",
+      "PASTE RELEVANT EXISTING CODE IF ANY"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-023",
@@ -490,7 +713,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You have old code - callback hell, class-based React, Python 2, jQuery spaghetti - that needs bringing up to current standards."
+    "useCase": "You have old code - callback hell, class-based React, Python 2, jQuery spaghetti - that needs bringing up to current standards.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE LEGACY CODE HERE",
+      "e.g., Python 2.7, JavaScript ES5",
+      "e.g., Python 3.12, TypeScript 5.4",
+      "e.g., class components → hooks, callbacks → async/await",
+      "e.g., public API must not change, no new dependencies"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-024",
@@ -511,7 +746,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You have a class or function that does far too much and needs breaking apart without breaking the behavior."
+    "useCase": "You have a class or function that does far too much and needs breaking apart without breaking the behavior.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE THE LARGE CLASS OR FUNCTION",
+      "What this code does in the system",
+      "External API must remain unchanged: YES / NO",
+      "Database schema is fixed: YES / NO",
+      "Must not introduce new external dependencies: YES / NO"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-025",
@@ -532,7 +779,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Converting callback-based or Promise-chain code to clean async/await with proper error handling."
+    "useCase": "Converting callback-based or Promise-chain code to clean async/await with proper error handling.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "callbacks / Promise chains",
+      "PASTE CODE HERE",
+      "JavaScript / TypeScript / Python",
+      "Crash fast / Recover and continue / Log and skip",
+      "Sequential / Parallel where possible"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-026",
@@ -554,7 +813,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Designing a new API or auditing an existing one for consistency, correctness, and developer experience."
+    "useCase": "Designing a new API or auditing an existing one for consistency, correctness, and developer experience.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "DESCRIBE WHAT THE API DOES",
+      "Internal service / Mobile app / Third-party developers",
+      "JWT / OAuth2 / API Key",
+      "Resource 1",
+      "Resource 2"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-027",
@@ -575,7 +846,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Designing a GraphQL API from scratch or migrating from REST, and want a complete, resolver-connected schema."
+    "useCase": "Designing a GraphQL API from scratch or migrating from REST, and want a complete, resolver-connected schema.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "DESCRIBE THE BUSINESS DOMAIN",
+      "LIST THE MAIN DATA TYPES",
+      "How user identity is passed - JWT in header, etc.",
+      "Web app / Mobile / Both"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-028",
@@ -597,7 +879,21 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Setting up or improving a CI/CD pipeline - want a real, working YAML file, not a generic template."
+    "useCase": "Setting up or improving a CI/CD pipeline - want a real, working YAML file, not a generic template.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "e.g., Node.js 20 / Python 3.12",
+      "e.g., Next.js, FastAPI, Django",
+      "e.g., Jest, Pytest",
+      "YES / NO",
+      "e.g., AWS ECS, Vercel, Fly.io, GCP Cloud Run",
+      "e.g., main → production, develop → staging",
+      "list the secret names - e.g., AWS_ACCESS_KEY, DOCKER_TOKEN"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-029",
@@ -619,7 +915,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Your Docker images are too large, builds are slow, or your Dockerfile has security or caching problems."
+    "useCase": "Your Docker images are too large, builds are slow, or your Dockerfile has security or caching problems.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE DOCKERFILE HERE",
+      "e.g., Python web app, Node.js API, Go binary",
+      "if known",
+      "PRODUCTION / DEV / BOTH NEEDED"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-030",
@@ -641,7 +948,21 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Standing up cloud infrastructure and want production-grade Terraform rather than click-ops."
+    "useCase": "Standing up cloud infrastructure and want production-grade Terraform rather than click-ops.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "AWS / GCP / Azure",
+      "e.g., ECS cluster with auto-scaling",
+      "e.g., RDS PostgreSQL with read replica",
+      "e.g., CloudFront CDN in front of S3",
+      "e.g., VPC with public and private subnets",
+      "dev / staging / prod - or all three using workspaces",
+      "S3 + DynamoDB / GCS / Terraform Cloud"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-031",
@@ -662,7 +983,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need real documentation - not just inline comments, but proper reference docs a new team member can use."
+    "useCase": "You need real documentation - not just inline comments, but proper reference docs a new team member can use.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE FUNCTION, CLASS, OR MODULE",
+      "Junior devs on the team / External API consumers / Both",
+      "Markdown / Sphinx RST / JSDoc / OpenAPI"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-032",
@@ -684,7 +1015,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "A feature needs a proper spec before development starts - something engineers, PMs, and QA can all work from."
+    "useCase": "A feature needs a proper spec before development starts - something engineers, PMs, and QA can all work from.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "FEATURE NAME",
+      "WHY THIS IS BEING BUILT",
+      "Who requested it, who it affects"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-033",
@@ -706,7 +1047,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Your repo needs a proper README that actually helps people get started - not the default one-liner."
+    "useCase": "Your repo needs a proper README that actually helps people get started - not the default one-liner.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PROJECT NAME",
+      "ONE PARAGRAPH DESCRIPTION",
+      "LIST LANGUAGES, FRAMEWORKS, DATABASES USED",
+      "Who will use this - developers, end users, both"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-034",
@@ -728,7 +1080,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Your app is slow and you need a structured approach to finding and fixing bottlenecks - not random micro-optimizations."
+    "useCase": "Your app is slow and you need a structured approach to finding and fixing bottlenecks - not random micro-optimizations.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE CODE OR DESCRIBE THE SYSTEM BOTTLENECK",
+      "e.g., p50: 200ms, p99: 4000ms, throughput: 120 req/s",
+      "e.g., p99 < 500ms, throughput > 1000 req/s",
+      "PASTE FLAME GRAPH TEXT / QUERY PLANS / NONE"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-035",
@@ -749,7 +1112,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You suspect an algorithm is inefficient but want a rigorous analysis before rewriting it."
+    "useCase": "You suspect an algorithm is inefficient but want a rigorous analysis before rewriting it.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE THE ALGORITHM",
+      "e.g., n = 1,000 / n = 10,000,000",
+      "e.g., nearly sorted, random, many duplicates",
+      "e.g., must run in O(1) extra space"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-036",
@@ -771,7 +1145,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Designing a database from requirements - want a normalized, indexed schema rather than figuring it out as you go."
+    "useCase": "Designing a database from requirements - want a normalized, indexed schema rather than figuring it out as you go.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "WHAT THE SYSTEM DOES",
+      "PostgreSQL / MySQL / MongoDB / DynamoDB",
+      "rows per table at 1 year, read/write ratio",
+      "e.g., fetch all orders for a user, sorted by date",
+      "e.g., count active subscriptions per plan"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-037",
@@ -792,7 +1178,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need to alter a production schema safely without downtime or data loss."
+    "useCase": "You need to alter a production schema safely without downtime or data loss.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE CURRENT TABLE DEFINITIONS",
+      "PostgreSQL / MySQL",
+      "approximate row count and table size in GB",
+      "ZERO / MAINTENANCE WINDOW OF X MINUTES"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-038",
@@ -813,7 +1210,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Upgrading a major framework version (React 17→18, Django 3→5, Next.js 13→15, etc.) and need a complete, safe migration plan."
+    "useCase": "Upgrading a major framework version (React 17→18, Django 3→5, Next.js 13→15, etc.) and need a complete, safe migration plan.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "FRAMEWORK vX",
+      "FRAMEWORK vY",
+      "e.g., 80,000 lines, 200 components, 40 API routes",
+      "EXACT CURRENT VERSION",
+      "EXACT TARGET VERSION",
+      "LIST THEM"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-039",
@@ -835,7 +1245,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Breaking apart an existing monolith - need a realistic, incremental plan rather than a risky big rewrite."
+    "useCase": "Breaking apart an existing monolith - need a realistic, incremental plan rather than a risky big rewrite.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "DESCRIBE THE CURRENT SYSTEM - language, framework, database, rough size",
+      "e.g., deploy frequency is blocked by one slow team",
+      "e.g., one module consumes all memory and starves others",
+      "NUMBER OF TEAMS AND THEIR DOMAINS",
+      "ZERO / PLANNED WINDOWS"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-040",
@@ -857,7 +1279,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Reviewing a PR and want a structured, senior-level review that goes beyond style comments."
+    "useCase": "Reviewing a PR and want a structured, senior-level review that goes beyond style comments.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE THE DIFF OR CHANGED CODE",
+      "WHAT THIS PR IS SUPPOSED TO DO",
+      "LANGUAGE, FRAMEWORK, WHAT THE SURROUNDING SYSTEM DOES",
+      "All issues / Security only / Performance only / Logic only"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-041",
@@ -878,7 +1311,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You made a significant technical decision and need to document it in a way the team can reference and revisit later."
+    "useCase": "You made a significant technical decision and need to document it in a way the team can reference and revisit later.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "WHAT PROBLEM TRIGGERED THIS DECISION",
+      "WHO IS MAKING THIS CALL",
+      "TODAY'S DATE",
+      "Proposed / Accepted / Deprecated / Superseded by ADR-XXX"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-042",
@@ -900,7 +1344,21 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Building a non-trivial React component and want it done properly - typed, accessible, tested, and reusable."
+    "useCase": "Building a non-trivial React component and want it done properly - typed, accessible, tested, and reusable.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "DESCRIBE EXACTLY WHAT IT DOES",
+      "VERSION",
+      "TailwindCSS / CSS Modules / Styled Components / plain CSS",
+      "Local state only / Zustand / Redux / Context",
+      "e.g., handles both controlled and uncontrolled usage",
+      "e.g., supports keyboard navigation and screen readers",
+      "e.g., renders a virtualized list of 10,000+ items"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-043",
@@ -921,7 +1379,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Your web app is slow on load or during interaction and you need a structured audit, not guesswork."
+    "useCase": "Your web app is slow on load or during interaction and you need a structured audit, not guesswork.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE COMPONENT TREE, BUNDLE CONFIG, OR DESCRIBE THE SETUP",
+      "e.g., LCP > 4s, FID > 200ms, bundle size 2.4MB",
+      "e.g., laggy scroll on the product listing page",
+      "React / Next.js / Vue / plain JS",
+      "bundler: Webpack/Vite/etc."
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-044",
@@ -942,7 +1412,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You just joined a team or inherited a repo and need to understand how it works quickly."
+    "useCase": "You just joined a team or inherited a repo and need to understand how it works quickly.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE KEY FILES OR DESCRIBE THE REPO STRUCTURE",
+      "LANGUAGE + FRAMEWORK",
+      "e.g., strong Python background, new to Django"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "code-045",
@@ -964,6 +1444,16 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need to explain complex logic to a non-technical stakeholder, write documentation, or simply understand a tangled flow yourself."
+    "useCase": "You need to explain complex logic to a non-technical stakeholder, write documentation, or simply understand a tangled flow yourself.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "PASTE CODE HERE",
+      "Non-technical PM / Junior developer / QA engineer",
+      "Documentation / Stakeholder demo / Team review"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   }
 ]

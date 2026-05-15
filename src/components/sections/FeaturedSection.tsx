@@ -5,11 +5,7 @@ import Link from "next/link";
 const SIZES = ["large", "tall", "", "", "wide", ""];
 
 
-const ArrowIcon = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M7 7h10v10M7 17 17 7"/>
-  </svg>
-);
+const ArrowIcon = () => null;
 
 export async function FeaturedSection() {
   const prompts = await getFeaturedPrompts();

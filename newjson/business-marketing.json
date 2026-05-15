@@ -19,7 +19,18 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "r/PromptEngineering",
-    "useCase": "Securing highlevel meetings by prioritizing aggressive conciseness and eliminating generic, forgettable corporate pleasantries."
+    "useCase": "Securing highlevel meetings by prioritizing aggressive conciseness and eliminating generic, forgettable corporate pleasantries.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "name",
+      "what you want to discuss",
+      "15 / 30 minutes",
+      "previous interactions or relationship"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-002",
@@ -40,7 +51,18 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "r/SaaS",
-    "useCase": "Drastically increasing cold outreach reply rates by mimicking human, high-velocity communication styles that bypass spam filters."
+    "useCase": "Drastically increasing cold outreach reply rates by mimicking human, high-velocity communication styles that bypass spam filters.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe what you do",
+      "who you're emailing and their role",
+      "what problem they probably have",
+      "the result you deliver, with numbers"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-003",
@@ -61,7 +83,15 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Stress-testing arguments and identifying critical logic flaws prior to high-stakes corporate negotiations to prevent blind spots."
+    "useCase": "Stress-testing arguments and identifying critical logic flaws prior to high-stakes corporate negotiations to prevent blind spots.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe your proposal or strategy"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-004",
@@ -83,7 +113,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "r/sales",
-    "useCase": "Providing foundational targeting data for sales teams to ensure outbound cold email efforts are accurately directed at the right demographic."
+    "useCase": "Providing foundational targeting data for sales teams to ensure outbound cold email efforts are accurately directed at the right demographic.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe what you sell"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-005",
@@ -104,7 +142,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "r/SaaS",
-    "useCase": "Extracting highly valuable, honest product feedback from users who have recently abandoned the ecosystem by appealing to their expertise."
+    "useCase": "Extracting highly valuable, honest product feedback from users who have recently abandoned the ecosystem by appealing to their expertise.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "your product name",
+      "what they were using",
+      "what they said"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-006",
@@ -125,7 +173,15 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/ProductMarketing",
-    "useCase": "Ensuring that costly development cycle updates translate into actual user adoption and retention metrics rather than being ignored."
+    "useCase": "Ensuring that costly development cycle updates translate into actual user adoption and retention metrics rather than being ignored.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "list your features here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-007",
@@ -146,7 +202,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "r/SaaS",
-    "useCase": "De-escalating agitated enterprise clients by demonstrating absolute contextual awareness of their historical issues."
+    "useCase": "De-escalating agitated enterprise clients by demonstrating absolute contextual awareness of their historical issues.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "Paste the email thread here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-008",
@@ -167,7 +231,19 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "r/SaaS",
-    "useCase": "Capitalizing on competitor missteps by launching highly targeted, emotionally resonant acquisition campaigns directly at dissatisfied users."
+    "useCase": "Capitalizing on competitor missteps by launching highly targeted, emotionally resonant acquisition campaigns directly at dissatisfied users.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "competitor name",
+      "pricing change / feature removal / outage",
+      "describe exactly what went wrong for them",
+      "how you solve what they're complaining about",
+      "how easy is it to switch to you"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-009",
@@ -188,7 +264,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "r/marketingagency",
-    "useCase": "Resurrecting dead leads through the injection of undeniable, unprompted value rather than guilt-driven pestering."
+    "useCase": "Resurrecting dead leads through the injection of undeniable, unprompted value rather than guilt-driven pestering.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "name and title",
+      "company name",
+      "your offer",
+      "any relevant update you know about"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-010",
@@ -209,7 +296,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "After a lost deal to extract real lessons, not cope."
+    "useCase": "After a lost deal to extract real lessons, not cope.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "product or service",
+      "company size, industry, role of decision-maker",
+      "amount, weeks/months",
+      "their stated reason",
+      "your honest suspicion"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-011",
@@ -230,7 +329,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Preparing for a sales call when you know the objections that will come up."
+    "useCase": "Preparing for a sales call when you know the objections that will come up.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe what you sell",
+      "the number they will balk at",
+      "e.g., \"We already have a solution for this\"",
+      "e.g., \"We don't have budget right now\"",
+      "e.g., \"We need to think about it\"",
+      "e.g., \"Can you send me more info?\""
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-012",
@@ -250,7 +362,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Your price is higher than competitors and you need to defend it without discounting or apologising."
+    "useCase": "Your price is higher than competitors and you need to defend it without discounting or apologising.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "product/service",
+      "price",
+      "lower price"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-013",
@@ -271,7 +393,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Cold outreach on LinkedIn where every other message sounds identical and gets ignored."
+    "useCase": "Cold outreach on LinkedIn where every other message sounds identical and gets ignored.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "first name",
+      "job title",
+      "company name",
+      "what I do and who I do it for"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-014",
@@ -291,7 +424,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Your landing page isn't converting and you suspect the headline and first 100 words are the problem."
+    "useCase": "Your landing page isn't converting and you suspect the headline and first 100 words are the problem.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "paste your current headline",
+      "paste it",
+      "what it does",
+      "who they are and what they desperately want",
+      "specific, measurable result if possible",
+      "the real pain"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-015",
@@ -311,7 +457,16 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need to define or document your brand voice so that any writer, AI tool, or new hire can match it."
+    "useCase": "You need to define or document your brand voice so that any writer, AI tool, or new hire can match it.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "paste a piece of copy you wrote or approved",
+      "paste another"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-016",
@@ -331,7 +486,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You have a customer result and need to turn it into a story that prospects actually read."
+    "useCase": "You have a customer result and need to turn it into a story that prospects actually read.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "company type, not necessarily the name",
+      "the specific problem or state they were in",
+      "your product or service",
+      "specific metric - time saved, revenue gained, cost cut",
+      "how long it took to see results"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-017",
@@ -352,7 +519,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Before you spend money running an ad, test whether the copy is actually doing its job."
+    "useCase": "Before you spend money running an ad, test whether the copy is actually doing its job.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "paste your ad headline, body copy, and CTA",
+      "Facebook / Google / LinkedIn / Out-of-Home",
+      "who it's aimed at",
+      "what you want them to do"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-018",
@@ -372,7 +550,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Writing a LinkedIn post that builds authority without looking like every other engagement-bait post."
+    "useCase": "Writing a LinkedIn post that builds authority without looking like every other engagement-bait post.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "the idea you want to share",
+      "your role and industry",
+      "the actual takeaway",
+      "a specific real thing that happened"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-019",
@@ -393,7 +582,25 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Prospects don't immediately get what you do, or your category feels crowded and you can't differentiate."
+    "useCase": "Prospects don't immediately get what you do, or your category feels crowded and you can't differentiate.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "what we do, who for, how long we've been doing it",
+      "what we currently say we are",
+      "names and their taglines/claims",
+      "the confused or underwhelmed reaction",
+      "their words, not ours",
+      "who",
+      "company name",
+      "category",
+      "unique value",
+      "alternatives",
+      "their limitation"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-020",
@@ -414,7 +621,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Launching something new and need a structured GTM plan before you start spending money."
+    "useCase": "Launching something new and need a structured GTM plan before you start spending money.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "what it is and what it does",
+      "the specific buyer - be narrow",
+      "your pricing model",
+      "your deadline",
+      "what gives you a real edge"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-021",
@@ -435,7 +654,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Before a sales call, investor pitch, or strategy session where you need to know your competitive landscape cold."
+    "useCase": "Before a sales call, investor pitch, or strategy session where you need to know your competitive landscape cold.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "company name",
+      "what we do",
+      "sales team / board / myself"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-022",
@@ -456,7 +685,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You think your pricing might be wrong but aren't sure whether you're underpriced, overpriced, or mis-packaged."
+    "useCase": "You think your pricing might be wrong but aren't sure whether you're underpriced, overpriced, or mis-packaged.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "product or service",
+      "how you charge and how much",
+      "your estimate or data",
+      "what they say",
+      "the happiest tier",
+      "the friction tier"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-023",
@@ -476,7 +718,23 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Monthly or quarterly update to your existing investors - needs to build confidence, not spin the truth."
+    "useCase": "Monthly or quarterly update to your existing investors - needs to build confidence, not spin the truth.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "pre-seed / seed / Series A",
+      "month",
+      "figure and % change vs last month",
+      "figure and % change",
+      "monthly burn and months of runway",
+      "2-3 real things",
+      "be honest - investors respect candour",
+      "real",
+      "intros, advice, a specific ask"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-024",
@@ -496,7 +754,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Cold outreach to a VC you've never met - not a warm intro, just a cold email."
+    "useCase": "Cold outreach to a VC you've never met - not a warm intro, just a cold email.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "first name",
+      "firm name",
+      "something specific",
+      "one sentence, outcome-focused",
+      "pre-seed / seed",
+      "the single most impressive number or fact"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-025",
@@ -517,7 +788,21 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Before a fundraising pitch - stress-test every hole an investor will poke."
+    "useCase": "Before a fundraising pitch - stress-test every hole an investor will poke.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "one sentence",
+      "the category and size",
+      "how we make money",
+      "your numbers",
+      "timing argument",
+      "relevant backgrounds in one sentence each",
+      "amount and what it's for"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-026",
@@ -537,7 +822,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Something went wrong publicly - a product failure, data issue, PR incident - and you need a statement in hours."
+    "useCase": "Something went wrong publicly - a product failure, data issue, PR incident - and you need a statement in hours.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe the incident factually",
+      "customers / employees / the public",
+      "immediate actions taken",
+      "the fix or investigation underway",
+      "be honest about the unknowns"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-027",
@@ -557,7 +854,23 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Pitching a journalist cold - product launch, funding news, story angle - and every other pitch in their inbox sounds the same."
+    "useCase": "Pitching a journalist cold - product launch, funding news, story angle - and every other pitch in their inbox sounds the same.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "first name",
+      "outlet name",
+      "their specific coverage area",
+      "the headline or topic",
+      "the story you'd love to see",
+      "the timeliness hook",
+      "your lead",
+      "third parties",
+      "their beat"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-028",
@@ -578,7 +891,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You have a genuine insight or contrarian view but need help structuring it into a publishable article."
+    "useCase": "You have a genuine insight or contrarian view but need help structuring it into a publishable article.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "what qualifies me to make this argument",
+      "job title and their specific context",
+      "LinkedIn / Forbes / trade journal / blog"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-029",
@@ -598,7 +921,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Your free trial or new user onboarding isn't converting and you need a sequence that actually gets people to the 'aha moment' fast."
+    "useCase": "Your free trial or new user onboarding isn't converting and you need a sequence that actually gets people to the 'aha moment' fast.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "what it does",
+      "be specific",
+      "where users typically go inactive",
+      "the behaviour difference"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-030",
@@ -619,7 +953,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You want to launch or improve a referral program and need a mechanism that actually motivates customers to refer, not just a discount code."
+    "useCase": "You want to launch or improve a referral program and need a mechanism that actually motivates customers to refer, not just a discount code.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "what you sell",
+      "who your current customers are",
+      "if you know it",
+      "your hypothesis",
+      "what you can spend per referred customer"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-031",
@@ -639,28 +985,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "A customer is showing low engagement signals and you want to intervene before they churn - not after."
-  },
-  {
-    "id": "biz-032",
-    "slug": "content-repurposing-engine",
-    "title": "Content Repurposing Engine",
-    "description": "You've created one piece of substantial content and want to extract maximum distribution from it.",
-    "prompt": "Act as a content distribution strategist. I just created:\n[describe the piece - e.g., a 40-minute podcast episode / a 3,000-word\nreport / a 45-minute webinar recording]\n\nTopic: [the subject matter]\nKey insights from it:\n- [insight 1]\n- [insight 2]\n- [insight 3]\n\nTarget audience: [who this was for]\nChannels I publish on: [LinkedIn / email / Twitter / YouTube / blog]\n\nGenerate a repurposing plan:\n1. LinkedIn post - the most surprising or counterintuitive point,\n   told as a story (not a listicle), under 200 words\n2. Email newsletter intro - the hook that makes subscribers click\n   through to the full piece\n3. Three tweet-length insights (under 280 chars each, no hashtags)\n4. One Reddit-style comment for a relevant community - purely useful,\n   zero self-promotion, naturally references the insight\n5. One short-form video script hook (under 30 seconds) that creates\n   enough tension to watch the full version",
-    "category": "business-marketing",
-    "platforms": [
-      "claude",
-      "chatgpt"
+    "useCase": "A customer is showing low engagement signals and you want to intervene before they churn - not after.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "what you sell",
+      "company type, not name",
+      "what problem they signed up to solve",
+      "the outcome they want"
     ],
-    "tags": [
-      "business",
-      "marketing",
-      "content"
-    ],
-    "difficulty": "intermediate",
-    "featured": false,
-    "source": "Community",
-    "useCase": "You've created one piece of substantial content and want to extract maximum distribution from it."
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-033",
@@ -681,7 +1017,21 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Before negotiating a contract - vendor, partnership, or enterprise customer - and you want maximum leverage."
+    "useCase": "Before negotiating a contract - vendor, partnership, or enterprise customer - and you want maximum leverage.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe the contract type and context",
+      "buyer / seller / partner",
+      "who they are and their likely incentives",
+      "what matters most to me",
+      "your best read on what they want",
+      "what makes this deal not worth doing",
+      "who is more time-pressured - me or them"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-034",
@@ -701,7 +1051,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Approaching a potential business partner - referral partner, co-marketing partner, distribution partner - for the first time."
+    "useCase": "Approaching a potential business partner - referral partner, co-marketing partner, distribution partner - for the first time.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "company and their role/business",
+      "their product or service",
+      "what I do",
+      "who we both serve"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-035",
@@ -721,7 +1082,20 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You're stuck on a major business decision and keep going in circles - you need structured external pressure."
+    "useCase": "You're stuck on a major business decision and keep going in circles - you need structured external pressure.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe the choice you're facing",
+      "describe",
+      "describe or write \"stay the course\"",
+      "your current analysis",
+      "your honest answer",
+      "the date"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-036",
@@ -742,7 +1116,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Before a hard conversation - letting someone go, addressing a performance issue, pushing back on a board member, confronting a co-founder."
+    "useCase": "Before a hard conversation - letting someone go, addressing a performance issue, pushing back on a board member, confronting a co-founder.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "their role and relationship to me",
+      "the core issue",
+      "the outcome, not the process",
+      "your real fear",
+      "your honest read"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-037",
@@ -762,7 +1148,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Addressing your team about a major change - restructure, pivot, bad news, or big transition - and you need to get this right."
+    "useCase": "Addressing your team about a major change - restructure, pivot, bad news, or big transition - and you need to get this right.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "the change or news",
+      "the real reason - not the PR version",
+      "the actual impact on people",
+      "the honest unknowns",
+      "the ask"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-038",
@@ -782,7 +1180,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "A customer is ready to be upgraded but you don't want to send a discount-blast or a pushy pitch."
+    "useCase": "A customer is ready to be upgraded but you don't want to send a discount-blast or a pushy pitch.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "plan / tier / package",
+      "months",
+      "the specific behaviour",
+      "the specific capability",
+      "what they're trying to accomplish overall"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-039",
@@ -803,7 +1213,21 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Preparing for a QBR with an enterprise customer - you need to tell a story with data, not just present slides."
+    "useCase": "Preparing for a QBR with an enterprise customer - you need to tell a story with data, not just present slides.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "company type",
+      "Q1/Q2/Q3/Q4 + year",
+      "their original goal",
+      "figure and what it means",
+      "honest",
+      "actions taken",
+      "what's at stake"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-040",
@@ -824,7 +1248,19 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Evaluating whether to enter a new market, geography, or customer segment before committing resources."
+    "useCase": "Evaluating whether to enter a new market, geography, or customer segment before committing resources.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe the new market",
+      "the pull - what makes it attractive",
+      "what we do and who we serve today",
+      "what we already have that would help",
+      "what we would need to build or acquire"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-041",
@@ -844,7 +1280,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Running customer discovery interviews and wanting questions that surface real insights, not socially acceptable answers."
+    "useCase": "Running customer discovery interviews and wanting questions that surface real insights, not socially acceptable answers.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "what you think you already know",
+      "the profile",
+      "30 / 45 / 60 minutes"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-042",
@@ -865,7 +1311,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need to identify emerging signals in your industry before they become obvious and the window closes."
+    "useCase": "You need to identify emerging signals in your industry before they become obvious and the window closes.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "the sector",
+      "what you do",
+      "6 months / 1 year / 3 years - pick one"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-043",
@@ -885,7 +1341,17 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "You need a SWOT for a strategy session, board meeting, or planning cycle - but the usual SWOT is too vague to act on."
+    "useCase": "You need a SWOT for a strategy session, board meeting, or planning cycle - but the usual SWOT is too vague to act on.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "what is being analysed",
+      "next 12 months / 3 years",
+      "the actual strategic question"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "biz-044",
@@ -905,6 +1371,18 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Community",
-    "useCase": "Building or rebuilding the founding story of your brand - for website About pages, pitch decks, media interviews, and new hire onboarding."
+    "useCase": "Building or rebuilding the founding story of your brand - for website About pages, pitch decks, media interviews, and new hire onboarding.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "name",
+      "the functional description",
+      "the origin - not the PR version, the real one",
+      "your customer and the bond",
+      "the ambition"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   }
 ]

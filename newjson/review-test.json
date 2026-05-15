@@ -3,7 +3,7 @@
     "id": "review-001",
     "slug": "brutal-honest-reviewer",
     "title": "The Brutal Honest Reviewer",
-    "description": "Gives unfiltered, direct feedback on any work \u2014 no sugarcoating, no vague praise",
+    "description": "Gives unfiltered, direct feedback on any work — no sugarcoating, no vague praise",
     "prompt": "Review the following [type of work: essay / design / business plan / code / pitch / product idea].\n\n[Paste your work here]\n\nRules:\n- Be brutally honest. Do not soften criticism to protect feelings.\n- Identify the 3 biggest problems that would cause this to fail\n- Rank them by severity (most damaging first)\n- For each problem: explain exactly why it's a problem and give a specific fix\n- At the end: give an honest overall score out of 10 with a one-line justification\n- Do not list things that are working unless asked",
     "category": "review-test",
     "platforms": [
@@ -19,14 +19,23 @@
     "difficulty": "beginner",
     "featured": true,
     "source": "r/PromptEngineering",
-    "useCase": "Getting unfiltered, actionable feedback that actually improves the work rather than generic encouragement."
+    "useCase": "Getting unfiltered, actionable feedback that actually improves the work rather than generic encouragement.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "type of work: essay / design / business plan / code / pitch / product idea",
+      "Paste your work here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-002",
     "slug": "red-team-reviewer",
     "title": "The Red Team Reviewer",
     "description": "Attacks your idea or plan from every angle to find the weaknesses before your critics do",
-    "prompt": "Act as a red team reviewer. Your job is to find every reason why the following [idea / plan / strategy / product] will fail.\n\n[Paste your idea or plan here]\n\nAttack from these angles:\n1. Market \u2014 Why won't people pay for this / use this?\n2. Competition \u2014 Who already does this better?\n3. Execution \u2014 What will go wrong when building it?\n4. Assumptions \u2014 What am I assuming that might not be true?\n5. Timing \u2014 Why is this the wrong time to do this?\n\nFor each point: be specific. Generic criticism is useless. Give me the sharpest version of each objection.",
+    "prompt": "Act as a red team reviewer. Your job is to find every reason why the following [idea / plan / strategy / product] will fail.\n\n[Paste your idea or plan here]\n\nAttack from these angles:\n1. Market — Why won't people pay for this / use this?\n2. Competition — Who already does this better?\n3. Execution — What will go wrong when building it?\n4. Assumptions — What am I assuming that might not be true?\n5. Timing — Why is this the wrong time to do this?\n\nFor each point: be specific. Generic criticism is useless. Give me the sharpest version of each objection.",
     "category": "review-test",
     "platforms": [
       "claude"
@@ -40,14 +49,23 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "r/PromptEngineering",
-    "useCase": "Pressure-testing ideas against the strongest possible objections before pitching or building."
+    "useCase": "Pressure-testing ideas against the strongest possible objections before pitching or building.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "idea / plan / strategy / product",
+      "Paste your idea or plan here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-003",
     "slug": "ui-ux-design-auditor",
     "title": "The UI/UX Design Auditor",
     "description": "Reviews any interface description or screenshot for usability, hierarchy, and conversion issues",
-    "prompt": "Conduct a UI/UX audit of the following interface.\n\n[Describe your interface or paste a description of the screens / user flows]\n\nReview against:\n1. Visual hierarchy \u2014 Is it immediately clear what the user should do first?\n2. Cognitive load \u2014 Are there too many choices or too much information at once?\n3. Consistency \u2014 Are design patterns consistent across the interface?\n4. Error prevention \u2014 Can the user easily make a mistake that's hard to undo?\n5. Conversion friction \u2014 What is stopping users from completing the primary action?\n\nFor each issue: identify the specific element, explain why it's a problem, and suggest the fix.",
+    "prompt": "Conduct a UI/UX audit of the following interface.\n\n[Describe your interface or paste a description of the screens / user flows]\n\nReview against:\n1. Visual hierarchy — Is it immediately clear what the user should do first?\n2. Cognitive load — Are there too many choices or too much information at once?\n3. Consistency — Are design patterns consistent across the interface?\n4. Error prevention — Can the user easily make a mistake that's hard to undo?\n5. Conversion friction — What is stopping users from completing the primary action?\n\nFor each issue: identify the specific element, explain why it's a problem, and suggest the fix.",
     "category": "review-test",
     "platforms": [
       "claude",
@@ -62,13 +80,21 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Identifying interface problems that hurt conversion and usability before development begins."
+    "useCase": "Identifying interface problems that hurt conversion and usability before development begins.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "Describe your interface or paste a description of the screens / user flows"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-004",
     "slug": "pitch-deck-dissector",
     "title": "The Pitch Deck Dissector",
-    "description": "Reviews a pitch deck like a skeptical investor \u2014 identifies missing slides, weak claims, and logical gaps",
+    "description": "Reviews a pitch deck like a skeptical investor — identifies missing slides, weak claims, and logical gaps",
     "prompt": "Review the following pitch deck content as a skeptical Series A investor who has seen 500+ pitches.\n\n[Paste your pitch deck content, slide by slide]\n\nFor each slide evaluate:\n- Is the claim credible and specific? (Flag vague statements like 'huge market opportunity')\n- What question does this slide leave unanswered?\n- What would make me stop reading here?\n\nAt the end:\n1. Which slide is the weakest and why?\n2. What is the one thing missing that would make this fundable?\n3. What is the one thing working in this deck's favor?",
     "category": "review-test",
     "platforms": [
@@ -83,13 +109,21 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "r/startups",
-    "useCase": "Identifying the fatal weaknesses in a pitch before presenting to real investors."
+    "useCase": "Identifying the fatal weaknesses in a pitch before presenting to real investors.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "Paste your pitch deck content, slide by slide"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-005",
     "slug": "resume-brutal-audit",
     "title": "The Resume Brutal Audit",
-    "description": "Reviews a resume like a recruiter with 8 seconds \u2014 cuts what doesn't work and fixes what does",
+    "description": "Reviews a resume like a recruiter with 8 seconds — cuts what doesn't work and fixes what does",
     "prompt": "Review the following resume as a recruiter who spends 8 seconds scanning before deciding to continue or reject.\n\n[Paste resume here]\n\nTarget role: [state the job title and company type you're applying to]\n\nTell me:\n1. What will make a recruiter stop reading immediately (the #1 rejection trigger)\n2. Which 3 bullet points are the weakest and why\n3. What is completely missing that this role requires\n4. Which section should be cut entirely\n5. Rewrite ONE weak bullet point as an example of what strong looks like\n\nBe direct. Politeness is unhelpful here.",
     "category": "review-test",
     "platforms": [
@@ -104,7 +138,16 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/jobs",
-    "useCase": "Getting honest, recruiter-perspective feedback that maximizes the chance of getting past the initial screen."
+    "useCase": "Getting honest, recruiter-perspective feedback that maximizes the chance of getting past the initial screen.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "Paste resume here",
+      "state the job title and company type you're applying to"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-006",
@@ -125,14 +168,22 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "r/writing",
-    "useCase": "Eliminating confusing sentences before publishing content, documentation, or important communication."
+    "useCase": "Eliminating confusing sentences before publishing content, documentation, or important communication.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "Paste your article / post / documentation / email here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-007",
     "slug": "product-idea-validator",
     "title": "The Product Idea Validator",
     "description": "Runs your product idea through a structured validation framework before you build anything",
-    "prompt": "Validate the following product idea using a structured framework.\n\nIdea: [describe your product idea in detail]\n\nAnalyze across 5 dimensions:\n1. Problem Clarity \u2014 Is the problem real, specific, and painful enough that people will pay to solve it?\n2. Market Size \u2014 Who has this problem and how many of them are there?\n3. Existing Alternatives \u2014 How do people solve this today and why is that insufficient?\n4. Unfair Advantage \u2014 Why are you / your team uniquely positioned to build this?\n5. Monetization \u2014 How will this make money and is that model sustainable?\n\nEnd with: Build / Validate More / Kill \u2014 and explain your verdict in one paragraph.",
+    "prompt": "Validate the following product idea using a structured framework.\n\nIdea: [describe your product idea in detail]\n\nAnalyze across 5 dimensions:\n1. Problem Clarity — Is the problem real, specific, and painful enough that people will pay to solve it?\n2. Market Size — Who has this problem and how many of them are there?\n3. Existing Alternatives — How do people solve this today and why is that insufficient?\n4. Unfair Advantage — Why are you / your team uniquely positioned to build this?\n5. Monetization — How will this make money and is that model sustainable?\n\nEnd with: Build / Validate More / Kill — and explain your verdict in one paragraph.",
     "category": "review-test",
     "platforms": [
       "claude",
@@ -147,7 +198,15 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "r/startups",
-    "useCase": "Stress-testing a product idea with a structured framework before investing time or money into building."
+    "useCase": "Stress-testing a product idea with a structured framework before investing time or money into building.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe your product idea in detail"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-008",
@@ -168,7 +227,15 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "r/PromptEngineering",
-    "useCase": "Strengthening arguments by identifying logical gaps before they're exploited by critics or evaluators."
+    "useCase": "Strengthening arguments by identifying logical gaps before they're exploited by critics or evaluators.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "Paste your argument here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-009",
@@ -189,7 +256,15 @@
     "difficulty": "intermediate",
     "featured": true,
     "source": "Kualitee",
-    "useCase": "Rapidly establishing the core defensive testing perimeter for newly developed, critical software features without wasting time on low-impact bugs."
+    "useCase": "Rapidly establishing the core defensive testing perimeter for newly developed, critical software features without wasting time on low-impact bugs.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "paste your feature description or user story here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-010",
@@ -210,7 +285,15 @@
     "difficulty": "beginner",
     "featured": false,
     "source": "TestMuAI",
-    "useCase": "Converting messy, stream-of-consciousness developer notes into professional, highly actionable tickets for tracking systems."
+    "useCase": "Converting messy, stream-of-consciousness developer notes into professional, highly actionable tickets for tracking systems.",
+    "estimatedTime": "3 min",
+    "variables": [
+      "paste your informal bug description here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-011",
@@ -232,7 +315,16 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "TestMuAI",
-    "useCase": "Establishing robust, automated deployment infrastructure that inherently prevents broken code from reaching production servers."
+    "useCase": "Establishing robust, automated deployment infrastructure that inherently prevents broken code from reaching production servers.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "your app type, e.g. React app / Node.js API / Next.js app",
+      "Vercel / AWS / Railway / your platform"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-012",
@@ -253,14 +345,22 @@
     "difficulty": "advanced",
     "featured": true,
     "source": "Medium",
-    "useCase": "Preemptively identifying and patching critical security vulnerabilities before formal penetration testing phases."
+    "useCase": "Preemptively identifying and patching critical security vulnerabilities before formal penetration testing phases.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "Paste your API endpoint code or description here"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-013",
     "slug": "state-mutation-observer",
     "title": "The State Mutation Observer",
     "description": "Finds race conditions and corrupted states caused by rapid concurrent user actions in frontend code",
-    "prompt": "Review the following frontend state management code:\n\n[Paste your state management code here \u2014 Redux, Zustand, React Context, etc.]\n\nHypothesize 5 distinct edge cases where rapid or concurrent user actions could result in:\n- Corrupted or inconsistent state\n- Race conditions between async operations\n- Stale closures capturing outdated state values\n- Optimistic updates that fail to roll back correctly\n- UI getting out of sync with the actual data\n\nFor each case: describe the exact sequence of user actions required to trigger it, the resulting failure, and the fix.",
+    "prompt": "Review the following frontend state management code:\n\n[Paste your state management code here — Redux, Zustand, React Context, etc.]\n\nHypothesize 5 distinct edge cases where rapid or concurrent user actions could result in:\n- Corrupted or inconsistent state\n- Race conditions between async operations\n- Stale closures capturing outdated state values\n- Optimistic updates that fail to roll back correctly\n- UI getting out of sync with the actual data\n\nFor each case: describe the exact sequence of user actions required to trigger it, the resulting failure, and the fix.",
     "category": "review-test",
     "platforms": [
       "claude"
@@ -274,7 +374,15 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "Derived from engineering practices",
-    "useCase": "Preventing subtle, nearly impossible-to-replicate frontend bugs caused by asynchronous data handling and unpredictable user pacing."
+    "useCase": "Preventing subtle, nearly impossible-to-replicate frontend bugs caused by asynchronous data handling and unpredictable user pacing.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "Paste your state management code here — Redux, Zustand, React Context, etc."
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-014",
@@ -295,7 +403,15 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Derived from engineering practices",
-    "useCase": "Ensuring backend infrastructure is robust enough to handle severely malformed data streams without crashing the server."
+    "useCase": "Ensuring backend infrastructure is robust enough to handle severely malformed data streams without crashing the server.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "describe your endpoint, method, and expected payload structure"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-015",
@@ -316,13 +432,24 @@
     "difficulty": "intermediate",
     "featured": false,
     "source": "Derived from engineering practices",
-    "useCase": "Aligning developer output precisely with product management expectations prior to the commencement of coding to prevent scope creep."
+    "useCase": "Aligning developer output precisely with product management expectations prior to the commencement of coding to prevent scope creep.",
+    "estimatedTime": "5 min",
+    "variables": [
+      "Paste your user story here",
+      "precondition",
+      "action",
+      "expected outcome"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-016",
     "slug": "performance-regression-profiler",
     "title": "The Performance Regression Profiler",
-    "description": "Diagnoses latency regressions with a strict protocol \u2014 no guesswork, only telemetry-driven hypotheses",
+    "description": "Diagnoses latency regressions with a strict protocol — no guesswork, only telemetry-driven hypotheses",
     "prompt": "Act as a Systems Reliability Engineer. The following module has shown a performance regression:\n\nRegression details: [describe the latency increase, e.g. '400ms slowdown in checkout flow']\nCode or system description: [paste relevant code or architecture description]\n\nProvide:\n1. A strict diagnostic protocol to isolate the bottleneck (step by step)\n2. The exact instrumentation probes to deploy (logging points, metrics, profiling tools)\n3. Top 3 algorithmic inefficiencies likely causing the regression (ranked by probability)\n4. How to reproduce the regression consistently in a test environment\n5. The fix for each hypothesis if confirmed",
     "category": "review-test",
     "platforms": [
@@ -337,7 +464,16 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "GitHub",
-    "useCase": "Systematically hunting down invisible performance drains that degrade user experience at scale, replacing guesswork with telemetry."
+    "useCase": "Systematically hunting down invisible performance drains that degrade user experience at scale, replacing guesswork with telemetry.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe the latency increase, e.g. '400ms slowdown in checkout flow'",
+      "paste relevant code or architecture description"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-017",
@@ -359,7 +495,17 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "Derived from engineering practices",
-    "useCase": "Accelerating the transition from slow manual QA processes to fully automated, highly reliable continuous test suites."
+    "useCase": "Accelerating the transition from slow manual QA processes to fully automated, highly reliable continuous test suites.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "paste your 3-5 manual test cases here",
+      "Playwright / Cypress / Selenium",
+      "React / Next.js / Vue / other"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   },
   {
     "id": "review-018",
@@ -380,6 +526,16 @@
     "difficulty": "advanced",
     "featured": false,
     "source": "Derived from engineering practices",
-    "useCase": "Guaranteeing application stability and smooth user experience in unpredictable, real-world cellular network environments."
+    "useCase": "Guaranteeing application stability and smooth user experience in unpredictable, real-world cellular network environments.",
+    "estimatedTime": "10 min",
+    "variables": [
+      "describe the user flow step by step, e.g. 'user adds item to cart, proceeds to checkout, enters payment details, submits order'",
+      "X",
+      "Y"
+    ],
+    "exampleOutput": "",
+    "updatedAt": "2026-05",
+    "copyCount": 0,
+    "relatedPrompts": []
   }
 ]

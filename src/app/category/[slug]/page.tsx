@@ -4,6 +4,8 @@ import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { notFound } from "next/navigation";
 
 const DIFF_CLASS: Record<string,string> = { beginner:"d-beg", intermediate:"d-int", advanced:"d-adv" };
+
+export const revalidate = 0;
 const CAT_LABELS: Record<string,{ label: string; italic: string }> = {
   "study-learn":     { label: "Academic",     italic: "Study" },
   "write-create":    { label: "Creative",    italic: "Writing" },
@@ -14,6 +16,9 @@ const CAT_LABELS: Record<string,{ label: string; italic: string }> = {
   testing:           { label: "Quality",               italic: "Assurance" },
   "career-brand":    { label: "Professional",    italic: "Growth" },
   "image-prompts":   { label: "Visual",             italic: "Generation" },
+  "ai-agents":       { label: "Agentic",            italic: "Workflows" },
+  instagram:         { label: "Instagram",          italic: "Socials" },
+  youtube:           { label: "YouTube",            italic: "Video" },
 };
 
 export async function generateStaticParams() {
