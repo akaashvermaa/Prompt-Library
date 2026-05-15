@@ -29,14 +29,13 @@ export default async function Home() {
             the <span className="it">same</span> prompt.
           </h2>
           <p className="sub">
-            Save your favourites, browse the library, and copy a tested prompt in one click. 
+            Save your favourites, tailor templates with AI, and build your own personal vault of high-performance prompts.
           </p>
           <div className="actions">
             <Link href="/browse" className="btn-prim">
               Browse the library
-              
             </Link>
-            <Link href="/submit" className="btn-sec">Submit a prompt</Link>
+            <Link href="/liked" className="btn-sec">View your vault</Link>
           </div>
         </div>
       </section>

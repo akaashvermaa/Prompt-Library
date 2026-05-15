@@ -34,12 +34,12 @@ export function BrowseSection({ prompts }: { prompts: Prompt[] }) {
   return (
     <section id="browse">
       <div className="wrap">
-        <div className="sec-head">
-          <div>
-            <div className="eyebrow">Browse / {prompts.length} total</div>
-            <h2>The whole <span className="it">stack</span>, filtered.</h2>
-          </div>
-          <p className="lede">Filter by model. Click any card to open the full prompt with copy &amp; variables.</p>
+        <div className="sec-head" style={{ display: 'block' }}>
+          <div className="eyebrow">Browse / {prompts.length} total</div>
+          <h2>The whole <span className="it">stack</span>, filtered.</h2>
+          <p className="lede" style={{ marginTop: '24px', opacity: 0.8, maxWidth: '600px' }}>
+            Filter by model. Click any card to open the full prompt with copy &amp; variables.
+          </p>
         </div>
 
         <div className="browse-head">

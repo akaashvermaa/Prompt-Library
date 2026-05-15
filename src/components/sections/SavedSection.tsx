@@ -6,6 +6,7 @@ import { getPromptsByIds } from "@/lib/prompts";
 import { Prompt } from "@/types";
 import Link from "next/link";
 import { LikeButton } from "@/components/ui/LikeButton";
+import { GridSkeleton } from "@/components/ui/Skeleton";
 
 const SIZES = ["large", "tall", "", "", "wide", ""];
 
@@ -32,11 +33,16 @@ export function SavedSection({ featuredPrompts }: { featuredPrompts: Prompt[] })
   const hasSaved = savedPrompts.length > 0;
   const displayPrompts = hasSaved ? savedPrompts.slice(0, 6) : featuredPrompts.slice(0, 6);
 
-  if (likesLoading && loading) {
+  // Use Skeleton while loading if the user is potentially logged in
+  if (likesLoading || (user && loading)) {
     return (
-      <section id="saved-section">
+      <section id="saved-section" style={{ padding: '140px 0' }}>
         <div className="wrap">
-          <div className="loading-text">Synchronizing your library...</div>
+          <div className="sec-head" style={{ display: 'block' }}>
+            <div className="eyebrow" style={{ opacity: 0.5 }}>Synchronizing Vault...</div>
+            <h2 style={{ marginBottom: '24px' }}>Loading your <span className="it">collection</span></h2>
+          </div>
+          <GridSkeleton count={3} />
         </div>
       </section>
     );

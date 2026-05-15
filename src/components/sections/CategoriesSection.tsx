@@ -24,12 +24,14 @@ export async function CategoriesSection() {
   return (
     <section id="categories" className="cats-section">
       <div className="wrap">
-        <div className="sec-head">
+        <div className="sec-head" style={{ display: 'block' }}>
           <div>
             <div className="eyebrow">Categories / index</div>
             <h2>Sorted by <span className="it">craft</span>, not by trend.</h2>
+            <p className="lede" style={{ marginTop: '24px', opacity: 0.8, maxWidth: '600px' }}>
+              Ten working categories. Each prompt belongs to exactly one. No "misc", no tag soup.
+            </p>
           </div>
-          <p className="lede">Ten working categories. Each prompt belongs to exactly one. No "misc", no tag soup.</p>
         </div>
         <div className="cats">
           {CATEGORIES.map((cat, i) => (
