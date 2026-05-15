@@ -12,12 +12,12 @@ export default async function BrowsePage() {
     <div className="page-pt">
       <section>
         <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <div className="eyebrow">Browse / {prompts.length} prompts</div>
-              <h2>The whole <span className="it">stack</span>, filtered.</h2>
-            </div>
-            <p className="lede">Filter by model or category. Live search - no submit needed.</p>
+          <div className="sec-head" style={{ display: 'block' }}>
+            <div className="eyebrow">Browse / {prompts.length} architectures</div>
+            <h2 style={{ marginBottom: '24px' }}>The whole <span className="it">stack</span>, filtered.</h2>
+            <p className="lede" style={{ maxWidth: '600px' }}>
+              Explore our curated archive of high-performance instructions. Use the filters below to find exactly what you need for your workflow.
+            </p>
           </div>
           <Suspense fallback={
             <div className="loading-text">

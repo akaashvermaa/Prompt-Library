@@ -9,7 +9,7 @@ import { AuthModal } from "@/components/ui/AuthModal";
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 
 export const metadata: Metadata = {
-  title: "PromptVault - A library for the prompt-craft era",
+  title: "PromptVault",
   description: "A curated, living archive of tested prompts for Claude, ChatGPT, Gemini and Grok.",
 };
 

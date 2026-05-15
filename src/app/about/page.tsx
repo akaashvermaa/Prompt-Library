@@ -1,240 +1,113 @@
 "use client";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 
 export default function AboutPage() {
   const [submissionsCount, setSubmissionsCount] = useState(0);
 
   useEffect(() => {
-    fetchSubmissionsCount();
+    fetch('/api/submit')
+      .then(res => res.json())
+      .then(data => setSubmissionsCount(data.length))
+      .catch(() => {});
   }, []);
 
-  const fetchSubmissionsCount = async () => {
-    try {
-      const response = await fetch('/api/submit', {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-      const data = await response.json();
-      setSubmissionsCount(data.length);
-    } catch (error) {
-      console.error('Error fetching submissions count:', error);
-    }
-  };
-
   return (
-    <div className="min-h-screen">
-      <Navbar />
-
-      {/* Hero Section */}
-      <section className="hero">
+    <div className="page-pt">
+      {/* Hero */}
+      <section className="hero" style={{ padding: '40px 0 60px' }}>
         <div className="wrap">
-          <div className="hero-meta">
-            <span>About</span>
-
-            <span>Learn more about PromptVault</span>
-          </div>
-          <h1>
-            Your community-driven<br />
-            <span className="it">prompt</span> library
-          </h1>
-          <div className="hero-row">
+          <div className="sec-head">
             <div>
-              <p className="hero-sub">
-                PromptVault is the <strong>curated repository</strong> of AI prompts, built and maintained by the community. Save time and unlock the true potential of your favorite AI models.
+              <div className="eyebrow">A humble mission</div>
+              <h1>
+                Built for <span className="it">humans</span>,<br />
+                powered by community.
+              </h1>
+            </div>
+            <p className="lede">
+              PromptVault isn't just a library. It's a humble attempt to make the future of AI accessible, one shared prompt at a time.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* The Philosophy */}
+      <section style={{ background: 'var(--bg-2)', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)' }}>
+        <div className="wrap">
+          <div className="feat-grid">
+            <div className="pcard large">
+              <div className="top">
+                <span className="num">01 / PHILOSOPHY</span>
+              </div>
+              <h3 className="serif">The belief in <span className="it">helping.</span></h3>
+              <p style={{ fontSize: '16px', color: 'var(--text)', opacity: 0.9 }}>
+                We started PromptVault with a simple realization: the gap between "AI is cool" and "AI is useful" is usually just a few well-chosen words. 
+              </p>
+              <p>
+                There is a unique joy in seeing someone finally get the result they were looking for. We believe that by sharing our best prompt architectures, we aren't just giving away code—we're helping people save time, reduce stress, and focus on what they actually love doing.
               </p>
             </div>
-            <div className="hero-stats">
-              <div className="stat">
-                <div className="n">100+</div>
-                <div className="l">PROMPTS</div>
+
+            <div className="pcard tall">
+              <div className="top">
+                <span className="num">02 / CORE</span>
               </div>
-              <div className="stat">
-                <div className="n">{submissionsCount}</div>
-                <div className="l">PENDING</div>
-              </div>
-              <div className="stat">
-                <div className="n">50+</div>
-                <div className="l">CONTRIBUTORS</div>
-              </div>
+              <h3 className="serif">Always <span className="it">open.</span></h3>
+              <p>
+                Knowledge shouldn't be gated behind complex paywalls or confusing interfaces. 
+              </p>
+              <p>
+                PromptVault is designed to be a friction-less experience. Whether you are an expert engineer or someone opening ChatGPT for the first time, you are welcome here. We are here to help you get the most out of these machines.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Marquee */}
-      <div className="strip">
-        <div className="strip-track">
-          <div className="strip-item">
-            <span>Think bigger</span>
-            <span className="star"></span>
-            <span className="it">Build faster</span>
-          </div>
-          <div className="strip-item">
-            <span>Precision prompts</span>
-            <span className="star"></span>
-            <span className="it">Perfect outputs</span>
-          </div>
-          <div className="strip-item">
-            <span>Unlock AI</span>
-            <span className="star"></span>
-            <span className="it">Without limits</span>
-          </div>
-          <div className="strip-item">
-            <span>Think bigger</span>
-            <span className="star"></span>
-            <span className="it">Build faster</span>
-          </div>
-          <div className="strip-item">
-            <span>Precision prompts</span>
-            <span className="star"></span>
-            <span className="it">Perfect outputs</span>
-          </div>
-          <div className="strip-item">
-            <span>Unlock AI</span>
-            <span className="star"></span>
-            <span className="it">Without limits</span>
-          </div>
-        </div>
-      </div>
-
-      {/* Our Mission Section */}
+      {/* Community Stats */}
       <section>
         <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <div className="eyebrow">Our mission</div>
-              <h2>
-                Building the world's<br />
-                <span className="it">best prompt</span> library
-              </h2>
-            </div>
-            <p className="lede">
-              We're creating a living library of prompts that evolve with the AI landscape.
-            </p>
+          <div className="sec-head" style={{ marginBottom: '40px' }}>
+             <div>
+               <div className="eyebrow">Growing together</div>
+               <h2>A small project with <span className="it">big</span> heart.</h2>
+             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="hero-card">
-              <div className="card-head">
-                <span>Why we built this</span>
-              </div>
-              <p>
-                PromptVault was created to solve a simple problem: everyone needs good prompts, but finding them is hard. We believe great AI tools deserve equally great prompts.
-              </p>
+          <div className="hero-stats" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '24px' }}>
+            <div className="pcard" style={{ padding: '32px' }}>
+              <div className="serif" style={{ fontSize: '48px', color: 'var(--amber)' }}>100+</div>
+              <div className="mono" style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.1em' }}>CURATED PROMPTS</div>
             </div>
-
-            <div className="hero-card">
-              <div className="card-head">
-                <span>What makes us different</span>
-                <div className="live">
-                  <span className="ping"></span>
-                  <span>Live</span>
-                </div>
-              </div>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '12px' }}>
-                  <span>+</span>
-                  <span style={{ lineHeight: '1.6' }}>Community-curated content</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '12px' }}>
-                  <span>+</span>
-                  <span style={{ lineHeight: '1.6' }}>One-click copy functionality</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', marginBottom: '12px' }}>
-                  <span>+</span>
-                  <span style={{ lineHeight: '1.6' }}>Platform-specific optimization</span>
-                </li>
-                <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
-                  <span>+</span>
-                  <span style={{ lineHeight: '1.6' }}>Zero friction experience</span>
-                </li>
-              </ul>
+            <div className="pcard" style={{ padding: '32px' }}>
+              <div className="serif" style={{ fontSize: '48px', color: 'var(--amber)' }}>{submissionsCount}</div>
+              <div className="mono" style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.1em' }}>COMMUNITY SUBMISSIONS</div>
+            </div>
+            <div className="pcard" style={{ padding: '32px' }}>
+              <div className="serif" style={{ fontSize: '48px', color: 'var(--amber)' }}>Open</div>
+              <div className="mono" style={{ fontSize: '11px', color: 'var(--muted)', letterSpacing: '0.1em' }}>ACCESS FOR ALL</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="cats-section">
+      {/* Helping Section */}
+      <section style={{ padding: '100px 0', borderTop: '1px solid var(--line)' }}>
         <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <div className="eyebrow">Platform features</div>
-              <h2>
-                Everything you need<br />
-                <span className="it">to master</span> AI
-              </h2>
-            </div>
-            <p className="lede">
-                Built with prompt engineers and power users in mind.
+          <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+            <div className="eyebrow" style={{ justifyContent: 'center' }}>How we help</div>
+            <h2 className="serif" style={{ fontSize: '42px', marginBottom: '24px' }}>Every click is a <span className="it">shared success.</span></h2>
+            <p style={{ fontSize: '18px', color: 'var(--muted)', lineHeight: '1.7', marginBottom: '40px' }}>
+              Our mission is to take the guesswork out of prompting. We test every submission, refine the variables, and package them so they work for you instantly. If we can save you even five minutes today, our job is done.
             </p>
-          </div>
-
-          <div className="cats">
-            <Link href="/browse" className="cat">
-              <div className="idx">01</div>
-              <div className="name">
-                <span className="it">Browse</span>
-              </div>
-              <div className="count">100+ prompts</div>
-              
-            </Link>
-
-            <Link href="/browse" className="cat">
-              <div className="idx">02</div>
-              <div className="name">
-                <span className="it">Categories</span>
-              </div>
-              <div className="count">10+ types</div>
-              
-            </Link>
-
-            <Link href="#" className="cat">
-              <div className="idx">03</div>
-              <div className="name">
-                <span className="it">Search</span>
-              </div>
-              <div className="count">Smart find</div>
-              
-            </Link>
-
-            <Link href="#" className="cat">
-              <div className="idx">04</div>
-              <div className="name">
-                <span className="it">Save</span>
-              </div>
-              <div className="count">Quick access</div>
-              
-            </Link>
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center' }}>
+              <Link href="/browse" className="btn-prim">Browse the Library</Link>
+              <Link href="/submit" className="btn-sec">Contribute a Prompt</Link>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      <section className="cta-section">
-        <div className="wrap">
-          <h2>
-            Ready to level up<br />
-            your AI <span className="it">workflow</span>?
-          </h2>
-          <p className="sub">
-            Join thousands of professionals who are using PromptVault to supercharge their AI interactions.
-          </p>
-          <div className="actions">
-            <Link href="/browse" className="btn-prim">
-              Browse prompts
-              
-            </Link>
-            <Link href="/submit" className="btn-sec">Submit your prompt</Link>
-          </div>
-        </div>
-      </section>
-
-          </div>
+    </div>
   );
 }

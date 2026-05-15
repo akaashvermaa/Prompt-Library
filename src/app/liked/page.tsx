@@ -36,12 +36,10 @@ export default function LikedPage() {
     <div className="page-pt">
       <section>
         <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <div className="eyebrow">Saved / your collection</div>
-              <h2>Prompts you <span className="it">loved.</span></h2>
-            </div>
-            <p className="lede">
+          <div className="sec-head" style={{ display: 'block' }}>
+            <div className="eyebrow">Saved / your collection</div>
+            <h2 style={{ marginBottom: '24px' }}>Prompts you <span className="it">loved.</span></h2>
+            <p className="lede" style={{ maxWidth: '600px' }}>
               {user
                 ? `${prompts.length} saved prompt${prompts.length !== 1 ? "s" : ""}. Copy any one instantly.`
                 : "Sign in to see your saved prompts."}
