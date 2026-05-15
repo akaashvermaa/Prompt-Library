@@ -2,13 +2,13 @@ import { getAllPrompts } from "@/lib/prompts";
 import Link from "next/link";
 
 const CATEGORIES = [
-  { slug: "study-learn",     label: "Study & Learn",     italic: "Learning" },
-  { slug: "write-create",    label: "Write & Create",    italic: "Essays" },
-  { slug: "code-dev",        label: "Code & Dev",        italic: "Development" },
-  { slug: "business-marketing", label: "Business & Marketing", italic: "Email" },
-  { slug: "review-test",    label: "Review & Test",    italic: "Feedback" },
-  { slug: "career-brand",    label: "Career & Brand",   italic: "Career" },
-  { slug: "image-prompts",   label: "Image",           italic: "Generation" },
+  { slug: "study-learn",     label: "Academic",     italic: "Study" },
+  { slug: "write-create",    label: "Creative",    italic: "Writing" },
+  { slug: "code-dev",        label: "Software",        italic: "Engineering" },
+  { slug: "business-marketing", label: "Strategic", italic: "Marketing" },
+  { slug: "review-test",    label: "Critical",    italic: "Review" },
+  { slug: "career-brand",    label: "Professional",   italic: "Growth" },
+  { slug: "image-prompts",   label: "Visual",           italic: "Generation" },
 ];
 
 const ArrowIcon = () => (
@@ -36,7 +36,7 @@ export async function CategoriesSection() {
           {CATEGORIES.map((cat, i) => (
             <Link key={cat.slug} href={`/category/${cat.slug}`} className="cat">
               <span className="idx">{String(i + 1).padStart(2, "0")}</span>
-              <span className="name">{cat.label} &amp; <span className="it">{cat.italic}</span></span>
+              <span className="name">{cat.label} <span className="it">{cat.italic}</span></span>
               <span className="count">{counts[cat.slug] ?? 0} prompts</span>
               <span className="arrow"><ArrowIcon /></span>
             </Link>

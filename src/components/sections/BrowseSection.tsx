@@ -7,8 +7,8 @@ import { PlatformBadge } from "@/components/ui/PlatformBadge";
 const TABS = ["all", "claude", "chatgpt", "gemini", "grok"] as const;
 
 const CAT_LABEL: Record<string, string> = {
-  "study-learn": "Study & Learn", "write-create": "Write & Create", "code-dev": "Code & Dev",
-  "business-marketing": "Business & Marketing", "review-test": "Review & Test", "career-brand": "Career & Brand", "image-prompts": "Image Prompts",
+  "study-learn": "Academic Study", "write-create": "Creative Writing", "code-dev": "Software Engineering",
+  "business-marketing": "Strategic Marketing", "review-test": "Critical Review", "career-brand": "Professional Growth", "image-prompts": "Visual Generation",
 };
 
 export function BrowseSection({ prompts }: { prompts: Prompt[] }) {

@@ -5,15 +5,15 @@ import { notFound } from "next/navigation";
 
 const DIFF_CLASS: Record<string,string> = { beginner:"d-beg", intermediate:"d-int", advanced:"d-adv" };
 const CAT_LABELS: Record<string,{ label: string; italic: string }> = {
-  "study-learn":     { label: "Study & Learn",     italic: "Learning" },
-  "write-create":    { label: "Write & Create",    italic: "Essays" },
-  "code-dev":        { label: "Code & Dev",        italic: "Development" },
-  teaching:          { label: "Teaching",          italic: "Explaining" },
-  "business-marketing": { label: "Business & Marketing", italic: "Email" },
-  "review-test":    { label: "Review & Test",    italic: "Feedback" },
-  testing:           { label: "QA",               italic: "Testing" },
-  "career-brand":    { label: "Career & Brand",    italic: "Career" },
-  image:             { label: "Image",             italic: "Generation" },
+  "study-learn":     { label: "Academic",     italic: "Study" },
+  "write-create":    { label: "Creative",    italic: "Writing" },
+  "code-dev":        { label: "Software",        italic: "Engineering" },
+  teaching:          { label: "Educational",          italic: "Teaching" },
+  "business-marketing": { label: "Strategic", italic: "Marketing" },
+  "review-test":    { label: "Critical",    italic: "Review" },
+  testing:           { label: "Quality",               italic: "Assurance" },
+  "career-brand":    { label: "Professional",    italic: "Growth" },
+  "image-prompts":   { label: "Visual",             italic: "Generation" },
 };
 
 export async function generateStaticParams() {
@@ -33,7 +33,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
           <div className="sec-head">
             <div>
               <div className="eyebrow">Category / {slug}</div>
-              <h2>{meta.label} &amp; <span className="it">{meta.italic}</span></h2>
+              <h2>{meta.label} <span className="it">{meta.italic}</span></h2>
             </div>
             <p className="lede">{prompts.length} prompts in this category.</p>
           </div>
