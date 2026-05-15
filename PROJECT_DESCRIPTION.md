@@ -1,7 +1,7 @@
 # PromptVault - Project Description
 
 ## Overview
-PromptVault is a modern, minimalist web application that serves as a curated library of AI prompts for popular language models including Claude, ChatGPT, Gemini, and Grok. The application provides a clean, distraction-free interface for discovering, searching, and copying prompts for various use cases.
+PromptVault is a modern, high-performance web application that serves as a curated library of AI prompts for popular language models including Claude, ChatGPT, Gemini, and Grok. Originally built as a static resource, it has evolved into a personalized, account-gated experience where users can build their own "vault" of saved prompt architectures. The application combines a minimalist, premium aesthetic with deep integration into Supabase for real-time data and authentication.
 
 ## Architecture
 
@@ -9,80 +9,72 @@ PromptVault is a modern, minimalist web application that serves as a curated lib
 - **Next.js 16.2.6** with App Router
 - **React 19.2.4** for UI components
 - **TypeScript** for type safety
-- **Tailwind CSS v4** for styling
+- **Tailwind CSS v4** for styling and utility-first design
+- **Supabase** for Backend-as-a-Service (Database & Auth)
 - **Lucide React** for icons
+- **Gemini AI** for prompt refinement (Refine API)
 
 ### File Structure
 ```
 src/
 ├── app/                          # Next.js App Router pages
-│   ├── page.tsx                 # Homepage (ultra-simple)
+│   ├── page.tsx                 # Homepage (Hero & Saved/Featured sections)
+│   ├── about/                   # About page with polished marquee
 │   ├── browse/page.tsx          # Browse all prompts
 │   ├── search/page.tsx          # Search results page
-│   ├── category/[slug]/page.tsx # Individual category pages
+│   ├── liked/page.tsx           # User's personal library (saved prompts)
+│   ├── submit/page.tsx          # Contributor submission form & Leaderboard
+│   ├── category/[slug]/page.tsx # Individual category pages with local search
 │   └── prompt/[slug]/page.tsx   # Individual prompt pages
 ├── components/
 │   ├── layout/
-│   │   ├── Navbar.tsx           # Navigation with search
+│   │   ├── Navbar.tsx           # Navigation with search and auth status
 │   │   └── Footer.tsx           # Footer component
 │   ├── sections/
 │   │   ├── Hero.tsx             # Minimal hero section
-│   │   ├── FeaturedPrompts.tsx  # Featured prompts display
-│   │   ├── CategoryGrid.tsx     # Category browsing
-│   │   ├── PromptGrid.tsx       # Prompt grid with filters
-│   │   └── RelatedPrompts.tsx   # Related prompts
+│   │   ├── SavedSection.tsx     # Context-aware saved/featured prompts
+│   │   ├── Leaderboard.tsx      # Contributor Hall of Fame
+│   │   └── CategoryGrid.tsx     # Category browsing
 │   └── ui/
-│       ├── SearchBar.tsx        # Search component
-│       ├── PromptCard.tsx       # Individual prompt card
-│       ├── CategoryPill.tsx     # Category selector
-│       ├── PlatformBadge.tsx    # Platform indicator
-│       └── CopyButton.tsx       # Copy to clipboard
-├── data/
-│   ├── prompts/                 # Categorized prompt data
-│   │   ├── business.json
-│   │   ├── coding.json
-│   │   ├── study.json
-│   │   ├── writing.json
-│   │   ├── teaching.json
-│   │   ├── review.json
-│   │   ├── testing.json
-│   │   └── linkedin.json
-│   └── categories.json          # Category definitions
+│       ├── Skeleton.tsx         # Global loading skeleton system
+│       ├── AuthModal.tsx        # Login/Signup modal
+│       ├── RefineModal.tsx      # Advanced AI-powered prompt tailoring modal
+│       └── PlatformBadge.tsx    # Platform indicator
 ├── lib/
-│   └── prompts.ts              # Prompt utilities and filtering
+│   ├── supabase.ts              # Supabase client initialization
+│   ├── auth-context.tsx         # Auth state provider and modal control
+│   ├── prompts.ts               # Prompt utilities and Leaderboard fetching
+│   └── search.ts                # Client-side search logic
 └── types/
     └── index.ts                # TypeScript interfaces
 ```
 
 ## Core Features
 
-### 1. Minimalist Design Philosophy
-- Clean, distraction-free interface
-- No unnecessary animations or visual effects
-- Focus on content and functionality
-- Dark theme with amber/orange accents
-- Responsive design for all devices
+### 1. Personalized Experience (The Vault)
+- **User Authentication**: Secure sign-up and login via Supabase Auth.
+- **Saved Library**: Users can save prompts to their personal "Vault" by clicking the heart icon.
+- **Context-Aware Sections**: The homepage dynamically switches between "Saved" prompts (for logged-in users) and "Featured" prompts (for guests/new users).
 
-### 2. Search Functionality
-- Real-time search across prompt fields (title, description, tags, content)
-- Debounced input for performance
-- Search results displayed in clean grid layout
-- URL-based search state persistence
-- No filters initially - pure search experience
+### 2. Hall of Contributors (Leaderboard)
+- **Community Recognition**: A dedicated leaderboard on the submission page.
+- **Contributor Tracking**: Recognition based on the number of submissions and "featured" status.
+- **Professional Links**: Contributors can link their GitHub and LinkedIn profiles to their architectural submissions.
 
-### 3. Prompt Organization
-- **Categories**: Study & Learning, Code & Development, Writing & Essays, Teaching & Explaining, Business & Email, Review & Feedback, QA & Testing, LinkedIn & Career
-- **Platforms**: ChatGPT, Claude, Gemini, Grok (with universal support)
-- **Difficulty Levels**: Beginner, Intermediate, Advanced
-- **Tags**: Additional categorization and discovery
-- **Featured Prompts**: Handpicked quality content
+### 3. Advanced Tailor Agent (Principal Architect)
+- **High-Density Refinement**: Users can provide specific context to transform general templates into expert-grade architectures.
+- **Principal Architect Persona**: The AI agent enforces strict density, structural integrity (e.g., [ROLE_MANIFESTO]), and agentic reasoning.
+- **Streaming UI**: Real-time streaming of generated prompts with a premium glassmorphic interface.
 
-### 4. User Experience
-- One-click copy functionality
-- Clean preview of prompt content
-- Individual prompt detail pages
-- Breadcrumb navigation
-- Empty states for better UX
+### 4. UX Stability & Performance
+- **Anti-Stutter System**: Global skeleton loading (`GridSkeleton`, `CardSkeleton`) prevents layout shifts during data fetching.
+- **Page Transitions**: Smooth `page-fade` animations across all routes for an app-like feel.
+- **Category-Scoped Search**: Instant, client-side filtering within specific categories for zero-latency discovery.
+
+### 5. Professional Prompt Library
+- **Categorized Content**: Structured across professional domains (Coding, Academic, Business, etc.).
+- **Multi-Platform Support**: Optimized for Claude, ChatGPT, Gemini, and Grok.
+- **Difficulty Scaling**: Prompts categorized from Beginner to Advanced architectures.
 
 ## Data Model
 
@@ -93,121 +85,31 @@ interface Prompt {
   slug: string;            // URL-friendly identifier
   title: string;           // Human-readable title
   description: string;     // One-line summary
-  prompt: string;         // Full detailed prompt
+  prompt: string;         // Full detailed prompt architecture
   category: string;       // Category classification
-  platforms: Platform[];   // Supported platforms
+  platforms: string[];     // Supported platforms
   tags: string[];         // Descriptive tags
   difficulty: string;     // Skill level
   featured: boolean;      // Highlight status
+  authorName?: string;     // Contributor name
+  githubUrl?: string;      // Social link
+  linkedinUrl?: string;    // Social link
 }
 ```
-
-### Category Structure
-```typescript
-interface Category {
-  id: string;             // Unique identifier
-  slug: string;           // URL-friendly identifier
-  label: string;          // Display name
-  description: string;    // Category description
-  icon: string;           // Lucide icon name
-  color: string;          // Tailwind color class
-  count: number;          // Number of prompts
-}
-```
-
-## Key Components
-
-### SearchBar Component
-- Simple input field with clear button
-- Debounced search (300ms delay)
-- Redirects to search results page
-- Mobile-responsive design
-
-### PromptCard Component
-- Displays title and description
-- Shows difficulty indicator
-- Platform badges
-- One-click copy button
-- Link to full prompt view
-
-### Navigation Structure
-1. **Homepage**: Ultra-simple - logo and search bar only
-2. **Browse**: All prompts with optional filtering
-3. **Search**: Search results page
-4. **Category**: Specific category pages
-5. **Prompt**: Individual prompt details
 
 ## Implementation Details
 
 ### State Management
-- Client-side state management with React hooks
-- URL synchronization for search and filters
-- No server-side state required
-- All data loaded from static JSON files
+- **Auth Context**: Global provider for user session and authentication modal state.
+- **Supabase Real-time**: Near-instant synchronization of user likes and vault data across sessions.
 
-### Performance Considerations
-- Static data loading (no API calls)
-- Debounced search for responsive UX
-- Lazy loading for prompt grids
-- Minimal re-renders with React optimization
-
-### Search Algorithm
-```typescript
-// Multi-field search with case insensitivity
-result = prompts.filter(p =>
-  p.title.toLowerCase().includes(searchTerm) ||
-  p.description.toLowerCase().includes(searchTerm) ||
-  p.tags.some(tag => tag.toLowerCase().includes(searchTerm)) ||
-  p.prompt.toLowerCase().includes(searchTerm)
-);
-```
-
-## Design System
-
-### Color Palette
-- **Primary**: Gray 900 (background), Gray 800 (cards)
-- **Accent**: Amber 400 / Orange 500 (highlights)
-- **Text**: White (primary), Gray 300/400 (secondary)
-
-### Typography
-- Headings: Geist font (from Next.js)
-- Body: System font stack
-- Monospace: For prompt content display
-
-### Spacing System
-- Container: Max-width with responsive padding
-- Components: Consistent spacing units
-- Grid: Responsive columns (1-4 based on screen size)
-
-## Browser Support
-- Modern browsers with ES6+ support
-- Mobile-first responsive design
-- Touch-friendly interface elements
-
-## Development Workflow
-- **Development**: `npm run dev` (localhost:3000)
-- **Build**: `npm run build` (production optimization)
-- **Start**: `npm start` (production server)
-- **Linting**: `npm run lint` (code quality)
-
-## Deployment
-- Static site generation (SSG) compatible
-- Can be deployed to Vercel, Netlify, or any static hosting
-- No database required
-- CDN-friendly with static assets
-
-## Future Enhancements
-- Server-side search for large datasets
-- User authentication and contributions
-- Tag-based navigation
-- Advanced filtering options
-- Prompt rating system
-- Export functionality
-- Dark/light mode toggle
+### Styling System
+- **Tailwind CSS 4**: Global design tokens defined in `globals.css`.
+- **Gray/Amber Palette**: A curated, premium color system for an "agentic" professional aesthetic.
 
 ## Key Design Principles
-1. **Simplicity**: Remove all unnecessary elements
-2. **Performance**: Fast loading and responsive search
-3. **Accessibility**: Semantic HTML and keyboard navigation
-4. **Maintainability**: Clean code structure with TypeScript
-5. **User Focus**: Content over design, functionality over features
+1. **User Ownership**: Focus on building a personal collection of prompts.
+2. **Humble & Community-Centric**: Professional yet approachable tone with contributor recognition.
+3. **Architectural Density**: Prioritizing logical structure and "Master Architectures" over simple text.
+4. **Visual Excellence**: State-of-the-art UI with glassmorphism, skeletons, and smooth transitions.
+5. **Speed of Access**: One-click utility, zero-latency local search, and optimized loading states.

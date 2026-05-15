@@ -16,6 +16,9 @@ export interface Prompt {
   updatedAt: string         // e.g. "2026-05"
   copyCount: number         // engagement metric
   relatedPrompts: string[]  // cross-linking array
+  authorName?: string
+  githubUrl?: string
+  linkedinUrl?: string
 }
 
 export interface Category {

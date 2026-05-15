@@ -1,15 +1,16 @@
 const ITEMS = [
-  { label: "study & learning", italic: true },
-  { label: "code review", italic: false },
-  { label: "essay outlines", italic: true },
-  { label: "teaching prompts", italic: false },
-  { label: "business & email", italic: true },
-  { label: "qa & testing", italic: false },
-  { label: "linkedin posts", italic: true },
-  { label: "review & feedback", italic: false },
+  { label: "Systemic Architectures", italic: true },
+  { label: "Agentic Workflows", italic: false },
+  { label: "Dense Reasoning", italic: true },
+  { label: "Visual Generation", italic: false },
+  { label: "Code Diagnostics", italic: true },
+  { label: "Strategic Marketing", italic: false },
+  { label: "Academic Synthesis", italic: true },
+  { label: "Zero-Shot Optimization", italic: false },
+  { label: "Chain-of-Thought", italic: true },
 ];
 
-const ALL = [...ITEMS, ...ITEMS];
+const ALL = [...ITEMS, ...ITEMS, ...ITEMS]; // Triple for smoother loop
 
 export function Marquee() {
   return (

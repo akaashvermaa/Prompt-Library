@@ -7,6 +7,7 @@ import { Prompt, Platform } from "@/types";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { CopyButton } from "@/components/ui/CopyButton";
 import { LikeButton } from "@/components/ui/LikeButton";
+import { GridSkeleton } from "@/components/ui/Skeleton";
 
 const TABS = ["any", "claude", "chatgpt", "gemini", "grok"] as const;
 const CATS = ["all", "study-learn", "write-create", "code-dev", "business-marketing", "review-test", "career-brand", "image-prompts", "ai-agents", "instagram", "youtube"];
@@ -20,7 +21,6 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
   const params = useSearchParams();
   const [platform, setPlatform] = useState<Platform>("any");
   const [category, setCategory] = useState("all");
-  // Live search - now with server-side debouncing
   const [query, setQuery] = useState(params.get("search") ?? "");
   const [debouncedQuery] = useDebounce(query, 300);
   const [serverResults, setServerResults] = useState<Prompt[] | null>(null);
@@ -38,7 +38,7 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
       .then(data => {
         setServerResults(data);
         setIsSearching(false);
-        setCurrentPage(1); // Reset page on new search
+        setCurrentPage(1);
       })
       .catch(err => {
         console.error("Search failed", err);
@@ -49,9 +49,7 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 
-  // Mix server results and client filters
   const results = useMemo(() => {
-    // If we have server search results, start from those. Otherwise start from all props.
     let out = serverResults !== null ? serverResults : prompts;
 
     if (platform !== "any") {
@@ -68,7 +66,6 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
       out = out.filter(p => p.category === category);
     }
 
-    // Only do client-side filtering if server results aren't active (query is short)
     if (serverResults === null && query.trim()) {
       const q = query.trim().toLowerCase();
       out = out.filter(p =>
@@ -83,19 +80,16 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
     return out;
   }, [platform, category, query, prompts, serverResults]);
 
-  // Pagination logic
   const totalPages = Math.ceil(results.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const paginatedResults = results.slice(startIndex, startIndex + itemsPerPage);
 
-  // Update URL when page changes
   useEffect(() => {
     const url = new URL(window.location.href);
     url.searchParams.set('page', currentPage.toString());
     window.history.replaceState({}, '', url);
   }, [currentPage]);
 
-  // Get page from URL on mount
   useEffect(() => {
     const pageParam = params.get('page');
     if (pageParam) {
@@ -108,10 +102,8 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
 
   return (
     <>
-      {/* Search */}
       <div className="search-shell browse-content">
         <div className="search">
-          
           <input
             type="text"
             placeholder="Search by keywords, tasks, or prompt types..."
@@ -138,13 +130,12 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
         </div>
       </div>
 
-      {/* Model tabs */}
       <div className="browse-head" style={{ marginBottom: '24px', border: 'none', paddingBottom: 0 }}>
         <div className="filter-tabs">
-          <div style={{ fontSize: '11px', color: 'var(--muted-2)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px', width: '100%' }}>
+          <div style={{ fontSize: '11px', color: 'var(--muted-2)', letterSpacing: '0.1em', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
             Select Model
           </div>
-          <div style={{ display: 'flex', gap: '4px' }}>
+          <div style={{ display: 'flex', gap: '8px' }}>
             {TABS.map(t => (
               <button
                 key={t}
@@ -161,9 +152,8 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
         </div>
       </div>
 
-      {/* Category tabs */}
-      <div className="cat-tabs" style={{ marginBottom: '48px' }}>
-        <div style={{ fontSize: '11px', color: 'var(--muted-2)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px', paddingLeft: '8px' }}>
+      <div className="cat-tabs filter-tabs" style={{ marginBottom: '48px' }}>
+        <div style={{ fontSize: '11px', color: 'var(--muted-2)', letterSpacing: '0.1em', textTransform: 'uppercase', paddingLeft: '8px', whiteSpace: 'nowrap' }}>
           Select Category
         </div>
         <div style={{display: 'flex', gap: '8px', flexWrap: 'nowrap', overflowX: 'auto', paddingBottom: '4px', scrollbarWidth: 'none'}}>
@@ -183,51 +173,52 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
         </div>
       </div>
 
-      {/* Grid */}
       <div className="browse-grid">
-        {paginatedResults.map(p => (
-          <Link key={p.id} href={`/prompt/${p.slug}`} className="bcard">
-            <div className="row1">
-              <span className="cat-tag">{CAT_LABEL[p.category] ?? p.category}</span>
-              <span className={`diff ${p.difficulty === 'beginner' ? 'd-beg' : p.difficulty === 'intermediate' ? 'd-int' : 'd-adv'}`}>
-                {p.difficulty.charAt(0).toUpperCase() + p.difficulty.slice(1)}
-              </span>
-            </div>
-            <h4>{p.title}</h4>
-            <p>{p.description}</p>
-            {p.imagePlatforms && p.imagePlatforms.length > 0 && (
-              <div className="image-platforms" style={{ background: 'var(--surface)', padding: '12px', borderRadius: '6px', border: '1px solid var(--line)', marginTop: 'auto' }}>
-                <span style={{color: 'var(--amber)'}}>Paste this into →</span>
-                <div style={{ marginTop: '6px' }}>
-                  {p.imagePlatforms.map((ip, idx) => (
-                    <span key={ip} className="pbadge" style={{fontSize: '11px', padding: '2px 8px', marginRight: '6px', marginBottom: '4px', display: 'inline-block' }}>
-                      {ip === 'midjourney' ? 'Midjourney' :
-                       ip === 'dalle3' ? 'DALL-E 3' :
-                       ip === 'imagen4' ? 'Imagen 4' :
-                       ip === 'stablediffusion' ? 'Stable Diffusion' : ip}
-                    </span>
-                  ))}
+        {isSearching ? (
+          <GridSkeleton count={itemsPerPage} />
+        ) : paginatedResults.length > 0 ? (
+          paginatedResults.map(p => (
+            <Link key={p.id} href={`/prompt/${p.slug}`} className="bcard">
+              <div className="row1">
+                <span className="cat-tag">{CAT_LABEL[p.category] ?? p.category}</span>
+                <span className={`diff ${p.difficulty === 'beginner' ? 'd-beg' : p.difficulty === 'intermediate' ? 'd-int' : 'd-adv'}`}>
+                  {p.difficulty.charAt(0).toUpperCase() + p.difficulty.slice(1)}
+                </span>
+              </div>
+              <h4>{p.title}</h4>
+              <p>{p.description}</p>
+              {p.imagePlatforms && p.imagePlatforms.length > 0 && (
+                <div className="image-platforms" style={{ background: 'var(--surface)', padding: '12px', borderRadius: '6px', border: '1px solid var(--line)', marginTop: 'auto' }}>
+                  <span style={{color: 'var(--amber)'}}>Paste this into:</span>
+                  <div style={{ marginTop: '6px' }}>
+                    {p.imagePlatforms.map((ip) => (
+                      <span key={ip} className="pbadge" style={{fontSize: '11px', padding: '2px 8px', marginRight: '6px', marginBottom: '4px', display: 'inline-block' }}>
+                        {ip === 'midjourney' ? 'Midjourney' :
+                         ip === 'dalle3' ? 'DALL-E 3' :
+                         ip === 'imagen4' ? 'Imagen 4' :
+                         ip === 'stablediffusion' ? 'Stable Diffusion' : ip}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+              <div className="foot" style={p.imagePlatforms && p.imagePlatforms.length > 0 ? { marginTop: 0 } : {}}>
+                <div className="badges">
+                  {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <LikeButton promptId={p.id} />
+                  <CopyButton text={p.prompt} />
                 </div>
               </div>
-            )}
-            <div className="foot" style={p.imagePlatforms && p.imagePlatforms.length > 0 ? { marginTop: 0 } : {}}>
-              <div className="badges">
-                {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <LikeButton promptId={p.id} />
-                <CopyButton text={p.prompt} />
-              </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))
+        ) : null}
       </div>
 
-      {paginatedResults.length === 0 && (
+      {!isSearching && paginatedResults.length === 0 && (
         <div className="no-results">
-          <p className="no-results-text">
-            No prompts match your filters.
-          </p>
+          <p className="no-results-text">No prompts match your filters.</p>
           <button
             onClick={() => { setPlatform("any"); setCategory("all"); setQuery(""); }}
             className="btn-sec"
@@ -237,7 +228,6 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
         </div>
       )}
 
-      {/* Pagination */}
       {totalPages > 1 && (
         <div className="pagination">
           <button
@@ -247,19 +237,13 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
           >
             Previous
           </button>
-
           <div className="page-numbers">
             {Array.from({ length: Math.min(7, totalPages) }, (_, i) => {
               let pageNum;
-              if (totalPages <= 7) {
-                pageNum = i + 1;
-              } else if (currentPage <= 4) {
-                pageNum = i + 1;
-              } else if (currentPage >= totalPages - 3) {
-                pageNum = totalPages - 6 + i;
-              } else {
-                pageNum = currentPage - 3 + i;
-              }
+              if (totalPages <= 7) pageNum = i + 1;
+              else if (currentPage <= 4) pageNum = i + 1;
+              else if (currentPage >= totalPages - 3) pageNum = totalPages - 6 + i;
+              else pageNum = currentPage - 3 + i;
 
               if (pageNum < 1 || pageNum > totalPages) return null;
 
@@ -274,7 +258,6 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
               );
             })}
           </div>
-
           <button
             onClick={() => setCurrentPage(p => Math.min(totalPages, p + 1))}
             disabled={currentPage === totalPages}

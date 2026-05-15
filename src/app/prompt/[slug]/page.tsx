@@ -2,8 +2,7 @@ import { getBySlug, getAllPrompts, getPromptsByIds } from "@/lib/prompts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
-import { CopyButton } from "@/components/ui/CopyButton";
-import { LikeButton } from "@/components/ui/LikeButton";
+import { PromptEditor } from "@/components/sections/PromptEditor";
 
 export async function generateStaticParams() {
   const all = await getAllPrompts();
@@ -15,7 +14,6 @@ export default async function PromptPage({ params }: { params: Promise<{ slug: s
   const prompt = await getBySlug(slug);
   if (!prompt) notFound();
 
-  const lines = prompt.prompt.split("\n");
   const related = await getPromptsByIds(prompt.relatedPrompts || []);
 
   return (
@@ -51,7 +49,7 @@ export default async function PromptPage({ params }: { params: Promise<{ slug: s
                     <div className="lbl">Est. Time</div>
                     <div className="val" style={{ color: "var(--muted)" }}>
                       {prompt.estimatedTime}
-                    </div>
+                     </div>
                   </div>
                 )}
                 <div>
@@ -99,33 +97,13 @@ export default async function PromptPage({ params }: { params: Promise<{ slug: s
               )}
             </div>
 
-            {/* Right - Editor panel */}
+            {/* Right - Protected Editor */}
             <div className="detail-right-col">
-              <div className="detail-right">
-                <div className="editor-head">
-                  <div className="dots">
-                    <span className="dot" /><span className="dot" /><span className="dot" />
-                  </div>
-                  <div className="file">prompt-{prompt.slug}.md</div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <LikeButton promptId={prompt.id} />
-                    <CopyButton text={prompt.prompt} />
-                  </div>
-                </div>
-                <div className="editor-body">
-                  {lines.map((line, i) => (
-                    <div key={i} className="ln">
-                      <span className="ln-num">{i + 1}</span>
-                      <span>{line || "\u00a0"}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
+              <PromptEditor prompt={prompt} />
 
               {prompt.exampleOutput && (
                 <div className="example-panel">
                   <div className="example-head">
-                    
                     Example Output
                   </div>
                   <div className="example-body">

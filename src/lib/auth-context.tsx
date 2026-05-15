@@ -12,6 +12,10 @@ interface AuthContextType {
   closeAuthModal: () => void;
   authModalOpen: boolean;
   authModalMode: "login" | "signup";
+  refineModalOpen: boolean;
+  openRefineModal: (prompt: any) => void;
+  closeRefineModal: () => void;
+  refinePrompt: any | null;
 }
 
 const AuthContext = createContext<AuthContextType>({
@@ -23,6 +27,10 @@ const AuthContext = createContext<AuthContextType>({
   closeAuthModal: () => {},
   authModalOpen: false,
   authModalMode: "login",
+  refineModalOpen: false,
+  openRefineModal: () => {},
+  closeRefineModal: () => {},
+  refinePrompt: null,
 });
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
@@ -31,6 +39,8 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authModalMode, setAuthModalMode] = useState<"login" | "signup">("login");
+  const [refineModalOpen, setRefineModalOpen] = useState(false);
+  const [refinePrompt, setRefinePrompt] = useState<any | null>(null);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
@@ -62,8 +72,21 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     setAuthModalOpen(false);
   }, []);
 
+  const openRefineModal = useCallback((prompt: any) => {
+    setRefinePrompt(prompt);
+    setRefineModalOpen(true);
+  }, []);
+
+  const closeRefineModal = useCallback(() => {
+    setRefineModalOpen(false);
+  }, []);
+
   return (
-    <AuthContext.Provider value={{ user, session, loading, signOut, openAuthModal, closeAuthModal, authModalOpen, authModalMode }}>
+    <AuthContext.Provider value={{ 
+      user, session, loading, signOut, 
+      openAuthModal, closeAuthModal, authModalOpen, authModalMode,
+      refineModalOpen, openRefineModal, closeRefineModal, refinePrompt 
+    }}>
       {children}
     </AuthContext.Provider>
   );

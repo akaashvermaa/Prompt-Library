@@ -5,6 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { AuthProvider } from "@/lib/auth-context";
 import { AuthModal } from "@/components/ui/AuthModal";
+import { RefineModal } from "@/components/ui/RefineModal";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-geist" });
 
@@ -26,7 +27,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="grain" />
           <Navbar />
           <AuthModal />
-          {children}
+          <RefineModal />
+          <main className="page-fade">
+            {children}
+          </main>
           <Footer />
         </AuthProvider>
       </body>
