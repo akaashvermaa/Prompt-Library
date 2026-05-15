@@ -17,10 +17,10 @@ export default async function PromptPage({ params }: { params: Promise<{ slug: s
   const related = await getPromptsByIds(prompt.relatedPrompts || []);
 
   return (
-    <div style={{ paddingTop: 80 }}>
-      <section className="detail-section">
+    <div className="page-pt" style={{ paddingBottom: 80 }}>
+      <section className="detail-section" style={{ padding: "40px 0 100px" }}>
         <div className="wrap">
-          <div className="detail-grid">
+          <div className="detail-grid" style={{ alignItems: "stretch" }}>
             {/* Left */}
             <div className="detail-left">
               <div className="crumb">
