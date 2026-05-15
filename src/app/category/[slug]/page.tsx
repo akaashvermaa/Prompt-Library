@@ -2,6 +2,7 @@ import { getByCategory } from "@/lib/prompts";
 import { notFound } from "next/navigation";
 import { CategoryContent } from "./CategoryClient";
 
+export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 const CAT_LABELS: Record<string, { label: string; italic: string }> = {
