@@ -294,10 +294,10 @@ section { padding: 120px 0; position: relative; }
 .pcard .num { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--muted-2); letter-spacing: 0.1em; }
 .card-like { margin-right: -8px; margin-top: -8px; }
 .none-liked-notice { animation: fadeIn 0.4s ease; }
-.pcard .diff { font-size: 11px; padding: 3px 8px; border-radius: 3px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; }
-.d-beg { background: rgba(118,184,156,0.1); color: #76b89c; }
-.d-int { background: rgba(244,167,56,0.1); color: var(--amber); }
-.d-adv { background: rgba(212,108,108,0.1); color: #d46c6c; }
+.pcard .diff { font-size: 10px; padding: 4px 10px; border-radius: 99px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; border: 1px solid transparent; }
+.d-beg { background: rgba(118,184,156,0.08); color: #76b89c; border-color: rgba(118,184,156,0.2); }
+.d-int { background: rgba(244,167,56,0.08); color: var(--amber); border-color: rgba(244,167,56,0.2); }
+.d-adv { background: rgba(212,108,108,0.08); color: #d46c6c; border-color: rgba(212,108,108,0.2); }
 .pcard h3 { font-family: "Instrument Serif", serif; font-size: 30px; line-height: 1.05; letter-spacing: -0.01em; }
 .pcard.large h3 { font-size: 44px; }
 .pcard h3 .it { font-style: italic; color: var(--amber); }
@@ -476,7 +476,6 @@ footer { border-top: 1px solid var(--line); padding: 50px 0 40px; }
 .like-btn:hover { border-color: #d46c6c; color: #d46c6c; background: rgba(212,108,108,0.08); }
 .like-btn.liked { border-color: #d46c6c; color: #d46c6c; background: rgba(212,108,108,0.12); }
 .bcard-actions { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 12px; border-top: 1px dashed var(--line); justify-content: space-between; }
-.bcard-like-btn { position: absolute; top: 14px; right: 14px; }
 
 /* Liked page empty state */
 .liked-empty { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; gap: 16px; }

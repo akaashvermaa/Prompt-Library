@@ -82,9 +82,6 @@ export default function LikedPage() {
             <div className="browse-grid">
               {prompts.map(p => (
                 <Link key={p.id} href={`/prompt/${p.slug}`} className="bcard">
-                  <div className="bcard-like-btn">
-                    <LikeButton promptId={p.id} />
-                  </div>
                   <div className="row1">
                     <span className="cat-tag">{p.category.replace(/-/g, " ")}</span>
                     <span className={`diff ${DIFF_CLASS[p.difficulty] ?? "d-int"}`}>
@@ -97,7 +94,10 @@ export default function LikedPage() {
                     <div className="badges">
                       {p.platforms.slice(0, 3).map(pl => <PlatformBadge key={pl} platform={pl} />)}
                     </div>
-                    <CopyButton text={p.prompt} />
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <LikeButton promptId={p.id} />
+                      <CopyButton text={p.prompt} />
+                    </div>
                   </div>
                 </Link>
               ))}

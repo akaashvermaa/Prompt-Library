@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { CopyButton } from "@/components/ui/CopyButton";
+import { LikeButton } from "@/components/ui/LikeButton";
 
 export async function generateStaticParams() {
   const all = await getAllPrompts();
@@ -106,7 +107,10 @@ export default async function PromptPage({ params }: { params: Promise<{ slug: s
                     <span className="dot" /><span className="dot" /><span className="dot" />
                   </div>
                   <div className="file">prompt-{prompt.slug}.md</div>
-                  <CopyButton text={prompt.prompt} />
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <LikeButton promptId={prompt.id} />
+                    <CopyButton text={prompt.prompt} />
+                  </div>
                 </div>
                 <div className="editor-body">
                   {lines.map((line, i) => (
