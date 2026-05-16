@@ -4,10 +4,14 @@ import { useAuth } from "@/lib/auth-context";
 import { supabase } from "@/lib/supabase";
 import { CopyButton } from "./CopyButton";
 import { Sparkles, X, ChevronRight, Save, Check, Wand2 } from "lucide-react";
+import { PlatformBadge } from "./PlatformBadge";
+
+type TargetPlatform = "claude" | "chatgpt" | "gemini" | "grok" | "any";
 
 export function RefineModal() {
   const { refineModalOpen, closeRefineModal, refinePrompt, user } = useAuth();
   const [context, setContext] = useState("");
+  const [targetPlatform, setTargetPlatform] = useState<TargetPlatform>("any");
   const [isRefining, setIsRefining] = useState(false);
   const [refinedOutput, setRefinedOutput] = useState("");
   const [step, setStep] = useState<"input" | "output">("input");
@@ -20,6 +24,7 @@ export function RefineModal() {
       setRefinedOutput("");
       setStep("input");
       setIsSaved(false);
+      setTargetPlatform("any");
     }
   }, [refineModalOpen]);
 
@@ -37,7 +42,8 @@ export function RefineModal() {
         body: JSON.stringify({
           basePrompt: refinePrompt.prompt,
           userContext: context,
-          promptId: refinePrompt.id
+          promptId: refinePrompt.id,
+          targetPlatform
         }),
       });
       if (!response.ok) throw new Error("Failed to refine prompt");
@@ -89,7 +95,7 @@ export function RefineModal() {
             Refine <span className="it">{refinePrompt.title}</span>
           </h2>
           <p className="refine-sub" style={{ marginTop: '12px', fontSize: '15px', opacity: 0.8 }}>
-            Inject your specific requirements to evolve this architecture.
+            Inject your specific requirements and select your target platform.
           </p>
         </div>
 
@@ -97,7 +103,21 @@ export function RefineModal() {
           {step === "input" ? (
             <div className="refine-input-step">
               <div style={{ marginBottom: '24px' }}>
-                <label className="refine-label" style={{ display: 'block', marginBottom: '12px', fontSize: '11px', color: 'var(--amber)' }}>Your Specific Context</label>
+                <label className="refine-label" style={{ display: 'block', marginBottom: '12px', fontSize: '11px', color: 'var(--amber)' }}>1. Select Target Platform</label>
+                <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>
+                  {(["any", "claude", "chatgpt", "gemini", "grok"] as TargetPlatform[]).map(p => (
+                    <button
+                      key={p}
+                      onClick={() => setTargetPlatform(p)}
+                      className={`ftab ${targetPlatform === p ? 'active' : ''}`}
+                      style={{ padding: '8px 16px', fontSize: '12px', textTransform: 'capitalize' }}
+                    >
+                      {p === "any" ? "General / Balanced" : p === "chatgpt" ? "ChatGPT" : p.charAt(0).toUpperCase() + p.slice(1)}
+                    </button>
+                  ))}
+                </div>
+
+                <label className="refine-label" style={{ display: 'block', marginBottom: '12px', fontSize: '11px', color: 'var(--amber)' }}>2. Your Specific Context</label>
                 <textarea 
                   className="refine-textarea"
                   placeholder="Describe your specific project or task details..."
@@ -115,7 +135,7 @@ export function RefineModal() {
                   style={{ padding: '18px', borderRadius: '12px', gap: '12px' }}
                 >
                   <Sparkles size={18} />
-                  <span style={{ fontWeight: 600 }}>Evolve Architecture</span>
+                  <span style={{ fontWeight: 600 }}>Evolve for {targetPlatform === 'any' ? 'Universal Use' : targetPlatform === 'chatgpt' ? 'ChatGPT' : targetPlatform.charAt(0).toUpperCase() + targetPlatform.slice(1)}</span>
                   <ChevronRight size={18} />
                 </button>
               </div>
@@ -123,7 +143,12 @@ export function RefineModal() {
           ) : (
             <div className="refine-output-step">
               <div className="refine-output-header" style={{ marginBottom: '12px' }}>
-                <div className="lbl" style={{ color: 'var(--amber)', fontWeight: 600, fontSize: '11px' }}>Master Architecture</div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                  <div className="lbl" style={{ color: 'var(--amber)', fontWeight: 600, fontSize: '11px' }}>Master Architecture</div>
+                  <div style={{ background: 'var(--line)', padding: '2px 8px', borderRadius: '4px', fontSize: '10px', color: 'var(--muted)', textTransform: 'uppercase' }}>
+                    Optimized for {targetPlatform}
+                  </div>
+                </div>
                 <div className="refine-output-actions">
                   <CopyButton text={refinedOutput} />
                   <button 
@@ -142,9 +167,14 @@ export function RefineModal() {
                 {isRefining && <span className="cursor-blink">|</span>}
               </div>
               {!isRefining && (
-                <button className="refine-back-btn" onClick={() => setStep("input")} style={{ marginTop: '20px', fontSize: '12px', opacity: 0.6 }}>
-                  ← Modify Context
-                </button>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '20px' }}>
+                   <button className="refine-back-btn" onClick={() => setStep("input")} style={{ fontSize: '12px', opacity: 0.6 }}>
+                    ← Modify Context
+                  </button>
+                  <div style={{ fontSize: '11px', color: 'var(--muted-2)' }}>
+                    Architecture tuned for {targetPlatform}
+                  </div>
+                </div>
               )}
             </div>
           )}

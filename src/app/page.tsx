@@ -7,6 +7,7 @@ import { BrowseSection } from "@/components/sections/BrowseSection";
 
 import { getAllPrompts, getFeaturedPrompts } from "@/lib/prompts";
 
+export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export default async function Home() {
