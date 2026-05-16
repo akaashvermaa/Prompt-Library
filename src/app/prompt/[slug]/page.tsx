@@ -2,7 +2,8 @@ import { getBySlug, getAllPrompts, getPromptsByIds } from "@/lib/prompts";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
-import { PromptEditor } from "@/components/sections/PromptEditor";
+import { PromptEditor, PromptActions } from "@/components/sections/PromptEditor";
+import { TailorAgent } from "@/components/ui/TailorAgent";
 
 export async function generateStaticParams() {
   const all = await getAllPrompts();
@@ -20,99 +21,96 @@ export default async function PromptPage({ params }: { params: Promise<{ slug: s
     <div className="page-pt" style={{ paddingBottom: 80 }}>
       <section className="detail-section" style={{ padding: "40px 0 100px" }}>
         <div className="wrap">
-          <div className="detail-grid" style={{ alignItems: "stretch" }}>
-            {/* Left */}
-            <div className="detail-left">
-              <div className="crumb">
-                <Link href="/browse">browse</Link>
-                &nbsp;/&nbsp;
-                <Link href={`/category/${prompt.category}`}>{prompt.category}</Link>
-                &nbsp;/&nbsp;
-                <span style={{ color: "var(--text)" }}>{prompt.slug}</span>
-              </div>
-              <h2>{prompt.title}</h2>
-              <p className="desc">{prompt.description}</p>
-              
-              <div className="detail-meta">
-                <div>
-                  <div className="lbl">Difficulty</div>
-                  <div className="val" style={{ textTransform: "capitalize", color: "var(--muted)" }}>
-                    {prompt.difficulty}
-                  </div>
-                </div>
-                <div>
-                  <div className="lbl">Category</div>
-                  <div className="val">{prompt.category}</div>
-                </div>
-                {prompt.estimatedTime && (
-                  <div>
-                    <div className="lbl">Est. Time</div>
-                    <div className="val" style={{ color: "var(--muted)" }}>
-                      {prompt.estimatedTime}
-                     </div>
-                  </div>
-                )}
-                <div>
-                  <div className="lbl">Works with</div>
-                  <div className="val">
-                    <div className="badges">
-                      {prompt.platforms.map(pl => <PlatformBadge key={pl} platform={pl} />)}
-                    </div>
-                  </div>
-                </div>
-                {prompt.variables && prompt.variables.length > 0 && (
-                  <div style={{ gridColumn: "1 / -1" }}>
-                    <div className="lbl">Required Inputs</div>
-                    <div className="val">
-                      <div className="badges" style={{ flexWrap: "wrap", gap: "8px" }}>
-                        {prompt.variables.map(v => (
-                          <span key={v} className="var-badge">[{v}]</span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
-                <div style={{ gridColumn: "1 / -1" }}>
-                  <div className="lbl">Tags</div>
-                  <div className="val mono" style={{ fontSize: 13, color: "var(--muted)" }}>
-                    {prompt.tags.map(t => `#${t}`).join("  ")}
-                  </div>
-                </div>
-              </div>
 
-              {related.length > 0 && (
-                <div style={{ marginTop: 40, paddingTop: 30, borderTop: "1px solid var(--line)" }}>
-                  <div className="lbl" style={{ fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", marginBottom: 8 }}>
-                    Related Prompts
-                  </div>
-                  <div className="related-list">
-                    {related.map(rp => (
-                      <Link href={`/prompt/${rp.slug}`} key={rp.id} className="related-item">
-                        <div className="related-title">{rp.title}</div>
-                        <div className="related-desc">{rp.description}</div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
+          {/* ── HEADER BLOCK ── */}
+          <div style={{ marginBottom: 48, paddingBottom: 40, borderBottom: '1px solid var(--line)' }}>
+            <div className="crumb" style={{ marginBottom: 20 }}>
+              <Link href="/browse">browse</Link>
+              &nbsp;/&nbsp;
+              <Link href={`/category/${prompt.category}`}>{prompt.category}</Link>
+              &nbsp;/&nbsp;
+              <span style={{ color: "var(--text)" }}>{prompt.slug}</span>
             </div>
 
-            {/* Right - Protected Editor */}
-            <div className="detail-right-col">
-              <PromptEditor prompt={prompt} />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '32px', marginBottom: 24 }}>
+              <div>
+                <h2 style={{ fontSize: 'clamp(28px, 4vw, 44px)', marginBottom: 10, lineHeight: 1.1 }}>{prompt.title}</h2>
+                <p style={{ fontSize: '16px', color: 'var(--muted)', maxWidth: '700px', lineHeight: 1.6 }}>{prompt.description}</p>
+              </div>
+              {/* Copy / Like actions top-right of header */}
+              <PromptActions prompt={prompt} />
+            </div>
 
-              {prompt.exampleOutput && (
-                <div className="example-panel">
-                  <div className="example-head">
-                    Example Output
-                  </div>
-                  <div className="example-body">
-                    {prompt.exampleOutput}
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', paddingTop: '24px', borderTop: '1px solid var(--line)' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                <span style={{ color: 'var(--muted)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Difficulty</span>
+                <span style={{ textTransform: "capitalize", fontWeight: 500, fontSize: '14px' }}>{prompt.difficulty}</span>
+              </div>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                <span style={{ color: 'var(--muted)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Category</span>
+                <span style={{ fontWeight: 500, fontSize: '14px' }}>{prompt.category}</span>
+              </div>
+              {prompt.estimatedTime && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                  <span style={{ color: 'var(--muted)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Est. Time</span>
+                  <span style={{ fontWeight: 500, fontSize: '14px' }}>{prompt.estimatedTime}</span>
+                </div>
+              )}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                <span style={{ color: 'var(--muted)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Platforms</span>
+                <div style={{ display: 'flex', gap: '8px', alignItems: 'center' }}>
+                  {prompt.platforms.map(pl => <PlatformBadge key={pl} platform={pl} />)}
+                </div>
+              </div>
+              {prompt.variables && prompt.variables.length > 0 && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                  <span style={{ color: 'var(--muted)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Inputs</span>
+                  <span style={{ color: 'var(--amber)', fontWeight: 500, fontSize: '14px' }}>{prompt.variables.join(", ")}</span>
+                </div>
+              )}
+              {prompt.tags && prompt.tags.length > 0 && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '5px' }}>
+                  <span style={{ color: 'var(--muted)', fontSize: '10px', textTransform: 'uppercase', letterSpacing: '0.12em' }}>Tags</span>
+                  <div style={{ display: 'flex', gap: '10px' }}>
+                    {prompt.tags.map(t => <span key={t} style={{ fontSize: '13px', color: 'var(--muted)' }}>#{t}</span>)}
                   </div>
                 </div>
               )}
             </div>
           </div>
+
+          {/* ── PROMPT CODE BLOCK (full width) ── */}
+          <div style={{ marginBottom: 48 }}>
+            <PromptEditor prompt={prompt} />
+          </div>
+
+          {/* ── TAILOR AGENT (full width) ── */}
+          <TailorAgent prompt={prompt} />
+
+          {/* ── RELATED PROMPTS ── */}
+          {related.length > 0 && (
+            <div style={{ marginTop: 64, paddingTop: 40, borderTop: '1px solid var(--line)' }}>
+              <div style={{ fontSize: 11, letterSpacing: "0.18em", textTransform: "uppercase", color: "var(--muted)", marginBottom: 20 }}>
+                Related Prompts
+              </div>
+              <div style={{ display: 'flex', gap: '16px', overflowX: 'auto', paddingBottom: '8px' }}>
+                {related.map(rp => (
+                  <Link href={`/prompt/${rp.slug}`} key={rp.id} className="related-item" style={{ minWidth: '260px', background: 'var(--surface)', padding: '20px', borderRadius: '10px', border: '1px solid var(--line)', textDecoration: 'none', display: 'block' }}>
+                    <div style={{ fontSize: '15px', fontWeight: 500, marginBottom: '6px', color: 'var(--text)' }}>{rp.title}</div>
+                    <div style={{ fontSize: '13px', color: 'var(--muted)', display: '-webkit-box', WebkitLineClamp: 2, WebkitBoxOrient: 'vertical', overflow: 'hidden' } as React.CSSProperties}>{rp.description}</div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {prompt.exampleOutput && (
+            <div className="example-panel" style={{ marginTop: 32 }}>
+              <div className="example-head">Example Output</div>
+              <div className="example-body">{prompt.exampleOutput}</div>
+            </div>
+          )}
+
         </div>
       </section>
     </div>
