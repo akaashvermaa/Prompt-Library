@@ -16,9 +16,9 @@ export async function POST(req: NextRequest) {
       });
     }
 
-    console.log("Refine API: Initializing Gemini model (gemini-flash-latest)");
+    console.log("Refine API: Initializing Gemini model (gemini-2.5-flash)");
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-flash-latest" });
+    const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
     const platformInstructions: Record<string, string> = {
       claude: "OPTIMIZE FOR CLAUDE: Use XML tags (e.g., <system>, <context>, <task>) to structure the prompt. Claude responds best to clear hierarchical separation and deeply nested instructions within tags.",
@@ -54,27 +54,97 @@ ${userContext}
 
 Final Refined Master Architecture [${targetPlatform || 'Universal'}]:`;
 
-    console.log("Refine API: Generating stream...");
-    const result = await model.generateContentStream(systemPrompt);
+    let stream: ReadableStream;
 
-    const stream = new ReadableStream({
-      async start(controller) {
-        const encoder = new TextEncoder();
-        try {
-          for await (const chunk of result.stream) {
-            const text = chunk.text();
-            if (text) {
-              controller.enqueue(encoder.encode(text));
+    try {
+      console.log("Refine API: Generating stream with Gemini...");
+      const result = await model.generateContentStream(systemPrompt);
+
+      stream = new ReadableStream({
+        async start(controller) {
+          const encoder = new TextEncoder();
+          try {
+            for await (const chunk of result.stream) {
+              const text = chunk.text();
+              if (text) {
+                controller.enqueue(encoder.encode(text));
+              }
             }
+          } catch (err: any) {
+            console.error("Refine API: Gemini Streaming error:", err.message || err);
+            controller.error(err);
+          } finally {
+            controller.close();
           }
-        } catch (err: any) {
-          console.error("Refine API: Streaming error:", err.message || err);
-          controller.error(err);
-        } finally {
-          controller.close();
+        },
+      });
+    } catch (geminiError: any) {
+      console.error("Refine API: Gemini generation failed. Falling back to Groq...", geminiError.message || geminiError);
+      
+      const grokKey = process.env.GROK_API_KEY;
+      if (!grokKey) {
+        throw new Error("Gemini failed and GROK_API_KEY is not configured for fallback.");
+      }
+
+      console.log("Refine API: Initializing Groq model (llama-3.3-70b-versatile) as fallback");
+      const groqResponse = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${grokKey}`
+        },
+        body: JSON.stringify({
+          model: "llama-3.3-70b-versatile",
+          messages: [{ role: "user", content: systemPrompt }],
+          stream: true
+        })
+      });
+
+      if (!groqResponse.ok) {
+        const errorText = await groqResponse.text();
+        throw new Error(`Groq fallback failed: ${groqResponse.status} ${groqResponse.statusText} - ${errorText}`);
+      }
+
+      stream = new ReadableStream({
+        async start(controller) {
+          const reader = groqResponse.body?.getReader();
+          const decoder = new TextDecoder();
+          const encoder = new TextEncoder();
+          if (!reader) {
+            controller.close();
+            return;
+          }
+          try {
+            let buffer = "";
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+              buffer += decoder.decode(value, { stream: true });
+              const lines = buffer.split('\n');
+              buffer = lines.pop() || "";
+              for (const line of lines) {
+                if (line.startsWith('data: ') && line.trim() !== 'data: [DONE]') {
+                  try {
+                    const data = JSON.parse(line.slice(6));
+                    const text = data.choices[0]?.delta?.content;
+                    if (text) {
+                      controller.enqueue(encoder.encode(text));
+                    }
+                  } catch (e) {
+                    // Ignore parse errors on partial chunks
+                  }
+                }
+              }
+            }
+          } catch (err: any) {
+            console.error("Refine API: Groq Streaming error:", err.message || err);
+            controller.error(err);
+          } finally {
+            controller.close();
+          }
         }
-      },
-    });
+      });
+    }
 
     return new Response(stream, {
       headers: {
