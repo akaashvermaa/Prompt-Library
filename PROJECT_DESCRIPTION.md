@@ -12,7 +12,7 @@ PromptVault is a modern, high-performance web application that serves as a curat
 - **Tailwind CSS v4** for styling and utility-first design
 - **Supabase** for Backend-as-a-Service (Database & Auth)
 - **Lucide React** for icons
-- **Gemini AI** for prompt refinement (Refine API)
+- **Gemini AI + Groq**: Dual-engine architecture for prompt refinement with automatic failover for high availability.
 
 ### File Structure
 ```
@@ -62,9 +62,10 @@ src/
 - **Professional Links**: Contributors can link their GitHub and LinkedIn profiles to their architectural submissions.
 
 ### 3. Advanced Tailor Agent (Principal Architect)
-- **High-Density Refinement**: Users can provide specific context to transform general templates into expert-grade architectures.
-- **Principal Architect Persona**: The AI agent enforces strict density, structural integrity (e.g., [ROLE_MANIFESTO]), and agentic reasoning.
-- **Streaming UI**: Real-time streaming of generated prompts with a premium glassmorphic interface.
+- **Zero-Friction Refinement**: A non-interrogative agent that always serves immediate, high-density results. It never stalls for more information; instead, it uses smart inferences to fill context gaps.
+- **Principal Architect Persona**: The AI agent enforces strict density, structural integrity (e.g., [ROLE_MANIFESTO]), and expert-grade instruction sets.
+- **Dual-Engine Orchestration**: Primary processing via Gemini-2.5-Flash with a robust fallback to Llama-3.3-70B (via Groq) to ensure zero downtime.
+- **Streaming UI**: Real-time streaming of generated architectures with a premium glassmorphic interface.
 
 ### 4. UX Stability & Performance
 - **Anti-Stutter System**: Global skeleton loading (`GridSkeleton`, `CardSkeleton`) prevents layout shifts during data fetching.

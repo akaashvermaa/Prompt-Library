@@ -5,6 +5,7 @@ import { Prompt } from "@/types";
 import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { LikeButton } from "@/components/ui/LikeButton";
 import { CopyButton } from "@/components/ui/CopyButton";
+import Fuse from "fuse.js";
 
 const DIFF_CLASS: Record<string, string> = { 
   beginner: "d-beg", 
@@ -23,13 +24,18 @@ export function CategoryContent({
 
   const filtered = useMemo(() => {
     if (!query.trim()) return prompts;
-    const q = query.toLowerCase().trim();
-    return prompts.filter(p => 
-      p.title.toLowerCase().includes(q) ||
-      p.description.toLowerCase().includes(q) ||
-      p.tags.some(t => t.toLowerCase().includes(q)) ||
-      p.prompt.toLowerCase().includes(q)
-    );
+    
+    const fuse = new Fuse(prompts, {
+      keys: [
+        { name: 'title', weight: 0.5 },
+        { name: 'tags', weight: 0.3 },
+        { name: 'description', weight: 0.2 },
+        { name: 'prompt', weight: 0.1 }
+      ],
+      threshold: 0.4
+    });
+
+    return fuse.search(query).map(r => r.item);
   }, [query, prompts]);
 
   return (

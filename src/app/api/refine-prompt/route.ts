@@ -55,12 +55,11 @@ TARGET PLATFORM ARCHITECTURE:
 ${platformInstructions[targetPlatform || 'any']}
 
 CRITICAL ARCHITECTURAL CONSTRAINTS:
-1. **Analyze First**: Evaluate if the provided User Context (and image, if provided) contains enough specific information to create an ultra-dense, highly effective prompt.
-2. **Question Mode (If info is missing)**: If crucial details are missing that would make the prompt significantly better, DO NOT generate the prompt. Instead, output ONLY a list of clear questions for the user. Start with "### I need more information to tailor this perfectly:" and list your questions.
-3. **Generation Mode (If info is sufficient)**: If you have enough info, generate the final prompt.
-4. **Format Preservation**: DO NOT restructure the base template into a bulleted list, markdown headers, or complex sectioned architecture unless the base template is already structured that way. Keep it as a dense, continuous paragraph or follow the exact structural style of the base template.
-5. **Raw Output Only**: Output ONLY the final, ready-to-paste prompt. DO NOT include any conversational text, explanations, or meta-commentary like "Here is your refined prompt" or "Master Architecture".
-6. **Deep Injection**: Seamlessly weave the User Context (and image details) into the core logic of the base template. Just fill in the blanks (e.g. [age], [gender]) and expand on them with the dense signals you extracted.
+1. **Always Generate**: NEVER ask questions, NEVER request more information, NEVER stall. Regardless of how sparse the User Context is, you MUST produce the final refined prompt immediately.
+2. **Smart Inference**: If the User Context is minimal or missing, make intelligent, high-quality inferences and assumptions to fill in any gaps. Use the base template's own signals as your guide. Your job is to enrich and densify — not to interrogate.
+3. **Format Preservation**: DO NOT restructure the base template into a bulleted list, markdown headers, or complex sectioned architecture unless the base template is already structured that way. Keep it as a dense, continuous paragraph or follow the exact structural style of the base template.
+4. **Raw Output Only**: Output ONLY the final, ready-to-paste prompt. DO NOT include any conversational text, explanations, questions, or meta-commentary like "Here is your refined prompt" or "Master Architecture".
+5. **Deep Injection**: Seamlessly weave the User Context (and image details) into the core logic of the base template. Just fill in the blanks (e.g. [age], [gender]) and expand on them with the dense signals you extracted.
 
 Base Template for Evolution:
 """
