@@ -8,6 +8,7 @@ import { PlatformBadge } from "@/components/ui/PlatformBadge";
 import { CopyButton } from "@/components/ui/CopyButton";
 import { LikeButton } from "@/components/ui/LikeButton";
 import { GridSkeleton } from "@/components/ui/Skeleton";
+import Fuse from "fuse.js";
 
 const TABS = ["any", "claude", "chatgpt", "gemini", "grok"] as const;
 const CATS = ["all", "study-learn", "write-create", "code-dev", "business-marketing", "review-test", "career-brand", "image-prompts", "ai-agents", "instagram", "youtube"];
@@ -67,14 +68,16 @@ export function BrowseContent({ prompts }: { prompts: Prompt[] }) {
     }
 
     if (serverResults === null && query.trim()) {
-      const q = query.trim().toLowerCase();
-      out = out.filter(p =>
-        p.title.toLowerCase().includes(q) ||
-        p.description.toLowerCase().includes(q) ||
-        p.tags.some(t => t.toLowerCase().includes(q)) ||
-        p.prompt.toLowerCase().includes(q) ||
-        (p.category === 'image-prompts' && p.imagePlatforms?.some(ip => ip.toLowerCase().includes(q)))
-      );
+      const fuse = new Fuse(out, {
+        keys: [
+          { name: 'title', weight: 0.5 },
+          { name: 'tags', weight: 0.3 },
+          { name: 'description', weight: 0.2 },
+          { name: 'prompt', weight: 0.1 }
+        ],
+        threshold: 0.4
+      });
+      out = fuse.search(query).map(r => r.item);
     }
 
     return out;

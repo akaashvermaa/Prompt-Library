@@ -1,4 +1,4 @@
-import { searchPrompts } from '@/lib/search';
+import { searchPrompts } from '@/lib/prompts';
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);

@@ -1,5 +1,7 @@
 import { Prompt } from '@/types'
 import { supabase } from '@/lib/supabase'
+import Fuse from 'fuse.js'
+import { generateEmbedding } from './embeddings'
 
 export async function getAllPrompts(): Promise<Prompt[]> {
   const { data, error } = await supabase.from('prompts').select('*');
@@ -53,16 +55,56 @@ export async function getFeaturedPrompts(): Promise<Prompt[]> {
 }
 
 export async function searchPrompts(query: string): Promise<Prompt[]> {
-  const q = query.toLowerCase();
-  // Fetch all for now and filter. 
-  // In a large app, you'd use Supabase full-text search (fts)
+  if (!query) return getAllPrompts();
+
+  // Try semantic search first for rich queries
+  if (query.split(' ').length > 3) {
+    try {
+      return await semanticSearchPrompts(query);
+    } catch (e) {
+      console.error("Semantic search failed, falling back to Fuse:", e);
+    }
+  }
+
   const all = await getAllPrompts();
-  return sortPromptsByCredibility(all.filter(p =>
-    p.title.toLowerCase().includes(q) ||
-    p.description.toLowerCase().includes(q) ||
-    p.tags.some(tag => tag.toLowerCase().includes(q)) ||
-    p.prompt.toLowerCase().includes(q)
-  ));
+  const fuse = new Fuse(all, {
+    keys: [
+      { name: 'title', weight: 0.5 },
+      { name: 'tags', weight: 0.3 },
+      { name: 'description', weight: 0.2 },
+      { name: 'prompt', weight: 0.1 }
+    ],
+    threshold: 0.4,
+    includeScore: true
+  });
+
+  const results = fuse.search(query);
+  // If we have fuzzy results, we use them. Fuse already sorts by score.
+  return results.map(r => r.item);
+}
+
+export async function semanticSearchPrompts(query: string, options?: {
+  category?: string;
+  platform?: string;
+  difficulty?: string;
+}): Promise<Prompt[]> {
+  const embedding = await generateEmbedding(query);
+  
+  const { data, error } = await supabase.rpc('match_prompts', {
+    query_embedding: embedding,
+    match_threshold: 0.4, // Slightly lower threshold for semantic matches
+    match_count: 15,
+    filter_category: options?.category || null,
+    filter_platform: options?.platform || null,
+    filter_difficulty: options?.difficulty || null
+  });
+
+  if (error) {
+    console.error('Semantic search RPC error:', error);
+    throw error;
+  }
+
+  return (data as any[]).map(mapDbToPrompt);
 }
 
 export async function filterPrompts(options: {
@@ -71,6 +113,15 @@ export async function filterPrompts(options: {
   difficulty?: string
   search?: string
 }): Promise<Prompt[]> {
+  // Try semantic search first if search term is descriptive
+  if (options.search && options.search.split(' ').length > 2) {
+    try {
+      return await semanticSearchPrompts(options.search, options);
+    } catch (e) {
+      console.error("Semantic filter failed, falling back to local:", e);
+    }
+  }
+
   let result = await getAllPrompts();
 
   if (options.category) {
@@ -88,14 +139,19 @@ export async function filterPrompts(options: {
   if (options.difficulty) {
     result = result.filter(p => p.difficulty === options.difficulty);
   }
+  
   if (options.search) {
-    const q = options.search.toLowerCase();
-    result = result.filter(p =>
-      p.title.toLowerCase().includes(q) ||
-      p.description.toLowerCase().includes(q) ||
-      p.tags.some(tag => tag.toLowerCase().includes(q)) ||
-      p.prompt.toLowerCase().includes(q)
-    );
+    const fuse = new Fuse(result, {
+      keys: [
+        { name: 'title', weight: 0.5 },
+        { name: 'tags', weight: 0.3 },
+        { name: 'description', weight: 0.2 },
+        { name: 'prompt', weight: 0.1 }
+      ],
+      threshold: 0.4
+    });
+    result = fuse.search(options.search).map(r => r.item);
+    return result;
   }
 
   return sortPromptsByCredibility(result);
